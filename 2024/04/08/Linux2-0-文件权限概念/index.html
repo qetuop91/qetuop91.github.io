@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Feliks">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Linux2.0 文件权限概念, Feliks">
+    <meta name="description" content="我的Linux学习笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Feliks</title>
+    <title>Linux2.0 文件权限概念 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Linux2.0 文件权限概念</h1>
                 </div>
             </div>
         </div>
@@ -361,12 +361,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -375,14 +388,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-08
                 </div>
                 
 
@@ -401,19 +414,193 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="Linux文件权限概念"><a href="#Linux文件权限概念" class="headerlink" title="Linux文件权限概念"></a>Linux文件权限概念</h1><p>作为一个初学者，文件的权限与属性是学习Linux相当重要的一环，如果屏幕中出现了【Permission deny】的时候，肯定是权限设置错误。</p>
+<h2 id="Linux文件属性"><a href="#Linux文件属性" class="headerlink" title="Linux文件属性"></a>Linux文件属性</h2><p>【ls】是一个查看文件的命令</p>
+<p>【su -】切换身份为root</p>
+<p>登录自己账户系统后，使用【su -】切换身份，执行【ls -al】看看</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309200832684.png" alt="image-20230920083217640"> </p>
+<p><strong>本章后续的chgrp、chown等命令可能都需要使用root的身份才能够处理，所以建议用root的身份来学习，但是不建议直接用root登录系统，建议使用【su -】来切换身份，离开root则使用exit回到Feliks（自己的账号）即可</strong></p>
+<p>ls是list的意思，重点在显示文件的文件名和相关属性，而选项【-al】则表示列出所有的文件详细的权限与属性（包含隐藏文件，就是文件名第一个字符为【.】的文件）</p>
+<p>-rw-r–r–. 1 root root 1857 8月 15 11:39 initial-setup-ks.cfg</p>
+<ul>
+<li><p>第一栏-rw-r–r–：文件的类型与权限（permission）</p>
+<ul>
+<li>第一个字符代表这个文件是目录、文件或链接文件等:</li>
+<li>当为【d】则是目录，例如图里的【.config】文件</li>
+<li>当为【-】则是文件，例如图里的【initial- setup- ks.cfg】文件</li>
+<li>若是【l】则表示为链接文件（link file）</li>
+<li>若是【b】则表示为设备文件里面的 可供存储的周边设备</li>
+<li>若是【c】则表示为设备文件里面的串行端口设备，例如键盘、鼠标等</li>
+<li>接下来的字符是三个为一组且均为【rwx】的三个参数的组合。<ul>
+<li>第一组：文件拥有者可具备的权限</li>
+<li>第二组：加入此用户组的账号的权限</li>
+<li>第三组：非本人且没有加入本用户组的其他账号的权限</li>
+<li>r：可读（read）</li>
+<li>w：可写（write）</li>
+<li>x：可执行（execute）</li>
+<li>如果没有权限则是【-】</li>
+</ul>
+</li>
+</ul>
+<p>例：【-rwxr-xr–】意义？</p>
+<p>[-] :1  [rwx] : 234  [r-x] : 567  [r–] : 890</p>
+<p>1是代表这个文件名为目录或文件</p>
+<p>234是拥有者的权限（可读可写可执行）</p>
+<p>567是同用户组的用户权限（可读可执行）</p>
+<p>890是其他用户权限（可读）</p>
+</li>
+<li><p>第二栏1：表示有多少文件名链接到此节点（inode）</p>
+<ul>
+<li>每个文件都会将他的权限与属性记录到文件系统的inode中，</li>
+</ul>
+</li>
+<li><p>第三栏root：表示这个文件（或目录）的拥有者账号</p>
+</li>
+<li><p>第四栏root：表示这个文件的所属用户组</p>
+<ul>
+<li>在Linux系统中，一个账号会加入一个或多个用户组中。</li>
+</ul>
+</li>
+<li><p>第五栏1857：表示这个文件的容量大小，默认单位是Bytes</p>
+</li>
+<li><p>第六栏：表示这个文件的创建日期或者是最近的修改日期</p>
+<ul>
+<li>如果这个文件被修改的时间距离现在太久，那么时间部分会仅显示年份而已</li>
+<li>显示完整的时间格式：【ls -l –full-time】</li>
+</ul>
+</li>
+<li><p>第七栏：表示文件名</p>
+</li>
+</ul>
+<p><strong>文件和目录是不一样的，目录如果没有x权限则不能进入</strong></p>
+<h2 id="如何修改文件属性与权限"><a href="#如何修改文件属性与权限" class="headerlink" title="如何修改文件属性与权限"></a>如何修改文件属性与权限</h2><ul>
+<li><p>chgrp：修改文件所属用户组</p>
+</li>
+<li><p>chown：修改文件拥有者</p>
+</li>
+<li><p>chmod：修改文件的权限，SUID、SGID、SBIT等特性</p>
+</li>
+</ul>
+<h3 id="修改所属用户组chgrp"><a href="#修改所属用户组chgrp" class="headerlink" title="修改所属用户组chgrp"></a>修改所属用户组chgrp</h3><p><strong>change group的缩写</strong></p>
+<p>命令：<code>chgrp -R dirname/filename</code></p>
+<ul>
+<li>-R：进行递归（recursive）修改，连同子目录下的所有文件、目录都更新成为这个用户组的意思，常常用来修改某一目录内所有的文件的情况</li>
+</ul>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201058714.png" alt="image-20230920105857692"> </p>
+<p>文件的用户组被修改成了users</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241652837.png" alt="image-20230920110008058"> </p>
+<p>因为testing组不存在，所以修改用户组失败</p>
+<h3 id="修改文件拥有者chown"><a href="#修改文件拥有者chown" class="headerlink" title="修改文件拥有者chown"></a>修改文件拥有者chown</h3><p><strong>change owner的缩写</strong></p>
+<p>命令：</p>
+<p><code>chown -R 账号名称 文件或目录  </code></p>
+<p><code>chown -R 账号名称:用户组名称 文件或目录  </code></p>
+<ul>
+<li>-R：进行递归（recursive）修改，连同子目录下的所有文件都修改</li>
+</ul>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201107487.png" alt="image-20230920110753464"> </p>
+<p>文件的拥有者被修改成了bin这个账号</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201109827.png" alt="image-20230920110923809"> </p>
+<p>把文件的拥有者和用户组改回root</p>
+<p><strong>事实上，chown也可以使用【chown user.group file】，但是有些人喜欢设置账号的时候加小数点，这样会造成系统的误判，所以还是比较建议使用【:】</strong></p>
+<p><strong>什么时候使用chgrp、chown？比如要把文件复制给另一个人的时候，会把拥有者和用户组也给复制过去，这时就要用chgrp和chown来修改别人才能修改</strong></p>
+<h3 id="修改权限chmod"><a href="#修改权限chmod" class="headerlink" title="修改权限chmod"></a>修改权限chmod</h3><p>权限的设置方法有两种：数字或者符号</p>
+<h4 id="数字类型修改文件权限"><a href="#数字类型修改文件权限" class="headerlink" title="数字类型修改文件权限"></a>数字类型修改文件权限</h4><p>r:4</p>
+<p>w:2</p>
+<p>x:1</p>
+<p>rwx权限&#x3D;4+2+1&#x3D;7</p>
+<p>例如：【-rwxrwx—】owner&#x3D;rwx&#x3D;7	group&#x3D;rwx&#x3D;7	others&#x3D;—&#x3D;0</p>
+<p>所以权限数字就是770</p>
+<p>命令：</p>
+<p><code>chmod -R xyz 文件或目录</code></p>
+<ul>
+<li>xyz：就是上面的数字类型的权限属性，rwx属性数值相加</li>
+<li>-R：进行递归（recursive）修改，连同子目录下的所有文件都会修改</li>
+</ul>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201418200.png" alt="image-20230920141837160"> </p>
+<h4 id="符号类型修改文件权限"><a href="#符号类型修改文件权限" class="headerlink" title="符号类型修改文件权限"></a>符号类型修改文件权限</h4><p>u：user</p>
+<p>g：group</p>
+<p>o：other</p>
+<p>a：all</p>
+<p>+：加入</p>
+<p>-：移除</p>
+<p>&#x3D;：设置</p>
+<p>命令：</p>
+<p><code>chmod u=rwx,g=rwx,o=rwx [filename]</code></p>
+<p>如果要设置文件【-rwxr-xr-x】</p>
+<p><code>chmod u=rwx,go=rx .bashrc</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201427645.png" alt="image-20230920142734622"> </p>
+<p>只想增加某个文件所有人都可以写入的权限：</p>
+<p><code>chmod a+w .bashrc</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201431222.png" alt="image-20230920143151195"> </p>
+<h2 id="目录与文件的权限意义"><a href="#目录与文件的权限意义" class="headerlink" title="目录与文件的权限意义"></a>目录与文件的权限意义</h2><ul>
+<li><p>权限对文件的重要性</p>
+<ul>
+<li>文件是实际含有数据的地方，包括一般文本文件，数据库文件，二进制可执行文件（binary program）等</li>
+<li>r（read）：可读取此文件的实际内容，如读取文本文件的文字内容等</li>
+<li>w（write）：可以编辑、新增或是修改该文件的内容（但不包含删除文件）</li>
+<li>x（execute）：该文件具有可以被系统执行的权限</li>
+</ul>
+<p><strong>在Linux下，文件是否能被执行，是借由是否具有x这个权限来决定的，和文件名后缀没有绝对的关系</strong></p>
+</li>
+<li><p>权限对目录的重要性</p>
+<ul>
+<li><p>目录主要的内容在记录文件名列表，文件名与目录有强烈的关联</p>
+</li>
+<li><p>r（read contents in directory）：表示具有读取目录结构列表的权限，有该权限代表可以查询该目录下的文件名数据，可以利用ls命令将目录的内容列表展示出来</p>
+</li>
+<li><p>w（modify contents of directory）：表示具有改动该目录结构列表的权限</p>
+<ul>
+<li>建立新的文件与目录的权限</li>
+<li>删除已经存在的文件和目录权限（无论该文件的权限是什么）</li>
+<li>将已存在的文件或目录进行更名的权限</li>
+<li>移动该目录内的文件、目录位置的权限</li>
+</ul>
+</li>
+<li><p>x（access directory）：目录的x权限代表用户是否能进入该目录成为工作目录的用途</p>
+<ul>
+<li><p>工作目录就是当前所在的目录</p>
+</li>
+<li><p>例：有目录是<code>drwxr--r-- root root</code>这样的权限，系统有个账号为vbird，并不支持root组，那vbird对此目录有何权限？</p>
+<p>答：vbird对此目录仅具有r的权限，因此vbird可以查询此目录下的文件名列表，但是因为没有x权限，所以不能切换到此目录内</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Linux文件种类与扩展名"><a href="#Linux文件种类与扩展名" class="headerlink" title="Linux文件种类与扩展名"></a>Linux文件种类与扩展名</h2><p>除了前面的一般文件【-】和目录文件【d】之外还有别的种类的文件</p>
+<ul>
+<li><p>文件种类</p>
+<ul>
+<li>常规文件<ul>
+<li>纯文本文件（ASCII）：是Linux系统中最多的一种文件类型，可以直接执行【cat ~&#x2F; .bashrc】就可以看到文件的内容</li>
+<li>二进制文件（binary）</li>
+<li>数据文件（data）</li>
+</ul>
+</li>
+<li>目录（directory）：第一个属性为【d】</li>
+<li>链接文件（link）：第一个属性为【l】</li>
+<li>设备与设备文件（device）<ul>
+<li>区块（block）设备文件：第一个属性为【b】，硬盘和软盘就是</li>
+<li>字符（character）设备文件：第一个属性为【c】，串行端口的接口设备，硬盘和鼠标就是</li>
+</ul>
+</li>
+<li>数据接口文件（sockets）：第一个属性为【s】</li>
+<li>数据输送文件（FIFO，pipe）：first-in-first-out，管道，第一个属性为【p】</li>
+</ul>
+</li>
+<li><p>Linux文件扩展名：一个Linux文件能否被执行，与他的第一栏是个属性有关，与文件名没有一点关系，只要权限有【x】，则代表这个文件具有可以被执行的能力</p>
+<ul>
+<li>.sh：脚本或批处理文件</li>
+<li>.Z .tar .tar.gz .zip .tgz：压缩文件</li>
+</ul>
+</li>
+<li><p>Linux文件名长度限制</p>
+<ul>
+<li>单一文件或目录最大容许文件名是255字节</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -440,7 +627,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/07/hello-world/">https://qetuop91.github.io/2024/04/07/hello-world/</a>
+                    <a href="https://qetuop91.github.io/2024/04/08/Linux2-0-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E6%A6%82%E5%BF%B5/">https://qetuop91.github.io/2024/04/08/Linux2-0-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E6%A6%82%E5%BF%B5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -477,7 +664,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -558,30 +749,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                <a href="/2024/04/08/Linux3-0-%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/5.jpg" class="responsive-img" alt="我的第一篇博客">
+                        <img src="/medias/myImages/7.jpg" class="responsive-img" alt="Linux3.0 目录配置">
                         
-                        <span class="card-title">我的第一篇博客</span>
+                        <span class="card-title">Linux3.0 目录配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            我的Linux学习笔记
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/test/" class="post-category">
-                                    test
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
@@ -591,8 +782,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">test</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -603,37 +794,47 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/07/hello-world/">
+                <a href="/2024/04/08/Linux1.0%20%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84/">
                     <div class="card-image">
                         
+                        <img src="/medias/myImages/5.jpg" class="responsive-img" alt="Linux1.0 用户与用户组">
                         
-                        <img src="/medias/myImages/10.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Linux1.0 用户与用户组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            我的Linux学习笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Feliks
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

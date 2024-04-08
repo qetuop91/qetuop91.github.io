@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Feliks">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Linux1.0 用户与用户组, Feliks">
+    <meta name="description" content="我的Linux学习笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Feliks</title>
+    <title>Linux1.0 用户与用户组 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Linux1.0 用户与用户组</h1>
                 </div>
             </div>
         </div>
@@ -361,12 +361,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -375,14 +388,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-08
                 </div>
                 
 
@@ -401,19 +414,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="用户与用户组"><a href="#用户与用户组" class="headerlink" title="用户与用户组"></a>用户与用户组</h1><h2 id="1-文件拥有者"><a href="#1-文件拥有者" class="headerlink" title="1.文件拥有者"></a>1.文件拥有者</h2><p>由于Linux是一个多人多任务的系统，因此可能常常会有多人同时使用这台主机来进行工作的情况，为了考虑每个人的隐私权以及每个人喜好的工作环境，因此文件拥有者这个角色就显得尤为重要</p>
+<h3 id="添加新的用户账号"><a href="#添加新的用户账号" class="headerlink" title="添加新的用户账号"></a>添加新的用户账号</h3><p><code>useradd</code> 选项 用户名</p>
+<ul>
+<li>-c comment 指定一段注释性描述</li>
+<li>-d 目录 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录</li>
+<li>-g 用户组 指定用户所属的用户组</li>
+<li>-G 用户组，用户组 指定用户所属的附加组</li>
+<li>-s Shell文件 指定用户的登录Shell</li>
+<li>-u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号</li>
+</ul>
+<p>例：</p>
+<p>创建一个用户sam，其中-d和-m选项用来为登录名sam产生一个主目录&#x2F;home&#x2F;sam</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403261511264.png" alt="image-20240326151054166"> </p>
+<p>创建一个用户gem，该用户的登录Shell是&#x2F;bin&#x2F;sh，属于group用户组，同时又属于adm和root用户组，其中group用户组是其主组</p>
+<p>① 创建用户组</p>
+<p>② 创建用户</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403261516118.png" alt="image-20240326151600042"> </p>
+<h3 id="删除用户账号"><a href="#删除用户账号" class="headerlink" title="删除用户账号"></a>删除用户账号</h3><p><code>userdel</code> 选项 用户名</p>
+<p>-r 把用户的主目录一起删除</p>
+<p>例：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403261521134.png" alt="image-20240326152150103"> </p>
+<h3 id="修改账号"><a href="#修改账号" class="headerlink" title="修改账号"></a>修改账号</h3><p><code>usermod</code> 选项 用户名</p>
+<ul>
+<li>-c comment 指定一段注释性描述</li>
+<li>-d 目录 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录</li>
+<li>-g 用户组 指定用户所属的用户组</li>
+<li>-G 用户组，用户组 指定用户所属的附加组</li>
+<li>-s Shell文件 指定用户的登录Shell</li>
+<li>-u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号</li>
+<li>-o 可以重复使用其他用户的标识号</li>
+</ul>
+<p>例：</p>
+<p>将sam的登录shell改为ksh，主目录改为&#x2F;home&#x2F;z，用户组改为developer</p>
+<p><code>usermod -s /bin/ksh -d /home/z -g developer sam</code></p>
+<h3 id="用户口令管理"><a href="#用户口令管理" class="headerlink" title="用户口令管理"></a>用户口令管理</h3><p><code>passwd</code> 选项  用户名</p>
+<ul>
+<li>-l 锁定口令，即禁用账号</li>
+<li>-u 口令解锁</li>
+<li>-d 使账号无口令</li>
+<li>-f 强迫用户下次登陆时修改口令</li>
+</ul>
+<p>例：</p>
+<p>为用户指定空口令</p>
+<p><code>passwd -d sam</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271046966.png" alt="image-20240327104615873"> </p>
+<p>删除sam的密码，使sam下一次登陆时系统不允许该用户登录</p>
+<p><code>passwd -l sam</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271047714.png" alt="image-20240327104742684"> </p>
+<h2 id="2-用户组的概念"><a href="#2-用户组的概念" class="headerlink" title="2.用户组的概念"></a>2.用户组的概念</h2><p>进行团队协同工作时非常有用。</p>
+<p>用户组相当于一个个社团，内部成员就是用户组内的成员，同时一个账号可以有多个用户组的支持，可以理解为多个社团有同一个指导老师</p>
+<h3 id="新增用户组"><a href="#新增用户组" class="headerlink" title="新增用户组"></a>新增用户组</h3><p><code>groupadd</code> 选项 用户组</p>
+<ul>
+<li>-g GID 指定新用户组的组标识号（GID）</li>
+<li>-o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同</li>
+</ul>
+<p>例：</p>
+<p>向系统中新增组group1，新租的组标识号使当前已有的最大组标识号的基础上加一</p>
+<p><code>groupadd group1</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271419882.png" alt="image-20240327141926804"> </p>
+<p>向系统中增加了一个新组group2，同时指定新组的组标识号是101</p>
+<p><code>groupadd -g 101 group2</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271421211.png" alt="image-20240327142107182"> </p>
+<h3 id="删除一个已有的用户组"><a href="#删除一个已有的用户组" class="headerlink" title="删除一个已有的用户组"></a>删除一个已有的用户组</h3><p><code>groupdel</code> 用户组</p>
+<p>例：</p>
+<p>删除组group1</p>
+<p><code>groupdel gruop1</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271436290.png" alt="image-20240327143643249"> </p>
+<h3 id="修改用户组的属性"><a href="#修改用户组的属性" class="headerlink" title="修改用户组的属性"></a>修改用户组的属性</h3><p><code>groupmod</code> 选项 用户组</p>
+<ul>
+<li>-g GID 为用户组指定新的组标识号</li>
+<li>-o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同</li>
+<li>-n 新用户组 将用户组的名字改为新名字</li>
+</ul>
+<p>例：</p>
+<p>将group2的组标识号改为102</p>
+<p><code>groupmod -g 102 group2</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271440777.png" alt="image-20240327144027748"> </p>
+<p>将group2的组标识号改为10000，组名修改为group3</p>
+<p><code>groupmod -g 10000 -n group3 group2</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403271441457.png" alt="image-20240327144135427"> </p>
+<p><strong>如果一个用户同时属于多个用户组，那么用户可以在用户组之间切换，以便具有其他用户组的权限</strong></p>
+<p>用户可以在登陆后，使用newgrp切换到其他用户组，参数就是目的用户组</p>
+<p><code>newgrp root</code></p>
+<p>将当前用户切换到root用户组，前提是root用户组确实是该用户的主组或附加组。</p>
+<h2 id="3-其他人的概念"><a href="#3-其他人的概念" class="headerlink" title="3.其他人的概念"></a>3.其他人的概念</h2><p>不是该用户组的成员都是其他人，在Linux里，任何一个文件都具有用户（User）、所属群组（Group）、其他人（Others）三种身份的个别权限。</p>
+<p>root是万能的！。</p>
+<p><strong>Linux用户身份与用户组记录的文件</strong></p>
+<p>在Linux系统中，默认情况下所有系统上的账号与一般身份用户，还有那个root的相关信息，都记录在&#x2F;etc&#x2F;passwd这个文件内，至于个人的密码则是记录在&#x2F;etc&#x2F;shadow这个文件内，此外，Linux所有的组名都记录在&#x2F;etc&#x2F;group中。这三个文件可以说是Linux系统里面账号密码用户组信息的集中地，不要随便删除。</p>
 
                 
             </div>
@@ -440,7 +528,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/07/hello-world/">https://qetuop91.github.io/2024/04/07/hello-world/</a>
+                    <a href="https://qetuop91.github.io/2024/04/08/Linux1.0%20%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84/">https://qetuop91.github.io/2024/04/08/Linux1.0%20%E7%94%A8%E6%88%B7%E4%B8%8E%E7%94%A8%E6%88%B7%E7%BB%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -477,7 +565,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -558,30 +650,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                <a href="/2024/04/08/Linux2-0-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E6%A6%82%E5%BF%B5/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/5.jpg" class="responsive-img" alt="我的第一篇博客">
+                        <img src="/medias/myImages/6.jpg" class="responsive-img" alt="Linux2.0 文件权限概念">
                         
-                        <span class="card-title">我的第一篇博客</span>
+                        <span class="card-title">Linux2.0 文件权限概念</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            我的Linux学习笔记
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/test/" class="post-category">
-                                    test
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
@@ -591,8 +683,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">test</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -603,37 +695,47 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/07/hello-world/">
+                <a href="/2024/04/08/Redis7%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
+                        <img src="/medias/myImages/8.jpg" class="responsive-img" alt="Redis7基础">
                         
-                        <img src="/medias/myImages/10.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Redis7基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            我的Redis学习笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Feliks
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Redis/" class="post-category">
+                                    Redis
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Redis/">
+                        <span class="chip bg-color">Redis</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

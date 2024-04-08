@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Feliks">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Linux5.0 磁盘与文件系统管理, Feliks">
+    <meta name="description" content="我的Linux学习笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Feliks</title>
+    <title>Linux5.0 磁盘与文件系统管理 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Linux5.0 磁盘与文件系统管理</h1>
                 </div>
             </div>
         </div>
@@ -361,12 +361,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -375,14 +388,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-08
                 </div>
                 
 
@@ -401,19 +414,136 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="Linux磁盘与文件系统管理"><a href="#Linux磁盘与文件系统管理" class="headerlink" title="Linux磁盘与文件系统管理"></a>Linux磁盘与文件系统管理</h1><h2 id="磁盘的分区、格式化、检验与挂载"><a href="#磁盘的分区、格式化、检验与挂载" class="headerlink" title="磁盘的分区、格式化、检验与挂载"></a>磁盘的分区、格式化、检验与挂载</h2><p>当我们想要在系统里面新增一块磁盘时</p>
+<ol>
+<li>对磁盘进行划分，以建立可用的磁盘分区</li>
+<li>对该磁盘分区进行格式化（format），以建立系统可用的文件系统</li>
+<li>对刚建好的文件系统进行检验</li>
+<li>在Linux上，需要建立挂载点（目录），并将其挂载上来</li>
+</ol>
+<h3 id="观察磁盘分区状态"><a href="#观察磁盘分区状态" class="headerlink" title="观察磁盘分区状态"></a>观察磁盘分区状态</h3><h4 id="lsblk（列出系统上的所有磁盘列表）"><a href="#lsblk（列出系统上的所有磁盘列表）" class="headerlink" title="lsblk（列出系统上的所有磁盘列表）"></a>lsblk（列出系统上的所有磁盘列表）</h4><ul>
+<li><p>-d：仅列出磁盘本身，并不会列出该磁盘的分区数据</p>
+</li>
+<li><p>-f：同时列出该磁盘内的文件系统名称</p>
+</li>
+<li><p>-i：使用ASCII的字符输出，不要使用复杂的编码</p>
+</li>
+<li><p>-m：同时输出该设备在&#x2F;dev下面的权限信息（rwx的数据）</p>
+</li>
+<li><p>-p：列出该设备的完整文件名，而不是仅列出最后的名字</p>
+</li>
+<li><p>-t：列出该磁盘设备的详细数据，包括磁盘阵列机制，预读写的数据量大小等</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310081010722.png" alt="image-20231008081308748"> </p>
+<ul>
+<li><p>NAME：设备的文件名，省略&#x2F;dev等前导目录</p>
+</li>
+<li><p>MAJ:MIN：主要与次要设备代码（内核识别的设备都是这两个代码来实现的）</p>
+</li>
+<li><p>RM：是否为可卸载设备：例如光盘、USB磁盘</p>
+</li>
+<li><p>SIZE：容量</p>
+</li>
+<li><p>RO：是否为只读设备</p>
+</li>
+<li><p>TYPE：是磁盘（disk）、分区（partition）还是只读存储器（rom）等输出</p>
+</li>
+<li><p>MOUNTPOINT：挂载点</p>
+<p>）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="blkid（列出设备的UUID参数）"><a href="#blkid（列出设备的UUID参数）" class="headerlink" title="blkid（列出设备的UUID参数）"></a>blkid（列出设备的UUID参数）</h4><ul>
+<li>UUID？<ul>
+<li>UUID是全局唯一标识符（universally unique identifier），这个标识符可以拿来作为挂在或是使用这个设备或文件系统</li>
+</ul>
+</li>
+</ul>
+<h4 id="parted（列出磁盘的分区表类型与分区信息）"><a href="#parted（列出磁盘的分区表类型与分区信息）" class="headerlink" title="parted（列出磁盘的分区表类型与分区信息）"></a>parted（列出磁盘的分区表类型与分区信息）</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310081034102.png" alt="image-20231008103455070"> </p>
+<p>列出&#x2F;dev&#x2F;sda磁盘的相关信息</p>
+<h2 id="磁盘分区：gdisk-fdisk"><a href="#磁盘分区：gdisk-fdisk" class="headerlink" title="磁盘分区：gdisk&#x2F;fdisk"></a>磁盘分区：gdisk&#x2F;fdisk</h2><p><strong>注意：MBR分区表使用fdisk分区，GPT分区表使用gdisk分区</strong></p>
+<p>① 先通过<code>lsblk</code>或<code>blkid</code>先找到磁盘</p>
+<p>② 使用<code>parted /dev/xxx print</code>来找出内部的分区表类型</p>
+<p>③ 再根据分区表类型判断使用<code>gdisk</code>还是<code>fdisk</code></p>
+<h3 id="gdisk"><a href="#gdisk" class="headerlink" title="gdisk"></a>gdisk</h3><p>常用参数：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091407844.png" alt="image-20231009140726801"> </p>
+<ul>
+<li><p>d：删除一个分区 </p>
+</li>
+<li><p>n：增加一个分区</p>
+</li>
+<li><p>p：打印出该磁盘的分区表（常用）</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091412498.png" alt="image-20231009141232127"> </p>
+</li>
+<li><p>q：不保存分区就直接离开gdisk</p>
+</li>
+<li><p>w：保存分区操作后离开gdisk</p>
+</li>
+</ul>
+<p>该磁盘一共有40GB左右的容量，一共有83886080个扇区，实际上只使用到60708863号扇区</p>
+<p><strong>强调：只要不按下w，直接按q退出就相安无事，此外也不要在MBR分区上使用gdisk，如果命令按错了分区记录会消失，也不要在GPT分区上使用fdisk</strong></p>
+<h4 id="用gdisk新增分区"><a href="#用gdisk新增分区" class="headerlink" title="用gdisk新增分区"></a>用gdisk新增分区</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091428253.png" alt="image-20231009142805203"> </p>
+<p>First sector：新增磁盘的开始扇区</p>
+<p>Last sector：通过<code>+1G</code>这种操控容量的方式会自动计算结束扇区</p>
+<p>Hex code or GUID：默认是Linux文件系统的8300</p>
+<p>以同样的方法增加两个分区，一个是1G的vfat文件系统（Windows），一个是0.5G的swap（Linux Swap）</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091434499.png" alt="image-20231009143451444"> </p>
+<p>此时保存退出后系统并不会立刻加载新的分区表，因为Linux担心系统出问题，所以分区表并没有被更新，因此有两种方法：</p>
+<ol>
+<li>重新启动</li>
+<li>通过partprobe来处理</li>
+</ol>
+<h4 id="partprobe更新Linux内核的分区表信息"><a href="#partprobe更新Linux内核的分区表信息" class="headerlink" title="partprobe更新Linux内核的分区表信息"></a>partprobe更新Linux内核的分区表信息</h4><p><code>partprobe -s</code>：更新Linux内核分区表信息</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091443288.png" alt="image-20231009144356266"> </p>
+<p>查看实际的磁盘分区状态：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091444550.png" alt="image-20231009144434520"> </p>
+<p>内核的分区记录：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091445531.png" alt="image-20231009144503501"> </p>
+<h4 id="用gdisk删除一个分区"><a href="#用gdisk删除一个分区" class="headerlink" title="用gdisk删除一个分区"></a>用gdisk删除一个分区</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091457616.png" alt="image-20231009145700564"> </p>
+<p>然后记得用<code>partprobe -s</code>刷新分区表</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091459915.png" alt="image-20231009145954838"> </p>
+<h2 id="文件系统挂载与卸载"><a href="#文件系统挂载与卸载" class="headerlink" title="文件系统挂载与卸载"></a>文件系统挂载与卸载</h2><ul>
+<li>单一文件系统不应该被重复挂载在不同的挂载点（目录）中</li>
+<li>单一目录不应该重复挂载多个文件系统</li>
+<li>要作为挂载点的目录，理论上应该都是空目录才行</li>
+</ul>
+<h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><p><code>mount -a</code></p>
+<p><code>mount [-l]</code></p>
+<p><code>mount [-t 文件系统] LABEL=&#39;&#39; 挂载点</code></p>
+<p><code>mount [-t 文件系统] UUID=&#39;&#39; 挂载点</code></p>
+<p><code>mount[-t 文件系统] 设备文件名 挂载点</code></p>
+<ul>
+<li>-a：依照配置文件&#x2F;etc&#x2F;fstab的数据将所有未挂载的磁盘都挂载上来</li>
+<li>-l：单纯的输入mount会显示目前挂载的信息，加上-l可增列Label名称</li>
+<li>-t：可以加上文件系统种类来指定想挂载的类型，常见的Linux支持类型有：xfs、ext3、ext4、reiserfs、vfat、iso9660（光盘格式）、nfs、cifs、smbfs（后面三种是网络文件系统类型）</li>
+</ul>
+<p><strong>通过<code>blkid</code>查看设备的UUID，更推荐使用UUID进行挂载，因为UUID是唯一的</strong></p>
+<ul>
+<li>挂载xfs&#x2F;ext4&#x2F;vfat等文件系统</li>
+</ul>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310121440141.png" alt="image-20231012144031082"> </p>
+<ul>
+<li>挂载CD或DVD光盘<ul>
+<li>光驱一挂载之后就无法退出光盘了，除非将他卸载才能够退出（图形化界面会自动将光盘挂载到&#x2F;media目录）</li>
+</ul>
+</li>
+<li>挂载vfat中文移动磁盘（USB磁盘）:<code>mount -o codepage=950, iocharset=utf8 UUID=&quot;xxxxxxxxx&quot; /data/usb</code><ul>
+<li>vfat格式可以使用codepage来处理，中文语系的代码为950</li>
+<li>默认的CentOS7并不支持NTFS文件系统格式</li>
+</ul>
+</li>
+<li>重新挂载根目录与挂在不特定目录：<code>mount -o remount, rw, auto /</code><ul>
+<li>重新挂载（remount）是个非常重要的机制，如果根目录出现【只读】或者挂载的参数要改变就可以用它</li>
+<li>将目录挂载到另一个目录下：<code>mount --bind /var /data/var</code></li>
+</ul>
+</li>
+<li>umount（将设备文件卸载）<ul>
+<li>-f：强制卸载。可用在类似网络文件系统（NFS）无法读取到的情况下</li>
+<li>-l：立刻卸载文件系统，比-f还牛逼</li>
+<li>-n：不更新&#x2F;etc&#x2F;mtab情况下卸载</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -440,7 +570,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/07/hello-world/">https://qetuop91.github.io/2024/04/07/hello-world/</a>
+                    <a href="https://qetuop91.github.io/2024/04/08/Linux5-0-%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">https://qetuop91.github.io/2024/04/08/Linux5-0-%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -477,7 +607,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -558,30 +692,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                <a href="/2024/04/08/Linux6-0-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8E%8B%E7%BC%A9/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/5.jpg" class="responsive-img" alt="我的第一篇博客">
+                        <img src="/medias/myImages/12.jpg" class="responsive-img" alt="Linux6.0 文件与文件系统的压缩">
                         
-                        <span class="card-title">我的第一篇博客</span>
+                        <span class="card-title">Linux6.0 文件与文件系统的压缩</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            我的Linux学习笔记
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/test/" class="post-category">
-                                    test
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
@@ -591,8 +725,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">test</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -603,37 +737,47 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/07/hello-world/">
+                <a href="/2024/04/08/Linux4-0-%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
                     <div class="card-image">
                         
+                        <img src="/medias/myImages/9.jpg" class="responsive-img" alt="Linux4.0 文件与目录管理">
                         
-                        <img src="/medias/myImages/10.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Linux4.0 文件与目录管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            我的Linux学习笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Feliks
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
