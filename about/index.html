@@ -407,21 +407,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">19</a></span>
+    <span class="count"><a href="/">20</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">4</a></span>
+    <span class="count"><a href="/categories">5</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">12</a></span>
+    <span class="count"><a href="/tags">13</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -437,21 +437,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">19</a></span>
+    <span class="count"><a href="/">20</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">4</a></span>
+    <span class="count"><a href="/categories">5</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">12</a></span>
+    <span class="count"><a href="/tags">13</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -595,7 +595,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,19],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,20],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -637,7 +637,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Linux","value":8},{"name":"Java","value":8},{"name":"Redis","value":1},{"name":"test","value":1}],
+                data: [{"name":"Linux","value":8},{"name":"live2d","value":1},{"name":"Java","value":8},{"name":"Redis","value":1},{"name":"test","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -661,7 +661,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Linux","Java","设计模式","创建型模式","单例模式","工厂模式","Redis","建造者模式","test","结构型模式"]
+                data: ["Linux","Java","设计模式","创建型模式","live2d","Redis","单例模式","工厂模式","建造者模式","test"]
             }
         ],
         yAxis: [
@@ -833,6 +833,12 @@
             
             
             
+            <a href="/tags/live2d/">
+                <span class="chip center-align waves-effect waves-light chip-default">live2d</span>
+            </a>
+            
+            
+            
             
             
             <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
@@ -844,6 +850,8 @@
             <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
                 <span class="chip center-align waves-effect waves-light chip-default">创建型模式</span>
             </a>
+            
+            
             
             
             
@@ -859,8 +867,6 @@
             
             
             
-            
-            
             <a href="/tags/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
                 <span class="chip center-align waves-effect waves-light chip-default">建造者模式</span>
             </a>
@@ -873,14 +879,14 @@
             
             
             
-            <a href="/tags/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                <span class="chip center-align waves-effect waves-light chip-default">结构型模式</span>
+            <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                <span class="chip center-align waves-effect waves-light chip-default">抽象工厂模式</span>
             </a>
             
             
             
-            <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                <span class="chip center-align waves-effect waves-light chip-default">抽象工厂模式</span>
+            <a href="/tags/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+                <span class="chip center-align waves-effect waves-light chip-default">结构型模式</span>
             </a>
             
             
@@ -1059,6 +1065,27 @@
 
 
     <footer class="page-footer bg-color">
+
+    <!-- <link rel="stylesheet" href="/live2d/css/live2d.css" />
+    <div id="landlord">
+        <div class="message"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="hide-button">隐藏</div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var message_Path = '/live2d/'
+        var home_Path = 'https://qetuop91.github.io/'
+    </script>
+    <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="/live2d/js/message.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            loadlive2d("live2d", "/live2d/model/tia/model.json");
+            // loadlive2d("live2d", "/live2d/model/nn/nn.model3.json");
+        })
+    </script> -->
+
     
 
     <div class="container row center-align"
@@ -1414,6 +1441,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/assets/z16.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":60,"vOffset":-15},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>
