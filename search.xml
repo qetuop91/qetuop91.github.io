@@ -4,6 +4,182 @@
   
     
     <entry>
+      <title>抽象工厂模式</title>
+      <link href="/2024/04/09/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2024/04/09/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h1><blockquote><p>是围绕一个超级工厂创建其他工厂，在该模式中，接口是负责创建一个相关对象的工厂，不需要显示指定他们的类，每个生成的工厂都能按照工厂模式提供对象，提供了一种创建一系列相关或相互依赖对象的接口。</p><p><strong>解决了什么？</strong></p><p>主要解决接口选择的问题</p><p><strong>什么时候使用？</strong></p><p>系统的产品有多于一个的产品族，而系统只消费其中某一族的产品</p><p><strong>怎么解决？</strong></p><p>在一个产品族里面定义多个产品</p></blockquote><blockquote><p><strong>优点</strong></p><p>当一个产品族中的多个对象被设计成一起工作的时候，能保证客户端始终只使用同一个产品族中的对象</p><p><strong>缺点</strong></p><p>产品族扩展非常困难，要增加一个系列的某一产品，既要在抽象的Creator里加代码，又要在具体的类里面加代码</p></blockquote><blockquote><p><strong>使用场景</strong></p><p>生成不同操作系统的程序</p></blockquote><p><strong>代码</strong></p><p>创建一个Shape接口</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>创建一个Color接口</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Color</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">fill</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>创建继承Shape接口的子类</p><p>Square.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Square</span> <span class="keyword">implements</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Square&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Rectangle.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Rectangle</span> <span class="keyword">implements</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Rectangle&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Circle.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Circle</span> <span class="keyword">implements</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Circle&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>创建继承Color接口的子类</p><p>Red.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Red</span> <span class="keyword">implements</span> <span class="title class_">Color</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fill</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Red&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Blue.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Blue</span> <span class="keyword">implements</span> <span class="title class_">Color</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fill</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Blue&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Green.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Green</span> <span class="keyword">implements</span> <span class="title class_">Color</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fill</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Green&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>创建获取接口的抽象工厂</p><p>AbstractFactory.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">AbstractFactory</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> Color <span class="title function_">getColor</span><span class="params">(String color)</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> Shape <span class="title function_">getShape</span><span class="params">(String shape)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>创建获取抽象工厂的工厂</p><p>该工厂可以根据传入的参数选择创建不同的抽象工厂</p><p>FactoryProducer.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FactoryProducer</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> AbstractFactory <span class="title function_">getFactory</span><span class="params">(String choice)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (choice.equalsIgnoreCase(<span class="string">&quot;SHAPE&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ShapeFactory</span>();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(choice.equalsIgnoreCase(<span class="string">&quot;COLOR&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ColorFactory</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>测试代码</p><ol><li>通过传入shape&#x2F;circle给工厂获取对应的抽象工厂</li><li>获取到抽象工厂以后，传入不同的参数来获取具体想要拿到的实体类</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AbstractFactoryPatternDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//获取shape工厂</span></span><br><span class="line">        <span class="type">AbstractFactory</span> <span class="variable">shapeFactory</span> <span class="operator">=</span> FactoryProducer.getFactory(<span class="string">&quot;shape&quot;</span>);</span><br><span class="line">        <span class="comment">//使用shape工厂获取Circle对象</span></span><br><span class="line">        <span class="type">Shape</span> <span class="variable">circle</span> <span class="operator">=</span> shapeFactory.getShape(<span class="string">&quot;circle&quot;</span>);</span><br><span class="line">        circle.draw();</span><br><span class="line">        <span class="comment">//使用shape工厂获取Rectangle对象</span></span><br><span class="line">        <span class="type">Shape</span> <span class="variable">rectangle</span> <span class="operator">=</span> shapeFactory.getShape(<span class="string">&quot;rectangle&quot;</span>);</span><br><span class="line">        rectangle.draw();</span><br><span class="line">        <span class="comment">//使用shape工厂获取Square对象</span></span><br><span class="line">        <span class="type">Shape</span> <span class="variable">square</span> <span class="operator">=</span> shapeFactory.getShape(<span class="string">&quot;square&quot;</span>);</span><br><span class="line">        square.draw();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取color工厂</span></span><br><span class="line">        <span class="type">AbstractFactory</span> <span class="variable">colorFactory</span> <span class="operator">=</span> FactoryProducer.getFactory(<span class="string">&quot;color&quot;</span>);</span><br><span class="line">        <span class="comment">//使用color工厂获取Red对象</span></span><br><span class="line">        <span class="type">Color</span> <span class="variable">red</span> <span class="operator">=</span> colorFactory.getColor(<span class="string">&quot;red&quot;</span>);</span><br><span class="line">        red.fill();</span><br><span class="line">        <span class="comment">//使用color工厂获取Blue对象</span></span><br><span class="line">        <span class="type">Color</span> <span class="variable">blue</span> <span class="operator">=</span> colorFactory.getColor(<span class="string">&quot;blue&quot;</span>);</span><br><span class="line">        blue.fill();</span><br><span class="line">        <span class="comment">//使用color工厂获取Green对象</span></span><br><span class="line">        <span class="type">Color</span> <span class="variable">green</span> <span class="operator">=</span> colorFactory.getColor(<span class="string">&quot;green&quot;</span>);</span><br><span class="line">        green.fill();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>UML类图</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403161148392.png" alt="image-20240314091504807"> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 创建型模式 </tag>
+            
+            <tag> 抽象工厂模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>工厂模式</title>
+      <link href="/2024/04/09/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2024/04/09/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><blockquote><p>定义一个创建对象的接口,让其子类自己实现实例化哪一个工厂类.<strong>在这个设计模式中,创建对象的过程会被延迟到子类进行</strong></p><p><strong>解决了什么?</strong></p><p>解决接口选择的问题</p><p><strong>什么时候使用?</strong></p><p>要明确地计划在不同条件下创建不同实例的时候</p><p><strong>怎么解决?</strong></p><p>让子类去实现工厂接口,返回的也是一个抽象的产品</p></blockquote><blockquote><p><strong>优点</strong></p><ol><li>一个调用者想创建一个对象,只需要知道其名称即可</li><li>扩展性高,如果 要增加一个产品,只需要扩展一个工厂类就可以了</li><li>屏蔽产品的具体实现,调用者只需要关心产品给出的接口</li></ol><p><strong>缺点</strong></p><p>每次增加一个产品的时候都需要增加一个具体类和对象实现工厂,使得系统中类的个数成倍增加,在一定程度上增加了系统的复杂度,同时也增加了系统具体类的依赖</p></blockquote><blockquote><p><strong>使用场景</strong></p><p>日志记录器</p><p>数据库访问</p><p>设计一个链接服务器的框架(需要三个协议:POP3、IMAP、HTTP)</p></blockquote><blockquote><p>包含的几个核心:</p><ul><li>抽象产品</li><li>具体产品</li><li>抽象工厂</li><li>具体工厂</li></ul></blockquote><p><strong>代码</strong></p><p>创建一个接口</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Sharp</span> &#123;</span><br><span class="line"><span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>创建实现接口的子类</p><p>Square.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Square</span> <span class="keyword">implements</span> <span class="title class_">Sharp</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Square&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Circle.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Circle</span> <span class="keyword">implements</span> <span class="title class_">Sharp</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Circle&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Rectangle.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Rectangle</span> <span class="keyword">implements</span> <span class="title class_">Sharp</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this is Rectangle&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>创建包含这些子类的工厂类</p><p>ShapeFactory.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 工厂类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ShapeFactory</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> Sharp <span class="title function_">getSharp</span><span class="params">(String sharpType)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (sharpType == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sharpType.equalsIgnoreCase(<span class="string">&quot;CIRCLE&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Circle</span>();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (sharpType.equalsIgnoreCase(<span class="string">&quot;RECTANGLR&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Rectangle</span>();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (sharpType.equalsIgnoreCase(<span class="string">&quot;SQUARE&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Square</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>UML类图</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403161133152.png" alt="image-20240313222630308"> </p><blockquote><p><strong>Circle、Rectangle、Square实现Sharp接口,ShapeFactory去创建这三个子类的对象,SharpFactoryDemo使用ShapeFatory获取不同的对象</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 创建型模式 </tag>
+            
+            <tag> 工厂模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>行为型模式</title>
+      <link href="/2024/04/09/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2024/04/09/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h1><blockquote><p>这些模式关注对象之间的通信和交互,为了在解决对象之间的责任分配和算法的封装</p></blockquote><ul><li>责任链模式(Chain of Responsibility Pattern)</li><li>命令模式(Command Pattern)</li><li>解释器模式(Interpreter Pattern)</li><li>迭代器模式(Iterator Pattern)</li><li>中介者模式(Mediator Pattern)</li><li>备忘录模式(Memento Pattern)</li><li>观察者模式(Observer Pattern)</li><li>状态模式(State Pattern)</li><li>空对象模式(Null Object Pattern)</li><li>策略模式(Strategy Pattern)</li><li>模板模式(Template Pattern)</li><li>访问者模式(Visitor Pattern)</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 行为型模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>结构型模式</title>
+      <link href="/2024/04/09/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2024/04/09/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h1><blockquote><p>这些模式关注对象之间的组合和关系,为了在解决如何构建灵活且可复用的类和对象结构</p></blockquote><ul><li>适配器模式(Adapter Pattern)</li><li>桥接模式(Bridge Pattern)</li><li>过滤器模式(Filter、Criteria Pattern)</li><li>组合模式(Composite Pattern)</li><li>装饰器模式(Decorator Pattern)</li><li>外观模式(Favade Pattern)</li><li>享元模式(Flyweight Pattern)</li><li>代理模式(Proxy Pattern)</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 结构型模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>创建型模式</title>
+      <link href="/2024/04/09/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2024/04/09/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h1><blockquote><p> 在创建对象的同时隐藏创建逻辑的方式，而不使用new去直接实例化一个对象，使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</p></blockquote><ul><li>工厂模式(Factory Pattern)</li><li>抽象工厂模式(Abstract Pattern)</li><li>单例模式(Singleton Pattern)</li><li>建造者模式(Builder Pattern)</li><li>原型模式(Prototype Pattern)</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 设计模式 </tag>
+            
+            <tag> 创建型模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计模式</title>
+      <link href="/2024/04/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2024/04/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><blockquote><p>分成三大类：创建型模式、结构型模式、行为型模式。</p><p>单独讨论的另一类设计模式：J2EE设计模式</p></blockquote><p><strong>六大原则:</strong></p><ol><li><p>开闭原则（OCP）</p><ul><li>对外开放、对修改关闭（热插拔）</li></ul></li><li><p>里氏代换原则（LSP）</p></li><li><p>依赖倒转原则（DIP）</p><ul><li>针对接编程，依赖于抽象而不依赖于具体</li></ul></li><li><p>接口隔离原则（ISP）</p><ul><li>使用多个隔离的接口比使用单个接口好</li><li>降低耦合度</li></ul></li><li><p>迪米特法则（DP）</p><ul><li>一个实体类应该尽可能地减少与其他实体类之间发生相互作用</li></ul></li><li><p>合成复用原则（CRP）</p><ul><li>尽量使用合成&#x2F;聚合地方式，而不是使用继承</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux8.0 BASH</title>
       <link href="/2024/04/08/Linux8-0-BASH/"/>
       <url>/2024/04/08/Linux8-0-BASH/</url>
