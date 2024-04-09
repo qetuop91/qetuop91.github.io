@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="工厂模式, Feliks">
+    <meta name="keywords" content="建造者模式, Feliks">
     <meta name="description" content="设计模式学习笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>工厂模式 | Feliks</title>
+    <title>建造者模式 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -340,7 +340,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">工厂模式</h1>
+                    <h1 class="description center-align post-title">建造者模式</h1>
                 </div>
             </div>
         </div>
@@ -376,8 +376,8 @@
                                 <span class="chip bg-color">创建型模式</span>
                             </a>
                         
-                            <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">工厂模式</span>
+                            <a href="/tags/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">建造者模式</span>
                             </a>
                         
                     </div>
@@ -427,107 +427,287 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><blockquote>
-<p>定义一个创建对象的接口,让其子类自己实现实例化哪一个工厂类.<strong>在这个设计模式中,创建对象的过程会被延迟到子类进行</strong></p>
-<p><strong>解决了什么?</strong></p>
-<p>解决接口选择的问题</p>
-<p><strong>什么时候使用?</strong></p>
-<p>要明确地计划在不同条件下创建不同实例的时候</p>
-<p><strong>怎么解决?</strong></p>
-<p>让子类去实现工厂接口,返回的也是一个抽象的产品</p>
+                <h1 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h1><blockquote>
+<p>使用多个简单的对象一步一步构建成一个复杂的对象。将一个复杂的构建与其表示相分离，使得同样的构建过程可以创建不同的表示</p>
+</blockquote>
+<blockquote>
+<p><strong>解决了什么？</strong></p>
+<p>一个复杂对象的创建工作，通常由各个部分的子对象用一定的算法构成，由于需求的变化，这个复杂对象的各个部分经常面临着剧烈的变化，但是将他们组合在一起的算法相对稳定。</p>
+<p><strong>什么时候使用？</strong></p>
+<p>一些基本部件不会变，而其组合经常变化的时候</p>
+<p><strong>怎么实现？</strong></p>
+<p>将变和不变分离开</p>
 </blockquote>
 <blockquote>
 <p><strong>优点</strong></p>
-<ol>
-<li>一个调用者想创建一个对象,只需要知道其名称即可</li>
-<li>扩展性高,如果 要增加一个产品,只需要扩展一个工厂类就可以了</li>
-<li>屏蔽产品的具体实现,调用者只需要关心产品给出的接口</li>
-</ol>
+<ul>
+<li>分离构建过程和表示，使得构建过程更加灵活，可以构建不同的表示</li>
+<li>可以更好地控制和构建过程，隐藏具体构建细节</li>
+<li>代码复用性高，可以在不同的构建过程中重复使用相同的构建者</li>
+</ul>
+</blockquote>
+<blockquote>
 <p><strong>缺点</strong></p>
-<p>每次增加一个产品的时候都需要增加一个具体类和对象实现工厂,使得系统中类的个数成倍增加,在一定程度上增加了系统的复杂度,同时也增加了系统具体类的依赖</p>
+<ul>
+<li>如果产品的属性较少，建造者模式可能会导致代码冗余</li>
+<li>建造者模式增加了系统的类和对象数量</li>
+</ul>
 </blockquote>
 <blockquote>
 <p><strong>使用场景</strong></p>
-<p>日志记录器</p>
-<p>数据库访问</p>
-<p>设计一个链接服务器的框架(需要三个协议:POP3、IMAP、HTTP)</p>
+<ol>
+<li>需要生成的对象具有复杂的内部结构</li>
+<li>需要生成的对象内部属性本身互相依赖</li>
+</ol>
 </blockquote>
 <blockquote>
-<p>包含的几个核心:</p>
-<ul>
-<li>抽象产品</li>
-<li>具体产品</li>
-<li>抽象工厂</li>
-<li>具体工厂</li>
-</ul>
+<p><strong>Considerations</strong></p>
+<p>与工厂模式的区别是，建造者模式更加关注与零件装配的顺序</p>
 </blockquote>
 <p><strong>代码</strong></p>
-<p>创建一个接口</p>
-<pre class="language-java" data-language="java"><code class="language-java">public interface Sharp &#123;
-	void draw();
+<p>“基类”</p>
+<p>Item.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 一个Item需要由食品名、打包方式、价格构成
+public interface Item &#123;
+    public String name();
+    public Packing packing();
+    public float price();
 &#125;</code></pre>
 
 
 
-<p>创建实现接口的子类</p>
-<p>Square.java</p>
-<pre class="language-java" data-language="java"><code class="language-java">public class Square implements Sharp&#123;
+<p>Packing.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 打包方式会根据不同的食品进行区分，所以并不在这里进行实现，而是定义接口，等到具体情况再进行区分实现
+public interface Packing &#123;
+    public String pack();
+&#125;</code></pre>
+
+
+
+<p>Meal.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+&#x2F;&#x2F; 菜单类，需要有添加菜品、计算总价、展示价格单的功能
+public class Meal &#123;
+	private List&lt;Item&gt; items &#x3D; new ArrayList&lt;&gt;();
+  public void addItem(Item item) &#123;
+      items.add(item);
+  &#125;
+
+  public float getCost() &#123;
+      float cost &#x3D; 0.0f;
+      for (Item item : items) &#123;
+          cost +&#x3D; item.price();
+      &#125;
+      return cost;
+  &#125;
+
+  public void showItems() &#123;
+      for (Item item : items) &#123;
+          System.out.println(&quot;Item: &quot; + item.name());
+          System.out.println(&quot;Packing: &quot; + item.packing().pack());
+          System.out.println(&quot;Price: &quot; + item.price());
+      &#125;
+  &#125;
+
+&#125;
+</code></pre>
+
+
+
+<p>根据不同的打包方式实现Packing</p>
+<p>Bottle.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 食物打包方式（装冷饮用的Bottle）
+public class Bottle implements Packing&#123;
     @Override
-    public void draw() &#123;
-        System.out.println(&quot;this is Square&quot;);
+    public String pack() &#123;
+        return &quot;Bottle&quot;;
     &#125;
 &#125;</code></pre>
 
 
 
-<p>Circle.java</p>
-<pre class="language-java" data-language="java"><code class="language-java">public class Circle implements Sharp&#123;
+<p>Wrapper.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 食物的打包方式（装汉堡的包装纸）
+public class Wrapper implements Packing&#123;
     @Override
-    public void draw() &#123;
-        System.out.println(&quot;this is Circle&quot;);
+    public String pack() &#123;
+        return &quot;Wrapper&quot;;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 
 
 
-<p>Rectangle.java</p>
-<pre class="language-java" data-language="java"><code class="language-java">public class Rectangle implements Sharp&#123;
+<p>实现Item接口的子类（冷饮套餐和食物套餐）</p>
+<p>ColdDrink.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 冷饮套餐，需要有打包方式及价格
+public abstract class ColdDrink implements Item &#123;
     @Override
-    public void draw() &#123;
-        System.out.println(&quot;this is Rectangle&quot;);
+    public Packing packing() &#123;
+        return new Bottle();
     &#125;
-&#125;</code></pre>
+
+    @Override
+    public abstract float price();
+&#125;
+</code></pre>
 
 
 
-<p>创建包含这些子类的工厂类</p>
-<p>ShapeFactory.java</p>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;**
- * 工厂类
- *&#x2F;
-public class ShapeFactory &#123;
-    public Sharp getSharp(String sharpType) &#123;
-        if (sharpType &#x3D;&#x3D; null) &#123;
-            return null;
-        &#125;
-        if (sharpType.equalsIgnoreCase(&quot;CIRCLE&quot;)) &#123;
-            return new Circle();
-        &#125;else if (sharpType.equalsIgnoreCase(&quot;RECTANGLR&quot;)) &#123;
-            return new Rectangle();
-        &#125;else if (sharpType.equalsIgnoreCase(&quot;SQUARE&quot;)) &#123;
-            return new Square();
-        &#125;
-        return null;
+<p>Burger.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 汉堡套餐（需要有打包方式和价格）
+public abstract class Burger implements Item &#123;
+    @Override
+    public Packing packing() &#123;
+    	return new Wrapper();
     &#125;
-&#125;</code></pre>
+
+    @Override
+    public abstract float price();
+&#125;
+</code></pre>
 
 
 
-<p><strong>UML类图</strong></p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403161133152.png" alt="image-20240313222630308"> </p>
-<blockquote>
-<p><strong>Circle、Rectangle、Square实现Sharp接口,ShapeFactory去创建这三个子类的对象,SharpFactoryDemo使用ShapeFatory获取不同的对象</strong></p>
-</blockquote>
+<p>具体的食物类</p>
+<p>VegBurger.java（继承Burger类）</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 蔬菜汉堡，汉堡下的分类
+public class VegBurger  extends Burger&#123;
+    @Override
+    public String name() &#123;
+    	return &quot;Veg Burger&quot;;
+    &#125;
+
+    @Override
+    public float price() &#123;
+    	return 25.0f;
+    &#125;
+&#125;
+</code></pre>
+
+
+
+<p>ChickenBurger.java（继承Burger类）</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 鸡肉汉堡，汉堡下的分类
+public class ChickenBurger extends Burger&#123;
+    @Override
+    public String name() &#123;
+    	return &quot;Chicken Burger&quot;;
+    &#125;
+
+    @Override
+    public float price() &#123;
+    	return 50.5f;
+    &#125;
+&#125;
+</code></pre>
+
+
+
+<p>Coke.java（继承ColdDrink类）</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 可口可乐，冷饮下的分类
+public class Coke extends ColdDrink&#123;
+    @Override
+    public String name() &#123;
+    	return &quot;Coke&quot;;
+    &#125;
+
+    @Override
+    public float price() &#123;
+    	return 30.0f;
+    &#125;
+&#125;
+</code></pre>
+
+
+
+<p>Pepsi.java（继承ColdDrink类）</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 百事可乐，冷饮下的分类
+public class Pepsi extends ColdDrink&#123;
+    @Override
+    public String name() &#123;
+    	return &quot;Pepsi&quot;;
+    &#125;
+
+    @Override
+    public float price() &#123;
+    	return 30.0f;
+    &#125;
+&#125;
+</code></pre>
+
+
+
+<p>构建套餐</p>
+<p>MealBuilder.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 构建菜单类，用户并不实际使用Meal类，而是使用MealBuilder类
+public class MealBuilder &#123;
+    &#x2F;&#x2F; 素菜套餐
+    public Meal prepareVegMeal() &#123;
+        Meal meal &#x3D; new Meal();
+        meal.addItem(new VegBurger());
+        meal.addItem(new Coke());
+        return meal;
+    &#125;
+
+    &#x2F;&#x2F; 非素套餐
+    public Meal prepareNonVegMeal() &#123;
+        Meal meal &#x3D; new Meal();
+        meal.addItem(new ChickenBurger());
+        meal.addItem(new Pepsi());
+        return meal;
+    &#125;
+
+    public Meal prepareAll() &#123;
+        Meal meal &#x3D; new Meal();
+        meal.addItem(new VegBurger());
+        meal.addItem(new ChickenBurger());
+        meal.addItem(new Coke());
+        meal.addItem(new Pepsi());
+        return meal;
+    &#125;
+&#125;
+</code></pre>
+
+
+
+<p>测试代码</p>
+<p>BuilderPatternDemo.java</p>
+<pre class="language-java" data-language="java"><code class="language-java">public class BuilderPatternDemo &#123;
+    public static void main(String[] args) &#123;
+        &#x2F;&#x2F; 调用已经创建好的菜单，而不是自己去创建菜单
+        MealBuilder mealBuilder &#x3D; new MealBuilder();
+        &#x2F;&#x2F; 从已有菜单中获取素菜套餐
+        Meal vegMeal &#x3D; mealBuilder.prepareVegMeal();
+        System.out.println(&quot;Veg Meal&quot;);
+        &#x2F;&#x2F; Meal类里写了展示菜单的方法
+        vegMeal.showItems();
+        System.out.println(&quot;Total Cost: &quot; + vegMeal.getCost() + &quot;\n&quot;);
+
+        &#x2F;&#x2F; 从已有菜单中获取非素套餐
+        Meal nonVegMeal &#x3D; mealBuilder.prepareNonVegMeal();
+        System.out.println(&quot;Non Veg Meal&quot;);
+        &#x2F;&#x2F; Meal类里写了展示菜单的方法
+        nonVegMeal.showItems();
+        System.out.println(&quot;Total Cost: &quot; + nonVegMeal.getCost() + &quot;\n&quot;);
+
+        &#x2F;&#x2F; 获取全部套餐
+        Meal allMeal &#x3D; mealBuilder.prepareAll();
+        System.out.println(&quot;All Meal&quot;);
+        allMeal.showItems();
+        System.out.println(&quot;Total Cost: &quot; + allMeal.getCost());
+    &#125;
+&#125;
+</code></pre>
+
+
+
+<p>运行结果</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403161130758.png" alt="image-20240316113012698"> </p>
+<p>UML类图</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403161111423.png" alt="image-20240316111146323"> </p>
 
                 
             </div>
@@ -554,7 +734,7 @@ public class ShapeFactory &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/09/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">https://qetuop91.github.io/2024/04/09/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</a>
+                    <a href="https://qetuop91.github.io/2024/04/09/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">https://qetuop91.github.io/2024/04/09/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -604,8 +784,8 @@ public class ShapeFactory &#123;
                                     <span class="chip bg-color">创建型模式</span>
                                 </a>
                             
-                                <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">工厂模式</span>
+                                <a href="/tags/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">建造者模式</span>
                                 </a>
                             
                         </div>
@@ -951,16 +1131,17 @@ public class ShapeFactory &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/09/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+                <a href="/2024/04/09/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/16.jpg" class="responsive-img" alt="抽象工厂模式">
+                        <img src="/medias/myImages/16.jpg" class="responsive-img" alt="建造者模式">
                         
-                        <span class="card-title">抽象工厂模式</span>
+                        <span class="card-title">建造者模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -970,9 +1151,9 @@ public class ShapeFactory &#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -985,6 +1166,7 @@ public class ShapeFactory &#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1000,8 +1182,8 @@ public class ShapeFactory &#123;
                         <span class="chip bg-color">创建型模式</span>
                     </a>
                     
-                    <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">抽象工厂模式</span>
+                    <a href="/tags/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">建造者模式</span>
                     </a>
                     
                 </div>
@@ -1015,12 +1197,12 @@ public class ShapeFactory &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/09/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+                <a href="/2024/04/09/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/18.jpg" class="responsive-img" alt="行为型模式">
+                        <img src="/medias/myImages/16.jpg" class="responsive-img" alt="单例模式">
                         
-                        <span class="card-title">行为型模式</span>
+                        <span class="card-title">单例模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1056,8 +1238,12 @@ public class ShapeFactory &#123;
                         <span class="chip bg-color">设计模式</span>
                     </a>
                     
-                    <a href="/tags/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">行为型模式</span>
+                    <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">创建型模式</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">单例模式</span>
                     </a>
                     
                 </div>
