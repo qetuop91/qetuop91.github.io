@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-11T15:52:43.244Z</updated>
+  <updated>2024-04-11T16:19:43.110Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -17,11 +17,211 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>1.0-集合框架概述</title>
-    <link href="https://qetuop91.github.io/2024/04/11/1-0-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/"/>
-    <id>https://qetuop91.github.io/2024/04/11/1-0-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/</id>
+    <title>Redis7-9.0-集群（cluster）</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-9.0-%E9%9B%86%E7%BE%A4%EF%BC%88cluster%EF%BC%89/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-9.0-%E9%9B%86%E7%BE%A4%EF%BC%88cluster%EF%BC%89/</id>
+    <published>2024-04-11T16:12:43.000Z</published>
+    <updated>2024-04-11T16:19:43.110Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis集群（cluster）&quot;&gt;&lt;a href=&quot;#Redis集群（cluster）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-8.0-哨兵（sentinel）</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-8.0-%E5%93%A8%E5%85%B5%EF%BC%88sentinel%EF%BC%89/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-8.0-%E5%93%A8%E5%85%B5%EF%BC%88sentinel%EF%BC%89/</id>
+    <published>2024-04-11T16:12:09.000Z</published>
+    <updated>2024-04-11T16:19:40.027Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis哨兵（sentinel）&quot;&gt;&lt;a href=&quot;#Redis哨兵（sentinel）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-7.0-复制（replica）</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-7.0-%E5%A4%8D%E5%88%B6%EF%BC%88replica%EF%BC%89/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-7.0-%E5%A4%8D%E5%88%B6%EF%BC%88replica%EF%BC%89/</id>
+    <published>2024-04-11T16:11:11.000Z</published>
+    <updated>2024-04-11T16:19:37.083Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis复制（replica）&quot;&gt;&lt;a href=&quot;#Redis复制（replica）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-6.0-发布订阅</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-6.0-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-6.0-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</id>
+    <published>2024-04-11T16:10:54.000Z</published>
+    <updated>2024-04-11T16:19:34.033Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis发布订阅&quot;&gt;&lt;a href=&quot;#Redis发布订阅&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-5.0-管道</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-5.0-%E7%AE%A1%E9%81%93/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-5.0-%E7%AE%A1%E9%81%93/</id>
+    <published>2024-04-11T16:10:37.000Z</published>
+    <updated>2024-04-11T16:14:34.066Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis管道&quot;&gt;&lt;a href=&quot;#Redis管道&quot; class=&quot;headerlink&quot; title=&quot;Redis管道&quot;&gt;&lt;/a&gt;Redis管道&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-4.0-事务</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-4.0-%E4%BA%8B%E5%8A%A1/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-4.0-%E4%BA%8B%E5%8A%A1/</id>
+    <published>2024-04-11T16:10:17.000Z</published>
+    <updated>2024-04-11T16:14:02.218Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis事务&quot;&gt;&lt;a href=&quot;#Redis事务&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-3.0-持久化</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-3.0-%E6%8C%81%E4%B9%85%E5%8C%96/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-3.0-%E6%8C%81%E4%B9%85%E5%8C%96/</id>
+    <published>2024-04-11T16:08:50.000Z</published>
+    <updated>2024-04-11T16:09:48.205Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis持久化&quot;&gt;&lt;a href=&quot;#Redis持久化&quot; class=&quot;headerlink&quot; title=&quot;Redis持久化&quot;&gt;&lt;/a&gt;Redis持久化&lt;/h1&gt;&lt;p&gt;官网：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis7-2.0-十大数据类型</title>
+    <link href="https://qetuop91.github.io/2024/04/12/Redis7-2.0-%E5%8D%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://qetuop91.github.io/2024/04/12/Redis7-2.0-%E5%8D%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2024-04-11T16:04:56.000Z</published>
+    <updated>2024-04-11T16:08:11.242Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Redis10大数据类型&quot;&gt;&lt;a href=&quot;#Redis10大数据类型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集合框架-1.0-概述</title>
+    <link href="https://qetuop91.github.io/2024/04/11/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-1.0-%E6%A6%82%E8%BF%B0/"/>
+    <id>https://qetuop91.github.io/2024/04/11/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-1.0-%E6%A6%82%E8%BF%B0/</id>
     <published>2024-04-11T15:37:06.000Z</published>
-    <updated>2024-04-11T15:52:43.244Z</updated>
+    <updated>2024-04-11T16:20:13.084Z</updated>
     
     
       
@@ -39,16 +239,16 @@
     
     <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
     
-    <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
-    
     <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
     
   </entry>
   
   <entry>
     <title>Spring杂记</title>
-    <link href="https://qetuop91.github.io/2024/04/11/Spring%E6%9D%82%E8%AE%B01-0/"/>
-    <id>https://qetuop91.github.io/2024/04/11/Spring%E6%9D%82%E8%AE%B01-0/</id>
+    <link href="https://qetuop91.github.io/2024/04/11/Spring%E6%9D%82%E8%AE%B0-1.0/"/>
+    <id>https://qetuop91.github.io/2024/04/11/Spring%E6%9D%82%E8%AE%B0-1.0/</id>
     <published>2024-04-11T15:18:47.000Z</published>
     <updated>2024-04-11T15:28:31.444Z</updated>
     
@@ -68,9 +268,9 @@
     
     <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
     
-    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="Spring" scheme="https://qetuop91.github.io/tags/Spring/"/>
+    
+    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -126,9 +326,9 @@
     <category term="RocketMQ" scheme="https://qetuop91.github.io/categories/RocketMQ/"/>
     
     
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
     <category term="RocketMQ" scheme="https://qetuop91.github.io/tags/RocketMQ/"/>
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
     
   </entry>
   
@@ -362,213 +562,6 @@
     <category term="设计模式" scheme="https://qetuop91.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     <category term="结构型模式" scheme="https://qetuop91.github.io/tags/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>创建型模式</title>
-    <link href="https://qetuop91.github.io/2024/04/09/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://qetuop91.github.io/2024/04/09/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/</id>
-    <published>2024-04-09T00:31:11.000Z</published>
-    <updated>2024-04-09T04:53:49.960Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;创建型模式&quot;&gt;&lt;a href=&quot;#创建型模式&quot; class=&quot;headerlink&quot; title=&quot;创建型模式&quot;&gt;&lt;/a&gt;创建型模式&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="设计模式" scheme="https://qetuop91.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="创建型模式" scheme="https://qetuop91.github.io/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式</title>
-    <link href="https://qetuop91.github.io/2024/04/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://qetuop91.github.io/2024/04/09/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
-    <published>2024-04-09T00:21:57.000Z</published>
-    <updated>2024-04-09T04:53:54.263Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="设计模式" scheme="https://qetuop91.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux8.0 BASH</title>
-    <link href="https://qetuop91.github.io/2024/04/08/Linux8-0-BASH/"/>
-    <id>https://qetuop91.github.io/2024/04/08/Linux8-0-BASH/</id>
-    <published>2024-04-08T02:25:36.000Z</published>
-    <updated>2024-04-08T02:35:46.815Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;BASH&quot;&gt;&lt;a href=&quot;#BASH&quot; class=&quot;headerlink&quot; title=&quot;BASH&quot;&gt;&lt;/a&gt;BASH&lt;/h1&gt;&lt;h2 id=&quot;系统的合法shell-与-etc-shells功能&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux7.0 vim程序编辑器</title>
-    <link href="https://qetuop91.github.io/2024/04/08/Linux7-0-vim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    <id>https://qetuop91.github.io/2024/04/08/Linux7-0-vim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/</id>
-    <published>2024-04-08T02:25:23.000Z</published>
-    <updated>2024-04-08T02:34:54.559Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim程序编辑器&quot;&gt;&lt;a href=&quot;#vim程序编辑器&quot; class=&quot;headerlink&quot; title=&quot;vim程序编辑器&quot;&gt;&lt;/a&gt;vim程序编辑器&lt;/h1&gt;&lt;h2 id=&quot;vi与vim&quot;&gt;&lt;a href=&quot;#vi与vim&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux6.0 文件与文件系统的压缩</title>
-    <link href="https://qetuop91.github.io/2024/04/08/Linux6-0-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8E%8B%E7%BC%A9/"/>
-    <id>https://qetuop91.github.io/2024/04/08/Linux6-0-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8E%8B%E7%BC%A9/</id>
-    <published>2024-04-08T02:25:10.000Z</published>
-    <updated>2024-04-08T02:34:32.851Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;文件与文件系统的压缩&quot;&gt;&lt;a href=&quot;#文件与文件系统的压缩&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux5.0 磁盘与文件系统管理</title>
-    <link href="https://qetuop91.github.io/2024/04/08/Linux5-0-%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/"/>
-    <id>https://qetuop91.github.io/2024/04/08/Linux5-0-%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</id>
-    <published>2024-04-08T02:24:54.000Z</published>
-    <updated>2024-04-08T02:34:07.323Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Linux磁盘与文件系统管理&quot;&gt;&lt;a href=&quot;#Linux磁盘与文件系统管理&quot; class=&quot;headerlink&quot; title=&quot;Linux磁盘与文件系统管理&quot;&gt;&lt;/a&gt;Linux磁盘与文件系统管理&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux4.0 文件与目录管理</title>
-    <link href="https://qetuop91.github.io/2024/04/08/Linux4-0-%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/"/>
-    <id>https://qetuop91.github.io/2024/04/08/Linux4-0-%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/</id>
-    <published>2024-04-08T02:24:36.000Z</published>
-    <updated>2024-04-08T02:33:26.841Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Linux文件与目录管理&quot;&gt;&lt;a href=&quot;#Linux文件与目录管理&quot; class=&quot;headerlink&quot; title=&quot;Linux文件与目录管理&quot;&gt;&lt;/a&gt;Linux文件与目录管理&lt;/h1&gt;&lt;h2 id=&quot;目录与路径&quot;&gt;&lt;a href=&quot;#目录与路径&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux3.0 目录配置</title>
-    <link href="https://qetuop91.github.io/2024/04/08/Linux3-0-%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE/"/>
-    <id>https://qetuop91.github.io/2024/04/08/Linux3-0-%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE/</id>
-    <published>2024-04-08T02:24:19.000Z</published>
-    <updated>2024-04-08T02:32:07.238Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Linux目录配置&quot;&gt;&lt;a href=&quot;#Linux目录配置&quot; class=&quot;headerlink&quot; title=&quot;Linux目录配置&quot;&gt;&lt;/a&gt;Linux目录配置&lt;/h1&gt;&lt;h3 id=&quot;Linux目录配置的依据——FHS&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
     
   </entry>
   
