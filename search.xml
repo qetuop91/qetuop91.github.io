@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Spring杂记</title>
+      <link href="/2024/04/11/Spring%E6%9D%82%E8%AE%B01-0/"/>
+      <url>/2024/04/11/Spring%E6%9D%82%E8%AE%B01-0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="如何概述SpringFramework"><a href="#如何概述SpringFramework" class="headerlink" title="如何概述SpringFramework"></a>如何概述SpringFramework</h1><p>SpringFramework是一个开源的、松耦合的、分层的、可配置的一站式企业级Java开发框架，它的核心是IOC与AOP，它可以更容易的构建出企业级Java应用，并且它可以根据应用开发的组件需要，整合对应的技术</p><ul><li>加入松耦合的概念是为了描述IOC和AOP</li><li>加入可配置的概念是为了给SpringBoot垫底</li></ul><h1 id="为什么使用SpringFramework"><a href="#为什么使用SpringFramework" class="headerlink" title="为什么使用SpringFramework"></a>为什么使用SpringFramework</h1><ul><li>IOC：组件之间的解耦</li><li>AOP：切面编程可以将应用业务做统一或特定的功能增强，能实现应用业务与增强业务的解耦</li><li>容器与事件：管理应用中使用的组件Bean、托管Bean的生命周期、事件与监听器的驱动机制</li><li>Web、事务控制、测试、与其他技术的整合</li></ul><h1 id="依赖查找与依赖注入的对比"><a href="#依赖查找与依赖注入的对比" class="headerlink" title="依赖查找与依赖注入的对比"></a>依赖查找与依赖注入的对比</h1><ul><li>目标作用不同：<ul><li>依赖注入的作用目标通常是类成员</li><li>依赖查找的作用目标可以是方法体内，也可以是方法体外</li></ul></li><li>实现方式不同：<ul><li>依赖注入通常接著一个上下文被动的接收</li><li>以来查找通常主动使用上下文搜索</li></ul></li></ul><h1 id="BeanFactory与ApplicationContext的对比"><a href="#BeanFactory与ApplicationContext的对比" class="headerlink" title="BeanFactory与ApplicationContext的对比"></a>BeanFactory与ApplicationContext的对比</h1><p><code>BeanFactory</code>接口提供了一个<strong>抽象的配置和对象的管理机制</strong>，<code>ApplicationContext</code>是<code>BeanFactory</code>的子接口，它简化了与AOP的整合、消息机制、事件机制，以及与Web环境的扩展（<code>WebApplicationContext</code>等），<code>BeanFactory</code>是没有这些扩展的</p><p><code>ApplicationContext</code>主要扩展了一下功能：</p><ul><li>AOP的支持（<code>AnnotationAwareAspectJAutoProxyCreator</code>作用于Bean的初始化之后）</li><li>配置元信息（<code>BeanDefinition</code>、<code>Environment</code>、注解等）</li><li>资源管理（<code>Resource</code>抽象）</li><li>事件驱动机制（<code>ApplicationEvent</code>、<code>AppliactionListener</code>）</li><li>消息与国际化（<code>LocaleResolver</code>）</li><li><code>Environment</code>抽象（SpringFramework 3.1 以后）</li></ul><h1 id="Autowired注入的原理逻辑"><a href="#Autowired注入的原理逻辑" class="headerlink" title="@Autowired注入的原理逻辑"></a>@Autowired注入的原理逻辑</h1><p>先拿属性对应的类型，去IOC容器中找Bean，如果找到了一个，直接返回；如果找到多个类型一致的Bean，把属性名拿过去，跟这些Bean的id逐个对比，如果有一个相同的直接返回，如果没有任何相同的id与要注入的属性名相同，则会抛出<code>NoUniqueBeanDefinitionException</code>异常</p><h1 id="依赖注入的注入方式"><a href="#依赖注入的注入方式" class="headerlink" title="依赖注入的注入方式"></a>依赖注入的注入方式</h1><table><thead><tr><th>注入方式</th><th>被注入成员是否可变</th><th>是否依赖IOC框架的API</th><th>使用场景</th></tr></thead><tbody><tr><td>构造器注入</td><td>不可变</td><td>否（xml、编程式注入不依赖）</td><td>不可变的固定注入</td></tr><tr><td>参数注入</td><td>不可变</td><td>否（高版本中注解配置类中的<code>@Bean</code>方法参数注入可不标注注解）</td><td>注解配置类中<code>@Bean</code>方法注册bean</td></tr><tr><td>属性注入</td><td>不可变</td><td>是（只能通过标注注解来侵入式注入）</td><td>通常用于不可变的固定注入</td></tr><tr><td>setter注入</td><td>可变</td><td>否（xml、编程式注入不依赖）</td><td>可选属性的注入</td></tr></tbody></table><h1 id="自动注入的注解对比"><a href="#自动注入的注解对比" class="headerlink" title="自动注入的注解对比"></a>自动注入的注解对比</h1><table><thead><tr><th>注解</th><th>注入方式</th><th>是否支持@Primary</th><th>来源</th><th>Bean不存在时处理</th></tr></thead><tbody><tr><td>@Autowired</td><td>根据类型注入</td><td>是</td><td>SpringFramework原生注解</td><td>可指定required=false来避免注入失败</td></tr><tr><td>@Resource</td><td>根据名称注入</td><td>是</td><td>JSR250规范</td><td>容器中不存在指定Bean会抛出异常</td></tr><tr><td>@Inject</td><td>根据类型注入</td><td>是</td><td>JSR330规范（需要导入jar包）</td><td>容器中不存在指定Bean会抛出异常</td></tr></tbody></table><p><code>@Qualifier</code>：如果被标注的成员/方法在根据类型注入时发现有多个相同类型的Bean，则会根据该注解声明的name寻找特定的bean</p><p><code>@Primary</code>：如果有多个相同类型的Bean同时注册到IOC容器中，使用“根据类型注入”的注解时会注入标注<code>@Primary</code>注解的Bean</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Spring </tag>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>原型模式</title>
       <link href="/2024/04/11/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
       <url>/2024/04/11/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
