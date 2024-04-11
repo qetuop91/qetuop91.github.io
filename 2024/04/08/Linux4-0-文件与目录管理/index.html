@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -491,7 +493,7 @@
 <li><p>pwd：显示当前目录</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211530834.png" alt="image-20230921153004807"> </p>
 <p>-P可以获得正确的目录路径</p>
-<p>&#x2F;var&#x2F;mail是&#x2F;var&#x2F;spool&#x2F;mail的链接文件</p>
+<p>/var/mail是/var/spool/mail的链接文件</p>
 </li>
 <li><p>mkdir：建立一个新目录</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211535605.png" alt="image-20230921153509581"> </p>
@@ -510,8 +512,8 @@
 </li>
 </ul>
 <h3 id="关于执行文件路径的变量：-PATH"><a href="#关于执行文件路径的变量：-PATH" class="headerlink" title="关于执行文件路径的变量：$PATH"></a>关于执行文件路径的变量：$PATH</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211545003.png" alt="image-20230921154509981"> </p>
-<p>为什么可以在任何地方执行&#x2F;bin&#x2F;ls命令？</p>
-<p>因为无论是root还是用户自身账号都有&#x2F;bin或&#x2F;usr&#x2F;bin这个目录在PATH变量内。&#x2F;bin在CentOS7中就是链接的&#x2F;usr&#x2F;bin</p>
+<p>为什么可以在任何地方执行/bin/ls命令？</p>
+<p>因为无论是root还是用户自身账号都有/bin或/usr/bin这个目录在PATH变量内。/bin在CentOS7中就是链接的/usr/bin</p>
 <h2 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h2><h3 id="文件与目录的查看：ls"><a href="#文件与目录的查看：ls" class="headerlink" title="文件与目录的查看：ls"></a>文件与目录的查看：ls</h3><p>当我们执行ls命令时，默认显示的只有：非隐藏的文件名、以文件名进行排序及文件名代表的颜色显示而已</p>
 <ul>
 <li>-a：全部文件，连同隐藏文件（开头为.的文件）一起列出来</li>
@@ -521,11 +523,11 @@
 <h3 id="复制、删除与移动：cp、rm、mv"><a href="#复制、删除与移动：cp、rm、mv" class="headerlink" title="复制、删除与移动：cp、rm、mv"></a>复制、删除与移动：cp、rm、mv</h3><ul>
 <li><p>cp（复制文件）</p>
 <ul>
-<li><p>-a：相当于-dr –preserver&#x3D;all的意思</p>
+<li><p>-a：相当于-dr –preserver=all的意思</p>
 <ul>
 <li><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211611744.png" alt="image-20230921161100718"> </p>
 </li>
-<li><p>直接复制不加任何选项的话，文件的某些属性&#x2F;权限会被改变</p>
+<li><p>直接复制不加任何选项的话，文件的某些属性/权限会被改变</p>
 </li>
 <li><p>如果想要将文件的所有特性一起复制过来就要加-a</p>
 </li>
@@ -535,7 +537,7 @@
 <ul>
 <li><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211604759.png" alt="image-20230921160451735"> </p>
 </li>
-<li><p>用root身份将home目录下的.bashrc复制到&#x2F;tmp下，并更名为bashrc</p>
+<li><p>用root身份将home目录下的.bashrc复制到/tmp下，并更名为bashrc</p>
 </li>
 <li><p>由于第二次加上了-i选项，所以覆盖前会询问是否覆盖</p>
 </li>
@@ -548,7 +550,7 @@
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211624437.png" alt="image-20230921162455415"> </li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211625042.png" alt="image-20230921162544018"> </li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211626642.png" alt="image-20230921162607621"> </li>
-<li>复制&#x2F;etc&#x2F;这个目录下的所有内容到&#x2F;tmp下面，-r选项是可以复制目录，但是文件和目录的权限可能会被改变</li>
+<li>复制/etc/这个目录下的所有内容到/tmp下面，-r选项是可以复制目录，但是文件和目录的权限可能会被改变</li>
 </ul>
 </li>
 </ul>
@@ -559,7 +561,7 @@
 <li>-i：在删除前会询问使用者是否操作<ul>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211639622.png" alt="image-20230921163946580"> </li>
 <li>可以在文件名后面加上通配符*，就可以删掉以文件名开头的所有文件</li>
-<li>将上面cp例子中建立的&#x2F;tmp&#x2F;etc这个目录删掉</li>
+<li>将上面cp例子中建立的/tmp/etc这个目录删掉</li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211644272.png" alt="image-20230921164407249"> </li>
 <li>删除一个带有-开头的文件</li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211646794.png" alt="image-20230921164601770"></li>
@@ -575,7 +577,7 @@
 <li>-u：目标文件已经存在时，且source比较新，才会更新</li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211649311.png" alt="image-20230921164944291"> 将某个文件移动到某个目录</li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211650159.png" alt="image-20230921165046137"> 对目录重命名</li>
-<li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211651646.png" alt="image-20230921165144627"> 建立两个文件，再全部移动&#x2F;tmp&#x2F;mvtest2中</li>
+<li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309211651646.png" alt="image-20230921165144627"> 建立两个文件，再全部移动/tmp/mvtest2中</li>
 <li><strong>如果有多个源文件或目录，则最后一个目标文件一定是目录</strong></li>
 </ul>
 </li>
@@ -595,7 +597,7 @@
 <li>tail：只看后面几行</li>
 <li>od：以二进制的方式读取文件内容</li>
 </ul>
-<h3 id="直接查看文件内容"><a href="#直接查看文件内容" class="headerlink" title="直接查看文件内容"></a>直接查看文件内容</h3><p>直接查看文件内容可以用cat&#x2F;tac&#x2F;nl这几个命令</p>
+<h3 id="直接查看文件内容"><a href="#直接查看文件内容" class="headerlink" title="直接查看文件内容"></a>直接查看文件内容</h3><p>直接查看文件内容可以用cat/tac/nl这几个命令</p>
 <h4 id="cat-concatenate"><a href="#cat-concatenate" class="headerlink" title="cat(concatenate)"></a>cat(concatenate)</h4><ul>
 <li>-A：相当于-vET的整合选项，可列出一些特殊字符而不是空白而已</li>
 <li>-b：列出行号，仅针对非空白行做行号显示，空白行不标行号</li>
@@ -604,13 +606,13 @@
 <li>-T：将【tab】按键以^I（大写i）显示出来</li>
 <li>-v：列出一些看不出来的特殊字符</li>
 </ul>
-<p><strong>查看&#x2F;etc&#x2F;issue这个文件的内容</strong></p>
+<p><strong>查看/etc/issue这个文件的内容</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241011660.png" alt="image-20230924101120625"> </p>
 <p><strong>加上打印行号</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241012420.png" alt="image-20230924101253397"> </p>
 <p><strong>不显示空白行的行号</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241020912.png" alt="image-20230924102015892"> </p>
-<p><strong>将&#x2F;etc&#x2F;man_db.conf的内容完整的显示出来（包含特殊字符）</strong></p>
+<p><strong>将/etc/man_db.conf的内容完整的显示出来（包含特殊字符）</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241014300.png" alt="image-20230924101453264"> </p>
 <h4 id="tac（反向列示）"><a href="#tac（反向列示）" class="headerlink" title="tac（反向列示）"></a>tac（反向列示）</h4><p>最后一行到第一行反向在屏幕上显示出来</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241022786.png" alt="image-20230924102204762"> </p>
@@ -628,7 +630,7 @@
 </li>
 <li>-w：行号栏位的占用的字符数</li>
 </ul>
-<p><strong>用nl列出&#x2F;etc&#x2F;issue的内容</strong></p>
+<p><strong>用nl列出/etc/issue的内容</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241031439.png" alt="image-20230924103123413"> </p>
 <p><strong>加上行号，包括空白行</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241033388.png" alt="image-20230924103309361"> </p>
@@ -640,7 +642,7 @@
 <ul>
 <li>空格键（space）：代表向下翻一页</li>
 <li>Enter：代表向下翻一行</li>
-<li>&#x2F;字符串：代表在这个显示的内容当中，向下查找字符串这个关键词</li>
+<li>/字符串：代表在这个显示的内容当中，向下查找字符串这个关键词</li>
 <li>:f：立刻显示出文件名以及目前显示的行数</li>
 <li>q：代表立刻离开more，不再显示该文件的内容</li>
 <li>b或【ctrl】+b：代表往回翻页，只对文件有用，对管道无用</li>
@@ -650,10 +652,10 @@
 <li>空格键：：向下翻动一页</li>
 <li>【pagedown】：向下翻动一页</li>
 <li>【pageup】：向上翻动一页</li>
-<li>&#x2F;字符串：向下查找字符串的功能</li>
+<li>/字符串：向下查找字符串的功能</li>
 <li>?字符串：向上查找字符串的功能</li>
-<li>n：重复前一个查找（与&#x2F;或?有关）</li>
-<li>N：反向的重复前一个查找（与&#x2F;或?有关）</li>
+<li>n：重复前一个查找（与/或?有关）</li>
+<li>N：反向的重复前一个查找（与/或?有关）</li>
 <li>g：前进到这个数据的第一行</li>
 <li>G：前进到这个数据的最后一行</li>
 <li>q：离开less这个程序</li>
@@ -671,10 +673,10 @@
 <li><p>-f：表示持续刷新显示后面所接文件中的内容，要等到按下【ctrl】+ c才会结束</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241536782.png" alt="image-20230924142715502"> </p>
 </li>
-<li><p>显示&#x2F;etc&#x2F;man_db.conf的第11行到20行？</p>
+<li><p>显示/etc/man_db.conf的第11行到20行？</p>
 <p><code>head -n 20 /etc/man_db.conf | tail -n 10</code>：先取前20行，再去后10行</p>
 </li>
-<li><p>显示&#x2F;etc&#x2F;man_db.conf的第11行到20行且列出正确的行号？</p>
+<li><p>显示/etc/man_db.conf的第11行到20行且列出正确的行号？</p>
 <p><code>cat -n /etc/man_db.conf | head -n 20 | tail -n 10</code></p>
 </li>
 </ul>
@@ -690,9 +692,9 @@
 </ul>
 </li>
 </ul>
-<p>将&#x2F;usr&#x2F;bin&#x2F;passwd的内容使用ASCII方式来显示：</p>
+<p>将/usr/bin/passwd的内容使用ASCII方式来显示：</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241536484.png" alt="image-20230924144825684"> </p>
-<p>将&#x2F;etc&#x2F;issue这个文件的内容以八进制列出存储值与ASCII的对照表（最左边一列是以八进制来表示Bytes数，第二栏0000020代表开头是第16个byte(2x8)的内容的意思）</p>
+<p>将/etc/issue这个文件的内容以八进制列出存储值与ASCII的对照表（最左边一列是以八进制来表示Bytes数，第二栏0000020代表开头是第16个byte(2x8)的内容的意思）</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241537194.png" alt="image-20230924145841111"> </p>
 <p>如果想立刻找到password这几个字的ASCII对照，该如何通过od命令来判断？</p>
 <p><code>echo password | od -t oCc</code></p>
@@ -711,7 +713,7 @@
 </li>
 <li><p>-c：仅修改文件的时间，若该文件不存在则不建立新文件</p>
 </li>
-<li><p>-d：后面可以接自定义的日期而不用目前的日期，也可以使用–date&#x3D;”日期或时间”</p>
+<li><p>-d：后面可以接自定义的日期而不用目前的日期，也可以使用–date=”日期或时间”</p>
 </li>
 <li><p>-m：仅修改mtime</p>
 </li>
@@ -720,13 +722,13 @@
 <li><p>创建一个新文件并观察时间</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241633399.png" alt="image-20230924163318379"> </p>
 </li>
-<li><p>将~&#x2F;.bashrc复制成为bashrc，复制完全的属性，检查其日期</p>
+<li><p>将~/.bashrc复制成为bashrc，复制完全的属性，检查其日期</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241637642.png" alt="image-20230924163706613"> </p>
 </li>
 <li><p>将bashrc改到两天前</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241642638.png" alt="image-20230924164205608"> </p>
 </li>
-<li><p>将上面的bashrc日期改为2013&#x2F;07&#x2F;15 2:34</p>
+<li><p>将上面的bashrc日期改为2013/07/15 2:34</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241648329.png" alt="image-20230924164835305"></p>
 </li>
 </ul>
@@ -790,7 +792,7 @@
 </ul>
 </li>
 </ul>
-<p>例如：feliks对于passwd这个程序来说是具有x的权限，表示feliks能执行passwd；passwd的拥有者是root这个账号；feliks执行passwd的过程中，会暂时获得root权限，这是&#x2F;etc&#x2F;shadow就可以被feliks所执行的passwd所修改。</p>
+<p>例如：feliks对于passwd这个程序来说是具有x的权限，表示feliks能执行passwd；passwd的拥有者是root这个账号；feliks执行passwd的过程中，会暂时获得root权限，这是/etc/shadow就可以被feliks所执行的passwd所修改。</p>
 <p><strong>SUID仅仅只能使用在二进制程序上，不能够用在shell脚本上面</strong></p>
 <ul>
 <li><p>SGID</p>
@@ -844,20 +846,20 @@
 </ul>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309271116437.png" alt="image-20230927111606399"> </p>
 </li>
-<li><p>locate &#x2F; updatedb</p>
+<li><p>locate / updatedb</p>
 <ul>
 <li>-i：忽略大小写的差异</li>
 <li>-c：不输出文件名，仅计算找到的文件数量</li>
 <li>-l：仅输出几行，例如五行则是<code>-l 5</code></li>
-<li>-S：输出locate所使用的数据库文件的相关信息，包括该数据库记录的文件&#x2F;目录数量等</li>
+<li>-S：输出locate所使用的数据库文件的相关信息，包括该数据库记录的文件/目录数量等</li>
 <li>-r：后面可接正则表达式的显示方式</li>
 </ul>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309271120697.png" alt="image-20230927112046673"> </p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309271121632.png" alt="image-20230927112126603"> </p>
 </li>
-<li><p>updatedb：根据&#x2F;etc&#x2F;updatedb.conf的设置去查找系统硬盘内的文件，并更新&#x2F;var&#x2F;lib&#x2F;mlocate内的数据库文件</p>
+<li><p>updatedb：根据/etc/updatedb.conf的设置去查找系统硬盘内的文件，并更新/var/lib/mlocate内的数据库文件</p>
 </li>
-<li><p>locate：依据&#x2F;var&#x2F;lib&#x2F;mlocate内的数据库记录，找出用户所输入关键词的文件名</p>
+<li><p>locate：依据/var/lib/mlocate内的数据库记录，找出用户所输入关键词的文件名</p>
 </li>
 <li><p>find</p>
 <ul>
@@ -868,15 +870,15 @@
 <li>-newer file：file是一个实际存在的文件，列出比file还要新的文件</li>
 </ul>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309271129825.png" alt="image-20230927112947789"> </p>
-<p>寻找&#x2F;etc下的文件，文件日期比&#x2F;etc&#x2F;passwd新就列出</p>
+<p>寻找/etc下的文件，文件日期比/etc/passwd新就列出</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309271132720.png" alt="image-20230927113216687"> </p>
 <ul>
-<li>-uid n：n为数字，这个数字是使用者的账号ID，UID记录在&#x2F;etc&#x2F;passwd里面</li>
-<li>-gid n：n为数字，哦这个数字是用户组名称的ID，GID记录在&#x2F;etc&#x2F;group里面</li>
+<li>-uid n：n为数字，这个数字是使用者的账号ID，UID记录在/etc/passwd里面</li>
+<li>-gid n：n为数字，哦这个数字是用户组名称的ID，GID记录在/etc/group里面</li>
 <li>-user name：name为使用者账号名称</li>
 <li>-group name：name为用户组名称</li>
-<li>-nouser：查找文件的拥有者不在&#x2F;etc&#x2F;passwd当中</li>
-<li>-nogroup：查找文件的拥有用户组不存在于&#x2F;etc&#x2F;group的文件</li>
+<li>-nouser：查找文件的拥有者不在/etc/passwd当中</li>
+<li>-nogroup：查找文件的拥有用户组不存在于/etc/group的文件</li>
 </ul>
 <p>查找home下面属于feliks的文件</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309301427860.png" alt="image-20230930142704801"> </p>
@@ -903,12 +905,12 @@
 </li>
 <li><p><strong>-perm -mode</strong>：查找文件权限【必须要全部囊括mode的权限】的文件（例如要找【-rwxr–r–】的文件，因为【-rwxr-xr-x】囊括了【-rwxr–r–】权限，所以也会被查出来）</p>
 </li>
-<li><p><strong>-perm &#x2F;mode</strong>：查找文件权限【包含任一mode的权限】的文件（例如要查找【-rwxr-xr-x】，但是【rw——-】也会被查出来，因为有【-rw】属性存在）</p>
+<li><p><strong>-perm /mode</strong>：查找文件权限【包含任一mode的权限】的文件（例如要查找【-rwxr-xr-x】，但是【rw——-】也会被查出来，因为有【-rw】属性存在）</p>
 <p>找出文件名为passwd的文件</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310070805485.png" alt="image-20231007080529174"> </p>
 <p>找出文件名钟包含了passwd这个关键字的文件</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310070807508.png" alt="image-20231007080734453"> </p>
-<p>找出&#x2F;run目录下文件类型为socket的文件名有哪些</p>
+<p>找出/run目录下文件类型为socket的文件名有哪些</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310070810093.png" alt="image-20231007081005040"> </p>
 <p>查找文件当中含有SGID、SUID或SBIT的属性</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310072001719.png" alt="image-20231007200121664"></p>
@@ -1335,10 +1337,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1460,6 +1462,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

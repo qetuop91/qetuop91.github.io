@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -486,7 +488,7 @@
 <p>总体功能概述</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921991.png" alt="image-20231023224035644"> </p>
 <h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ol>
-<li><p>性能极高：Redis读的速度：110000次&#x2F;秒，写的速度：81000次&#x2F;秒</p>
+<li><p>性能极高：Redis读的速度：110000次/秒，写的速度：81000次/秒</p>
 </li>
 <li><p>Redis数据类型丰富，不仅仅支持键值对类型的数据，同时还提供：</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921869.png" alt="image-20231023224257302"> </p>
@@ -528,8 +530,8 @@
 <li>Redis 的过期时间设置有四种形式：<ol>
 <li>EXPIRE 秒——设置指定的过期时间(秒)，表示的是时间间隔。</li>
 <li>PEXPIRE 毫秒——设置指定的过期时间，以毫秒为单位，表示的是时间间隔。</li>
-<li>EXPIREAT 时间戳-秒——设置指定的 Key 过期的 Unix 时间，单位为秒，表示的是时间&#x2F;时刻。</li>
-<li>PEXPIREAT 时间戳-毫秒——设置指定的 Key 到期的 Unix 时间，以毫秒为单位，表示的是时间&#x2F;时刻。</li>
+<li>EXPIREAT 时间戳-秒——设置指定的 Key 过期的 Unix 时间，单位为秒，表示的是时间/时刻。</li>
+<li>PEXPIREAT 时间戳-毫秒——设置指定的 Key 到期的 Unix 时间，以毫秒为单位，表示的是时间/时刻。</li>
 </ol>
 </li>
 </ul>
@@ -583,9 +585,9 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921751.png" alt="image-20231026225917226"></p>
 </li>
 </ul>
-<h4 id="get-key"><a href="#get-key" class="headerlink" title="get key"></a>get key</h4><h3 id="同时设置-获取多个键值"><a href="#同时设置-获取多个键值" class="headerlink" title="同时设置&#x2F;获取多个键值"></a>同时设置&#x2F;获取多个键值</h3><h4 id="MSET-key-value-key-value-……"><a href="#MSET-key-value-key-value-……" class="headerlink" title="MSET key value [key value ……]"></a>MSET key value [key value ……]</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921959.png" alt="image-20231026231216551"> </p>
+<h4 id="get-key"><a href="#get-key" class="headerlink" title="get key"></a>get key</h4><h3 id="同时设置-获取多个键值"><a href="#同时设置-获取多个键值" class="headerlink" title="同时设置/获取多个键值"></a>同时设置/获取多个键值</h3><h4 id="MSET-key-value-key-value-……"><a href="#MSET-key-value-key-value-……" class="headerlink" title="MSET key value [key value ……]"></a>MSET key value [key value ……]</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921959.png" alt="image-20231026231216551"> </p>
 <h4 id="MGET-key-key-……"><a href="#MGET-key-key-……" class="headerlink" title="MGET key [key ……]"></a>MGET key [key ……]</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921019.png" alt="image-20231026231234380"> </p>
-<h4 id="mset-mget-msetnx"><a href="#mset-mget-msetnx" class="headerlink" title="mset&#x2F;mget&#x2F;msetnx"></a>mset&#x2F;mget&#x2F;msetnx</h4><p>msetnx只有在全部键都不存在的情况下才会执行成功</p>
+<h4 id="mset-mget-msetnx"><a href="#mset-mget-msetnx" class="headerlink" title="mset/mget/msetnx"></a>mset/mget/msetnx</h4><p>msetnx只有在全部键都不存在的情况下才会执行成功</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921032.png" alt="image-20231026231452451"> </p>
 <h3 id="获取指定区间范围内的值"><a href="#获取指定区间范围内的值" class="headerlink" title="获取指定区间范围内的值"></a>获取指定区间范围内的值</h3><h4 id="getrange"><a href="#getrange" class="headerlink" title="getrange"></a>getrange</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921108.png" alt="image-20231026232015484"> </p>
 <h4 id="setrange"><a href="#setrange" class="headerlink" title="setrange"></a>setrange</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921115.png" alt="image-20231026232031029"> </p>
@@ -608,14 +610,14 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921830.png" alt="image-20231028112604471"> </p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921895.png" alt="image-20231028112802727"> </p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921606.png" alt="image-20231028112822195"> </p>
-<h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="lpush-rpush-lrange"><a href="#lpush-rpush-lrange" class="headerlink" title="lpush&#x2F;rpush&#x2F;lrange"></a>lpush&#x2F;rpush&#x2F;lrange</h4><p>从左边进</p>
+<h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="lpush-rpush-lrange"><a href="#lpush-rpush-lrange" class="headerlink" title="lpush/rpush/lrange"></a>lpush/rpush/lrange</h4><p>从左边进</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921738.png" alt="image-20231028113527125"> </p>
 <p>从右边进</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921656.png" alt="image-20231028113543717"> </p>
 <p>遍历的时候两个顺序有所不同</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921740.png" alt="image-20231028113610635"> </p>
 <p><strong>没有rrange，只有lrange</strong></p>
-<h4 id="lpop-rpop"><a href="#lpop-rpop" class="headerlink" title="lpop&#x2F;rpop"></a>lpop&#x2F;rpop</h4><p>lpop：从左边弹出</p>
+<h4 id="lpop-rpop"><a href="#lpop-rpop" class="headerlink" title="lpop/rpop"></a>lpop/rpop</h4><p>lpop：从左边弹出</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921742.png" alt="image-20231028113806734"> </p>
 <p>rpop：从右边弹出</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921783.png" alt="image-20231028113846973"> </p>
@@ -636,7 +638,7 @@
 <h4 id="lset-key-index-value"><a href="#lset-key-index-value" class="headerlink" title="lset key index value"></a>lset key index value</h4><p>将列表中index位置的值改成value</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921552.png" alt="image-20231028151659457"> </p>
 <p>将3号索引位置的值改成”Java”</p>
-<h4 id="linsert-key-before-after-已有值-插入的新值"><a href="#linsert-key-before-after-已有值-插入的新值" class="headerlink" title="linsert key before&#x2F;after 已有值 插入的新值"></a>linsert key before&#x2F;after 已有值 插入的新值</h4><p>在”Java”前插入”PHP”</p>
+<h4 id="linsert-key-before-after-已有值-插入的新值"><a href="#linsert-key-before-after-已有值-插入的新值" class="headerlink" title="linsert key before/after 已有值 插入的新值"></a>linsert key before/after 已有值 插入的新值</h4><p>在”Java”前插入”PHP”</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921510.png" alt="image-20231028151959451"> </p>
 <p>在”Java”后插入”Mysql”</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921667.png" alt="image-20231028152034892"> </p>
@@ -645,7 +647,7 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921679.png" alt="image-20231028152656920"> </p>
 <p>仍然还是KV键值对的模式，但是value用来存放一对键值对</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921684.png" alt="image-20231028153010474"> </p>
-<h3 id="常用命令-2"><a href="#常用命令-2" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="hset-hget-hmset-hmget-hgetall-hdel"><a href="#hset-hget-hmset-hmget-hgetall-hdel" class="headerlink" title="hset&#x2F;hget&#x2F;hmset&#x2F;hmget&#x2F;hgetall&#x2F;hdel"></a>hset&#x2F;hget&#x2F;hmset&#x2F;hmget&#x2F;hgetall&#x2F;hdel</h4><p>hset：</p>
+<h3 id="常用命令-2"><a href="#常用命令-2" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="hset-hget-hmset-hmget-hgetall-hdel"><a href="#hset-hget-hmset-hmget-hgetall-hdel" class="headerlink" title="hset/hget/hmset/hmget/hgetall/hdel"></a>hset/hget/hmset/hmget/hgetall/hdel</h4><p>hset：</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921710.png" alt="image-20231028153435724"> </p>
 <p>hget：</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921391.png" alt="image-20231028153505778"> </p>
@@ -662,11 +664,11 @@
 <p>user:001里面只剩下id和name</p>
 <h4 id="hexists-key-在key里面的某个值的key"><a href="#hexists-key-在key里面的某个值的key" class="headerlink" title="hexists key 在key里面的某个值的key"></a>hexists key 在key里面的某个值的key</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921704.png" alt="image-20231028154904963"> </p>
 <p>在user:001这个key里面有name和id两个key，没有score这个key</p>
-<h4 id="hkeys-hvals"><a href="#hkeys-hvals" class="headerlink" title="hkeys&#x2F;hvals"></a>hkeys&#x2F;hvals</h4><p>hkeys：获取当前key下的所有key</p>
+<h4 id="hkeys-hvals"><a href="#hkeys-hvals" class="headerlink" title="hkeys/hvals"></a>hkeys/hvals</h4><p>hkeys：获取当前key下的所有key</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921186.png" alt="image-20231028155035935"> </p>
 <p>hvals：获取当前key下的所有key对应的value值</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921666.png" alt="image-20231028155152041"> </p>
-<h4 id="hincrby-hincrbyfloat"><a href="#hincrby-hincrbyfloat" class="headerlink" title="hincrby&#x2F;hincrbyfloat"></a>hincrby&#x2F;hincrbyfloat</h4><p>hincrby：让某个值以<strong>整数形式</strong>自增</p>
+<h4 id="hincrby-hincrbyfloat"><a href="#hincrby-hincrbyfloat" class="headerlink" title="hincrby/hincrbyfloat"></a>hincrby/hincrbyfloat</h4><p>hincrby：让某个值以<strong>整数形式</strong>自增</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921664.png" alt="image-20231028155442902"> </p>
 <p>hincrbyfloat：让某个值以<strong>浮点数形式</strong>自增</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921235.png" alt="image-20231028155648274"> </p>
@@ -778,7 +780,7 @@
 <p>用在哪？</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921312.png" alt="image-20231029161820053"> </p>
 <p>说明：<strong>用String类型作为底层数据结构实现的一种统计二值状态的数据类型，位图的本质是数组</strong>，它是基于String数据类型的按位的操作。该数组有多个二进制位组成，每个二进制位都对应一个偏移量（就是索引）。</p>
-<p>Bitmap支持的最大位数是<strong>2^32</strong>位，它可以极大的节约存储空间，使用512M内存就可以存储多达42.9亿的字节信息（2^32 &#x3D; 4294967296）</p>
+<p>Bitmap支持的最大位数是<strong>2^32</strong>位，它可以极大的节约存储空间，使用512M内存就可以存储多达42.9亿的字节信息（2^32 = 4294967296）</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921380.png" alt="image-20231029162555281"> </p>
 <h3 id="常用命令-5"><a href="#常用命令-5" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="setbit-key-offset-value"><a href="#setbit-key-offset-value" class="headerlink" title="setbit key offset value"></a>setbit key offset value</h4><p>setbit 键 偏移位 只能0或1</p>
 <p><strong>Bitmap的偏移量是从0开始算的</strong></p>
@@ -864,15 +866,15 @@
 <h4 id="GEOHASH-key-member-member-…"><a href="#GEOHASH-key-member-member-…" class="headerlink" title="GEOHASH key member [member …]"></a>GEOHASH key member [member …]</h4><p>返回一个或多个位置元素的Geohash表示</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921204.png" alt="image-20231101220455404"> </p>
 <h2 id="流（Stream）"><a href="#流（Stream）" class="headerlink" title="流（Stream）"></a>流（Stream）</h2><p>Redis Stream 是 Redis 5.0 版本新增加的数据结构。</p>
-<p>Redis Stream 主要用于消息队列（MQ，Message Queue），Redis 本身是有一个 Redis 发布订阅 (pub&#x2F;sub) 来实现消息队列的功能，但它有个缺点就是消息无法持久化，如果出现网络断开、Redis 宕机等，消息就会被丢弃。</p>
-<p>简单来说发布订阅 (pub&#x2F;sub) 可以分发消息，但无法记录历史消息。</p>
+<p>Redis Stream 主要用于消息队列（MQ，Message Queue），Redis 本身是有一个 Redis 发布订阅 (pub/sub) 来实现消息队列的功能，但它有个缺点就是消息无法持久化，如果出现网络断开、Redis 宕机等，消息就会被丢弃。</p>
+<p>简单来说发布订阅 (pub/sub) 可以分发消息，但无法记录历史消息。</p>
 <p>而 Redis Stream 提供了消息的持久化和主备复制功能，可以让任何客户端访问任何时刻的数据，并且能记住每一个客户端的访问位置，还能保证消息不丢失</p>
 <h3 id="在redis5-0之前"><a href="#在redis5-0之前" class="headerlink" title="在redis5.0之前"></a>在redis5.0之前</h3><ul>
 <li>使用List实现消息队列</li>
 </ul>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921249.png" alt="image-20231101223005015"> </p>
 <ul>
-<li>pub&#x2F;sub</li>
+<li>pub/sub</li>
 </ul>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921389.png" alt="image-20231101223114642"> </p>
 <p>Stream：Redis版本的MQ消息中间件 + 阻塞队列</p>
@@ -893,7 +895,7 @@
 <h4 id="XREVRANGE"><a href="#XREVRANGE" class="headerlink" title="XREVRANGE"></a>XREVRANGE</h4><p>和XRANGE相比区别在于反向获取，ID从大到小</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921480.png" alt="image-20231102220647892"> </p>
 <h4 id="XDEL"><a href="#XDEL" class="headerlink" title="XDEL"></a>XDEL</h4><p>删除消息</p>
-<p>删除messageID&#x3D;”1698850723494-0”的数据</p>
+<p>删除messageID=”1698850723494-0”的数据</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921507.png" alt="image-20231102221043982"> </p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921591.png" alt="image-20231102234519698"> </p>
 <h4 id="XTRIM"><a href="#XTRIM" class="headerlink" title="XTRIM"></a>XTRIM</h4><p>限制Stream的长度，如果已经超长会进行截取</p>
@@ -907,7 +909,7 @@
 </ul>
 <h4 id="XLEN"><a href="#XLEN" class="headerlink" title="XLEN"></a>XLEN</h4><p>获取Stream中的消息长度</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921735.png" alt="image-20231102234633777"> </p>
-<h4 id="XREAD"><a href="#XREAD" class="headerlink" title="XREAD"></a>XREAD</h4><p>获取消息（阻塞&#x2F;非阻塞），返回大于指定ID的消息</p>
+<h4 id="XREAD"><a href="#XREAD" class="headerlink" title="XREAD"></a>XREAD</h4><p>获取消息（阻塞/非阻塞），返回大于指定ID的消息</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921998.png" alt="image-20231105203501223"> </p>
 <ul>
 <li><p>COUNT：最多读取多少条消息</p>
@@ -919,7 +921,7 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921233.png" alt="image-20231105215216538"> </p>
 <ul>
 <li>$代表特殊ID，表示以当前Stream已经存的最大ID作为最后一个ID，当前Stream中不存在大于当前最大ID的消息，因此返回nil</li>
-<li>0-0代表从最小的ID开始获取Stream中的消息，当不指定count，将会返回Stream中的所有消息，注意也可以使用0（00&#x2F;000也都是可以的）</li>
+<li>0-0代表从最小的ID开始获取Stream中的消息，当不指定count，将会返回Stream中的所有消息，注意也可以使用0（00/000也都是可以的）</li>
 </ul>
 </li>
 <li><p>阻塞：</p>
@@ -981,10 +983,10 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921556.png" alt="image-20231106195447646"> </p>
 <h4 id="XGROUP-DELCONSUMER"><a href="#XGROUP-DELCONSUMER" class="headerlink" title="XGROUP DELCONSUMER"></a>XGROUP DELCONSUMER</h4><p>删除消费者组</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921651.png" alt="image-20231106200047777"> </p>
-<h4 id="XCLAIM"><a href="#XCLAIM" class="headerlink" title="XCLAIM"></a>XCLAIM</h4><p>转移消息的归属权（将长期未处理&#x2F;无法处理的消息转交给其他消费者组进行处理）</p>
+<h4 id="XCLAIM"><a href="#XCLAIM" class="headerlink" title="XCLAIM"></a>XCLAIM</h4><p>转移消息的归属权（将长期未处理/无法处理的消息转交给其他消费者组进行处理）</p>
 <h3 id="四个特殊符号"><a href="#四个特殊符号" class="headerlink" title="四个特殊符号"></a>四个特殊符号</h3><h4 id=""><a href="#" class="headerlink" title="- +"></a>- +</h4><p>最小和最大可能出现的ID</p>
 <h4 id="-1"><a href="#-1" class="headerlink" title="$"></a>$</h4><p>表示只消费新的消息，当前流中最大的ID，可用于将要到来的消息</p>
-<h4 id="-2"><a href="#-2" class="headerlink" title="&gt;"></a>&gt;</h4><p>用于<strong>XREADGROUP</strong>命令，表示迄今还没有发送给组中使用者信息，会更新消费者组的最后ID</p>
+<h4 id="-2"><a href="#-2" class="headerlink" title=">"></a>&gt;</h4><p>用于<strong>XREADGROUP</strong>命令，表示迄今还没有发送给组中使用者信息，会更新消费者组的最后ID</p>
 <h4 id="-3"><a href="#-3" class="headerlink" title="*"></a>*</h4><p>用于<strong>XADD</strong>命令，让系统自动生成ID</p>
 <h1 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h1><p>官网：<a target="_blank" rel="noopener" href="https://redis.io/docs/manual/presistence">https://redis.io/docs/manual/presistence</a></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921760.png" alt="image-20231107123453191"> </p>
@@ -1004,7 +1006,7 @@
 <li><p>在一定间隔时间做一次备份，如果redis意外挂掉了，就会丢失从当前到最近一次快照期间的数据，快照之间的数据会丢失</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921009.png" alt="image-20231108211306395"> </p>
 </li>
-<li><p>内存数据的全量同步，如果数据量太大会导致I&#x2F;O严重影响服务器性能</p>
+<li><p>内存数据的全量同步，如果数据量太大会导致I/O严重影响服务器性能</p>
 </li>
 <li><p>RDB依赖于主进程的fork，在更大的数据集中，可能会导致服务请求的瞬间延迟。fork的时候内存中的数据被克隆了一份，大约两倍的膨胀性，需要慎重考虑</p>
 </li>
@@ -1026,7 +1028,7 @@
 <p>将备份文件（dump.rdb）移动到redis安装目录并启动服务即可</p>
 <p><strong>备份成功后用flushdb清空redis看看是否可以恢复数据</strong></p>
 <ul>
-<li>结论：执行FLUSHALL&#x2F;FLUSHDB命令也会产生dump.rdb文件，但里面是空的，没有意义</li>
+<li>结论：执行FLUSHALL/FLUSHDB命令也会产生dump.rdb文件，但里面是空的，没有意义</li>
 <li>下次启动的时候redis会自动从dump.rdb文件中自动读取上一次备份的数据</li>
 </ul>
 <p><strong>物理恢复，一定服务器和备份分机隔离</strong></p>
@@ -1157,7 +1159,7 @@
 </ul>
 <h4 id="纯缓存模式"><a href="#纯缓存模式" class="headerlink" title="纯缓存模式"></a>纯缓存模式</h4><p>关闭RDB+AOF：</p>
 <ul>
-<li><code>save &quot;&quot;</code>：禁用RDB，禁用的时候仍然可以使用save、bgsave生成rdb文件</li>
+<li><code>save ""</code>：禁用RDB，禁用的时候仍然可以使用save、bgsave生成rdb文件</li>
 <li><code>appendonly no</code>：禁用AOF，禁用的时候仍然可以使用bgrewriteaof生成aof文件</li>
 </ul>
 <h1 id="Redis事务"><a href="#Redis事务" class="headerlink" title="Redis事务"></a>Redis事务</h1><p><strong>数据库事务是什么？</strong></p>
@@ -1261,7 +1263,7 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921047.png" alt="image-20231122081954410"></p>
 </li>
 </ul>
-<p>发布&#x2F;订阅其实是一个轻量的队列，只不过数据不会被持久化，一般用来处理<strong>实时性较高的异步消息</strong></p>
+<p>发布/订阅其实是一个轻量的队列，只不过数据不会被持久化，一般用来处理<strong>实时性较高的异步消息</strong></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921119.png" alt="image-20231122082051754"> </p>
 <h2 id="常用命令-9"><a href="#常用命令-9" class="headerlink" title="常用命令"></a>常用命令</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921672.png" alt="image-20231122082206626"> </p>
 <h3 id="SUBSCRIBE-channel-channel-…"><a href="#SUBSCRIBE-channel-channel-…" class="headerlink" title="SUBSCRIBE channel [channel …]"></a>SUBSCRIBE channel [channel …]</h3><p>订阅给定的一个或多个频道的消息，<strong>推荐先执行订阅后再发布，订阅成功之前发布的消息是收不到的</strong></p>
@@ -1309,12 +1311,12 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921735.png" alt="image-20240113172536457"> </p>
 <h3 id="PUNSUBSCRIBE-pattern-pattern-…"><a href="#PUNSUBSCRIBE-pattern-pattern-…" class="headerlink" title="PUNSUBSCRIBE [pattern [pattern …]]"></a>PUNSUBSCRIBE [pattern [pattern …]]</h3><p>退订所有给定模式的频道</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921976.png" alt="image-20240113172833361"> </p>
-<h2 id="PUB-SUB总结"><a href="#PUB-SUB总结" class="headerlink" title="PUB&#x2F;SUB总结"></a>PUB&#x2F;SUB总结</h2><p>Redis可以实现消息中间件MQ的功能，通过发布订阅实现消息的引导和分流。（不建议使用，redis就做好分布式缓存功能就行了，专业的事情交给专业的中间件处理）</p>
+<h2 id="PUB-SUB总结"><a href="#PUB-SUB总结" class="headerlink" title="PUB/SUB总结"></a>PUB/SUB总结</h2><p>Redis可以实现消息中间件MQ的功能，通过发布订阅实现消息的引导和分流。（不建议使用，redis就做好分布式缓存功能就行了，专业的事情交给专业的中间件处理）</p>
 <h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
 <li>发布的消息在Redis系统中不能持久化，因此，必须先执行订阅再等消息发布，如果先发布了信息，那么该消息由于没有订阅者，消息将被直接丢弃</li>
 <li>消息只管发送对于发布者而言消息是即发即失的，不管接收，也没有ACK机制，无法保证消息的消费成功</li>
 </ul>
-<p>以上的缺点导致了Redis的PUB&#x2F;SUB模式就像个小玩具，在生产环境中几乎无用武之地，为此，Redis5.0版本新增了Stream数据结构，不但支持多播，还支持数据持久化，相比PUB&#x2F;SUB更加强大</p>
+<p>以上的缺点导致了Redis的PUB/SUB模式就像个小玩具，在生产环境中几乎无用武之地，为此，Redis5.0版本新增了Stream数据结构，不但支持多播，还支持数据持久化，相比PUB/SUB更加强大</p>
 <h1 id="Redis复制（replica）"><a href="#Redis复制（replica）" class="headerlink" title="Redis复制（replica）"></a>Redis复制（replica）</h1><p><strong>官网</strong>：<a target="_blank" rel="noopener" href="https://redis.io/docs/management/replication/">https://redis.io/docs/management/replication/</a></p>
 <h2 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h2><p>主从复制，master以写为主，slave以读为主</p>
 <p>当master数据变化的时候，自动将新的数据异步同步到其他slave数据库</p>
@@ -1476,7 +1478,7 @@
 <li>工作目录</li>
 </ul>
 </li>
-<li><strong>sentinel monitor <master-name> <ip> <redis-port> <quorum></strong><ul>
+<li><strong>sentinel monitor <master-name> <ip> <redis-port> <quorum></quorum></redis-port></ip></master-name></strong><ul>
 <li>设置要监控的master服务器</li>
 <li>quorum表示最少有几个哨兵认可客观下线，同一故障迁移的法定票数<ul>
 <li>有的时候网络是不可靠的，一个sentinel会因为网络堵塞误认为一个master已经宕机，在sentinel集群环境下需要多个sentinel相互沟通来确认某个master是否真的已经宕机了，quorum这个参数是进行客观下线的一个依据，意思是至少有quorum个sentinel认为这个master有故障，才会对这个master进行下线以及故障转移，因为有的时候sentinel节点可能因为自身网络原因，导致无法连接master，而此时master并没有出现故障，所以这就需要多个sentinel都一致认为该master有问题，才可以进行下一步操作，这就保证了公平性和高可用。</li>
@@ -1484,7 +1486,7 @@
 </li>
 </ul>
 </li>
-<li><strong>sentinel auth-pass <master-name> <password></strong><ul>
+<li><strong>sentinel auth-pass <master-name> <password></password></master-name></strong><ul>
 <li>master设置了密码，连接master服务的密码</li>
 </ul>
 </li>
@@ -1501,7 +1503,7 @@
 <li>SDOWN主观不可用是单个sentinel自己主观上监测到的关于master的状态，从sentinel的角度来看，如果发送了PING心跳后在一定时间内没有受到合法的回复就视为达到了SDOWN的条件</li>
 <li>sentinel配置文件中的down-after-milliseconds设置了判断主观下线的时间长度<ul>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921289.png" alt="image-20240226201439479"> </li>
-<li>sentinel down-after-milliseconds <masterName> <timeout></li>
+<li>sentinel down-after-milliseconds <mastername> <timeout></timeout></mastername></li>
 </ul>
 </li>
 </ul>
@@ -1510,7 +1512,7 @@
 <li>ODOWN需要一定数量的sentinel，多个哨兵达成一致意见才能认为一个master客观上已经宕掉</li>
 <li><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921288.png" alt="image-20240226211452689"> <ul>
 <li>master-name：是对某个master+slave组合的一个区分标识（一套sentinel可以监听多组master+slave这样的组合）</li>
-<li>quorum：是进行客观下线的一个依据，也称为法定人数&#x2F;法定票数，意思是至少有quorum个sentinel认为这个master有故障才会对这个master进行下线以及故障转移，因为有的时候某个sentinel节点可能因为自身网络原因导致无法连接master，而此时master并没有出现故障，所以这就需要多个sentinel都一致认为该master有问题才可以进行下一步操作，报这个了公平性和高可用。</li>
+<li>quorum：是进行客观下线的一个依据，也称为法定人数/法定票数，意思是至少有quorum个sentinel认为这个master有故障才会对这个master进行下线以及故障转移，因为有的时候某个sentinel节点可能因为自身网络原因导致无法连接master，而此时master并没有出现故障，所以这就需要多个sentinel都一致认为该master有问题才可以进行下一步操作，报这个了公平性和高可用。</li>
 </ul>
 </li>
 </ul>
@@ -1681,22 +1683,22 @@
 </li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">//import io.lettuce.core.cluster.SlotHash;</span>
     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//6373</span>
     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//10374</span>
     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//14503</span>
     <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//866</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 </ol>
 <h3 id="为什么Redis集群的的最大槽数是16384个？"><a href="#为什么Redis集群的的最大槽数是16384个？" class="headerlink" title="为什么Redis集群的的最大槽数是16384个？"></a>为什么Redis集群的的最大槽数是16384个？</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921105.png" alt="image-20240229093009219"> </p>
 <ol>
 <li>如果槽位为65536（2^16），发送心跳信息的消息头高达8k，发送的心跳包过于庞大<ul>
-<li>在消息头中最占空间的是myslot[CLUSTER_SLOT&#x2F;8]<ul>
-<li>当槽位为65536时，这块的大小是：65536÷8÷1024&#x3D;8kb</li>
-<li>当槽位为16384时，这块的大小是：15384÷8÷1024&#x3D;2kb</li>
+<li>在消息头中最占空间的是myslot[CLUSTER_SLOT/8]<ul>
+<li>当槽位为65536时，这块的大小是：65536÷8÷1024=8kb</li>
+<li>当槽位为16384时，这块的大小是：15384÷8÷1024=2kb</li>
 </ul>
 </li>
 <li>因为每秒钟redis节点需要发送一定数量的ping消息作为心跳包，如果槽位为65536，这个ping的消息头太大了，浪费带宽。</li>
@@ -1707,7 +1709,7 @@
 </ul>
 </li>
 <li>槽位越小，节点越少的情况下，压缩比高，容易传输<ul>
-<li>Redis主节点的配置信息中它所负责的哈希槽是通过一张bitmap的形式来保存的，在传输过程中会对bitmap进行压缩，但是如果bitmap的填充率（slots &#x2F; N）很高的话（N表示节点数），bitmap的压缩率就很低，如果节点数很少，而哈希槽数很多的话，bitmap的压缩率就很低</li>
+<li>Redis主节点的配置信息中它所负责的哈希槽是通过一张bitmap的形式来保存的，在传输过程中会对bitmap进行压缩，但是如果bitmap的填充率（slots / N）很高的话（N表示节点数），bitmap的压缩率就很低，如果节点数很少，而哈希槽数很多的话，bitmap的压缩率就很低</li>
 </ul>
 </li>
 </ol>
@@ -2098,10 +2100,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -2176,18 +2178,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                <a href="/2024/04/07/hello-world/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/5.jpg" class="responsive-img" alt="我的第一篇博客">
                         
-                        <span class="card-title">我的第一篇博客</span>
+                        <img src="/medias/myImages/21.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Hexo初始文档
                         
                     </div>
                     <div class="publish-info">
@@ -2198,8 +2201,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/test/" class="post-category">
-                                    test
+                            <a href="/categories/Hexo/" class="post-category">
+                                    Hexo
                                 </a>
                             
                             
@@ -2209,8 +2212,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">test</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
@@ -2223,6 +2226,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

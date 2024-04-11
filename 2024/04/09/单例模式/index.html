@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -379,7 +381,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -452,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-09
+                    2024-04-11
                 </div>
                 
 
@@ -503,7 +505,7 @@
 <ol>
 <li>要求生产唯一序列号</li>
 <li>WEB中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来</li>
-<li>创建的一个对象需要消耗的资源过多，比如I&#x2F;O与数据库的连接等</li>
+<li>创建的一个对象需要消耗的资源过多，比如I/O与数据库的连接等</li>
 </ol>
 </blockquote>
 <blockquote>
@@ -512,20 +514,20 @@
 </blockquote>
 <p><strong>代码</strong></p>
 <p>SingleObject（基本实现）</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
     <span class="token comment">//创建一个SingleObject的私有对象</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">//把构造器私有化，不允许外部直接创建该类</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"SingleObject被创建"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -535,18 +537,18 @@
 <li>因为没有加锁synchronized，所以严格意义上不算单例模式</li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 懒汉式 线程不安全的</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
     <span class="token comment">//私有化空参构造器</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">}</span>
         <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -557,18 +559,18 @@
 <li>缺点：必须加锁synchronized才能保证单例，但是加锁会影响效率</li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 懒汉式 线程安全的</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
     <span class="token comment">//私有化空参构造器</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">}</span>
         <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -580,62 +582,62 @@
 <li>基于classloader机制避免了多线程的同步问题，但是instance在类装载的时候就实例化，虽然导致类装载的原因有很多种，在单例模式中大多是嗲用getInstance方法， 但是也不能确保有其他的方式或者其他的静态方法导致类装载，这时候初始化instance明显没有打到lazy loading（懒加载）的效果</li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 饿汉式 线程安全的</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">//私有化空参构造器</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h2 id="双检锁-双重校验锁（DCL-double-checked-locking）"><a href="#双检锁-双重校验锁（DCL-double-checked-locking）" class="headerlink" title="双检锁&#x2F;双重校验锁（DCL: double checked locking）"></a>双检锁&#x2F;双重校验锁（DCL: double checked locking）</h2><ul>
+<h2 id="双检锁-双重校验锁（DCL-double-checked-locking）"><a href="#双检锁-双重校验锁（DCL-double-checked-locking）" class="headerlink" title="双检锁/双重校验锁（DCL: double checked locking）"></a>双检锁/双重校验锁（DCL: double checked locking）</h2><ul>
 <li>是否Lazy初始化：是</li>
 <li>是否多线程安全：是</li>
 <li>采用双锁机制，安全且在多线程情况下保持高性能</li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 双检锁</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
 
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 线程1、2同时到达判断instance是否为null</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// 线程1进去，线程2被阻塞</span>
-            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token class-name">SingleObject</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token class-name">SingleObject</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token comment">//1创建完对象后，instance就不为null，2不会进入if，避免多次初始化</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                     instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">&#125;</span>
-            <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">&#125;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
         <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h2 id="登记式-静态内部类"><a href="#登记式-静态内部类" class="headerlink" title="登记式&#x2F;静态内部类"></a>登记式&#x2F;静态内部类</h2><ul>
+<h2 id="登记式-静态内部类"><a href="#登记式-静态内部类" class="headerlink" title="登记式/静态内部类"></a>登记式/静态内部类</h2><ul>
 <li>是否Lazy初始化：是</li>
 <li>是否多线程安全：是</li>
 <li>能达到双检锁方式一样的功效，但实现更简单，对静态域使用延迟初始化，应该使用这种方式而不是双检锁。只适用于静态域的情况，双检锁的方式可以在实例域需要延迟初始化的时候使用。</li>
 <li>利用classloader机制保证初始化instance时只有一个线程，跟饿汉式不同的是：饿汉式只要SingletObject类被装载了，那么instance就会被实例化，没有打到懒加载的效果，而这种方式是SingleObject类被装载了，但是instance不一定被初始化，因为SingletonHolder类没有被主动使用，只有显式调用getInstance方法才会显式装载SingletonHolder从而实例化instance</li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 登记式/静态内部类</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SingletonHolder</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SingletonHolder</span> <span class="token punctuation">{</span>
         <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token class-name">SingletonHolder</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -646,12 +648,12 @@
 <li>避免多线程同步的问题，而且还自动支持序列化机制，防止反序列化重新创建新的对象，绝对防止多次实例化</li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 枚举</span>
-<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
     <span class="token constant">INSTANCE</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"枚举类型的实例"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>Considerations<br>一般情况下不建议使用懒汉式，不管是线程安全还是线程不安全的，比较建议使用饿汉式。而在我们需要明确实现懒加载（lazy loading）的效果时，才会使用登记式（静态内部类）的方式。在涉及到反序列化创建对象的时候，可以使用枚举的方式，其他的特殊需求可以考虑双检锁的方式。</p>
@@ -1053,10 +1055,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1086,7 +1088,7 @@
                 <a href="/2024/04/09/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/16.jpg" class="responsive-img" alt="建造者模式">
+                        <img src="/medias/myImages/24.jpg" class="responsive-img" alt="建造者模式">
                         
                         <span class="card-title">建造者模式</span>
                     </div>
@@ -1146,7 +1148,7 @@
                 <a href="/2024/04/09/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/16.jpg" class="responsive-img" alt="抽象工厂模式">
+                        <img src="/medias/myImages/22.jpg" class="responsive-img" alt="抽象工厂模式">
                         
                         <span class="card-title">抽象工厂模式</span>
                     </div>
@@ -1202,6 +1204,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -470,9 +472,9 @@
 <li>-u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号</li>
 </ul>
 <p>例：</p>
-<p>创建一个用户sam，其中-d和-m选项用来为登录名sam产生一个主目录&#x2F;home&#x2F;sam</p>
+<p>创建一个用户sam，其中-d和-m选项用来为登录名sam产生一个主目录/home/sam</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403261511264.png" alt="image-20240326151054166"> </p>
-<p>创建一个用户gem，该用户的登录Shell是&#x2F;bin&#x2F;sh，属于group用户组，同时又属于adm和root用户组，其中group用户组是其主组</p>
+<p>创建一个用户gem，该用户的登录Shell是/bin/sh，属于group用户组，同时又属于adm和root用户组，其中group用户组是其主组</p>
 <p>① 创建用户组</p>
 <p>② 创建用户</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202403261516118.png" alt="image-20240326151600042"> </p>
@@ -491,7 +493,7 @@
 <li>-o 可以重复使用其他用户的标识号</li>
 </ul>
 <p>例：</p>
-<p>将sam的登录shell改为ksh，主目录改为&#x2F;home&#x2F;z，用户组改为developer</p>
+<p>将sam的登录shell改为ksh，主目录改为/home/z，用户组改为developer</p>
 <p><code>usermod -s /bin/ksh -d /home/z -g developer sam</code></p>
 <h3 id="用户口令管理"><a href="#用户口令管理" class="headerlink" title="用户口令管理"></a>用户口令管理</h3><p><code>passwd</code> 选项  用户名</p>
 <ul>
@@ -546,7 +548,7 @@
 <h2 id="3-其他人的概念"><a href="#3-其他人的概念" class="headerlink" title="3.其他人的概念"></a>3.其他人的概念</h2><p>不是该用户组的成员都是其他人，在Linux里，任何一个文件都具有用户（User）、所属群组（Group）、其他人（Others）三种身份的个别权限。</p>
 <p>root是万能的！。</p>
 <p><strong>Linux用户身份与用户组记录的文件</strong></p>
-<p>在Linux系统中，默认情况下所有系统上的账号与一般身份用户，还有那个root的相关信息，都记录在&#x2F;etc&#x2F;passwd这个文件内，至于个人的密码则是记录在&#x2F;etc&#x2F;shadow这个文件内，此外，Linux所有的组名都记录在&#x2F;etc&#x2F;group中。这三个文件可以说是Linux系统里面账号密码用户组信息的集中地，不要随便删除。</p>
+<p>在Linux系统中，默认情况下所有系统上的账号与一般身份用户，还有那个root的相关信息，都记录在/etc/passwd这个文件内，至于个人的密码则是记录在/etc/shadow这个文件内，此外，Linux所有的组名都记录在/etc/group中。这三个文件可以说是Linux系统里面账号密码用户组信息的集中地，不要随便删除。</p>
 
                 
             </div>
@@ -932,10 +934,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1057,6 +1059,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

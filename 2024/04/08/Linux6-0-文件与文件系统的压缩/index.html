@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -472,16 +474,16 @@
 <li>*.tar.bz2：tar程序打包的文件，并且经过bzip2的压缩</li>
 <li>*.tar.xz：tar程序打包的文件，并且经过xz的压缩</li>
 </ul>
-<h2 id="gzip，zcat-zmore-zless-zgrep"><a href="#gzip，zcat-zmore-zless-zgrep" class="headerlink" title="gzip，zcat&#x2F;zmore&#x2F;zless&#x2F;zgrep"></a>gzip，zcat&#x2F;zmore&#x2F;zless&#x2F;zgrep</h2><p>gzip可以解压缩compress、zip、gzip等软件所压缩的文件，gzip建立的压缩文件为*.gz</p>
+<h2 id="gzip，zcat-zmore-zless-zgrep"><a href="#gzip，zcat-zmore-zless-zgrep" class="headerlink" title="gzip，zcat/zmore/zless/zgrep"></a>gzip，zcat/zmore/zless/zgrep</h2><p>gzip可以解压缩compress、zip、gzip等软件所压缩的文件，gzip建立的压缩文件为*.gz</p>
 <p><code>gzip [-cdtv#] 文件名</code></p>
 <ul>
 <li>-c：将压缩的数据输出到屏幕上，可通过数据流重定向来处理</li>
 <li>-d：解压缩的参数</li>
 <li>-t：可以用来检验一个压缩文件的一致性，看看文件有无错误</li>
-<li>-v：可以显示出原文件&#x2F;压缩文件的压缩比等信息</li>
+<li>-v：可以显示出原文件/压缩文件的压缩比等信息</li>
 <li>-#：#是数字的意思，代表压缩等级，-1最快，但是压缩比最差，-9最慢，但是压缩比最好，默认是-6</li>
 </ul>
-<p>找出&#x2F;etc下面容量最大的文件，并且复制到&#x2F;tmp里面，然后以gzip进行压缩</p>
+<p>找出/etc下面容量最大的文件，并且复制到/tmp里面，然后以gzip进行压缩</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310141607533.png" alt="image-20231014160747430"> </p>
 <p>使用gzip的时候默认情况下原本的文件会被压缩成为.gz后缀的文件，源文件就不存在了</p>
 <p>由于services是文本文件，请将其压缩文件的内容读取出来</p>
@@ -494,7 +496,7 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310141625948.png" alt="image-20231014162553924"> </p>
 <p>找出‘http’这个关键字在services.gz中出现在哪几行</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310141628398.png" alt="image-20231014162830349"> </p>
-<h2 id="bzip2，bzcat-bzmore-bzless-bzgrep"><a href="#bzip2，bzcat-bzmore-bzless-bzgrep" class="headerlink" title="bzip2，bzcat&#x2F;bzmore&#x2F;bzless&#x2F;bzgrep"></a>bzip2，bzcat&#x2F;bzmore&#x2F;bzless&#x2F;bzgrep</h2><p>如果说gzip是为了替换compress并提供更好的压缩比而成立的，那么bzip2是为了替换gzip并提供更佳的压缩比而成立的</p>
+<h2 id="bzip2，bzcat-bzmore-bzless-bzgrep"><a href="#bzip2，bzcat-bzmore-bzless-bzgrep" class="headerlink" title="bzip2，bzcat/bzmore/bzless/bzgrep"></a>bzip2，bzcat/bzmore/bzless/bzgrep</h2><p>如果说gzip是为了替换compress并提供更好的压缩比而成立的，那么bzip2是为了替换gzip并提供更佳的压缩比而成立的</p>
 <p><code>bzip2 [-cdkzv#] 文件名</code></p>
 <p><code>bzcat 文件名.bz2</code></p>
 <ul>
@@ -502,13 +504,13 @@
 <li>-d：解压缩的参数</li>
 <li>-k：保留原始文件，而不会删除原来的文件</li>
 <li>-z：压缩的参数（默认值）</li>
-<li>-v：可以显示出源文件&#x2F;压缩文件的压缩比等信息</li>
+<li>-v：可以显示出源文件/压缩文件的压缩比等信息</li>
 <li>-#：与gzip一致，-9最佳，-1最快</li>
 </ul>
 <p>将services文件用bzip2压缩</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310150121781.png" alt="image-20231014232939310"> </p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310150121944.png" alt="image-20231014232954549"> </p>
-<h2 id="xz，xzcat-xzmore-xzless-xzgrep"><a href="#xz，xzcat-xzmore-xzless-xzgrep" class="headerlink" title="xz，xzcat&#x2F;xzmore&#x2F;xzless&#x2F;xzgrep"></a>xz，xzcat&#x2F;xzmore&#x2F;xzless&#x2F;xzgrep</h2><p>xz拥有比bzip2更高的压缩比</p>
+<h2 id="xz，xzcat-xzmore-xzless-xzgrep"><a href="#xz，xzcat-xzmore-xzless-xzgrep" class="headerlink" title="xz，xzcat/xzmore/xzless/xzgrep"></a>xz，xzcat/xzmore/xzless/xzgrep</h2><p>xz拥有比bzip2更高的压缩比</p>
 <p><code>xz [-dtlkc#] 文件名</code></p>
 <p><code>xcat 文件名.xz</code></p>
 <ul>
@@ -528,15 +530,15 @@
 <li>-c：建立打包文件，可搭配-v来查看过程中被打包的文件名</li>
 <li>-t：查看打包文件的内容含有哪些文件名，重点在查看文件名</li>
 <li>-x：解包或解压缩的功能，可以搭配-C在特定目录解压，特别留意的是**-c、-t、-x不可同时出现在一串命令行中**</li>
-<li>-z：通过gzip的支持进行压缩&#x2F;解压缩：此时文件名最好为：***.tar.gz **</li>
-<li>-j：通过bzip2的支持进行压缩&#x2F;解压缩：此时文件名最好为：***.tar.bz2 **</li>
-<li>-J：通过xz的支持进行压缩&#x2F;解压缩哦：此时文件名最好为：***.tar.xz <strong>，特别留意，</strong>-z、-j、-J不可以同时出现在遗传命令行中**</li>
-<li>-v：在压缩&#x2F;解压缩的过程中，将正在处理的文件名显示出来</li>
+<li>-z：通过gzip的支持进行压缩/解压缩：此时文件名最好为：***.tar.gz **</li>
+<li>-j：通过bzip2的支持进行压缩/解压缩：此时文件名最好为：***.tar.bz2 **</li>
+<li>-J：通过xz的支持进行压缩/解压缩哦：此时文件名最好为：***.tar.xz <strong>，特别留意，</strong>-z、-j、-J不可以同时出现在遗传命令行中**</li>
+<li>-v：在压缩/解压缩的过程中，将正在处理的文件名显示出来</li>
 <li>-f filename：-f后面要立刻接要被处理的文件名，建议-f单独写一个选项（比较不会忘记）</li>
 <li>-C 目录：这个选项用在解压缩，如果要在特定目录解压缩，可以使用这个选项</li>
 <li>-p（小写）：保留备份数据的原本权限和属性，常用于备份（-c）重要的配置文件</li>
 <li>-P（大写）：保留绝对路径，就是允许备份数据中含有根目录存在的意思</li>
-<li>–exclude&#x3D;FILE：在压缩过程中，不要将FILE打包</li>
+<li>–exclude=FILE：在压缩过程中，不要将FILE打包</li>
 </ul>
 <p>我常用的解压缩命令：<code>tar -xvzf filename</code>，加入了-z，支持gzip</p>
 <ul>
@@ -544,7 +546,7 @@
 <li>查询：<strong>tar -jtv -f filename.tar.bz2</strong></li>
 <li>解压缩：<strong>tar -jxv -f filename.tar.bz2 -C 要解压缩的目录</strong></li>
 </ul>
-<p>使用tar加入-z、-j或-J的参数来备份&#x2F;etc&#x2F;目录</p>
+<p>使用tar加入-z、-j或-J的参数来备份/etc/目录</p>
 <p><code>time tar -zpcv -f /root/etc.tar.gz /etc</code>（-p保留原本文件的权限与属性）</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310150121236.png" alt="image-20231015012110133"> </p>
 <p><code>time tar -jpcv -f /root/etc.tar.bz2 /etc</code></p>
@@ -552,10 +554,10 @@
 <p><code>time tar -Jpcv -f /root/etc.tar.xz /etc</code></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310150130312.png" alt="image-20231015013022287"> </p>
 <p>可以看到xz压缩后的文件大小相比其他两个是最小的，但是时间雀食优点久</p>
-<h3 id="为什么要去掉根目录？"><a href="#为什么要去掉根目录？" class="headerlink" title="为什么要去掉根目录？"></a>为什么要去掉根目录？</h3><p>我们使用tar备份的数据可能会需要就压缩回来使用，此时tar记录的文件名就是解压缩后的实际文件名，用&#x2F;etc&#x2F;xxx举例子，如果拿掉根目录，我们在&#x2F;tmp下解开就会变成&#x2F;tmp&#x2F;etc&#x2F;xxx，而如果不去掉根目录，解压出来就会是绝对路径，即解压后的文件会被放到&#x2F;etc&#x2F;xxx中，把原来etc下的数据覆盖掉。所以不要随便用-P参数</p>
-<h3 id="将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）"><a href="#将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）" class="headerlink" title="将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）"></a>将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）</h3><p>在本目录下进行解压缩的操作：<code>tar -jxv -f /root/etc.tar.bz2</code>，但是如果我想让其在&#x2F;tmp目录下解压缩，那就得cd&#x2F;tmp再执行上述命令，会显得有点麻烦，这时可以使用-C的选项：<code>tar -jxv -f /root/etc.tar.bz2 -C /tmp</code></p>
+<h3 id="为什么要去掉根目录？"><a href="#为什么要去掉根目录？" class="headerlink" title="为什么要去掉根目录？"></a>为什么要去掉根目录？</h3><p>我们使用tar备份的数据可能会需要就压缩回来使用，此时tar记录的文件名就是解压缩后的实际文件名，用/etc/xxx举例子，如果拿掉根目录，我们在/tmp下解开就会变成/tmp/etc/xxx，而如果不去掉根目录，解压出来就会是绝对路径，即解压后的文件会被放到/etc/xxx中，把原来etc下的数据覆盖掉。所以不要随便用-P参数</p>
+<h3 id="将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）"><a href="#将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）" class="headerlink" title="将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）"></a>将备份的数据解压缩，并考虑特定目录的解压缩操作（-C的应用）</h3><p>在本目录下进行解压缩的操作：<code>tar -jxv -f /root/etc.tar.bz2</code>，但是如果我想让其在/tmp目录下解压缩，那就得cd/tmp再执行上述命令，会显得有点麻烦，这时可以使用-C的选项：<code>tar -jxv -f /root/etc.tar.bz2 -C /tmp</code></p>
 <h3 id="仅解开单一文件"><a href="#仅解开单一文件" class="headerlink" title="仅解开单一文件"></a>仅解开单一文件</h3><p>管道|配合grep可以截取关键词，</p>
-<p><code>tar -jtv -f /root/etc.tar.bz2 | grep &#39;shadow&#39;</code></p>
+<p><code>tar -jtv -f /root/etc.tar.bz2 | grep 'shadow'</code></p>
 <p>语法：</p>
 <p><code>tar -jtv -f 打包文件.tar.bz2 待解开文件名</code></p>
 <p><code>tar -jtv -f /root/etc.tar.bz2 etc/shadow</code></p>
@@ -564,7 +566,7 @@
 <p>tarfile：tar打包出来的文件.tar后缀的就是tarfile</p>
 <p>tarball：带有别的压缩的支持例如<code>.tar.bz2</code>格式的，就是tarball</p>
 <p><strong>利用管道命令与数据流</strong></p>
-<p>将&#x2F;etc整个目录进行打包的同时在&#x2F;tmp下解开</p>
+<p>将/etc整个目录进行打包的同时在/tmp下解开</p>
 <p><code>tar -cvf - /etc | tar -xvf -</code></p>
 <p>-就表示这个被打包的文件</p>
 
@@ -952,10 +954,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1077,6 +1079,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

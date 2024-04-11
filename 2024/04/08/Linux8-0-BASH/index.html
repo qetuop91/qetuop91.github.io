@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -459,7 +461,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="BASH"><a href="#BASH" class="headerlink" title="BASH"></a>BASH</h1><h2 id="系统的合法shell-与-etc-shells功能"><a href="#系统的合法shell-与-etc-shells功能" class="headerlink" title="系统的合法shell 与 &#x2F;etc&#x2F;shells功能"></a>系统的合法shell 与 &#x2F;etc&#x2F;shells功能</h2><p>通过查看&#x2F;etc&#x2F;shells文件可以看到当前系统有多少个可以使用的shell</p>
+                <h1 id="BASH"><a href="#BASH" class="headerlink" title="BASH"></a>BASH</h1><h2 id="系统的合法shell-与-etc-shells功能"><a href="#系统的合法shell-与-etc-shells功能" class="headerlink" title="系统的合法shell 与 /etc/shells功能"></a>系统的合法shell 与 /etc/shells功能</h2><p>通过查看/etc/shells文件可以看到当前系统有多少个可以使用的shell</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310231500423.png" alt="image-20231023150007380"> </p>
 <h2 id="Bash-shell-的功能"><a href="#Bash-shell-的功能" class="headerlink" title="Bash shell 的功能"></a>Bash shell 的功能</h2><p>bash主要的优点：</p>
 <ul>
@@ -500,11 +502,11 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>[ctrl]+u&#x2F;[ctrl]+k</td>
+<td>[ctrl]+u/[ctrl]+k</td>
 <td>分别是从光标处向前删除命令串，及向后删除命令串</td>
 </tr>
 <tr>
-<td>[ctrl]+a&#x2F;[ctrl]+e</td>
+<td>[ctrl]+a/[ctrl]+e</td>
 <td>分别是让光标移动到整个命令串的最前面，或最后面</td>
 </tr>
 </tbody></table>
@@ -516,7 +518,7 @@
 </li>
 <li><p>变量的设置规则</p>
 <ul>
-<li><p>变量与变量内容以【&#x3D;】连接</p>
+<li><p>变量与变量内容以【=】连接</p>
 <p><code>myname=vbird</code></p>
 </li>
 <li><p>等号两边不能直接接空格</p>
@@ -530,20 +532,20 @@
 </li>
 <li><p>双引号内的特殊字符如$等，可以保留原有的特性</p>
 <ul>
-<li><code>var=&quot;lang is $LANG&quot;</code>则<code>echo $var</code>可以得到lang is zh_CN.UTF-8</li>
+<li><code>var="lang is $LANG"</code>则<code>echo $var</code>可以得到lang is zh_CN.UTF-8</li>
 </ul>
 </li>
 <li><p>单引号内的特殊字符则为一般字符（纯文本）</p>
 <ul>
-<li><p><code>var=&#39;lang is $LANG&#39;</code>则<code>echo $var</code>可以得到lang is $LANG</p>
+<li><p><code>var='lang is $LANG'</code>则<code>echo $var</code>可以得到lang is $LANG</p>
 </li>
 <li><p>可使用转义符【\】将一些特殊符号变成一般符号（例如回车、空格、$等）</p>
 </li>
-<li><p>【&#96;&#96;】或【$(命令)】用于借由其他额外命令所提供的信息</p>
+<li><p>【``】或【$(命令)】用于借由其他额外命令所提供的信息</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310241455751.png" alt="image-20231024145502716"> </p>
 </li>
-<li><p>若该变量为扩增变量内容时，则可用 <code>&quot;$变量名称&quot;</code> 或 <code>$&#123;变量&#125;</code> 累加内容</p>
-<p><code>PATH=&quot;$PATH&quot;:/home/bin</code> 或 <code>PATH=$&#123;PATH&#125;:/home/bin</code></p>
+<li><p>若该变量为扩增变量内容时，则可用 <code>"$变量名称"</code> 或 <code>${变量}</code> 累加内容</p>
+<p><code>PATH="$PATH":/home/bin</code> 或 <code>PATH=${PATH}:/home/bin</code></p>
 </li>
 <li><p>若该变量需要在其他子程序执行，则需要以export来是变量变成环境变量</p>
 <p><code>export PATH</code></p>
@@ -612,11 +614,11 @@
 </ul>
 <h3 id="影响显示结果的语系变量（locale）"><a href="#影响显示结果的语系变量（locale）" class="headerlink" title="影响显示结果的语系变量（locale）"></a>影响显示结果的语系变量（locale）</h3><p>使用locale可以查看Linux支持了多少语系</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310251042657.png" alt="image-20231025104248626"> </p>
-<p>可以通过&#x2F;etc&#x2F;locale.conf更改整体系统默认语系</p>
+<p>可以通过/etc/locale.conf更改整体系统默认语系</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310251049598.png" alt="image-20231025104959566"> </p>
 <h3 id="变量的有效范围"><a href="#变量的有效范围" class="headerlink" title="变量的有效范围"></a>变量的有效范围</h3><p>基本上可以这样看待：</p>
-<p>环境变量&#x3D;全局变量</p>
-<p>自定义变量&#x3D;局部变量</p>
+<p>环境变量=全局变量</p>
+<p>自定义变量=局部变量</p>
 <ul>
 <li>为什么环境变量的数据可以被子进程引用？<ul>
 <li>当启动一个shell，操作系统会分配一内存区域给shell使用，此内存中的变量可以让子进程使用</li>
@@ -652,7 +654,7 @@
 <li><p>-r：将变量设置为readonly类型，该变量不可被更改内容，也不能unset</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310251446706.png" alt="image-20231025144620659"> </p>
 <p><strong>变量类型默认为字符串，如果不指定变量类型，则1+2为一个字符串而不是计算式</strong></p>
-<p><strong>bash环境中的数值运算，默认最多仅能到达整数形态，所以1&#x2F;3结果是0</strong></p>
+<p><strong>bash环境中的数值运算，默认最多仅能到达整数形态，所以1/3结果是0</strong></p>
 <p>将sum变成环境变量</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310251456997.png" alt="image-20231025144928274"> </p>
 <p>让sum变量变成只读属性，不可修改，只能注销再登录才能恢复该变量的类型</p>
@@ -664,7 +666,7 @@
 </li>
 <li><p>数组（array）变量类型</p>
 <p>设置数组的方式：<code>var[index]=content</code></p>
-<p>数组名为var，数组内容为var[1]&#x3D;小明。。。，index就是数组下标，</p>
+<p>数组名为var，数组内容为var[1]=小明。。。，index就是数组下标，</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310251504415.png" alt="image-20231025150427380"> </p>
 <p><strong>一般来说建议使用${数组}的方式来读取，比较准确无误</strong></p>
 </li>
@@ -682,14 +684,14 @@
 <li>-t：可使用的最大CPU时间（单位是秒）</li>
 <li>-u：单一使用者可以使用的最大进程（process）数量</li>
 </ul>
-<h2 id="命令别名与历史命令"><a href="#命令别名与历史命令" class="headerlink" title="命令别名与历史命令"></a>命令别名与历史命令</h2><h3 id="命令别名设置：alias、unalias"><a href="#命令别名设置：alias、unalias" class="headerlink" title="命令别名设置：alias、unalias"></a>命令别名设置：alias、unalias</h3><p><strong>命令使用格式</strong>：<code>alias lm=&#39;ls -al | more&#39;</code></p>
+<h2 id="命令别名与历史命令"><a href="#命令别名与历史命令" class="headerlink" title="命令别名与历史命令"></a>命令别名与历史命令</h2><h3 id="命令别名设置：alias、unalias"><a href="#命令别名设置：alias、unalias" class="headerlink" title="命令别名设置：alias、unalias"></a>命令别名设置：alias、unalias</h3><p><strong>命令使用格式</strong>：<code>alias lm='ls -al | more'</code></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271418807.png" alt="image-20231027141806691"> </p>
 <p>以后输入lm就相当于执行了<code>ls -al | more</code></p>
-<p><strong>防误删除的方法</strong>：<code>alias rm=&#39;rm -i&#39;</code>，这样每次删除文件之前都会确认是否删除该文件</p>
+<p><strong>防误删除的方法</strong>：<code>alias rm='rm -i'</code>，这样每次删除文件之前都会确认是否删除该文件</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271419118.png" alt="image-20231027141919090"> </p>
 <p><strong>查看目前存在的命令别名</strong>：<code>alias</code></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271419983.png" alt="image-20231027141945957"> </p>
-<p><strong>使用vi打开vim</strong>：<code>alias vi=&#39;vim&#39;</code> </p>
+<p><strong>使用vi打开vim</strong>：<code>alias vi='vim'</code> </p>
 <p><strong>删除别名</strong>：unalias</p>
 <p>把刚刚创建的别名lm删除：<code>unalias lm</code></p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271428766.png" alt="image-20231027142829738"> </p>
@@ -702,7 +704,7 @@
 <ul>
 <li>n：数字，意思是列出最近n条命令行列表</li>
 <li>-c：将目前的shell中的所有history内容全部清除</li>
-<li>-a：将目前新增的history命令新增入histfiles中，如果没有加histfiles，则默认写入~&#x2F;.bash_history</li>
+<li>-a：将目前新增的history命令新增入histfiles中，如果没有加histfiles，则默认写入~/.bash_history</li>
 <li>-r：将histfiles的内容读到目前这个shell的history中</li>
 <li>-w：将目前的history记录内容写入到histfiles中</li>
 </ul>
@@ -710,10 +712,10 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271504389.png" alt="image-20231027150454363"> </p>
 <p>将目前的数据写入histfile中</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271508721.png" alt="image-20231027150838691"> </p>
-<p>因为没有histfile，所以默认写入~&#x2F;.bash_history</p>
+<p>因为没有histfile，所以默认写入~/.bash_history</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310271510834.png" alt="image-20231027151028804"> </p>
 <ul>
-<li>当我们以bash登录Linux主机之后，系统会主动地由家目录的<del>&#x2F;.bash_history读取以前曾经执行过的命令，</del>&#x2F;.bash_history记录的数据条数与HISTFILESIZE变量的值有关</li>
+<li>当我们以bash登录Linux主机之后，系统会主动地由家目录的<del>/.bash_history读取以前曾经执行过的命令，</del>/.bash_history记录的数据条数与HISTFILESIZE变量的值有关</li>
 </ul>
 <p><code>!number</code>、<code>!command</code>、<code>!!</code></p>
 <ul>
@@ -723,7 +725,7 @@
 </ul>
 <h2 id="Bash-shell的操作环境"><a href="#Bash-shell的操作环境" class="headerlink" title="Bash shell的操作环境"></a>Bash shell的操作环境</h2><h3 id="路径与命令查找顺序"><a href="#路径与命令查找顺序" class="headerlink" title="路径与命令查找顺序"></a>路径与命令查找顺序</h3><p>系统中其实有不少的ls命令，那怎么知道命令运行的顺序？</p>
 <ol>
-<li>以相对&#x2F;绝对路径执行命令，例如【&#x2F;bin&#x2F;ls】或【.&#x2F;ls】</li>
+<li>以相对/绝对路径执行命令，例如【/bin/ls】或【./ls】</li>
 <li>由alias找到该命令来执行</li>
 <li>由bash内置的（builtin）命令来执行</li>
 <li>通过$PATH这个变量的顺序查找到的第一个命令来执行</li>
@@ -1114,10 +1116,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1243,6 +1245,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

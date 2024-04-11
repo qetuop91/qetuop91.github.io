@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -473,14 +475,14 @@
 </li>
 <li><p>-i：使用ASCII的字符输出，不要使用复杂的编码</p>
 </li>
-<li><p>-m：同时输出该设备在&#x2F;dev下面的权限信息（rwx的数据）</p>
+<li><p>-m：同时输出该设备在/dev下面的权限信息（rwx的数据）</p>
 </li>
 <li><p>-p：列出该设备的完整文件名，而不是仅列出最后的名字</p>
 </li>
 <li><p>-t：列出该磁盘设备的详细数据，包括磁盘阵列机制，预读写的数据量大小等</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310081010722.png" alt="image-20231008081308748"> </p>
 <ul>
-<li><p>NAME：设备的文件名，省略&#x2F;dev等前导目录</p>
+<li><p>NAME：设备的文件名，省略/dev等前导目录</p>
 </li>
 <li><p>MAJ:MIN：主要与次要设备代码（内核识别的设备都是这两个代码来实现的）</p>
 </li>
@@ -505,8 +507,8 @@
 </li>
 </ul>
 <h4 id="parted（列出磁盘的分区表类型与分区信息）"><a href="#parted（列出磁盘的分区表类型与分区信息）" class="headerlink" title="parted（列出磁盘的分区表类型与分区信息）"></a>parted（列出磁盘的分区表类型与分区信息）</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310081034102.png" alt="image-20231008103455070"> </p>
-<p>列出&#x2F;dev&#x2F;sda磁盘的相关信息</p>
-<h2 id="磁盘分区：gdisk-fdisk"><a href="#磁盘分区：gdisk-fdisk" class="headerlink" title="磁盘分区：gdisk&#x2F;fdisk"></a>磁盘分区：gdisk&#x2F;fdisk</h2><p><strong>注意：MBR分区表使用fdisk分区，GPT分区表使用gdisk分区</strong></p>
+<p>列出/dev/sda磁盘的相关信息</p>
+<h2 id="磁盘分区：gdisk-fdisk"><a href="#磁盘分区：gdisk-fdisk" class="headerlink" title="磁盘分区：gdisk/fdisk"></a>磁盘分区：gdisk/fdisk</h2><p><strong>注意：MBR分区表使用fdisk分区，GPT分区表使用gdisk分区</strong></p>
 <p>① 先通过<code>lsblk</code>或<code>blkid</code>先找到磁盘</p>
 <p>② 使用<code>parted /dev/xxx print</code>来找出内部的分区表类型</p>
 <p>③ 再根据分区表类型判断使用<code>gdisk</code>还是<code>fdisk</code></p>
@@ -554,25 +556,25 @@
 </ul>
 <h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><p><code>mount -a</code></p>
 <p><code>mount [-l]</code></p>
-<p><code>mount [-t 文件系统] LABEL=&#39;&#39; 挂载点</code></p>
-<p><code>mount [-t 文件系统] UUID=&#39;&#39; 挂载点</code></p>
+<p><code>mount [-t 文件系统] LABEL='' 挂载点</code></p>
+<p><code>mount [-t 文件系统] UUID='' 挂载点</code></p>
 <p><code>mount[-t 文件系统] 设备文件名 挂载点</code></p>
 <ul>
-<li>-a：依照配置文件&#x2F;etc&#x2F;fstab的数据将所有未挂载的磁盘都挂载上来</li>
+<li>-a：依照配置文件/etc/fstab的数据将所有未挂载的磁盘都挂载上来</li>
 <li>-l：单纯的输入mount会显示目前挂载的信息，加上-l可增列Label名称</li>
 <li>-t：可以加上文件系统种类来指定想挂载的类型，常见的Linux支持类型有：xfs、ext3、ext4、reiserfs、vfat、iso9660（光盘格式）、nfs、cifs、smbfs（后面三种是网络文件系统类型）</li>
 </ul>
 <p><strong>通过<code>blkid</code>查看设备的UUID，更推荐使用UUID进行挂载，因为UUID是唯一的</strong></p>
 <ul>
-<li>挂载xfs&#x2F;ext4&#x2F;vfat等文件系统</li>
+<li>挂载xfs/ext4/vfat等文件系统</li>
 </ul>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310121440141.png" alt="image-20231012144031082"> </p>
 <ul>
 <li>挂载CD或DVD光盘<ul>
-<li>光驱一挂载之后就无法退出光盘了，除非将他卸载才能够退出（图形化界面会自动将光盘挂载到&#x2F;media目录）</li>
+<li>光驱一挂载之后就无法退出光盘了，除非将他卸载才能够退出（图形化界面会自动将光盘挂载到/media目录）</li>
 </ul>
 </li>
-<li>挂载vfat中文移动磁盘（USB磁盘）:<code>mount -o codepage=950, iocharset=utf8 UUID=&quot;xxxxxxxxx&quot; /data/usb</code><ul>
+<li>挂载vfat中文移动磁盘（USB磁盘）:<code>mount -o codepage=950, iocharset=utf8 UUID="xxxxxxxxx" /data/usb</code><ul>
 <li>vfat格式可以使用codepage来处理，中文语系的代码为950</li>
 <li>默认的CentOS7并不支持NTFS文件系统格式</li>
 </ul>
@@ -585,7 +587,7 @@
 <li>umount（将设备文件卸载）<ul>
 <li>-f：强制卸载。可用在类似网络文件系统（NFS）无法读取到的情况下</li>
 <li>-l：立刻卸载文件系统，比-f还牛逼</li>
-<li>-n：不更新&#x2F;etc&#x2F;mtab情况下卸载</li>
+<li>-n：不更新/etc/mtab情况下卸载</li>
 </ul>
 </li>
 </ul>
@@ -974,10 +976,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1099,6 +1101,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->

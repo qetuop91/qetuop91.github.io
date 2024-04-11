@@ -52,7 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -552,8 +554,8 @@
 <h4 id="数字类型修改文件权限"><a href="#数字类型修改文件权限" class="headerlink" title="数字类型修改文件权限"></a>数字类型修改文件权限</h4><p>r:4</p>
 <p>w:2</p>
 <p>x:1</p>
-<p>rwx权限&#x3D;4+2+1&#x3D;7</p>
-<p>例如：【-rwxrwx—】owner&#x3D;rwx&#x3D;7	group&#x3D;rwx&#x3D;7	others&#x3D;—&#x3D;0</p>
+<p>rwx权限=4+2+1=7</p>
+<p>例如：【-rwxrwx—】owner=rwx=7	group=rwx=7	others=—=0</p>
 <p>所以权限数字就是770</p>
 <p>命令：</p>
 <p><code>chmod -R xyz 文件或目录</code></p>
@@ -568,7 +570,7 @@
 <p>a：all</p>
 <p>+：加入</p>
 <p>-：移除</p>
-<p>&#x3D;：设置</p>
+<p>=：设置</p>
 <p>命令：</p>
 <p><code>chmod u=rwx,g=rwx,o=rwx [filename]</code></p>
 <p>如果要设置文件【-rwxr-xr-x】</p>
@@ -618,7 +620,7 @@
 <li><p>文件种类</p>
 <ul>
 <li>常规文件<ul>
-<li>纯文本文件（ASCII）：是Linux系统中最多的一种文件类型，可以直接执行【cat ~&#x2F; .bashrc】就可以看到文件的内容</li>
+<li>纯文本文件（ASCII）：是Linux系统中最多的一种文件类型，可以直接执行【cat ~/ .bashrc】就可以看到文件的内容</li>
 <li>二进制文件（binary）</li>
 <li>数据文件（data）</li>
 </ul>
@@ -1031,10 +1033,10 @@
         appId: '1YWcg1etbAjnud8Pu2IHPMLc-gzGzoHsz',
         appKey: 'TJKweAaoyZOzfuTrurXWXofz',
         serverURLs: 'https://1ywcg1et.lc-cn-n1-shared.com',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mp',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just go go'
@@ -1156,6 +1158,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Feliks<br />'
+            + '文章作者: Feliks<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
