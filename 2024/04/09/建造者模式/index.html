@@ -511,25 +511,25 @@
 <p><strong>代码</strong></p>
 <p>“基类”</p>
 <p>Item.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 一个Item需要由食品名、打包方式、价格构成</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 一个Item需要由食品名、打包方式、价格构成</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Item</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token class-name">Packing</span> <span class="token function">packing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token keyword">float</span> <span class="token function">price</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>Packing.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 打包方式会根据不同的食品进行区分，所以并不在这里进行实现，而是定义接口，等到具体情况再进行区分实现</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 打包方式会根据不同的食品进行区分，所以并不在这里进行实现，而是定义接口，等到具体情况再进行区分实现</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Packing</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">pack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>Meal.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
 
 <span class="token comment">// 菜单类，需要有添加菜品、计算总价、展示价格单的功能</span>
@@ -556,37 +556,37 @@
   <span class="token punctuation">&#125;</span>
 
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>根据不同的打包方式实现Packing</p>
 <p>Bottle.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 食物打包方式（装冷饮用的Bottle）</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 食物打包方式（装冷饮用的Bottle）</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Bottle</span> <span class="token keyword">implements</span> <span class="token class-name">Packing</span><span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">pack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">return</span> <span class="token string">"Bottle"</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>Wrapper.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 食物的打包方式（装汉堡的包装纸）</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 食物的打包方式（装汉堡的包装纸）</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Wrapper</span> <span class="token keyword">implements</span> <span class="token class-name">Packing</span><span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">pack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">return</span> <span class="token string">"Wrapper"</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>实现Item接口的子类（冷饮套餐和食物套餐）</p>
 <p>ColdDrink.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 冷饮套餐，需要有打包方式及价格</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 冷饮套餐，需要有打包方式及价格</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">ColdDrink</span> <span class="token keyword">implements</span> <span class="token class-name">Item</span> <span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">Packing</span> <span class="token function">packing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -596,12 +596,12 @@
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">float</span> <span class="token function">price</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>Burger.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 汉堡套餐（需要有打包方式和价格）</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 汉堡套餐（需要有打包方式和价格）</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Burger</span> <span class="token keyword">implements</span> <span class="token class-name">Item</span> <span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">Packing</span> <span class="token function">packing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -611,13 +611,13 @@
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">float</span> <span class="token function">price</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>具体的食物类</p>
 <p>VegBurger.java（继承Burger类）</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 蔬菜汉堡，汉堡下的分类</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 蔬菜汉堡，汉堡下的分类</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VegBurger</span>  <span class="token keyword">extends</span> <span class="token class-name">Burger</span><span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -629,12 +629,12 @@
     	<span class="token keyword">return</span> <span class="token number">25.0f</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>ChickenBurger.java（继承Burger类）</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 鸡肉汉堡，汉堡下的分类</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 鸡肉汉堡，汉堡下的分类</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ChickenBurger</span> <span class="token keyword">extends</span> <span class="token class-name">Burger</span><span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -646,12 +646,12 @@
     	<span class="token keyword">return</span> <span class="token number">50.5f</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>Coke.java（继承ColdDrink类）</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 可口可乐，冷饮下的分类</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 可口可乐，冷饮下的分类</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Coke</span> <span class="token keyword">extends</span> <span class="token class-name">ColdDrink</span><span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -663,12 +663,12 @@
     	<span class="token keyword">return</span> <span class="token number">30.0f</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>Pepsi.java（继承ColdDrink类）</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 百事可乐，冷饮下的分类</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 百事可乐，冷饮下的分类</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pepsi</span> <span class="token keyword">extends</span> <span class="token class-name">ColdDrink</span><span class="token punctuation">&#123;</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -680,13 +680,13 @@
     	<span class="token keyword">return</span> <span class="token number">30.0f</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>构建套餐</p>
 <p>MealBuilder.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 构建菜单类，用户并不实际使用Meal类，而是使用MealBuilder类</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 构建菜单类，用户并不实际使用Meal类，而是使用MealBuilder类</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MealBuilder</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">// 素菜套餐</span>
     <span class="token keyword">public</span> <span class="token class-name">Meal</span> <span class="token function">prepareVegMeal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -713,13 +713,13 @@
         <span class="token keyword">return</span> meal<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>测试代码</p>
 <p>BuilderPatternDemo.java</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BuilderPatternDemo</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BuilderPatternDemo</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token comment">// 调用已经创建好的菜单，而不是自己去创建菜单</span>
         <span class="token class-name">MealBuilder</span> mealBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MealBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -744,7 +744,7 @@
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Total Cost: "</span> <span class="token operator">+</span> allMeal<span class="token punctuation">.</span><span class="token function">getCost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
