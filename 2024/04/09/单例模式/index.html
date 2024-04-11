@@ -52,8 +52,8 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 
 <body>
@@ -512,20 +512,20 @@
 </blockquote>
 <p><strong>代码</strong></p>
 <p>SingleObject（基本实现）</p>
-<pre class="language-java" data-language="java"><code class="language-java">public class SingleObject &#123;
-    &#x2F;&#x2F;创建一个SingleObject的私有对象
-    private static SingleObject instance &#x3D; new SingleObject();
-    &#x2F;&#x2F;把构造器私有化，不允许外部直接创建该类
-    private SingleObject() &#123;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">//创建一个SingleObject的私有对象</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//把构造器私有化，不允许外部直接创建该类</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 
-    &#125;
-    public static SingleObject getInstance() &#123;
-        return instance;
-    &#125;
-    public void msg() &#123;
-        System.out.println(&quot;SingleObject被创建&quot;);
-    &#125;
-&#125;</code></pre>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"SingleObject被创建"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -534,19 +534,19 @@
 <li>是否多线程安全：否</li>
 <li>因为没有加锁synchronized，所以严格意义上不算单例模式</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 懒汉式 线程不安全的
-public class SingleObject &#123;
-    private static SingleObject instance;
-    &#x2F;&#x2F;私有化空参构造器
-    private SingleObject() &#123;&#125;
-    &#x2F;&#x2F;在获取对象的时候判断全局instance是否为null
-    public static SingleObject getInstance() &#123;
-        if (instance &#x3D;&#x3D; null) &#123;
-            return new SingleObject();
-        &#125;
-        return instance;
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 懒汉式 线程不安全的</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
+    <span class="token comment">//私有化空参构造器</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -556,19 +556,19 @@ public class SingleObject &#123;
 <li>优点：第一次调用才初始化，避免内存浪费</li>
 <li>缺点：必须加锁synchronized才能保证单例，但是加锁会影响效率</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 懒汉式 线程安全的
-public class SingleObject &#123;
-    private static SingleObject instance;
-    &#x2F;&#x2F;私有化空参构造器
-    private SingleObject() &#123;&#125;
-    &#x2F;&#x2F;在获取对象的时候判断全局instance是否为null
-    public static synchronized SingleObject getInstance() &#123;
-        if (instance &#x3D;&#x3D; null) &#123;
-            return new SingleObject();
-        &#125;
-        return instance;
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 懒汉式 线程安全的</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
+    <span class="token comment">//私有化空参构造器</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -579,16 +579,16 @@ public class SingleObject &#123;
 <li>缺点：类在加载的时候就会初始化，浪费内存</li>
 <li>基于classloader机制避免了多线程的同步问题，但是instance在类装载的时候就实例化，虽然导致类装载的原因有很多种，在单例模式中大多是嗲用getInstance方法， 但是也不能确保有其他的方式或者其他的静态方法导致类装载，这时候初始化instance明显没有打到lazy loading（懒加载）的效果</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 饿汉式 线程安全的
-public class SingleObject &#123;
-    private static SingleObject instance &#x3D; new SingleObject();
-    &#x2F;&#x2F;私有化空参构造器
-    private SingleObject() &#123;&#125;
-    &#x2F;&#x2F;在获取对象的时候判断全局instance是否为null
-    public static synchronized SingleObject getInstance() &#123;
-        return instance;
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 饿汉式 线程安全的</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//私有化空参构造器</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -597,26 +597,26 @@ public class SingleObject &#123;
 <li>是否多线程安全：是</li>
 <li>采用双锁机制，安全且在多线程情况下保持高性能</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 双检锁
-public class SingleObject &#123;
-    private volatile static SingleObject instance;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 双检锁</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
 
-    private SingleObject() &#123;
-    &#125;
-    public static SingleObject getInstance() &#123;
-        &#x2F;&#x2F; 线程1、2同时到达判断instance是否为null
-        if (instance &#x3D;&#x3D; null) &#123;
-            &#x2F;&#x2F; 线程1进去，线程2被阻塞
-            synchronized (SingleObject.class) &#123;
-                &#x2F;&#x2F;1创建完对象后，instance就不为null，2不会进入if，避免多次初始化
-                if (instance &#x3D;&#x3D; null) &#123;
-                    instance &#x3D; new SingleObject();
-                &#125;
-            &#125;
-        &#125;
-        return instance;
-    &#125;
-&#125;</code></pre>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 线程1、2同时到达判断instance是否为null</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// 线程1进去，线程2被阻塞</span>
+            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token class-name">SingleObject</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token comment">//1创建完对象后，instance就不为null，2不会进入if，避免多次初始化</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -626,16 +626,16 @@ public class SingleObject &#123;
 <li>能达到双检锁方式一样的功效，但实现更简单，对静态域使用延迟初始化，应该使用这种方式而不是双检锁。只适用于静态域的情况，双检锁的方式可以在实例域需要延迟初始化的时候使用。</li>
 <li>利用classloader机制保证初始化instance时只有一个线程，跟饿汉式不同的是：饿汉式只要SingletObject类被装载了，那么instance就会被实例化，没有打到懒加载的效果，而这种方式是SingleObject类被装载了，但是instance不一定被初始化，因为SingletonHolder类没有被主动使用，只有显式调用getInstance方法才会显式装载SingletonHolder从而实例化instance</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 登记式&#x2F;静态内部类
-public class SingleObject &#123;
-    private static class SingletonHolder &#123;
-        private static final SingleObject instance &#x3D; new SingleObject();
-    &#125;
-    private SingleObject() &#123;&#125;
-    public static final SingleObject getInstance() &#123;
-        return SingletonHolder.instance;
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 登记式/静态内部类</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SingletonHolder</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token class-name">SingletonHolder</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -645,13 +645,13 @@ public class SingleObject &#123;
 <li><strong>实现单例模式的最佳方法</strong></li>
 <li>避免多线程同步的问题，而且还自动支持序列化机制，防止反序列化重新创建新的对象，绝对防止多次实例化</li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 枚举
-public enum SingleObject &#123;
-    INSTANCE;
-    public void msg() &#123;
-        System.out.println(&quot;枚举类型的实例&quot;);
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 枚举</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">&#123;</span>
+    <span class="token constant">INSTANCE</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"枚举类型的实例"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 <blockquote>
 <p>Considerations<br>一般情况下不建议使用懒汉式，不管是线程安全还是线程不安全的，比较建议使用饿汉式。而在我们需要明确实现懒加载（lazy loading）的效果时，才会使用登记式（静态内部类）的方式。在涉及到反序列化创建对象的时候，可以使用枚举的方式，其他的特殊需求可以考虑双检锁的方式。</p>

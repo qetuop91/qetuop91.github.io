@@ -52,8 +52,8 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 
 <body>
@@ -1680,14 +1680,14 @@
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921970.png" alt="image-20240229084901043"></p>
 </li>
 </ul>
-<pre class="language-java" data-language="java"><code class="language-java">@Test
-public void test3() &#123;
-    &#x2F;&#x2F;import io.lettuce.core.cluster.SlotHash;
-    System.out.println(SlotHash.getSlot(&quot;A&quot;));		&#x2F;&#x2F;6373
-    System.out.println(SlotHash.getSlot(&quot;B&quot;));		&#x2F;&#x2F;10374
-    System.out.println(SlotHash.getSlot(&quot;C&quot;));		&#x2F;&#x2F;14503
-    System.out.println(SlotHash.getSlot(&quot;Hello&quot;));	&#x2F;&#x2F;866
-&#125;</code></pre></li>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">//import io.lettuce.core.cluster.SlotHash;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//6373</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//10374</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//14503</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">SlotHash</span><span class="token punctuation">.</span><span class="token function">getSlot</span><span class="token punctuation">(</span><span class="token string">"Hello"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//866</span>
+<span class="token punctuation">&#125;</span></code></pre></li>
 </ul>
 </li>
 </ol>

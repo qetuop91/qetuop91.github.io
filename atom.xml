@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-10T04:36:41.877Z</updated>
+  <updated>2024-04-11T03:00:30.220Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RocketMQ</title>
+    <link href="https://qetuop91.github.io/2024/04/11/RocketMQ/"/>
+    <id>https://qetuop91.github.io/2024/04/11/RocketMQ/</id>
+    <published>2024-04-11T02:54:18.000Z</published>
+    <updated>2024-04-11T03:00:30.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;发送一条消息&quot;&gt;&lt;a href=&quot;#发送一条消息&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="RocketMQ" scheme="https://qetuop91.github.io/categories/RocketMQ/"/>
+    
+    
+    <category term="RocketMQ" scheme="https://qetuop91.github.io/tags/RocketMQ/"/>
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>友链头像</title>
@@ -28,8 +55,8 @@
       
         
         
-    <summary type="html">&lt;pre class=&quot;language-json&quot; data-language=&quot;json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&amp;#123;
-    &amp;quot;avatar&amp;quot;:</summary>
+    <summary type="html">&lt;pre class=&quot;language-json&quot; data-language=&quot;json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    &lt;span</summary>
         
       
     
@@ -528,32 +555,6 @@
     
     
     <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的第一篇博客</title>
-    <link href="https://qetuop91.github.io/2024/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://qetuop91.github.io/2024/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
-    <published>2024-04-07T13:56:59.000Z</published>
-    <updated>2024-04-09T09:00:51.657Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;测试我的第一篇博客&quot;&gt;&lt;a href=&quot;#测试我的第一篇博客&quot; class=&quot;headerlink&quot; title=&quot;测试我的第一篇博客&quot;&gt;&lt;/a&gt;测试我的第一篇博客&lt;/h1&gt;&lt;p&gt;正文&lt;/p&gt;
-&lt;h1 id=&quot;第二章&quot;&gt;&lt;a href=&quot;#第二章&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="test" scheme="https://qetuop91.github.io/categories/test/"/>
-    
-    
-    <category term="test" scheme="https://qetuop91.github.io/tags/test/"/>
     
   </entry>
   
