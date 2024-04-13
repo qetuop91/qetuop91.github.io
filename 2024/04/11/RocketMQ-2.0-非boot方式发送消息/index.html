@@ -446,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-12
+                    2024-04-13
                 </div>
                 
 
@@ -536,7 +536,9 @@
 </ol>
 <h1 id="发送一条异步消息"><a href="#发送一条异步消息" class="headerlink" title="发送一条异步消息"></a>发送一条异步消息</h1><ol>
 <li><p>BSyncTest.java中添加生产异步消息的生产者</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404111001521.png" alt="image-20240411100121420"> </p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404132240621.png" alt="image-20240411100121420"> </p>
+</li>
+<li><p>消费者</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">asyncProducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token class-name">DefaultMQProducer</span> producer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultMQProducer</span><span class="token punctuation">(</span><span class="token string">"async-producer-group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -559,8 +561,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h1 id="发送一条单向消息"><a href="#发送一条单向消息" class="headerlink" title="发送一条单向消息"></a>发送一条单向消息</h1><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404111001159.png" alt="image-20240411100153991"> </p>
-<p>生产者</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<h2 id="生产者"><a href="#生产者" class="headerlink" title="生产者"></a>生产者</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onewayProducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token class-name">DefaultMQProducer</span> producer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultMQProducer</span><span class="token punctuation">(</span><span class="token string">"oneway-producer-group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     producer<span class="token punctuation">.</span><span class="token function">setNamesrvAddr</span><span class="token punctuation">(</span><span class="token class-name">MqConstant</span><span class="token punctuation">.</span><span class="token constant">NAME_SRV_ADDR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -573,8 +574,7 @@
 
 
 
-<p>消费者</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 消费者</span>
+<h2 id="消费者"><a href="#消费者" class="headerlink" title="消费者"></a>消费者</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 消费者</span>
 <span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onewayConsumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token comment">// 不管是push还是pull，底层都是pull模式，通过长轮询的方案实现</span>
@@ -612,8 +612,7 @@
 <h1 id="发送一条延迟消息"><a href="#发送一条延迟消息" class="headerlink" title="发送一条延迟消息"></a>发送一条延迟消息</h1><p><code>message.setDelayTimeLevel(3);</code>：</p>
 <p>给消息设置一个延迟等级（一共有十八个等级）</p>
 <p>1s 5s 10s 30s 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m 20m 30m 1h 2h</p>
-<p>生产者</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 生产者</span>
+<h2 id="生产者-1"><a href="#生产者-1" class="headerlink" title="生产者"></a>生产者</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 生产者</span>
 <span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msProducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token class-name">DefaultMQProducer</span> producer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultMQProducer</span><span class="token punctuation">(</span><span class="token string">"ms-producer-group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -628,8 +627,7 @@
     producer<span class="token punctuation">.</span><span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>消费者</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 消费者</span>
+<h2 id="消费者-1"><a href="#消费者-1" class="headerlink" title="消费者"></a>消费者</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 消费者</span>
 <span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msConsumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token class-name">DefaultMQPushConsumer</span> consumer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultMQPushConsumer</span><span class="token punctuation">(</span><span class="token string">"ms-consumer-group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -652,8 +650,7 @@
 
 
 
-<h1 id="发送一组消息"><a href="#发送一组消息" class="headerlink" title="发送一组消息"></a>发送一组消息</h1><p>生产者</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<h1 id="发送一组消息"><a href="#发送一组消息" class="headerlink" title="发送一组消息"></a>发送一组消息</h1><h2 id="生产者-2"><a href="#生产者-2" class="headerlink" title="生产者"></a>生产者</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testBatchProducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token class-name">DefaultMQProducer</span> producer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultMQProducer</span><span class="token punctuation">(</span><span class="token string">"batch-producer-group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     producer<span class="token punctuation">.</span><span class="token function">setNamesrvAddr</span><span class="token punctuation">(</span><span class="token class-name">MqConstant</span><span class="token punctuation">.</span><span class="token constant">NAME_SRV_ADDR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -673,8 +670,7 @@
 
 
 <p>消息监听里<code>MessageListenerConcurrently</code>是并发模式，多线程的，失败了会重试16次</p>
-<p>消费者</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<h2 id="消费者-2"><a href="#消费者-2" class="headerlink" title="消费者"></a>消费者</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testBatchConsumer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token class-name">DefaultMQPushConsumer</span> consumer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultMQPushConsumer</span><span class="token punctuation">(</span><span class="token string">"batch-consumer-group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     consumer<span class="token punctuation">.</span><span class="token function">setNamesrvAddr</span><span class="token punctuation">(</span><span class="token class-name">MqConstant</span><span class="token punctuation">.</span><span class="token constant">NAME_SRV_ADDR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1071,6 +1067,7 @@
     consumer<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
 
                 
