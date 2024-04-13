@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-13T03:31:10.260Z</updated>
+  <updated>2024-04-13T12:06:41.165Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RocketMQ-3.0-SpringBoot集成RocketocketMQ</title>
+    <link href="https://qetuop91.github.io/2024/04/13/RocketMQ-3.0-SpringBoot%E9%9B%86%E6%88%90RocketocketMQ/"/>
+    <id>https://qetuop91.github.io/2024/04/13/RocketMQ-3.0-SpringBoot%E9%9B%86%E6%88%90RocketocketMQ/</id>
+    <published>2024-04-13T12:06:10.000Z</published>
+    <updated>2024-04-13T12:06:41.165Z</updated>
+    
+    
+    
+    
+    <category term="RocketMQ" scheme="https://qetuop91.github.io/categories/RocketMQ/"/>
+    
+    
+    <category term="RocketMQ" scheme="https://qetuop91.github.io/tags/RocketMQ/"/>
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Sunshine+Moonlight串流</title>
@@ -52,8 +71,16 @@
     <link href="https://qetuop91.github.io/2024/04/12/RocketMQ-1.0-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%90%AF%E5%8A%A8RocketMQ/"/>
     <id>https://qetuop91.github.io/2024/04/12/RocketMQ-1.0-%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%90%AF%E5%8A%A8RocketMQ/</id>
     <published>2024-04-12T03:17:05.000Z</published>
-    <updated>2024-04-12T03:17:57.478Z</updated>
+    <updated>2024-04-13T12:05:00.796Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要使用RocketMQ？&quot;&gt;&lt;a href=&quot;#为什么要使用RocketMQ？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
@@ -523,37 +550,6 @@
     <category term="创建型模式" scheme="https://qetuop91.github.io/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
     
     <category term="抽象工厂模式" scheme="https://qetuop91.github.io/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工厂模式</title>
-    <link href="https://qetuop91.github.io/2024/04/09/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://qetuop91.github.io/2024/04/09/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
-    <published>2024-04-09T00:42:56.000Z</published>
-    <updated>2024-04-11T06:27:00.087Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="设计模式" scheme="https://qetuop91.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="创建型模式" scheme="https://qetuop91.github.io/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="工厂模式" scheme="https://qetuop91.github.io/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
