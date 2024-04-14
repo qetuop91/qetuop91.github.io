@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="行为型模式, Feliks">
-    <meta name="description" content="设计模式学习笔记">
+    <meta name="keywords" content="RocketMQ-4.0-消息堆积, Feliks">
+    <meta name="description" content="RocketMQ学习笔记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>行为型模式 | Feliks</title>
+    <title>RocketMQ-4.0-消息堆积 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -359,12 +359,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">行为型模式</h1>
+                    <h1 class="description center-align post-title">RocketMQ-4.0-消息堆积</h1>
                 </div>
             </div>
         </div>
@@ -387,16 +387,12 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/RocketMQ/">
+                                <span class="chip bg-color">RocketMQ</span>
+                            </a>
+                        
                             <a href="/tags/Java/">
                                 <span class="chip bg-color">Java</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">设计模式</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">行为型模式</span>
                             </a>
                         
                     </div>
@@ -407,8 +403,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/RocketMQ/" class="post-category">
+                                RocketMQ
                             </a>
                         
                     </div>
@@ -420,21 +416,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-09
+                    2024-04-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-09
+                    2024-04-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    124
+                    380
                 </div>
                 
 
@@ -461,23 +457,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h1><blockquote>
-<p>这些模式关注对象之间的通信和交互,为了在解决对象之间的责任分配和算法的封装</p>
-</blockquote>
+                <h1 id="消息堆积问题"><a href="#消息堆积问题" class="headerlink" title="消息堆积问题"></a>消息堆积问题</h1><p>一般认为单条队列消息差值&gt;=10w条的时候，就算堆积问题</p>
+<h2 id="什么情况下出现消息堆积？"><a href="#什么情况下出现消息堆积？" class="headerlink" title="什么情况下出现消息堆积？"></a>什么情况下出现消息堆积？</h2><ol>
+<li><p>生产者生产消息太快了</p>
 <ul>
-<li>责任链模式(Chain of Responsibility Pattern)</li>
-<li>命令模式(Command Pattern)</li>
-<li>解释器模式(Interpreter Pattern)</li>
-<li>迭代器模式(Iterator Pattern)</li>
-<li>中介者模式(Mediator Pattern)</li>
-<li>备忘录模式(Memento Pattern)</li>
-<li>观察者模式(Observer Pattern)</li>
-<li>状态模式(State Pattern)</li>
-<li>空对象模式(Null Object Pattern)</li>
-<li>策略模式(Strategy Pattern)</li>
-<li>模板模式(Template Pattern)</li>
-<li>访问者模式(Visitor Pattern)</li>
+<li><p>增加消费者数量，但是消费者数量&lt;=队列数量</p>
+</li>
+<li><p>适当地设置最大的消费线程数量</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * consumeThreadNumber是怎么计算的？
+ * 线程池里面的最大核心线程数量（n是当前程序运行电脑的最大处理器数量）：
+ *      IO密集型：2n
+ *          读取数据、操作数据库等操作
+ *      CPU密集型：n或者n+1
+ *          用于计算、执行循环等操作
+ */</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
+        topic <span class="token operator">=</span> <span class="token string">"backlogTopic"</span><span class="token punctuation">,</span>
+        consumerGroup <span class="token operator">=</span> <span class="token string">"backlog-consumer-group"</span><span class="token punctuation">,</span>
+        <span class="token comment">// 消息堆积的处理：适当地设置最大的消费线程数量（根据IO（2n）/CPU（n+1））</span>
+        consumeThreadNumber <span class="token operator">=</span> <span class="token number">32</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EBacklogListener1</span> <span class="token keyword">implements</span> <span class="token class-name">RocketMQListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是测试积压的第一个消费者："</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>这里的consumeThreadNumber是根据当前机器的逻辑处理器来算出的，就是公式里的n</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142157692.png" alt="image-20240414215724613"> </p>
+</li>
+<li><p>动态扩容队列数量，从而增加消费者数量</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142158343.png" alt="image-20240414215817311"> </p>
+<blockquote>
+<p>  注意：扩容可以在消息没消费完的时候进行，但是缩容不行，缩容只能在消息消费完后进行设置，不然会导致消息丢失不会被消费</p>
+</blockquote>
+</li>
 </ul>
+</li>
+<li><p>消费者消费出现问题</p>
+<ul>
+<li>排查消费者程序的问题</li>
+</ul>
+</li>
+</ol>
+<h1 id="跳过堆积"><a href="#跳过堆积" class="headerlink" title="跳过堆积"></a>跳过堆积</h1><p>当消息出现堆积问题且不想处理的话可以对其进行跳过堆积处理（不推荐）</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142159547.png" alt="image-20240414215930529"> </p>
 
                 
             </div>
@@ -504,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/09/xing-wei-xing-mo-shi/">https://qetuop91.github.io/2024/04/09/xing-wei-xing-mo-shi/</a>
+                    <a href="https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/">https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,16 +569,12 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/RocketMQ/">
+                                    <span class="chip bg-color">RocketMQ</span>
+                                </a>
+                            
                                 <a href="/tags/Java/">
                                     <span class="chip bg-color">Java</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">设计模式</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">行为型模式</span>
                                 </a>
                             
                         </div>
@@ -963,57 +986,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/09/gong-han-mo-shi/">
+                <a href="/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/21.jpg" class="responsive-img" alt="工厂模式">
+                        <img src="/medias/myImages/19.jpg" class="responsive-img" alt="RocketMQ-4.0-消息堆积">
                         
-                        <span class="card-title">工厂模式</span>
+                        <span class="card-title">RocketMQ-4.0-消息堆积</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            设计模式学习笔记
+                            RocketMQ学习笔记
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/RocketMQ/" class="post-category">
+                                    RocketMQ
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/RocketMQ/">
+                        <span class="chip bg-color">RocketMQ</span>
+                    </a>
+                    
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">创建型模式</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">工厂模式</span>
                     </a>
                     
                 </div>
@@ -1027,30 +1044,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/09/jie-gou-xing-mo-shi/">
+                <a href="/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/17.jpg" class="responsive-img" alt="结构型模式">
+                        <img src="/medias/myImages/18.jpg" class="responsive-img" alt="RocketMQ-3.0-SpringBoot集成RocketocketMQ">
                         
-                        <span class="card-title">结构型模式</span>
+                        <span class="card-title">RocketMQ-3.0-SpringBoot集成RocketocketMQ</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            设计模式学习笔记
+                            RocketMQ学习笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/RocketMQ/" class="post-category">
+                                    RocketMQ
                                 </a>
                             
                             
@@ -1060,16 +1077,12 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/RocketMQ/">
+                        <span class="chip bg-color">RocketMQ</span>
+                    </a>
+                    
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">结构型模式</span>
                     </a>
                     
                 </div>

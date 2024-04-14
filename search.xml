@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>RocketMQ-4.0-消息堆积</title>
+      <link href="/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/"/>
+      <url>/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="消息堆积问题"><a href="#消息堆积问题" class="headerlink" title="消息堆积问题"></a>消息堆积问题</h1><p>一般认为单条队列消息差值&gt;=10w条的时候，就算堆积问题</p><h2 id="什么情况下出现消息堆积？"><a href="#什么情况下出现消息堆积？" class="headerlink" title="什么情况下出现消息堆积？"></a>什么情况下出现消息堆积？</h2><ol><li><p>生产者生产消息太快了</p><ul><li><p>增加消费者数量，但是消费者数量&lt;=队列数量</p></li><li><p>适当地设置最大的消费线程数量</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/** * consumeThreadNumber是怎么计算的？ * 线程池里面的最大核心线程数量（n是当前程序运行电脑的最大处理器数量）： *      IO密集型：2n *          读取数据、操作数据库等操作 *      CPU密集型：n或者n+1 *          用于计算、执行循环等操作 */</span><span class="token annotation punctuation">@Component</span><span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>        topic <span class="token operator">=</span> <span class="token string">"backlogTopic"</span><span class="token punctuation">,</span>        consumerGroup <span class="token operator">=</span> <span class="token string">"backlog-consumer-group"</span><span class="token punctuation">,</span>        <span class="token comment">// 消息堆积的处理：适当地设置最大的消费线程数量（根据IO（2n）/CPU（n+1））</span>        consumeThreadNumber <span class="token operator">=</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EBacklogListener1</span> <span class="token keyword">implements</span> <span class="token class-name">RocketMQListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是测试积压的第一个消费者："</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><p>这里的consumeThreadNumber是根据当前机器的逻辑处理器来算出的，就是公式里的n</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142157692.png" alt="image-20240414215724613"> </p></li><li><p>动态扩容队列数量，从而增加消费者数量</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142158343.png" alt="image-20240414215817311"> </p><blockquote><p>  注意：扩容可以在消息没消费完的时候进行，但是缩容不行，缩容只能在消息消费完后进行设置，不然会导致消息丢失不会被消费</p></blockquote></li></ul></li><li><p>消费者消费出现问题</p><ul><li>排查消费者程序的问题</li></ul></li></ol><h1 id="跳过堆积"><a href="#跳过堆积" class="headerlink" title="跳过堆积"></a>跳过堆积</h1><p>当消息出现堆积问题且不想处理的话可以对其进行跳过堆积处理（不推荐）</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142159547.png" alt="image-20240414215930529"> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> RocketMQ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RocketMQ </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RocketMQ-3.0-SpringBoot集成RocketocketMQ</title>
       <link href="/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/"/>
       <url>/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</url>
@@ -307,9 +334,9 @@
             
             <tag> Java </tag>
             
-            <tag> 面试 </tag>
-            
             <tag> 集合 </tag>
+            
+            <tag> 面试 </tag>
             
         </tags>
       
@@ -336,9 +363,9 @@
             
             <tag> Java </tag>
             
-            <tag> Spring </tag>
-            
             <tag> 面试 </tag>
+            
+            <tag> Spring </tag>
             
         </tags>
       
