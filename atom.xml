@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-14T14:01:51.655Z</updated>
+  <updated>2024-04-15T03:02:08.802Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>集合框架-3.0-迭代器与foreach</title>
+    <link href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/"/>
+    <id>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</id>
+    <published>2024-04-15T02:53:15.000Z</published>
+    <updated>2024-04-15T03:02:08.802Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;迭代器（iterator）的作用？&quot;&gt;&lt;a href=&quot;#迭代器（iterator）的作用？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集合框架-2.0-Collection中的常用方法</title>
+    <link href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/"/>
+    <id>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/</id>
+    <published>2024-04-15T02:47:55.000Z</published>
+    <updated>2024-04-15T02:52:01.895Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;常用方法：（Collection中定义了15个抽象方法）&quot;&gt;&lt;a href=&quot;#常用方法：（Collection中定义了15个抽象方法）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础1.0</title>
+    <link href="https://qetuop91.github.io/2024/04/15/java-ji-chu-1-0/"/>
+    <id>https://qetuop91.github.io/2024/04/15/java-ji-chu-1-0/</id>
+    <published>2024-04-15T02:43:23.000Z</published>
+    <updated>2024-04-15T02:43:27.977Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>RocketMQ-4.0-消息堆积</title>
@@ -468,93 +539,6 @@
     
     
     <category term="avatar" scheme="https://qetuop91.github.io/tags/avatar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>live2d</title>
-    <link href="https://qetuop91.github.io/2024/04/09/live2d/"/>
-    <id>https://qetuop91.github.io/2024/04/09/live2d/</id>
-    <published>2024-04-09T12:29:45.000Z</published>
-    <updated>2024-04-09T15:02:53.756Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="live2d" scheme="https://qetuop91.github.io/categories/live2d/"/>
-    
-    
-    <category term="live2d" scheme="https://qetuop91.github.io/tags/live2d/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建造者模式</title>
-    <link href="https://qetuop91.github.io/2024/04/09/jian-zao-zhe-mo-shi/"/>
-    <id>https://qetuop91.github.io/2024/04/09/jian-zao-zhe-mo-shi/</id>
-    <published>2024-04-09T09:12:01.000Z</published>
-    <updated>2024-04-11T06:27:17.937Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;建造者模式&quot;&gt;&lt;a href=&quot;#建造者模式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="设计模式" scheme="https://qetuop91.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="创建型模式" scheme="https://qetuop91.github.io/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="建造者模式" scheme="https://qetuop91.github.io/tags/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单例模式</title>
-    <link href="https://qetuop91.github.io/2024/04/09/dan-li-mo-shi/"/>
-    <id>https://qetuop91.github.io/2024/04/09/dan-li-mo-shi/</id>
-    <published>2024-04-09T09:02:28.000Z</published>
-    <updated>2024-04-11T06:27:12.429Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="设计模式" scheme="https://qetuop91.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="创建型模式" scheme="https://qetuop91.github.io/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="单例模式" scheme="https://qetuop91.github.io/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   

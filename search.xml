@@ -4,6 +4,77 @@
   
     
     <entry>
+      <title>集合框架-3.0-迭代器与foreach</title>
+      <link href="/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/"/>
+      <url>/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</url>
+      
+        <content type="html"><![CDATA[<h1 id="迭代器（iterator）的作用？"><a href="#迭代器（iterator）的作用？" class="headerlink" title="迭代器（iterator）的作用？"></a>迭代器（iterator）的作用？</h1><p>遍历集合元素</p><h1 id="获取迭代器对象"><a href="#获取迭代器对象" class="headerlink" title="获取迭代器对象"></a>获取迭代器对象</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Iterator</span> iterator <span class="token operator">=</span> coll<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h1 id="迭代器实现遍历"><a href="#迭代器实现遍历" class="headerlink" title="迭代器实现遍历"></a>迭代器实现遍历</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// next()：①指针下移 ②将下移后集合位置上的元素返回</span><span class="token punctuation">}</span></code></pre><h1 id="增强for循环（foreach）"><a href="#增强for循环（foreach）" class="headerlink" title="增强for循环（foreach）"></a>增强for循环（foreach）</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>遍历数组、集合</p><h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>要遍历的集合或数组的类型 临时变量 <span class="token operator">:</span> 要遍历的集合或数组变量<span class="token punctuation">)</span> <span class="token punctuation">{</span>操作临时变量的输出<span class="token punctuation">}</span></code></pre><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><blockquote><ul><li><p>针对集合来说，增强for循环的底层仍然是使用迭代器</p><ul><li><p>增强for循环的执行过程中，是将集合或数组元素中的元素一次赋值给临时变量</p><p>注意：循环体中对临时变量的修改可能</p></li></ul></li></ul></blockquote><blockquote><p>  不会导致原有集合或数组中元素的修改</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 面试 </tag>
+            
+            <tag> 集合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集合框架-2.0-Collection中的常用方法</title>
+      <link href="/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/"/>
+      <url>/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="常用方法：（Collection中定义了15个抽象方法）"><a href="#常用方法：（Collection中定义了15个抽象方法）" class="headerlink" title="常用方法：（Collection中定义了15个抽象方法）"></a><strong>常用方法：（Collection中定义了15个抽象方法）</strong></h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">addAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">containsAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">retainAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">removeAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h1 id="集合与数组之间的转换"><a href="#集合与数组之间的转换" class="headerlink" title="集合与数组之间的转换"></a><strong>集合与数组之间的转换</strong></h1><p><strong>集合</strong> —&gt; <strong>数组</strong>：<code>toArray()</code><br><strong>数组</strong> —&gt; <strong>集合</strong>：调用Arrays的静态方法<code>asList(Object ... objs)</code></p><h1 id="向Collection中添加元素的要求："><a href="#向Collection中添加元素的要求：" class="headerlink" title="向Collection中添加元素的要求："></a><strong>向Collection中添加元素的要求：</strong></h1><p>要求元素所属的类一定要重写<code>equals()</code>!<br>原因：<br>因为Collection中的相关方法（例如：<code>contains()</code>/<code>remove()</code>）在使用时，要调用元素所在类的<code>equals()</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 面试 </tag>
+            
+            <tag> 集合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java基础1.0</title>
+      <link href="/2024/04/15/java-ji-chu-1-0/"/>
+      <url>/2024/04/15/java-ji-chu-1-0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RocketMQ-4.0-消息堆积</title>
       <link href="/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/"/>
       <url>/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</url>
