@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Sunshine+Moonlight串流, Feliks">
-    <meta name="description" content="串流">
+    <meta name="keywords" content="集合框架-5.0-Set接口与实现类的使用, Feliks">
+    <meta name="description" content="Java集合框架">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Sunshine+Moonlight串流 | Feliks</title>
+    <title>集合框架-5.0-Set接口与实现类的使用 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -359,12 +359,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/30.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/29.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Sunshine+Moonlight串流</h1>
+                    <h1 class="description center-align post-title">集合框架-5.0-Set接口与实现类的使用</h1>
                 </div>
             </div>
         </div>
@@ -387,20 +387,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%B2%E6%B5%81/">
-                                <span class="chip bg-color">串流</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/Moonlight/">
-                                <span class="chip bg-color">Moonlight</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
-                            <a href="/tags/Sunshine/">
-                                <span class="chip bg-color">Sunshine</span>
-                            </a>
-                        
-                            <a href="/tags/Github%E5%BC%80%E6%BA%90/">
-                                <span class="chip bg-color">Github开源</span>
+                            <a href="/tags/%E9%9B%86%E5%90%88/">
+                                <span class="chip bg-color">集合</span>
                             </a>
                         
                     </div>
@@ -411,8 +407,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%B8%B2%E6%B5%81/" class="post-category">
-                                串流
+                            <a href="/categories/Java/" class="post-category">
+                                Java
                             </a>
                         
                     </div>
@@ -424,21 +420,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-13
+                    2024-04-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-14
+                    2024-04-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    578
+                    666
                 </div>
                 
 
@@ -465,58 +461,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="串流是什么？"><a href="#串流是什么？" class="headerlink" title="串流是什么？"></a>串流是什么？</h1><p>调用存储在其他设备上的文件，实时传输，来实现在本设备的实时播放，只要是调用不属于本地的视频、音乐、游戏，都属于串流</p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><ol>
-<li><p>主机（就是你的电脑）上安装sunshine</p>
+                <h1 id="Set及其实现类特点"><a href="#Set及其实现类特点" class="headerlink" title="Set及其实现类特点"></a>Set及其实现类特点</h1><p>java.util.Collection：存储一个一个的数据</p>
 <ul>
-<li><p>sunshine在github的官方开源网址：<a target="_blank" rel="noopener" href="https://github.com/LizardByte/Sunshine/releases">Releases · LizardByte/Sunshine (github.com)</a></p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131044468.png" alt="image-20240413104440422"> </p>
-</li>
-<li><p>登不上github的我把两个软件都放在了奶牛快传（app-nonRoot-release.apk是安卓版的moonlight）：</p>
-<p><a target="_blank" rel="noopener" href="https://cowtransfer.com/s/0d8a95c5c6214b">https://cowtransfer.com/s/0d8a95c5c6214b</a> 点击链接查看 [ sunshine + moonlight ] ，或访问奶牛快传 <a target="_blank" rel="noopener" href="https://cowtransfer.com/">https://cowtransfer.com</a> 传输口令：<code>uciuwf</code></p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131049997.png" alt="image-20240413104640891"> </p>
-<p>下完之后记得删掉文件后面的(delete)</p>
-</li>
+<li>子接口<strong>Set</strong>：存储无序的、不可重复的数据<ul>
+<li><strong>HashSet</strong>：主要实现类（底层使用HashMap，即使用数组+单链表+红黑树结构进行存储（jdk8中））<ul>
+<li><strong>LinkedHashSet</strong>：是HashSet的子类，在现有的数组+单链表+红黑树结构基础上又添加了一组双向链表用于记录添加元素的先后顺序，便于频繁的查询操作</li>
 </ul>
 </li>
-<li><p>手机或者你要串流到的设备上安装moonlight，安卓版的也在上面的链接里，iOS版的自行去AppStore搜索<code>Moonlight</code></p>
-<ul>
-<li><p>官方github开源网址：<a target="_blank" rel="noopener" href="https://github.com/moonlight-stream">Moonlight Game Streaming Project (github.com)</a></p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131100683.png" alt="image-20240413110014622"></p>
-</li>
+<li><strong>TreeSet</strong>：底层使用红黑树存储，可以按照添加的元素的置顶的属性大小顺序进行遍历</li>
 </ul>
 </li>
-</ol>
-<h1 id="Sunshine安装与配置"><a href="#Sunshine安装与配置" class="headerlink" title="Sunshine安装与配置"></a>Sunshine安装与配置</h1><p>安装sunshine的时候除了要留意一下它在电脑里的安装路径外，其他直接默认然后下一步就好，装好之后会看到这样一个图标：</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131104715.png" alt="image-20240413110420693"> </p>
-<p>右键，Open Sunshine，就会打开一个网页，第一次打开会显示如下内容：</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131107538.png" alt="image-20240413110732510"> </p>
-<p>根据个人喜好设置好用户名和密码之后进行登录就可以到这个页面进行Sunshine设置了</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131108980.png" alt="image-20240413110858889"> </p>
-<p>初始页面是英文的，可以在配置（Configuration）里面设置中文</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131111456.png" alt="image-20240413111129441"> </p>
-<p>非常人性化的Sunshine其实已经帮我们配置好了大部分的设置，我们只需小小的按照个人需求去配置即可</p>
-<p>点击NetWork，将UPnP打开</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131114451.png" alt="image-20240413111404433"> </p>
-<p>UPnP就是方便端口转发的网络协议，可以让设备自动配置端口转发，同时要在路由器打开UPnP服务即可</p>
-<p>如果有要使用IPV6进行串流的需要进行设置：</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131117391.png" alt="image-20240413111705371"> </p>
-<p>设置完之后记得<strong>保存</strong>，<strong>应用</strong>，不然配置不会生效</p>
-<h1 id="Moonlight配置"><a href="#Moonlight配置" class="headerlink" title="Moonlight配置"></a>Moonlight配置</h1><p>Moonlight安装就不讲了，安卓版的直接在设备运行apk文件就行了，iOS更简单</p>
-<p>下载后是这个东东</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131055634.jpg" alt="6a23079ec3aa7b60b7364b5141e0248"> </p>
-<p>打开Moonlight之后添加你的主机ip进去即可</p>
-<p>主机ip的获取方式：</p>
-<ol>
-<li>在电脑上按<code>win</code>键+<code>r</code>键</li>
-<li>输入<code>cmd</code>，按回车</li>
-<li>在弹出的黑窗口中输入：<code>ipconfig</code></li>
-<li>将ipv4地址输入到Moonlight中</li>
-</ol>
-<p>选择DESKTOP连接到电脑的桌面</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131127998.png" alt="c42abd2d7ae7818e7f5d622ed6b0036"> </p>
-<p>然后就可以开玩辣</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131126631.png" alt="image-20240413112611239"> </p>
+</ul>
+<h1 id="使用频率"><a href="#使用频率" class="headerlink" title="使用频率"></a>使用频率</h1><blockquote>
+<p>  相较于List、Map来说，使用的频率比较少</p>
+<p>  用来过滤重复的数据</p>
+</blockquote>
+<h1 id="Set中无序性、不可重复性的理解（HashSet及其子类为例）"><a href="#Set中无序性、不可重复性的理解（HashSet及其子类为例）" class="headerlink" title="Set中无序性、不可重复性的理解（HashSet及其子类为例）"></a>Set中无序性、不可重复性的理解（HashSet及其子类为例）</h1><blockquote>
+<p>  无序性：</p>
+<p>  ≠ 随机性</p>
+<p>  添加元素的顺序和遍历元素的顺序不一致，是不是就是无序性？（不是）</p>
+<p>  什么是无序性？与添加元素的位置有关（可以用链表来理解），元素与元素之间的地址不是依次紧密排列的，这里是根据添加元素的哈希值，计算其在数组中的存储位置，此位置不是一次排序的，表现为无序性</p>
+</blockquote>
+<blockquote>
+<p>  不可重复性：</p>
+<p>  添加到Set中的元素是不能相同的</p>
+<p>  比较的标准需要判断hashCode()得到的哈希值以及equals()得到的boolean型的结果</p>
+<p>  哈希值相同且equals()返回true，则认为元素是相同的</p>
+</blockquote>
+<h1 id="添加到HashSet-LinkedHashSet中元素的要求"><a href="#添加到HashSet-LinkedHashSet中元素的要求" class="headerlink" title="添加到HashSet/LinkedHashSet中元素的要求"></a>添加到HashSet/LinkedHashSet中元素的要求</h1><p>元素所在的类要重写两个方法：equals()和hashCode()</p>
+<p>同时，要求equals()和hashCode()要保持一致性，只需要在IDEA中自动生成两个方法的重写即可，既能保证两个方法的一致性</p>
+<h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><h2 id="底层的数据结构"><a href="#底层的数据结构" class="headerlink" title="底层的数据结构"></a>底层的数据结构</h2><blockquote>
+<p>  红黑树</p>
+</blockquote>
+<h2 id="添加数据后的特点"><a href="#添加数据后的特点" class="headerlink" title="添加数据后的特点"></a>添加数据后的特点</h2><blockquote>
+<p>  可以按照添加的元素的置顶的属性大小顺序进行遍历</p>
+</blockquote>
+<h2 id="向TreeSet中添加的元素的要求"><a href="#向TreeSet中添加的元素的要求" class="headerlink" title="向TreeSet中添加的元素的要求"></a>向TreeSet中添加的元素的要求</h2><blockquote>
+<p>  要求添加到TreeSet中的元素必须是同一个类型的对象，否则会报ClassCastException异常</p>
+</blockquote>
+<h2 id="判断数据是否相同的标准"><a href="#判断数据是否相同的标准" class="headerlink" title="判断数据是否相同的标准"></a>判断数据是否相同的标准</h2><blockquote>
+<p>  不再是考虑hashCode()和equals()方法了，意味着添加到TreeSet中的元素所在的类不需要重写hashCode()和equals()方法</p>
+<ul>
+<li>比较元素是否相等的标准就是考虑自然排序或定制排序中compareTo()或compare()的返回值</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>  如果compareTo()或compare()的返回值为0，则认为两个对象时相等的，由于TreeSet中不能存放相同的元素，则后一个相等的元素就不能添加到TreeSet中</p>
+</blockquote>
 
                 
             </div>
@@ -543,7 +534,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/13/sunshine-moonlight-chuan-liu/">https://qetuop91.github.io/2024/04/13/sunshine-moonlight-chuan-liu/</a>
+                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -581,20 +572,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%B2%E6%B5%81/">
-                                    <span class="chip bg-color">串流</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/Moonlight/">
-                                    <span class="chip bg-color">Moonlight</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
-                                <a href="/tags/Sunshine/">
-                                    <span class="chip bg-color">Sunshine</span>
-                                </a>
-                            
-                                <a href="/tags/Github%E5%BC%80%E6%BA%90/">
-                                    <span class="chip bg-color">Github开源</span>
+                                <a href="/tags/%E9%9B%86%E5%90%88/">
+                                    <span class="chip bg-color">集合</span>
                                 </a>
                             
                         </div>
@@ -1010,30 +997,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/">
+                <a href="/2024/04/15/2.0-easyvirtualdisplay/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/18.jpg" class="responsive-img" alt="RocketMQ-3.0-SpringBoot集成RocketocketMQ">
+                        <img src="/medias/myImages/31.jpg" class="responsive-img" alt="使用EasyVirtualDisplay的副屏方案">
                         
-                        <span class="card-title">RocketMQ-3.0-SpringBoot集成RocketocketMQ</span>
+                        <span class="card-title">使用EasyVirtualDisplay的副屏方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            RocketMQ学习笔记
+                            串流
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/RocketMQ/" class="post-category">
-                                    RocketMQ
+                            <a href="/categories/%E4%B8%B2%E6%B5%81/" class="post-category">
+                                    串流
                                 </a>
                             
                             
@@ -1043,12 +1030,24 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RocketMQ/">
-                        <span class="chip bg-color">RocketMQ</span>
+                    <a href="/tags/%E4%B8%B2%E6%B5%81/">
+                        <span class="chip bg-color">串流</span>
                     </a>
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Moonlight/">
+                        <span class="chip bg-color">Moonlight</span>
+                    </a>
+                    
+                    <a href="/tags/Sunshine/">
+                        <span class="chip bg-color">Sunshine</span>
+                    </a>
+                    
+                    <a href="/tags/Github%E5%BC%80%E6%BA%90/">
+                        <span class="chip bg-color">Github开源</span>
+                    </a>
+                    
+                    <a href="/tags/EasyVirtualDisplay/">
+                        <span class="chip bg-color">EasyVirtualDisplay</span>
                     </a>
                     
                 </div>
@@ -1062,30 +1061,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/">
+                <a href="/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/16.jpg" class="responsive-img" alt="RocketMQ-1.0-配置与启动RocketMQ">
+                        <img src="/medias/myImages/28.jpg" class="responsive-img" alt="集合框架-4.0-List接口与实现类的使用">
                         
-                        <span class="card-title">RocketMQ-1.0-配置与启动RocketMQ</span>
+                        <span class="card-title">集合框架-4.0-List接口与实现类的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            RocketMQ学习笔记
+                            Java集合框架
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/RocketMQ/" class="post-category">
-                                    RocketMQ
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
@@ -1095,12 +1094,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RocketMQ/">
-                        <span class="chip bg-color">RocketMQ</span>
-                    </a>
-                    
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">集合</span>
                     </a>
                     
                 </div>
@@ -1298,7 +1301,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">42.6k</span>
+                        class="white-color">44.1k</span>
             
             
             

@@ -4,6 +4,97 @@
   
     
     <entry>
+      <title>使用EasyVirtualDisplay的副屏方案</title>
+      <link href="/2024/04/15/2.0-easyvirtualdisplay/"/>
+      <url>/2024/04/15/2.0-easyvirtualdisplay/</url>
+      
+        <content type="html"><![CDATA[<p>本方案基于Sunshine+Moonlight串流实现，不知道这两个是什么的可以回去自行阅览：<a href="https://feliks.netlify.app/2024/04/13/sunshine-moonlight-chuan-liu/">Sunshine+Moonlight串流 | Feliks</a></p><h1 id="EasyVirtualDisplay"><a href="#EasyVirtualDisplay" class="headerlink" title="EasyVirtualDisplay"></a>EasyVirtualDisplay</h1><p><strong>github官方开源地址中的描述</strong></p><p>Effortlessly create virtual displays in Windows, capable of supporting various resolutions and refresh rates, suitable for remote control or graphics card spoofing.</p><p>在win中轻松创建支持多种分辨率和刷新率的虚拟显示器，可用于远程控制或显卡欺骗。</p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>官方github地址：<a href="https://github.com/KtzeAbyss/Easy-Virtual-Display/releases/tag/0.1">Release EasyVirtualDisplay 0.1 · KtzeAbyss/Easy-Virtual-Display (github.com)</a></p><p>我把它放到奶牛快传了，无法访问github的也可以直接在奶牛里下载：<a href="https://cowtransfer.com/s/f4bf54e92c4c4b">https://cowtransfer.com/s/f4bf54e92c4c4b</a></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151546176.png" alt="image-20240415154615153"> </p><p>下载里面的EVDsetup.exe</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151535802.png" alt="image-20240415153525746"> </p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>下载好后运行并安装EasyVirtualDisplay</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151536196.png" alt="image-20240415153648168"> </p><p>安装好后运行viruaDisplayLit.exe</p><p>首次安装要下载驱动，启动<code>viruaDisplayLit</code>后，在隐藏图标那里找到他并右键</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151540540.png" alt="image-20240415154025523"> </p><p>驱动安装好后就可以<strong>启动虚拟屏幕</strong>了</p><h1 id="Moonlight"><a href="#Moonlight" class="headerlink" title="Moonlight"></a>Moonlight</h1><p>启动要串流的设备里的Moonlight，并且与Sunshine进行串流</p><p>接下来进行Sunshine的配置</p><h1 id="Sunshine配置"><a href="#Sunshine配置" class="headerlink" title="Sunshine配置"></a>Sunshine配置</h1><p>打开Sunshine的安装目录，找到tools目录，进去</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151550655.png" alt="image-20240415155039613"> </p><p>进去tools目录后在上面的输入框输入cmd并回车</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151551790.png" alt="image-20240415155153762"> </p><p>在打开的黑窗口中输入<code>dxgi-info.exe</code>，回车</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151553951.png" alt="image-20240415155302920"> </p><p>在展示的信息里面可以看到OUTPUT那一栏中有一块另外的<code>DISPLAY</code></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151555824.png" alt="image-20240415155544801"> </p><p>复制这个名称（不一定非是DISPLAY9，请根据自己的实际情况来复制）</p><p>在Sunshine的网页里找到<strong>Audio/Video</strong>选项卡</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151549908.png" alt="image-20240415154910863"> </p><p>在下面找到<strong>输出名称</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151549557.png" alt="image-20240415154935534"> </p><p>将刚刚得到的名称输入进去</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151556653.png" alt="image-20240415155656633"> </p><p>然后保存重启Sunshine，让你的设备在Moonlight中重新与Sunshine进行串流即可</p><h1 id="屏幕设置"><a href="#屏幕设置" class="headerlink" title="屏幕设置"></a>屏幕设置</h1><p>启动虚拟屏幕后可以在屏幕设置里查看到两块屏幕</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151602726.png" alt="image-20240415160258681"> </p><p><strong>记得设置好你需要的主副屏幕的位置</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 串流 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 串流 </tag>
+            
+            <tag> Moonlight </tag>
+            
+            <tag> Sunshine </tag>
+            
+            <tag> Github开源 </tag>
+            
+            <tag> EasyVirtualDisplay </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集合框架-5.0-Set接口与实现类的使用</title>
+      <link href="/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/"/>
+      <url>/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Set及其实现类特点"><a href="#Set及其实现类特点" class="headerlink" title="Set及其实现类特点"></a>Set及其实现类特点</h1><p>java.util.Collection：存储一个一个的数据</p><ul><li>子接口<strong>Set</strong>：存储无序的、不可重复的数据<ul><li><strong>HashSet</strong>：主要实现类（底层使用HashMap，即使用数组+单链表+红黑树结构进行存储（jdk8中））<ul><li><strong>LinkedHashSet</strong>：是HashSet的子类，在现有的数组+单链表+红黑树结构基础上又添加了一组双向链表用于记录添加元素的先后顺序，便于频繁的查询操作</li></ul></li><li><strong>TreeSet</strong>：底层使用红黑树存储，可以按照添加的元素的置顶的属性大小顺序进行遍历</li></ul></li></ul><h1 id="使用频率"><a href="#使用频率" class="headerlink" title="使用频率"></a>使用频率</h1><blockquote><p>  相较于List、Map来说，使用的频率比较少</p><p>  用来过滤重复的数据</p></blockquote><h1 id="Set中无序性、不可重复性的理解（HashSet及其子类为例）"><a href="#Set中无序性、不可重复性的理解（HashSet及其子类为例）" class="headerlink" title="Set中无序性、不可重复性的理解（HashSet及其子类为例）"></a>Set中无序性、不可重复性的理解（HashSet及其子类为例）</h1><blockquote><p>  无序性：</p><p>  ≠ 随机性</p><p>  添加元素的顺序和遍历元素的顺序不一致，是不是就是无序性？（不是）</p><p>  什么是无序性？与添加元素的位置有关（可以用链表来理解），元素与元素之间的地址不是依次紧密排列的，这里是根据添加元素的哈希值，计算其在数组中的存储位置，此位置不是一次排序的，表现为无序性</p></blockquote><blockquote><p>  不可重复性：</p><p>  添加到Set中的元素是不能相同的</p><p>  比较的标准需要判断hashCode()得到的哈希值以及equals()得到的boolean型的结果</p><p>  哈希值相同且equals()返回true，则认为元素是相同的</p></blockquote><h1 id="添加到HashSet-LinkedHashSet中元素的要求"><a href="#添加到HashSet-LinkedHashSet中元素的要求" class="headerlink" title="添加到HashSet/LinkedHashSet中元素的要求"></a>添加到HashSet/LinkedHashSet中元素的要求</h1><p>元素所在的类要重写两个方法：equals()和hashCode()</p><p>同时，要求equals()和hashCode()要保持一致性，只需要在IDEA中自动生成两个方法的重写即可，既能保证两个方法的一致性</p><h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><h2 id="底层的数据结构"><a href="#底层的数据结构" class="headerlink" title="底层的数据结构"></a>底层的数据结构</h2><blockquote><p>  红黑树</p></blockquote><h2 id="添加数据后的特点"><a href="#添加数据后的特点" class="headerlink" title="添加数据后的特点"></a>添加数据后的特点</h2><blockquote><p>  可以按照添加的元素的置顶的属性大小顺序进行遍历</p></blockquote><h2 id="向TreeSet中添加的元素的要求"><a href="#向TreeSet中添加的元素的要求" class="headerlink" title="向TreeSet中添加的元素的要求"></a>向TreeSet中添加的元素的要求</h2><blockquote><p>  要求添加到TreeSet中的元素必须是同一个类型的对象，否则会报ClassCastException异常</p></blockquote><h2 id="判断数据是否相同的标准"><a href="#判断数据是否相同的标准" class="headerlink" title="判断数据是否相同的标准"></a>判断数据是否相同的标准</h2><blockquote><p>  不再是考虑hashCode()和equals()方法了，意味着添加到TreeSet中的元素所在的类不需要重写hashCode()和equals()方法</p><ul><li>比较元素是否相等的标准就是考虑自然排序或定制排序中compareTo()或compare()的返回值</li></ul></blockquote><blockquote><p>  如果compareTo()或compare()的返回值为0，则认为两个对象时相等的，由于TreeSet中不能存放相同的元素，则后一个相等的元素就不能添加到TreeSet中</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 面试 </tag>
+            
+            <tag> 集合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集合框架-4.0-List接口与实现类的使用</title>
+      <link href="/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/"/>
+      <url>/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="List接口中存储数据的特点"><a href="#List接口中存储数据的特点" class="headerlink" title="List接口中存储数据的特点"></a>List接口中存储数据的特点</h1><p><strong>用于存储有序的、可以重复的数据 –&gt; 使用List代替数组，“动态”数组</strong></p><h1 id="List中常用的方法"><a href="#List中常用的方法" class="headerlink" title="List中常用的方法"></a>List中常用的方法</h1><h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><ul><li><p>在index位置插入element元素</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre></li><li><p>从index位置开始将elements中所有的元素添加进来</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">addAll</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Collection</span> elements<span class="token punctuation">)</span></code></pre></li></ul><h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><ul><li><p>获取指定index位置的元素</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span></code></pre></li><li><p>返回从fromInedex到toIndex位置的子集合</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">List</span> <span class="token function">subList</span><span class="token punctuation">(</span><span class="token keyword">int</span> fromIndex<span class="token punctuation">,</span> <span class="token keyword">int</span> toIndex<span class="token punctuation">)</span></code></pre></li></ul><h2 id="获取元素索引"><a href="#获取元素索引" class="headerlink" title="获取元素索引"></a>获取元素索引</h2><ul><li><p>返回element在集合中首次出现的位置</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre></li><li><p>返回element在当前集合中末次出现的位置</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre></li></ul><h2 id="删除和替换元素"><a href="#删除和替换元素" class="headerlink" title="删除和替换元素"></a>删除和替换元素</h2><ul><li><p>移除指定index位置的元素，并返回此元素</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span></code></pre></li><li><p>设置指定index位置的元素为element</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre></li></ul><h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ul><li>增<ul><li><code>add(Object element)</code></li><li><code>addAll(int index, Collection elements)</code></li></ul></li><li>删<ul><li><code>remove(Object element)</code></li><li>remove(int index)</li></ul></li><li>改<ul><li><code>set(int index, Object element)</code></li></ul></li><li>查<ul><li><code>get(int index)</code></li></ul></li><li>插<ul><li><code>add(int index, Object element)</code></li><li>addAll(int index, Collection elements)</li></ul></li><li>长度<ul><li><code>size()</code></li></ul></li><li>遍历<ul><li><code>iterator()</code>：使用迭代器进行遍历</li><li>增强for循环（foreach）</li><li>一般的for循环</li></ul></li></ul><h1 id="List及其实现类特点"><a href="#List及其实现类特点" class="headerlink" title="List及其实现类特点"></a>List及其实现类特点</h1><p>java.util.Collection：存储一个一个的数据</p><ul><li>子接口<strong>List</strong>：存储有序的、可重复的数据（“动态”数组）<ul><li><strong>ArrayList</strong><ul><li>List的主要实现类；线程不安全的、效率高；底层使用Object[]数组存储</li><li>在添加、查找数据时效率高；插入、删除数据时效率低</li></ul></li><li><strong>LinkedList</strong><ul><li>底层使用双向链表的方式进行存储；在对集合中的数据进行频繁的删除、插入操作时，建议使用此类</li><li>在插入、删除数据时效率搞；添加、查找数据时效率低</li></ul></li><li><strong>Vector</strong><ul><li>List的古老实现类；线程安全的，效率低</li><li>底层使用Object[]数组存储</li></ul></li></ul></li></ul><p>【面试题】</p><ul><li>ArrayList、Vector的区别是什么？</li><li>ArrayList、LinkedList的区别是什么？</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 面试 </tag>
+            
+            <tag> 集合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>集合框架-3.0-迭代器与foreach</title>
       <link href="/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/"/>
       <url>/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</url>
@@ -130,10 +221,10 @@
     
     <entry>
       <title>Sunshine+Moonlight串流</title>
-      <link href="/2024/04/13/sunshine-moonlight-chuan-liu/"/>
-      <url>/2024/04/13/sunshine-moonlight-chuan-liu/</url>
+      <link href="/2024/04/13/1.0-sunshine-moonlight-chuan-liu/"/>
+      <url>/2024/04/13/1.0-sunshine-moonlight-chuan-liu/</url>
       
-        <content type="html"><![CDATA[<h1 id="串流是什么？"><a href="#串流是什么？" class="headerlink" title="串流是什么？"></a>串流是什么？</h1><p>调用存储在其他设备上的文件，实时传输，来实现在本设备的实时播放，只要是调用不属于本地的视频、音乐、游戏，都属于串流</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><ol><li><p>主机（就是你的电脑）上安装sunshine</p><ul><li><p>sunshine在github的官方开源网址：<a href="https://github.com/LizardByte/Sunshine/releases">Releases · LizardByte/Sunshine (github.com)</a></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131044468.png" alt="image-20240413104440422"> </p></li><li><p>登不上github的我把两个软件都放在了奶牛快传（app-nonRoot-release.apk是安卓版的moonlight）：</p><p><a href="https://cowtransfer.com/s/0d8a95c5c6214b">https://cowtransfer.com/s/0d8a95c5c6214b</a> 点击链接查看 [ sunshine + moonlight ] ，或访问奶牛快传 <a href="https://cowtransfer.com/">https://cowtransfer.com</a> 传输口令：<code>uciuwf</code></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131049997.png" alt="image-20240413104640891"> </p><p>下完之后记得删掉文件后面的(delete)</p></li></ul></li><li><p>手机或者你要串流到的设备上安装moonlight，安卓版的也在上面的链接里，iOS版的自行去AppStore搜索<code>Moonlight</code></p><ul><li><p>官方github开源网址：<a href="https://github.com/moonlight-stream">Moonlight Game Streaming Project (github.com)</a></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131100683.png" alt="image-20240413110014622"></p></li></ul></li></ol><h1 id="Sunshine安装与配置"><a href="#Sunshine安装与配置" class="headerlink" title="Sunshine安装与配置"></a>Sunshine安装与配置</h1><p>安装sunshine的时候除了要留意一下它在电脑里的安装路径外，其他直接默认然后下一步就好，装好之后会看到这样一个图标：</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131104715.png" alt="image-20240413110420693"> </p><p>右键，Open Sunshine，就会打开一个网页，第一次打开会显示如下内容：</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131107538.png" alt="image-20240413110732510"> </p><p>根据个人喜好设置好用户名和密码之后进行登录就可以到这个页面进行Sunshine设置了</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131108980.png" alt="image-20240413110858889"> </p><p>初始页面是英文的，可以在配置（Configuration）里面设置中文</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131111456.png" alt="image-20240413111129441"> </p><p>非常人性化的Sunshine其实已经帮我们配置好了大部分的设置，我们只需小小的按照个人需求去配置即可</p><p>点击NetWork，将UPnP打开</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131114451.png" alt="image-20240413111404433"> </p><p>UPnP就是方便端口转发的网络协议，可以让设备自动配置端口转发，同时要在路由器打开UPnP服务即可</p><p>如果有要使用IPV6进行串流的需要进行设置：</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131117391.png" alt="image-20240413111705371"> </p><p>设置完之后记得<strong>保存</strong>，<strong>应用</strong>，不然配置不会生效</p><h1 id="Moonlight配置"><a href="#Moonlight配置" class="headerlink" title="Moonlight配置"></a>Moonlight配置</h1><p>Moonlight安装就不讲了，安卓版的直接在设备运行apk文件就行了，iOS更简单</p><p>下载后是这个东东</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131055634.jpg" alt="6a23079ec3aa7b60b7364b5141e0248"> </p><p>打开Moonlight之后添加你的主机ip进去即可</p><p>主机ip的获取方式：</p><ol><li>在电脑上按<code>win</code>键+<code>r</code>键</li><li>输入<code>cmd</code>，按回车</li><li>在弹出的黑窗口中输入：<code>ipconfig</code></li><li>将ipv4地址输入到Moonlight中</li></ol><p>选择DESKTOP连接到电脑的桌面</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131127998.png" alt="c42abd2d7ae7818e7f5d622ed6b0036"> </p><p>然后就可以开玩辣</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131126631.png" alt="image-20240413112611239"> </p>]]></content>
+        <content type="html"><![CDATA[<h1 id="串流是什么？"><a href="#串流是什么？" class="headerlink" title="串流是什么？"></a>串流是什么？</h1><p>调用存储在其他设备上的文件，实时传输，来实现在本设备的实时播放，只要是调用不属于本地的视频、音乐、游戏，都属于串流</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><ol><li><p>主机（就是你的电脑）上安装sunshine</p><ul><li><p>sunshine在github的官方开源网址：<a href="https://github.com/LizardByte/Sunshine/releases">Releases · LizardByte/Sunshine (github.com)</a></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131044468.png" alt="image-20240413104440422"> </p></li><li><p>登不上github的我把两个软件都放在了奶牛快传（app-nonRoot-release.apk是安卓版的moonlight）：</p><p><a href="https://cowtransfer.com/s/2794362b448849">https://cowtransfer.com/s/2794362b448849</a></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404151546944.png" alt="image-20240415154637919"> </p><p>下完之后记得删掉文件后面的(delete)</p></li></ul></li><li><p>手机或者你要串流到的设备上安装moonlight，安卓版的也在上面的链接里，iOS版的自行去AppStore搜索<code>Moonlight</code></p><ul><li><p>官方github开源网址：<a href="https://github.com/moonlight-stream">Moonlight Game Streaming Project (github.com)</a></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131100683.png" alt="image-20240413110014622"></p></li></ul></li></ol><h1 id="Sunshine安装与配置"><a href="#Sunshine安装与配置" class="headerlink" title="Sunshine安装与配置"></a>Sunshine安装与配置</h1><p>安装sunshine的时候除了要留意一下它在电脑里的安装路径外，其他直接默认然后下一步就好，装好之后会看到这样一个图标：</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131104715.png" alt="image-20240413110420693"> </p><p>右键，Open Sunshine，就会打开一个网页，第一次打开会显示如下内容：</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131107538.png" alt="image-20240413110732510"> </p><p>根据个人喜好设置好用户名和密码之后进行登录就可以到这个页面进行Sunshine设置了</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131108980.png" alt="image-20240413110858889"> </p><p>初始页面是英文的，可以在配置（Configuration）里面设置中文</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131111456.png" alt="image-20240413111129441"> </p><p>非常人性化的Sunshine其实已经帮我们配置好了大部分的设置，我们只需小小的按照个人需求去配置即可</p><p>点击NetWork，将UPnP打开</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131114451.png" alt="image-20240413111404433"> </p><p>UPnP就是方便端口转发的网络协议，可以让设备自动配置端口转发，同时要在路由器打开UPnP服务即可</p><p>如果有要使用IPV6进行串流的需要进行设置：</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131117391.png" alt="image-20240413111705371"> </p><p>设置完之后记得<strong>保存</strong>，<strong>应用</strong>，不然配置不会生效</p><h1 id="Moonlight配置"><a href="#Moonlight配置" class="headerlink" title="Moonlight配置"></a>Moonlight配置</h1><p>Moonlight安装就不讲了，安卓版的直接在设备运行apk文件就行了，iOS更简单</p><p>下载后是这个东东</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131055634.jpg" alt="6a23079ec3aa7b60b7364b5141e0248"> </p><p>打开Moonlight之后添加你的主机ip进去即可</p><p>主机ip的获取方式：</p><ol><li>在电脑上按<code>win</code>键+<code>r</code>键</li><li>输入<code>cmd</code>，按回车</li><li>在弹出的黑窗口中输入：<code>ipconfig</code></li><li>将ipv4地址输入到Moonlight中</li></ol><p>选择DESKTOP连接到电脑的桌面</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131127998.png" alt="c42abd2d7ae7818e7f5d622ed6b0036"> </p><p>然后就可以开玩辣</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404131126631.png" alt="image-20240413112611239"> </p>]]></content>
       
       
       <categories>
