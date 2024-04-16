@@ -52,9 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
-
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -423,21 +423,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-15
+                    2024-04-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    17 分
                 </div>
                 
 
@@ -910,6 +910,151 @@
 
 <p><code>BigInteger</code>内部使用<code>int[]</code>数组来存储任意大小的整型数据</p>
 <p>相对于常规整数类型的运算来说，<code>BigInteger</code>运算的效率会相对较低</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="成员变量和局部变量的区别？"><a href="#成员变量和局部变量的区别？" class="headerlink" title="成员变量和局部变量的区别？"></a>成员变量和局部变量的区别？</h2><ul>
+<li><strong>语法形式</strong><ul>
+<li>成员变量是属于类的，局部变量是在代码块或者方法中定义的变量或是方法的参数</li>
+<li>成员变量可以被<code>public</code>、<code>private</code>、<code>static</code>等修饰符所修饰，而局部变量不能被访问控制修饰符以及<code>static</code>修饰</li>
+<li>成员变量和局部变量都可以被<code>final</code>修饰</li>
+</ul>
+</li>
+<li><strong>存储方式</strong><ul>
+<li>如果成员变量被<code>static</code>修饰，则该成员变量是<strong>属于类</strong>的，如果没有被<code>static</code>修饰，则该成员变量是<strong>属于实例</strong>的</li>
+<li>对象存在于堆内存，局部变量存在于栈内存</li>
+</ul>
+</li>
+<li><strong>生存时间</strong><ul>
+<li>成员变量是对象的一部分，它随着对象的创建而存在，</li>
+<li>局部变量随着方法的调用而自动生成，随着方法调用的结束而消亡</li>
+</ul>
+</li>
+<li><strong>默认值</strong><ul>
+<li>成员变量如果没有被赋予初始值，则会自动以类型的默认值而赋值（一种情况例外：被<code>final</code>修饰的成员变量也必须显式赋值）</li>
+<li>局部变量不会自动赋值</li>
+</ul>
+</li>
+</ul>
+<p>成员变量&amp;局部变量代码演示</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VariableExample</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 成员变量</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token comment">// 在方法中的局部变量</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 在栈中分配的局部变量</span>
+        <span class="token keyword">int</span> number1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token comment">// 在栈中分配的局部变量</span>
+        <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 有形参的方法中的局部变量</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token keyword">int</span> number<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 在栈中分配的局部变量</span>
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> number <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 构造器中的局部变量</span>
+    <span class="token keyword">public</span> <span class="token class-name">VariableExample</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 对成员变量进行赋值</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token comment">// 对成员变量进行赋值</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+        <span class="token comment">// 在栈中分配的局部变量</span>
+        <span class="token keyword">int</span> number <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        <span class="token comment">// 在栈中分配的局部变量</span>
+        <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"Hello, "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">".!"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+
+
+<h3 id="为什么成员变量有默认值？"><a href="#为什么成员变量有默认值？" class="headerlink" title="为什么成员变量有默认值？"></a>为什么成员变量有默认值？</h3><ol>
+<li>如果没有默认值，变量存储的是内存地址对应的任意随机值，程序读取该值运行会出现意外</li>
+<li>默认值设置有两种方式：手动和自动，根据第一点，没有手动赋值就一定要自动赋值，成员变量在运行时可以借助反射等方法手动赋值，而局部变量不行</li>
+<li>对于编译器（javac）来说，局部变量有没有赋值很好判断，可以直接报错，而成员变量可能是运行时赋值，无法判断，误报“没默认值”又会影响用户体验，所以采取自动赋默认值</li>
+</ol>
+<h2 id="静态变量有什么作用？"><a href="#静态变量有什么作用？" class="headerlink" title="静态变量有什么作用？"></a>静态变量有什么作用？</h2><p>静态变量就是被<code>static</code>关键字修饰的变量，其被类的所有实例共享，无论一个类创建了多少对象，他们都共享同一份静态变量，即：<strong>静态变量只会被分配一次内存，即使创建多个对象，这样可以节省内存</strong></p>
+<p>静态变量通过类名来访问，例如：<code>StaticVariableExample.staticVar</code></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticVariableExample</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 静态变量</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> staticVar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>但是如果变量被<code>private</code>关键字修饰就无法这样访问了</p>
+<p>通常情况下，静态变量会被<code>final</code>关键字修饰成常量</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConstantVariableExample</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 常量</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> constantVar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+<h2 id="字符型常量和字符串常量的区别？"><a href="#字符型常量和字符串常量的区别？" class="headerlink" title="字符型常量和字符串常量的区别？"></a>字符型常量和字符串常量的区别？</h2><ul>
+<li><strong>形式</strong><ul>
+<li>字符常量是单引号引起的一个字符</li>
+<li>字符串常量是双引号引起的<strong>0个</strong>或若干个字符</li>
+</ul>
+</li>
+<li>含义<ul>
+<li>字符常量相当于一个整型值（ASCII码），可以参加表达式运算</li>
+<li>字符串常量代表一个地址值（该字符串在内存中存放的位置）</li>
+</ul>
+</li>
+<li>占内存大小<ul>
+<li>字符常量：2个字节</li>
+<li>字符串常量：若干个字节</li>
+</ul>
+</li>
+</ul>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StringExample</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 字符型常量</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">char</span> <span class="token constant">LETTER_A</span> <span class="token operator">=</span> <span class="token char">'A'</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 字符串常量</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">GREETING_MESSAGE</span> <span class="token operator">=</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="静态方法为什么不能调用非静态成员？"><a href="#静态方法为什么不能调用非静态成员？" class="headerlink" title="静态方法为什么不能调用非静态成员？"></a>静态方法为什么不能调用非静态成员？</h2><p>和JVM有关，原因：</p>
+<ol>
+<li>静态方法是属于类的，在类加载的时候就会分配内存，可以通过类名直接访问。而非静态成员属于实例对象，只有在对象实例化之后才存在，需要通过类的实例对象去访问</li>
+<li>在类的非静态成员不存在的时候静态方法已经存在了，此时调用在内存中还不存在的非静态成员，属于非法操作</li>
+</ol>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 定义一个字符型常量</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">char</span> <span class="token constant">LETTER_A</span> <span class="token operator">=</span> <span class="token char">'A'</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 定义一个字符串常量</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">GREETING_MESSAGE</span> <span class="token operator">=</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 输出字符型常量的值</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"字符型常量的值为："</span> <span class="token operator">+</span> <span class="token constant">LETTER_A</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 输出字符串常量的值</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"字符串常量的值为："</span> <span class="token operator">+</span> <span class="token constant">GREETING_MESSAGE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+<h2 id="静态方法和实例方法有什么不同？"><a href="#静态方法和实例方法有什么不同？" class="headerlink" title="静态方法和实例方法有什么不同？"></a>静态方法和实例方法有什么不同？</h2><ol>
+<li><strong>调用方式</strong><ul>
+<li>在外部调用静态方法时，可以使用<code>类名.方法名</code>的方式，也可以使用<code>对象.方法名</code>的方式，而实例方法只有后者这一方式，即：<code>调用静态方法可以无需创建对象</code></li>
+<li>一般不建议使用<code>对象.方法名</code>的方式来调用静态方法，这种方式非常容易造成混淆，静态方法不属于类的某个对象，而是属于这个类，因此一般建议使用前者来进行调用</li>
+</ul>
+</li>
+<li><strong>访问类成员是否存在限制</strong><ul>
+<li>静态方法在访问本类的成员时，只允许访问静态成员（静态成员变量和静态方法），不允许访问实例成员（实例成员变量和实例方法）</li>
+<li>实例方法不存在上述限制</li>
+</ul>
+</li>
+</ol>
 
                 
             </div>
@@ -1687,7 +1832,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">47.9k</span>
+                        class="white-color">49.3k</span>
             
             
             
