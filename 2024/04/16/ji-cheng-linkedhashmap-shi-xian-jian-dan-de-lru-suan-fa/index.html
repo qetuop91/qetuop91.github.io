@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Redis7-5.0-管道, Feliks">
-    <meta name="description" content="我的Redis学习笔记">
+    <meta name="keywords" content="继承LinkedHashMap实现简单的LRU算法, Feliks">
+    <meta name="description" content="LRU算法是一种内存数据淘汰策略">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Redis7-5.0-管道 | Feliks</title>
+    <title>继承LinkedHashMap实现简单的LRU算法 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -359,12 +359,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Redis7-5.0-管道</h1>
+                    <h1 class="description center-align post-title">继承LinkedHashMap实现简单的LRU算法</h1>
                 </div>
             </div>
         </div>
@@ -387,8 +387,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Redis/">
-                                <span class="chip bg-color">Redis</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">淘汰算法</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BC%93%E5%AD%98/">
+                                <span class="chip bg-color">缓存</span>
+                            </a>
+                        
+                            <a href="/tags/LRU/">
+                                <span class="chip bg-color">LRU</span>
                             </a>
                         
                     </div>
@@ -399,8 +411,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Redis/" class="post-category">
-                                Redis
+                            <a href="/categories/Java/" class="post-category">
+                                Java
                             </a>
                         
                     </div>
@@ -412,28 +424,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-12
+                    2024-04-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-12
+                    2024-04-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    462
+                    892
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -453,29 +465,102 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Redis管道"><a href="#Redis管道" class="headerlink" title="Redis管道"></a>Redis管道</h1><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921746.png" alt="image-20231120123420152"> </p>
-<p><strong>如何优化频繁命令往返造成的性能瓶颈？</strong></p>
-<p>管道（pipeline）可以一次性发送多条命令给服务端，服务端依次处理完毕后，<strong>通过一条响应一次性将结果返回，通过减少客户端与redis的通信次数来实现降低往返延时时间。</strong>pipeline实现的原理是<strong>队列</strong>，先进先出特性就保证数据的顺序性。</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921755.png" alt="image-20231120123827191"> </p>
-<h2 id="管道是什么？"><a href="#管道是什么？" class="headerlink" title="管道是什么？"></a>管道是什么？</h2><p>pipeline是为了解决RTT（Round Trip Time）往返时，仅仅是将命令打包一次性发送，对整个redis的执行不造成其他影响（<strong>批处理命令变种优化措施，类似Redis的原生批命令mget和mset</strong>）</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404080921675.png" alt="image-20231120125554054"> </p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>pipeline与<strong>原生批量命令</strong>对比</p>
-<ul>
-<li>原生批量命令是原子性（例如mset、mget），<strong>pipeline是非原子性</strong></li>
-<li>原生批量命令一次只能执行一种命令，pipeline支持批量执行不同命令</li>
-<li>原生批量命令是服务端实现，而pipeline需要服务端与客户端共同完成</li>
-</ul>
-<p>pipeline与<strong>事务</strong>对比</p>
-<ul>
-<li>事务具有原子性，管道不具有原子性</li>
-<li>管道一次性将多条命令发送到服务器，事务是一条一条的发，事务只有在接收到exec命令后才会执行，管道不会</li>
-<li>执行事务时会阻塞其他命令的执行，而执行管道中的命令时不会</li>
-</ul>
-<p>使用pipeline注意事项</p>
-<ul>
-<li>pipeline缓冲的指令只是会依次执行，不保证原子性，如果执行中指令发生异常，将会继续执行后续的指令</li>
-<li>使用pipeline组装的命令个数不能太多，不过数据量过大客户端阻塞的时间可能过久，同时服务端此时也被迫回复一个队列答复，占用很多内存</li>
-</ul>
+                <p>当我们写的项目或应用有了一定流量后，查询数据库就会特别频繁，此时我们可以考虑使用Java自带的HashMap或者ConcurrentHashMap，但是这样实现的缓存机制会有个问题：<code>内存会无限制的增长</code>，所以HashMap很快也被淘汰了</p>
+<p>我们在查询redis的时候，希望可以本地缓存放一些热点数据，使用HashMap显然无法满足这种需求</p>
+<p>HashMap也不是就完全没用了，在一些场景下作为缓存，当不需要淘汰机制的时候，比如利用反射，如果每次都用反射去搜索Method、Field，性能会很低，此时如果用HashMap缓存起来，性能将提高很多</p>
+<p><code>常见的三种淘汰算法：FIFO、LRU、LFU</code></p>
+<h1 id="LRU的背景"><a href="#LRU的背景" class="headerlink" title="LRU的背景"></a>LRU的背景</h1><p><strong>LRU</strong>：<code>least-recently-used</code>最近最少使用算法，是一种内存数据淘汰策略，使用常见是当内存不足时，需要淘汰最近最少使用的数据。</p>
+<h1 id="LRU原理"><a href="#LRU原理" class="headerlink" title="LRU原理"></a>LRU原理</h1><p>用一个特殊的栈来保存当前正在使用的各个页面的页面号，当一个新的进程访问某个页面时，将该页面号压入栈顶，如果栈中的内存不够，就把栈底的页面号移除，这样栈顶始终都是最新被访问的页面编号，而栈底则是最近最久未被访问的页面号</p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>我们可以通过继承LinkedHashMap，重写removeEldestEntry方法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 重写LinkedHashMap的removeEldestEntry方法
+ * 在Put的时候判断如果为true就会删除最老的
+ * @param eldest
+ * @return
+ */</span>
+<span class="token annotation punctuation">@Override</span>
+<span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">removeEldestEntry</span><span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span> eldest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> max<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+<p>在LinkedHashMap中维护了一个entry链表（用来存放key和value的对象），在每一次get或者put的时候都会把插入的新entry，或者查询到的老entry放在链表表尾。</p>
+<blockquote>
+<p>  <strong>Considerations</strong></p>
+<p>  直接使用LinkedHashMap实现并不是线程安全的，要做到线程安全，就需要加上<code>synchronized</code>修饰符</p>
+</blockquote>
+<p><strong>具体实现代码</strong></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 三种常见的淘汰算法：FIFO、LRU、LFU
+ * LRUMap
+ * 每次访问数据都会将其放在我们的队尾，如果需要淘汰数据，就只需要淘汰队首即可。
+ * 如果有个数据在1个小时的前59分钟访问了1万次(可见这是个热点数据),
+ * 再后一分钟没有访问这个数据，但是有其他的数据访问，就导致了我们这个热点数据被淘汰。
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LRUMap</span> <span class="token keyword">extends</span> <span class="token class-name">LinkedHashMap</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">int</span> max<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Object</span> lock<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 在LinkedHashMap中维护了一个entry（用来存放key和value的对象）链表，在每一次get或者put的时候
+     * 都会把插入的新entry，或者查询到的老entry放在链表的表尾
+     *
+     * 在构造方法中设置的大小特意为max*1.4
+     *
+     * 在下面的removeEldestEntry方法中只需要size() &gt; max就淘汰，这样我们这个map就永远也走不到
+     * 扩容的逻辑了
+     *
+     * 通过重写LinkedHashMap中的几个简单的方法实现LRUMap
+     * @param max
+     * @param lock
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">LRUMap</span><span class="token punctuation">(</span><span class="token keyword">int</span> max<span class="token punctuation">,</span> <span class="token class-name">Object</span> lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 不用扩容</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>max <span class="token operator">*</span> <span class="token number">1.4f</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0.75f</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>max <span class="token operator">=</span> max<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>lock <span class="token operator">=</span> lock<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 重写LinkedHashMap的removeEldestEntry方法
+     * 在Put的时候判断如果为true就会删除最老的
+     * @param eldest
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">removeEldestEntry</span><span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span> eldest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> max<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 当其他线程试图访问被synchronized修饰的代码块时会被阻塞，只有当前拿到锁的进程可以访问代码块</span>
+    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">getValue</span><span class="token punctuation">(</span><span class="token class-name">Object</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">putValue</span><span class="token punctuation">(</span><span class="token class-name">Object</span> key<span class="token punctuation">,</span> <span class="token class-name">Object</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">removeValue</span><span class="token punctuation">(</span><span class="token class-name">Object</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Object</span> remove <span class="token operator">=</span> <span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> remove <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">removeAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
 
                 
             </div>
@@ -502,7 +587,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/12/redis7-5.0-guan-dao/">https://qetuop91.github.io/2024/04/12/redis7-5.0-guan-dao/</a>
+                    <a href="https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/">https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,8 +625,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Redis/">
-                                    <span class="chip bg-color">Redis</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">淘汰算法</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BC%93%E5%AD%98/">
+                                    <span class="chip bg-color">缓存</span>
+                                </a>
+                            
+                                <a href="/tags/LRU/">
+                                    <span class="chip bg-color">LRU</span>
                                 </a>
                             
                         </div>
@@ -953,45 +1050,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/12/redis7-6.0-fa-bu-ding-yue/">
+                <a href="/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/13.jpg" class="responsive-img" alt="Redis7-6.0-发布订阅">
+                        <img src="/medias/myImages/13.jpg" class="responsive-img" alt="继承LinkedHashMap实现简单的LRU算法">
                         
-                        <span class="card-title">Redis7-6.0-发布订阅</span>
+                        <span class="card-title">继承LinkedHashMap实现简单的LRU算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Redis学习笔记
+                            LRU算法是一种内存数据淘汰策略
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Redis/" class="post-category">
-                                    Redis
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">淘汰算法</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BC%93%E5%AD%98/">
+                        <span class="chip bg-color">缓存</span>
+                    </a>
+                    
+                    <a href="/tags/LRU/">
+                        <span class="chip bg-color">LRU</span>
                     </a>
                     
                 </div>
@@ -1005,30 +1116,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/12/redis7-4.0-shi-wu/">
+                <a href="/2024/04/15/2.0-easyvirtualdisplay/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/11.jpg" class="responsive-img" alt="Redis7-4.0-事务">
+                        <img src="/medias/myImages/31.jpg" class="responsive-img" alt="使用EasyVirtualDisplay的副屏方案">
                         
-                        <span class="card-title">Redis7-4.0-事务</span>
+                        <span class="card-title">使用EasyVirtualDisplay的副屏方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Redis学习笔记
+                            串流
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Redis/" class="post-category">
-                                    Redis
+                            <a href="/categories/%E4%B8%B2%E6%B5%81/" class="post-category">
+                                    串流
                                 </a>
                             
                             
@@ -1038,8 +1149,24 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
+                    <a href="/tags/%E4%B8%B2%E6%B5%81/">
+                        <span class="chip bg-color">串流</span>
+                    </a>
+                    
+                    <a href="/tags/Moonlight/">
+                        <span class="chip bg-color">Moonlight</span>
+                    </a>
+                    
+                    <a href="/tags/Sunshine/">
+                        <span class="chip bg-color">Sunshine</span>
+                    </a>
+                    
+                    <a href="/tags/Github%E5%BC%80%E6%BA%90/">
+                        <span class="chip bg-color">Github开源</span>
+                    </a>
+                    
+                    <a href="/tags/EasyVirtualDisplay/">
+                        <span class="chip bg-color">EasyVirtualDisplay</span>
                     </a>
                     
                 </div>

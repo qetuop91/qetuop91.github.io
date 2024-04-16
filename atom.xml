@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-15T08:06:27.094Z</updated>
+  <updated>2024-04-16T02:47:39.328Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>继承LinkedHashMap实现简单的LRU算法</title>
+    <link href="https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/"/>
+    <id>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</id>
+    <published>2024-04-16T01:47:45.000Z</published>
+    <updated>2024-04-16T02:47:39.328Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当我们写的项目或应用有了一定流量后，查询数据库就会特别频繁，此时我们可以考虑使用Java自带的HashMap或者ConcurrentHashMap，但是这样实现的缓存机制会有个问题：&lt;code&gt;内存会无限制的增长&lt;/code&gt;，所以HashMap很快也被淘汰了&lt;/p&gt;
+&lt;p</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="淘汰算法" scheme="https://qetuop91.github.io/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="缓存" scheme="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/"/>
+    
+    <category term="LRU" scheme="https://qetuop91.github.io/tags/LRU/"/>
+    
+  </entry>
   
   <entry>
     <title>使用EasyVirtualDisplay的副屏方案</title>
@@ -531,35 +563,6 @@
     <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring杂记</title>
-    <link href="https://qetuop91.github.io/2024/04/11/spring-za-ji-1.0/"/>
-    <id>https://qetuop91.github.io/2024/04/11/spring-za-ji-1.0/</id>
-    <published>2024-04-11T15:18:47.000Z</published>
-    <updated>2024-04-15T12:25:36.364Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;如何概述SpringFramework&quot;&gt;&lt;a href=&quot;#如何概述SpringFramework&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Spring" scheme="https://qetuop91.github.io/categories/Spring/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="Spring" scheme="https://qetuop91.github.io/tags/Spring/"/>
     
   </entry>
   
