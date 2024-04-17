@@ -426,14 +426,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.9k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    24 分
                 </div>
                 
 
@@ -741,7 +741,231 @@ realtime <span class="token operator">=</span>none                   <span class
 文件系统       类型  容量  已用  可用 已用% 挂载点
 /dev/md0       xfs   <span class="token number">3</span>.0G   33M  <span class="token number">3</span>.0G    <span class="token number">2</span>% /srv/raid
 <span class="token comment"># 多了一个/dev/md0的设备，挂载的地方在我们创建的/srv/raid中</span></code></pre>
+<h3 id="组建RAID10"><a href="#组建RAID10" class="headerlink" title="组建RAID10"></a>组建<code>RAID10</code></h3><ol>
+<li><p>创建并格式化分区（5，6，7，8）</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1.创建扩展分区4</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># fdisk /dev/sda</span>
+欢迎使用 <span class="token function">fdisk</span> <span class="token punctuation">(</span>util-linux <span class="token number">2.23</span>.2<span class="token punctuation">)</span>。
 
+更改将停留在内存中，直到您决定将更改写入磁盘。
+使用写入命令前请三思。
+
+
+命令<span class="token punctuation">(</span>输入 m 获取帮助<span class="token punctuation">)</span>：n
+Partition type:
+   p   primary <span class="token punctuation">(</span><span class="token number">3</span> primary, <span class="token number">0</span> extended, <span class="token number">1</span> <span class="token function">free</span><span class="token punctuation">)</span>
+   e   extended
+Select <span class="token punctuation">(</span>default e<span class="token punctuation">)</span>: e
+已选择分区 <span class="token number">4</span>
+起始 扇区 <span class="token punctuation">(</span><span class="token number">35674112</span>-83886079，默认为 <span class="token number">35674112</span><span class="token punctuation">)</span>：
+将使用默认值 <span class="token number">35674112</span>
+Last 扇区, +扇区 or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">35674112</span>-83886079，默认为 <span class="token number">83886079</span><span class="token punctuation">)</span>：+10G
+分区 <span class="token number">4</span> 已设置为 Extended 类型，大小设为 <span class="token number">10</span> GiB
+
+<span class="token comment"># 2.创建逻辑分区5、6、7、8</span>
+命令<span class="token punctuation">(</span>输入 m 获取帮助<span class="token punctuation">)</span>：n
+All primary partitions are <span class="token keyword">in</span> use
+添加逻辑分区 <span class="token number">5</span>
+起始 扇区 <span class="token punctuation">(</span><span class="token number">35676160</span>-56645631，默认为 <span class="token number">35676160</span><span class="token punctuation">)</span>：
+将使用默认值 <span class="token number">35676160</span>
+Last 扇区, +扇区 or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">35676160</span>-56645631，默认为 <span class="token number">56645631</span><span class="token punctuation">)</span>：+1G
+分区 <span class="token number">5</span> 已设置为 Linux 类型，大小设为 <span class="token number">1</span> GiB
+
+命令<span class="token punctuation">(</span>输入 m 获取帮助<span class="token punctuation">)</span>：n
+All primary partitions are <span class="token keyword">in</span> use
+添加逻辑分区 <span class="token number">6</span>
+起始 扇区 <span class="token punctuation">(</span><span class="token number">37775360</span>-56645631，默认为 <span class="token number">37775360</span><span class="token punctuation">)</span>：
+将使用默认值 <span class="token number">37775360</span>
+Last 扇区, +扇区 or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">37775360</span>-56645631，默认为 <span class="token number">56645631</span><span class="token punctuation">)</span>：+1G
+分区 <span class="token number">6</span> 已设置为 Linux 类型，大小设为 <span class="token number">1</span> GiB
+
+命令<span class="token punctuation">(</span>输入 m 获取帮助<span class="token punctuation">)</span>：n
+All primary partitions are <span class="token keyword">in</span> use
+添加逻辑分区 <span class="token number">7</span>
+起始 扇区 <span class="token punctuation">(</span><span class="token number">39874560</span>-56645631，默认为 <span class="token number">39874560</span><span class="token punctuation">)</span>：
+将使用默认值 <span class="token number">39874560</span>
+Last 扇区, +扇区 or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">39874560</span>-56645631，默认为 <span class="token number">56645631</span><span class="token punctuation">)</span>：+1G
+分区 <span class="token number">7</span> 已设置为 Linux 类型，大小设为 <span class="token number">1</span> GiB
+
+命令<span class="token punctuation">(</span>输入 m 获取帮助<span class="token punctuation">)</span>：n
+All primary partitions are <span class="token keyword">in</span> use
+添加逻辑分区 <span class="token number">8</span>
+起始 扇区 <span class="token punctuation">(</span><span class="token number">41973760</span>-56645631，默认为 <span class="token number">41973760</span><span class="token punctuation">)</span>：
+将使用默认值 <span class="token number">41973760</span>
+Last 扇区, +扇区 or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">41973760</span>-56645631，默认为 <span class="token number">56645631</span><span class="token punctuation">)</span>：+1G
+分区 <span class="token number">8</span> 已设置为 Linux 类型，大小设为 <span class="token number">1</span> GiB
+命令<span class="token punctuation">(</span>输入 m 获取帮助<span class="token punctuation">)</span>：w
+The partition table has been altered<span class="token operator">!</span>
+
+<span class="token comment"># 3.使用partprobe -s更新Linux内核的分区表信息</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># partprobe -s</span>
+/dev/sda: msdos partitions <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token operator">&lt;</span><span class="token number">5</span> <span class="token number">6</span> <span class="token number">7</span> <span class="token number">8</span> <span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span>
+/dev/sdb: msdos partitions <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span>
+
+<span class="token comment"># 4.格式化为xfs类型（5、6、7、8四个分区）</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/sda5</span>
+meta-data<span class="token operator">=</span>/dev/sda5              <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">65536</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">262144</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/sda6</span>
+meta-data<span class="token operator">=</span>/dev/sda6              <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">65536</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">262144</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/sda7</span>
+meta-data<span class="token operator">=</span>/dev/sda7              <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">65536</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">262144</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/sda8</span>
+meta-data<span class="token operator">=</span>/dev/sda8              <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">65536</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">262144</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span>
+
+<span class="token comment"># 查看UUID与TYPE确认是否格式化完成</span>
+<span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># blkid /dev/sda*</span>
+/dev/sda: <span class="token assign-left variable">PTTYPE</span><span class="token operator">=</span><span class="token string">"dos"</span> 
+/dev/sda2: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"1ae3bbf7-d0b6-4482-af22-e9fa816410e2"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
+/dev/sda3: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"5lsM5H-xprD-Opd9-vMX9-OkAs-5liF-rxFujb"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"LVM2_member"</span> 
+/dev/sda5: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"d7cd45fa-f763-413e-bfd0-1d1ed7888049"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
+/dev/sda6: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"744e3019-7da3-43e3-a3ee-ada2efe82c0c"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
+/dev/sda7: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"8ee54c11-ba26-4738-a619-7a485f00a498"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
+/dev/sda8: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"6a9a6a98-e05c-4c40-a080-698f8e611a6d"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> </code></pre>
+
+
+</li>
+<li><p>将磁盘两两组建<code>RAID1</code></p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 5.sda5、sda6组RAID1（md0），sda7、sda8组RAID1（md1）</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md0 --auto=yes --level=1 --chunk=256K --raid-devices=2 /dev/sda{5,6}</span>
+mdadm: Note: this array has metadata at the start and
+    may not be suitable as a boot device.  If you plan to
+    store <span class="token string">'/boot'</span> on this device please ensure that
+    your boot-loader understands md/v1.x metadata, or use
+    <span class="token parameter variable">--metadata</span><span class="token operator">=</span><span class="token number">0.90</span>
+Continue creating array? y
+mdadm: Defaulting to version <span class="token number">1.2</span> metadata
+mdadm: array /dev/md0 started.
+
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md1 --auto=yes --level=1 --chunk=256K --raid-devices=2 /dev/sda{7,8}</span>
+mdadm: Note: this array has metadata at the start and
+    may not be suitable as a boot device.  If you plan to
+    store <span class="token string">'/boot'</span> on this device please ensure that
+    your boot-loader understands md/v1.x metadata, or use
+    <span class="token parameter variable">--metadata</span><span class="token operator">=</span><span class="token number">0.90</span>
+Continue creating array? y
+mdadm: Defaulting to version <span class="token number">1.2</span> metadata
+mdadm: array /dev/md1 started.</code></pre>
+</li>
+<li><p>将两个<code>RAID1</code>组成一个<code>RAID0</code>（md3）</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 6.将md0和md1组成RAID0（md3）</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md3 --auto=yes --level=0 --chunk=256K --raid-devices=2 /dev/md{0,1}</span>
+mdadm: Defaulting to version <span class="token number">1.2</span> metadata
+mdadm: array /dev/md3 started.
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --detail /dev/md3</span>
+/dev/md3:
+           Version <span class="token builtin class-name">:</span> <span class="token number">1.2</span>
+     Creation Time <span class="token builtin class-name">:</span> Wed Apr <span class="token number">17</span> <span class="token number">16</span>:34:50 <span class="token number">2024</span>
+        Raid Level <span class="token builtin class-name">:</span> raid0
+        Array Size <span class="token builtin class-name">:</span> <span class="token number">2091008</span> <span class="token punctuation">(</span><span class="token number">2042.00</span> MiB <span class="token number">2141.19</span> MB<span class="token punctuation">)</span>
+      Raid Devices <span class="token builtin class-name">:</span> <span class="token number">2</span>
+     Total Devices <span class="token builtin class-name">:</span> <span class="token number">2</span>
+       Persistence <span class="token builtin class-name">:</span> Superblock is persistent
+
+       Update Time <span class="token builtin class-name">:</span> Wed Apr <span class="token number">17</span> <span class="token number">16</span>:34:50 <span class="token number">2024</span>
+             State <span class="token builtin class-name">:</span> clean 
+    Active Devices <span class="token builtin class-name">:</span> <span class="token number">2</span>
+   Working Devices <span class="token builtin class-name">:</span> <span class="token number">2</span>
+    Failed Devices <span class="token builtin class-name">:</span> <span class="token number">0</span>
+     Spare Devices <span class="token builtin class-name">:</span> <span class="token number">0</span>
+
+        Chunk Size <span class="token builtin class-name">:</span> 256K
+
+Consistency Policy <span class="token builtin class-name">:</span> none
+
+              Name <span class="token builtin class-name">:</span> localhost.localdomain:3  <span class="token punctuation">(</span>local to <span class="token function">host</span> localhost.localdomain<span class="token punctuation">)</span>
+              UUID <span class="token builtin class-name">:</span> 5ce98002:f148d891:33c1cd8d:5568473e
+            Events <span class="token builtin class-name">:</span> <span class="token number">0</span>
+
+    Number   Major   Minor   RaidDevice State
+       <span class="token number">0</span>       <span class="token number">9</span>        <span class="token number">0</span>        <span class="token number">0</span>      active <span class="token function">sync</span>   /dev/md0
+       <span class="token number">1</span>       <span class="token number">9</span>        <span class="token number">1</span>        <span class="token number">1</span>      active <span class="token function">sync</span>   /dev/md1</code></pre>
+</li>
+<li><p>格式化md3为xfs文件系统</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 7.格式化md3</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/md3</span>
+meta-data<span class="token operator">=</span>/dev/md3               <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">8</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">65344</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">522752</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">64</span>     <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">128</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">64</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span></code></pre>
+</li>
+<li><p>挂载md3</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 8.将md3挂载到我们自己创建的目录/srv/raid下</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mount /dev/md3 /srv/raid</span>
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># df -Th /srv/raid</span>
+文件系统       类型  容量  已用  可用 已用% 挂载点
+/dev/md3       xfs   <span class="token number">2</span>.0G   33M  <span class="token number">2</span>.0G    <span class="token number">2</span>% /srv/raid
+<span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># lsblk</span>
+NAME            MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sda               <span class="token number">8</span>:0    <span class="token number">0</span>   40G  <span class="token number">0</span> disk  
+├─sda1            <span class="token number">8</span>:1    <span class="token number">0</span>    2M  <span class="token number">0</span> part  
+├─sda2            <span class="token number">8</span>:2    <span class="token number">0</span>    1G  <span class="token number">0</span> part  /boot
+├─sda3            <span class="token number">8</span>:3    <span class="token number">0</span>   16G  <span class="token number">0</span> part  
+│ ├─centos-root <span class="token number">253</span>:0    <span class="token number">0</span>   10G  <span class="token number">0</span> lvm   /
+│ ├─centos-swap <span class="token number">253</span>:1    <span class="token number">0</span>    1G  <span class="token number">0</span> lvm   <span class="token punctuation">[</span>SWAP<span class="token punctuation">]</span>
+│ └─centos-home <span class="token number">253</span>:5    <span class="token number">0</span>    5G  <span class="token number">0</span> lvm   /home
+├─sda4            <span class="token number">8</span>:4    <span class="token number">0</span>  512B  <span class="token number">0</span> part  
+├─sda5            <span class="token number">8</span>:5    <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─md0           <span class="token number">9</span>:0    <span class="token number">0</span> 1022M  <span class="token number">0</span> raid1 
+│   └─md3         <span class="token number">9</span>:3    <span class="token number">0</span>    2G  <span class="token number">0</span> raid0 /srv/raid
+├─sda6            <span class="token number">8</span>:6    <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─md0           <span class="token number">9</span>:0    <span class="token number">0</span> 1022M  <span class="token number">0</span> raid1 
+│   └─md3         <span class="token number">9</span>:3    <span class="token number">0</span>    2G  <span class="token number">0</span> raid0 /srv/raid
+├─sda7            <span class="token number">8</span>:7    <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─md1           <span class="token number">9</span>:1    <span class="token number">0</span> 1022M  <span class="token number">0</span> raid1 
+│   └─md3         <span class="token number">9</span>:3    <span class="token number">0</span>    2G  <span class="token number">0</span> raid0 /srv/raid
+├─sda8            <span class="token number">8</span>:8    <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─md1           <span class="token number">9</span>:1    <span class="token number">0</span> 1022M  <span class="token number">0</span> raid1 
+│   └─md3         <span class="token number">9</span>:3    <span class="token number">0</span>    2G  <span class="token number">0</span> raid0 /srv/raid
+└─sda9            <span class="token number">8</span>:9    <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+sdb               <span class="token number">8</span>:16   <span class="token number">0</span>    5G  <span class="token number">0</span> disk  
+├─sdb1            <span class="token number">8</span>:17   <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─vg0-lv0     <span class="token number">253</span>:4    <span class="token number">0</span>   32M  <span class="token number">0</span> lvm   
+├─sdb2            <span class="token number">8</span>:18   <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─vg1-lv1     <span class="token number">253</span>:2    <span class="token number">0</span>   20M  <span class="token number">0</span> lvm   
+├─sdb3            <span class="token number">8</span>:19   <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+│ └─vg2-lv2     <span class="token number">253</span>:3    <span class="token number">0</span>   20M  <span class="token number">0</span> lvm   
+└─sdb4            <span class="token number">8</span>:20   <span class="token number">0</span>    1G  <span class="token number">0</span> part  
+sr0              <span class="token number">11</span>:0    <span class="token number">1</span>  <span class="token number">9</span>.6G  <span class="token number">0</span> rom   /run/media/feliks/CentOS <span class="token number">7</span> x86_64
+
+<span class="token comment"># 至此RAID10组建成功</span></code></pre></li>
+</ol>
 
                 
             </div>
@@ -1517,7 +1741,7 @@ realtime <span class="token operator">=</span>none                   <span class
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">57.3k</span>
+                        class="white-color">59k</span>
             
             
             
