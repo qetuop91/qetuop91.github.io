@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-16T03:30:37.838Z</updated>
+  <updated>2024-04-17T08:01:45.519Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-9.0-软件磁盘阵列（Software RAID）</title>
+    <link href="https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/"/>
+    <id>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/</id>
+    <published>2024-04-17T08:01:01.000Z</published>
+    <updated>2024-04-17T08:01:45.519Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;软件磁盘阵列（Software-RAID）&quot;&gt;&lt;a href=&quot;#软件磁盘阵列（Software-RAID）&quot; class=&quot;headerlink&quot; title=&quot;软件磁盘阵列（Software RAID）&quot;&gt;&lt;/a&gt;软件磁盘阵列（Software</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>继承LinkedHashMap实现简单的LRU算法</title>
@@ -75,9 +100,9 @@
     
     <category term="Sunshine" scheme="https://qetuop91.github.io/tags/Sunshine/"/>
     
-    <category term="EasyVirtualDisplay" scheme="https://qetuop91.github.io/tags/EasyVirtualDisplay/"/>
-    
     <category term="Github开源" scheme="https://qetuop91.github.io/tags/Github%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="EasyVirtualDisplay" scheme="https://qetuop91.github.io/tags/EasyVirtualDisplay/"/>
     
   </entry>
   
@@ -534,35 +559,6 @@
     
     
     <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>集合框架-1.0-概述</title>
-    <link href="https://qetuop91.github.io/2024/04/11/ji-he-kuang-jia-1.0-gai-shu/"/>
-    <id>https://qetuop91.github.io/2024/04/11/ji-he-kuang-jia-1.0-gai-shu/</id>
-    <published>2024-04-11T15:37:06.000Z</published>
-    <updated>2024-04-11T16:20:13.084Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Java集合框架体系&quot;&gt;&lt;a href=&quot;#Java集合框架体系&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
     
   </entry>
   
