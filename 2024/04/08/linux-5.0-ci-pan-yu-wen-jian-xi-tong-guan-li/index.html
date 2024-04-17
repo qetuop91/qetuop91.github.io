@@ -426,14 +426,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.2k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    23 分
+                    25 分
                 </div>
                 
 
@@ -1039,6 +1039,33 @@ du: 无法访问<span class="token string">"/run/user/1000/gvfs"</span><span cla
 <h4 id="用gdisk删除一个分区"><a href="#用gdisk删除一个分区" class="headerlink" title="用gdisk删除一个分区"></a>用gdisk删除一个分区</h4><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091457616.png" alt="image-20231009145700564"> </p>
 <p>然后记得用<code>partprobe -s</code>刷新分区表</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310091459915.png" alt="image-20231009145954838"> </p>
+<h3 id="fdisk"><a href="#fdisk" class="headerlink" title="fdisk"></a>fdisk</h3><p>fdisk跟gdisk的使用方式几乎一样，fdisk有时会使用柱面（cylinder）作为分区的最小单位</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404162251099.png" alt="image-20240416225125040"> </p>
+<h2 id="磁盘格式化"><a href="#磁盘格式化" class="headerlink" title="磁盘格式化"></a>磁盘格式化</h2><p>要进行格式化的命令就是【<code>mkfs</code>：makefilesystem】，该命令其实是一个综合命令，它会去调用正确的文件系统格式化工具软件，CentOS7使用XFS作为默认文件系统，先了解mkfs.xfs</p>
+<h3 id="mkfs-xfs"><a href="#mkfs-xfs" class="headerlink" title="mkfs.xfs"></a>mkfs.xfs</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs [-b bsize] [-d parms] [-i parms] [-l parms] [-L label] [-f] [-r parms] 设备名称</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404162303418.jpg" alt="9eaf23ce8ee1135d842011b22d43d20"> </p>
+<p>将上面分出来的/dev/sda4格式化为xfs文件系统</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># partprobe -s</span>
+/dev/sda: msdos partitions <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span>
+<span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/sda4</span>
+meta-data<span class="token operator">=</span>/dev/sda4              <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">72684</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">290736</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span></code></pre>
+
+<p>使用<code>blkid</code>查看是否格式化完毕</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># blkid /dev/sda4</span>
+/dev/sda4: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"da2a4d8e-e1c8-4022-9a49-47095b158926"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> </code></pre>
+
+
+
+
 <h2 id="文件系统挂载与卸载"><a href="#文件系统挂载与卸载" class="headerlink" title="文件系统挂载与卸载"></a>文件系统挂载与卸载</h2><ul>
 <li>单一文件系统不应该被重复挂载在不同的挂载点（目录）中</li>
 <li>单一目录不应该重复挂载多个文件系统</li>
@@ -1842,7 +1869,7 @@ du: 无法访问<span class="token string">"/run/user/1000/gvfs"</span><span cla
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">53.2k</span>
+                        class="white-color">53.4k</span>
             
             
             
@@ -2181,9 +2208,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
