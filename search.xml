@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Java基础3.0</title>
+      <link href="/2024/04/18/java-ji-chu-3.0/"/>
+      <url>/2024/04/18/java-ji-chu-3.0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p><strong>Java异常类层次结构图概览</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181509151.png" alt="image-20240418150926127"> </p><h2 id="Exception-和-Error-有什么区别？"><a href="#Exception-和-Error-有什么区别？" class="headerlink" title="Exception 和 Error 有什么区别？"></a>Exception 和 Error 有什么区别？</h2><p>在Java中，所有的异常类都有一个共同的祖先：<code>java.lang.Throwable</code></p><p><code>Throwable</code>类有两个重要的子类：</p><ul><li><code>Exception</code><ul><li>程序本身可以处理的异常，可以通过<code>try-catch</code>进行捕获。</li><li><code>Exception</code>又分为<code>Checked Exception</code>（受检查异常，必须处理）和<code>Unchecked Exception</code>（不受检查异常，可以不处理）</li></ul></li><li><code>Error</code><ul><li>属于程序无法处理的错误，不建议通过<code>try-catch</code>捕获</li><li>例如JVM虚拟机运行错误（<code>Virtual MechineError</code>）、虚拟机内存不够错误（<code>OutOfMemoryError</code>）、类定义错误（<code>NoClassDefFoundError</code>）等，这些异常发生时，JVM一般会选择线程终止</li></ul></li></ul><h2 id="Checked-Exception-和-Unchecked-Exception有什么区别？"><a href="#Checked-Exception-和-Unchecked-Exception有什么区别？" class="headerlink" title="Checked Exception 和 Unchecked Exception有什么区别？"></a>Checked Exception 和 Unchecked Exception有什么区别？</h2><p><code>checked Exception</code>受检查异常，Java代码在编译的过程中，如果受检查异常没有被<code>catch</code>捕获或者<code>throws</code>关键字处理的话，就没有办法通过编译</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181459528.png" alt="image-20240418145909485"> </p><p>除了<code>RuntimeException</code>及其子类之外，其余的<code>Exception</code>类及其子类都属于受检查异常</p><p>常见的受检查异常：<code>IOException</code>、<code>ClassNotFoundException</code>、<code>SQLException</code>等等</p><p><code>Unchecked Exception</code>不受检查异常，Java代码在编译的过程中，我们即使不处理不受检查异常也可以正常通过编译</p><p><code>RuntimeException</code>及其子类都统称为非受检查异常，常见的如下：</p><ul><li><code>NullPointerException</code>（空指针异常，NPE）</li><li><code>IllegalArgumentException</code>（参数异常，比如方法传入形参类型错误）</li><li><code>NumberFormatException</code>（字符串转换为数字格式异常，<code>IllegalArgumentException</code>的子类）</li><li><code>ArrayIndexOutOfBoundsException</code>（数组下标越界异常）</li><li><code>ClassCastException</code>（类型转换异常）</li><li><code>ArithmeticException</code>（算术异常）</li><li><code>SecurityException</code>（安全异常，例如权限不够）</li><li><code>UnsupportedOperationException</code>（不支持的操作异常，例如重复创建同一用户）</li><li>……还有很多不受检查异常</li></ul><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181520775.png" alt="image-20240418152019747"> </p><h2 id="Throwable类常用方法"><a href="#Throwable类常用方法" class="headerlink" title="Throwable类常用方法"></a>Throwable类常用方法</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/** * 返回异常发生时的简要描述 * @return */</span><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">return</span> detailMessage<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">/** * 返回异常发生时的详细信息 * @return */</span><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token class-name">String</span> message <span class="token operator">=</span> <span class="token function">getLocalizedMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token punctuation">(</span>message <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token string">": "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span> <span class="token operator">:</span> s<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">/** * 返回异常对象的本地化信息，使用Throwable的子类覆盖这个方法，可以生成本地化信息 * 如果子类没有覆盖该发方法，则该方法返回的信息与getMessage()返回的结果相同 * @return */</span><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getLocalizedMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">return</span> <span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">/** * 在控制台打印Throwable对象封装的异常信息 */</span><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java基础2.0</title>
       <link href="/2024/04/17/java-ji-chu-2.0/"/>
       <url>/2024/04/17/java-ji-chu-2.0/</url>

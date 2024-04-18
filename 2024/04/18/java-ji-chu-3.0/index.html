@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Feliks">
-    <meta name="description" content="Hexo初始文档">
+    <meta name="keywords" content="Java基础3.0, Feliks">
+    <meta name="description" content="Java基础">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Feliks</title>
+    <title>Java基础3.0 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -359,12 +359,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Java基础3.0</h1>
                 </div>
             </div>
         </div>
@@ -387,8 +387,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                     </div>
@@ -399,8 +403,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/Java/" class="post-category">
+                                Java
                             </a>
                         
                     </div>
@@ -412,28 +416,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-07
+                    2024-04-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-11
+                    2024-04-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    572
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -453,19 +457,76 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
+                <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p><strong>Java异常类层次结构图概览</strong></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181509151.png" alt="image-20240418150926127"> </p>
+<h2 id="Exception-和-Error-有什么区别？"><a href="#Exception-和-Error-有什么区别？" class="headerlink" title="Exception 和 Error 有什么区别？"></a>Exception 和 Error 有什么区别？</h2><p>在Java中，所有的异常类都有一个共同的祖先：<code>java.lang.Throwable</code></p>
+<p><code>Throwable</code>类有两个重要的子类：</p>
+<ul>
+<li><code>Exception</code><ul>
+<li>程序本身可以处理的异常，可以通过<code>try-catch</code>进行捕获。</li>
+<li><code>Exception</code>又分为<code>Checked Exception</code>（受检查异常，必须处理）和<code>Unchecked Exception</code>（不受检查异常，可以不处理）</li>
+</ul>
+</li>
+<li><code>Error</code><ul>
+<li>属于程序无法处理的错误，不建议通过<code>try-catch</code>捕获</li>
+<li>例如JVM虚拟机运行错误（<code>Virtual MechineError</code>）、虚拟机内存不够错误（<code>OutOfMemoryError</code>）、类定义错误（<code>NoClassDefFoundError</code>）等，这些异常发生时，JVM一般会选择线程终止</li>
+</ul>
+</li>
+</ul>
+<h2 id="Checked-Exception-和-Unchecked-Exception有什么区别？"><a href="#Checked-Exception-和-Unchecked-Exception有什么区别？" class="headerlink" title="Checked Exception 和 Unchecked Exception有什么区别？"></a>Checked Exception 和 Unchecked Exception有什么区别？</h2><p><code>checked Exception</code>受检查异常，Java代码在编译的过程中，如果受检查异常没有被<code>catch</code>捕获或者<code>throws</code>关键字处理的话，就没有办法通过编译</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181459528.png" alt="image-20240418145909485"> </p>
+<p>除了<code>RuntimeException</code>及其子类之外，其余的<code>Exception</code>类及其子类都属于受检查异常</p>
+<p>常见的受检查异常：<code>IOException</code>、<code>ClassNotFoundException</code>、<code>SQLException</code>等等</p>
+<p><code>Unchecked Exception</code>不受检查异常，Java代码在编译的过程中，我们即使不处理不受检查异常也可以正常通过编译</p>
+<p><code>RuntimeException</code>及其子类都统称为非受检查异常，常见的如下：</p>
+<ul>
+<li><code>NullPointerException</code>（空指针异常，NPE）</li>
+<li><code>IllegalArgumentException</code>（参数异常，比如方法传入形参类型错误）</li>
+<li><code>NumberFormatException</code>（字符串转换为数字格式异常，<code>IllegalArgumentException</code>的子类）</li>
+<li><code>ArrayIndexOutOfBoundsException</code>（数组下标越界异常）</li>
+<li><code>ClassCastException</code>（类型转换异常）</li>
+<li><code>ArithmeticException</code>（算术异常）</li>
+<li><code>SecurityException</code>（安全异常，例如权限不够）</li>
+<li><code>UnsupportedOperationException</code>（不支持的操作异常，例如重复创建同一用户）</li>
+<li>……还有很多不受检查异常</li>
+</ul>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181520775.png" alt="image-20240418152019747"> </p>
+<h2 id="Throwable类常用方法"><a href="#Throwable类常用方法" class="headerlink" title="Throwable类常用方法"></a>Throwable类常用方法</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 返回异常发生时的简要描述
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> detailMessage<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre>
+<span class="token comment">/**
+ * 返回异常发生时的详细信息
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> message <span class="token operator">=</span> <span class="token function">getLocalizedMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>message <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token string">": "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span> <span class="token operator">:</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre>
+<span class="token comment">/**
+ * 返回异常对象的本地化信息，使用Throwable的子类覆盖这个方法，可以生成本地化信息
+ * 如果子类没有覆盖该发方法，则该方法返回的信息与getMessage()返回的结果相同
+ * @return
+ */</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getLocalizedMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre>
+<span class="token comment">/**
+ * 在控制台打印Throwable对象封装的异常信息
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+
 
                 
             </div>
@@ -482,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Hexo</a>
+                    <a href="/about" rel="external nofollow noreferrer">Feliks</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -492,7 +553,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/07/hello-world/">https://qetuop91.github.io/2024/04/07/hello-world/</a>
+                    <a href="https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/">https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -505,7 +566,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Hexo</a>
+                    <a href="/about" target="_blank">Feliks</a>
                     !
                 </span>
             </div>
@@ -530,8 +591,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
                         </div>
@@ -943,83 +1008,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/08/redis7-1.0-gai-shu/">
+                <a href="/2024/04/18/java-ji-chu-3.0/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/8.jpg" class="responsive-img" alt="Redis7-1.0-基础">
+                        <img src="/medias/myImages/2.jpg" class="responsive-img" alt="Java基础3.0">
                         
-                        <span class="card-title">Redis7-1.0-基础</span>
+                        <span class="card-title">Java基础3.0</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Redis学习笔记
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Redis/" class="post-category">
-                                    Redis
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/04/07/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/myImages/21.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Hexo初始文档
+                            Java基础
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
@@ -1030,8 +1047,64 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/04/17/java-ji-chu-2.0/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/myImages/1.jpg" class="responsive-img" alt="Java基础2.0">
+                        
+                        <span class="card-title">Java基础2.0</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java基础
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
