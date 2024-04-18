@@ -430,14 +430,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    572
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -527,6 +527,60 @@
 
 
 
+<h2 id="try-catch-finally？"><a href="#try-catch-finally？" class="headerlink" title="try-catch-finally？"></a>try-catch-finally？</h2><ul>
+<li><code>try</code>块：用于捕获异常，可后接零个或多个<code>catch</code>块，如果没有<code>catch</code>块，则必须跟一个<code>finally</code>块</li>
+<li><code>catch</code>块：用于处理<code>try</code>捕获到的异常</li>
+<li><code>finally</code>块：无论是否捕获或处理异常，<code>finally</code>块内的语句都会执行，当在<code>try</code>块或<code>catch</code>块中遇到<code>return</code>语句时，<code>finally</code>语句块将在方法<code>return</code>前被执行</li>
+</ul>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Try to do something."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"RuntimeException"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Catch Exception: "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Finally"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>运行结果<br><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404182253309.png" alt="image-20240418225354257"> </p>
+<blockquote>
+<p>  <code>Considerations</code></p>
+<p>  千万不要在<code>finally</code>块中使用<code>return</code>！当<code>try</code>语句和<code>finally</code>语句中都有<code>return</code>语句的时候<code>try</code>块中的<code>return</code>会被忽略，为什么呢？这是因为**<code>try</code>块中的<code>return</code>返回值会先被暂存在一个本地变量中，当执行到<code>finally</code>块中的<code>return</code>之后，这个本地变量的值就变成了<code>finally</code>块中<code>return</code>的返回值**</p>
+</blockquote>
+<p>在<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.10.2.5">JVM官方文档</a>中明确提到了相关内容</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404182307345.png" alt="image-20240418230717318"> </p>
+<p>演示</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> value <span class="token operator">*</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>如上代码所示<code>try</code>和<code>finally</code>中都定义了<code>return</code>语句，调用方法时传入5，您猜怎么着，输出的结果并不是25，而是0</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404182311998.png" alt="image-20240418231154972"> </p>
+<p>验证了上面所说的，所以<strong>不要在finally中写return语句</strong></p>
+<h2 id="finally块中的代码一定会执行吗？"><a href="#finally块中的代码一定会执行吗？" class="headerlink" title="finally块中的代码一定会执行吗？"></a>finally块中的代码一定会执行吗？</h2><p>不一定，以上方<code>try-catch-finally</code>中的代码举例</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Try to do something."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"RuntimeException"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Catch Exception: "</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Finally"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>在<code>finally</code>之前虚拟机就被终止运行的话，是不会执行到<code>finally</code>块中的语句的，上方代码直接在<code>catch</code>块中直接终止程序，程序自然就不会走到<code>finally</code>块</p>
+<p>运行结果：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404182320423.png" alt="image-20240418232049400"> </p>
 
                 
             </div>
@@ -1302,7 +1356,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">65.8k</span>
+                        class="white-color">66.2k</span>
             
             
             
