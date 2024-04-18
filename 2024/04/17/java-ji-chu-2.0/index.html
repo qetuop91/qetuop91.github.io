@@ -423,21 +423,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-17
+                    2024-04-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    5.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    23 分
                 </div>
                 
 
@@ -814,6 +814,284 @@
 <li>若两个对象的<code>hashCode</code>值相等并且<code>equals()</code>判断也为<code>true</code>，那才认为两个对象相等</li>
 <li>若两个对象的<code>hashCode</code>值不相等，则可以直接认为两个对象不相等</li>
 </ul>
+<h2 id="为什么重写equals-时必须重写hashCode-方法"><a href="#为什么重写equals-时必须重写hashCode-方法" class="headerlink" title="为什么重写equals()时必须重写hashCode()方法"></a>为什么重写equals()时必须重写hashCode()方法</h2><p>因为在使用<code>equals()</code>去判断两个对象相等时，他们的<code>hashCode</code>也必须要相等，如果不重写<code>equals()</code>就会导致其判断是两个相等的对象但是<code>hashCode</code>值却不相等</p>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><code>equals</code>方法判断两个对象是相等的，那这两个对象的<code>hashCode</code>值也要相等</li>
+<li>两个对象有着相同的<code>hashCode</code>值，他们也不一定是相等的（哈希碰撞）</li>
+</ul>
+<h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="StringBuffer和StringBuilder的区别？"><a href="#StringBuffer和StringBuilder的区别？" class="headerlink" title="StringBuffer和StringBuilder的区别？"></a>StringBuffer和StringBuilder的区别？</h2><ul>
+<li><p><strong>可变性</strong></p>
+<ul>
+<li><p><code>String</code>是不可变的</p>
+</li>
+<li><p><code>StringBuffer</code>与<code>StringBuilder</code>都继承自<code>AbstractStringBuilder</code>类，在<code>AbstractStringBuilder</code>类中也是使用字符数组保存字符串，不过没有使用<code>final</code>和<code>private</code>关键字修饰，最关键的是这个类还提供了很多修改字符串的方法比如<code>append</code></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// StringBuilder类</span>
+<span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">StringBuilder</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractStringBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span>
+    
+<span class="token comment">// StringBuffer类</span>
+ <span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">StringBuffer</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractStringBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span></code></pre>
+
+<p>AbstractStringBuilder</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractStringBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">Appendable</span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * The value is used for character storage.
+     */</span>
+    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> value<span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * The count is the number of characters used.
+     */</span>
+    <span class="token keyword">int</span> count<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">AbstractStringBuilder</span> <span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>str <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token function">appendNull</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span>count <span class="token operator">+</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        str<span class="token punctuation">.</span><span class="token function">getChars</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">,</span> value<span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        count <span class="token operator">+=</span> len<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// ......</span>
+<span class="token punctuation">}</span></code></pre></li>
+</ul>
+</li>
+<li><p><strong>线程安全性</strong></p>
+<ul>
+<li><code>String</code>中的对象是不可变的，即可理解为常量，线程安全，<code>AbstractStringBuilder</code>是<code>StringBuilder</code>与<code>StringBuffer</code>的公共父类，定义类一些字符串的基本操作，例如<code>expandCapacity</code>、<code>append</code>、<code>insert</code>、<code>indexOf</code>等公共方法。</li>
+<li><code>StringBuffer</code>对方法加了同步锁或者对调用的方法加了同步锁，所以是<strong>线程安全</strong>的</li>
+<li><code>StringBuilder</code>并没有对方法进行加同步锁，所以是<strong>非线程安全</strong>的</li>
+</ul>
+</li>
+<li><p><strong>性能</strong></p>
+<ul>
+<li>每次对<code>String</code>类型进行改变的时候，都会生成一个新的<code>String</code>对象，然后指针指向新的<code>String</code>对象。</li>
+<li><code>StringBuffer</code>每次都会对<code>StringBuffer</code>本身进行操作，而不是生成新的对象并改变对象引用</li>
+<li>相同的请款下使用<code>StringBuilder</code>相比使用<code>StringBuffer</code>仅能获得10% ~ 15%左右的性能提升，但是却要冒线程不安全的风险</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>操作少量数据：<code>String</code>类</li>
+<li>单线程操作字符串缓冲区下大量数据操作：<code>StringBuilder</code>类</li>
+<li>多线程操作字符串缓冲区下大量数据操作：<code>StringBuffer</code>类</li>
+</ul>
+<h2 id="String为什么是不可变的？"><a href="#String为什么是不可变的？" class="headerlink" title="String为什么是不可变的？"></a>String为什么是不可变的？</h2><p>我们来看看String类</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">String</span> <span class="token keyword">implements</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span><span class="token punctuation">,</span> <span class="token class-name">Comparable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span>
+    <span class="token comment">/** The value is used for character storage. */</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">char</span> value<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// ......</span>
+<span class="token punctuation">}</span></code></pre>
+
+<blockquote>
+<p>  看到了吗，<code>String</code>类被<code>final</code>关键字修饰，而被<code>final</code>关键字修饰的类不能被继承，修饰的方法不能被重写，修饰的变量是<strong>基本数据类型</strong>则<strong>值不能改变</strong>，修饰的变量是<strong>引用类型</strong>则<strong>不能再指向其他对象</strong>。因此，<code>final</code>关键字修饰的数组保存字符串并不是<code>String</code>不可变的根本原因，因为这个数组保存的字符串是可变的（引用类型变量的情况）</p>
+<p>  根本原因：</p>
+<ol>
+<li>保存字符串的数组被<code>final</code>修饰且为<code>private</code>，并且<code>String</code>类并没有提供/暴露修改这个字符串的方法</li>
+<li><code>String</code>类被<code>final</code>修饰导致其不能被继承，进而避免了子类破坏<code>String</code>不可变</li>
+</ol>
+<p>  扩展：<strong>如果<code>String</code>可变会导致什么样的结果？</strong></p>
+<p>  用<code>HashSet</code>做示例，其内的元素是<code>StringBuilder</code></p>
+  <pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StringBuilder</span><span class="token punctuation">&gt;</span></span> set <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">StringBuilder</span> stringBuilder1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token string">"aaa"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">StringBuilder</span> stringBuilder2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token string">"aaabbb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>stringBuilder1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>stringBuilder2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [aaabbb, aaa]</span>
+    <span class="token class-name">StringBuilder</span> stringBuilder3 <span class="token operator">=</span> stringBuilder1<span class="token punctuation">;</span>
+    stringBuilder3<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"bbb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [aaabbb, aaabbb]</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>  <code>StringBuilder</code>型变量<code>stringBuilder1</code>和<code>stringBuilder2</code>分别指向了堆内的字面量”aaa”和”aaabbb”，把他们都插入到<code>HashSet</code>中，但是我们后面定义了一个<code>stringBuilder3</code>指向<code>stringBuilder1</code>的地址，再改变<code>stringBuilder3</code>的值，因为<code>StringBuilder</code>并不具备不可变性的保护，这就导致了<code>stringBuilder3</code>直接在原来的<code>stringBuilder1</code>地址上修改导致<code>stringBuilder1</code>的值也变了，此时<code>HashSet</code>里面竟然会有两个一样的键值，<strong>破坏了HashSet键值的唯一性，所以千万千万不要用可变类型做HashMap和HashSet键值</strong></p>
+<p>  补充：在Java9之后，<code>String</code>、<code>StringBuilder</code>、<code>StringBuffer</code>的实现改用为<code>byte</code>数组</p>
+  <pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">String</span> <span class="token keyword">implements</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span><span class="token punctuation">,</span><span class="token class-name">Comparable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span>
+    <span class="token comment">// @Stable 注解表示变量最多被修改一次，称为“稳定的”。</span>
+    <span class="token annotation punctuation">@Stable</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">AbstractStringBuilder</span> <span class="token keyword">implements</span> <span class="token class-name">Appendable</span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span>
+    <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> value<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span></code></pre>
+
+<p>  提问：<strong>为什么Java9的<code>String</code>底层要把<code>char[]</code>改为<code>byte[]</code>？</strong></p>
+<p>  新版的<code>String</code>其实支持两个编码方案：<code>Latin-1</code> 和 <code>UTF-16</code>，如果字符串中包含的汉字没有超过<code>Latin-1</code>可表示范围内的字符，那就会使用<code>Latin-1</code>作为编码方案，在该编码方案下，<code>byte</code>占一个字节（8位）<code>char</code>占两个字节（16位），<code>byte</code>相比<code>char</code>节省一般的内存空间</p>
+<p>  如果字符串中包含的汉字超过<code>Latin-1</code>可表示范围内的字符，那么<code>byte</code>和<code>char</code>占用的内存空间是一致的</p>
+</blockquote>
+<h2 id="字符串拼接用“-”还是用StringBuilder？"><a href="#字符串拼接用“-”还是用StringBuilder？" class="headerlink" title="字符串拼接用“+”还是用StringBuilder？"></a>字符串拼接用“+”还是用StringBuilder？</h2><p>Java语言本身不支持运算符重载，“+”与“+=”是专门为<code>String</code>类重载过的运算符，也是Java中仅有的两个重载过的运算符</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token string">"he"</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token string">"llo"</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> str3 <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> str4 <span class="token operator">=</span> str1 <span class="token operator">+</span> str2 <span class="token operator">+</span> str3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>来看看它的字节码文件</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404180952198.png" alt="image-20240418095238037"> </p>
+<p>可以看出字符串对象通过“+”的字符串拼接方式，实际上是通过<code>StringBuilder``调用append()</code>方法实现的，拼接完成后调用<code>StringBuilder</code>里的<code>toString()</code>得到一个<code>String</code>对象</p>
+<p>在循环里使用“+”进行拼接会发生什么？</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token string">"he"</span><span class="token punctuation">,</span> <span class="token string">"llo"</span><span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> s <span class="token operator">:</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        str <span class="token operator">+=</span> s<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>查看字节码我们可以得知，使用“+”的方式拼接字符串，他会在循环内部不断创建<code>StringBuilder</code>对象</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181014642.png" alt="image-20240418101418543"> </p>
+<p>直接使用<code>StringBuilder</code>对象去拼接字符串就不会存在这个问题了</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token string">"he"</span><span class="token punctuation">,</span> <span class="token string">"llo"</span><span class="token punctuation">,</span> <span class="token string">"world"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token class-name">StringBuilder</span> stringBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> s <span class="token operator">:</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        stringBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181019379.png" alt="image-20240418101922343"> </p>
+<h2 id="String-equals-和-Object-equals-的区别？"><a href="#String-equals-和-Object-equals-的区别？" class="headerlink" title="String.equals() 和 Object.equals()的区别？"></a>String.equals() 和 Object.equals()的区别？</h2><p><code>String.equals()</code></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> anObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> anObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>anObject <span class="token keyword">instanceof</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> anotherString <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">)</span>anObject<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> value<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> anotherString<span class="token punctuation">.</span>value<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">char</span> v1<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+            <span class="token keyword">char</span> v2<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> anotherString<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+            <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>n<span class="token operator">--</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>v1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> v2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><code>Object.equals()</code></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><code>String</code>中的<code>equals</code>方法是被重写过的，用来比较字符串的值是否相等，而<code>Object</code>中的<code>equals</code>方法比较的是对象的内存地址。</p>
+<h2 id="字符串常量池的作用？"><a href="#字符串常量池的作用？" class="headerlink" title="字符串常量池的作用？"></a>字符串常量池的作用？</h2><p><strong>为了避免字符串的重复创建</strong></p>
+<p><strong>字符串常量池</strong>是JVM为了提升性能和减少内存针对字符串（<code>String</code>类）专门开辟的一块区域</p>
+<p>我们来看看以下两个字符串的地址</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在堆中创建字符串对象"ab"</span>
+    <span class="token comment">// 将字符产对象"ab"的引用保存在字符串常量池中</span>
+	<span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token string">"ab"</span><span class="token punctuation">;</span>
+    <span class="token comment">// 直接返回字符串常量池中字符串对象"ab"的引用</span>
+    <span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token string">"ab"</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"str1: "</span> <span class="token operator">+</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"@"</span> <span class="token operator">+</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"str2: "</span> <span class="token operator">+</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"@"</span> <span class="token operator">+</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str1 <span class="token operator">==</span> str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181029255.png" alt="image-20240418102911227"> </p>
+<p>可以看到<code>str1</code>和<code>str2</code>的地址是完全一致的</p>
+<h2 id="String-str1-new-String-“abc”-这段代码创建了几个字符串对象？"><a href="#String-str1-new-String-“abc”-这段代码创建了几个字符串对象？" class="headerlink" title="String str1 = new String(“abc”);这段代码创建了几个字符串对象？"></a>String str1 = new String(“abc”);这段代码创建了几个字符串对象？</h2><p>会创建 1 或 2 个字符串对象</p>
+<ol>
+<li><p>如果字符串常量池中不存在字符串对象”abc”的引用，那么他会在堆上创建两个字符串对象，其中一个字符串对象的引用会被保存在字符串常量池中</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181040609.png" alt="image-20240418104022575"> </p>
+<p><code>LDC</code>：用于判断字符串常量池中是否保存了对应的字符串对象的引用，如果保存了的话就直接返回，如果没有就会在堆中创建对应的字符串对象并将该字符串对象的引用保存到字符串常量中</p>
+</li>
+<li><p>如果字符串常量池中有”abc”的引用，则只会在堆中创建一个字符串对象”abc”</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> string <span class="token operator">=</span> <span class="token string">"abc"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181053155.png" alt="image-20240418105312116"><br>下面的<code>LDC</code>命令不会在堆中创建新的字符串对象”abc”，这是因为在上面已经执行了一次<code>LDC</code>命令，已经在堆中创建过一次字符串对象”abc”了，所以会直接返回字符串常量池中字符串对象”abc”的引用</p>
+</li>
+</ol>
+<h2 id="String-intern-的作用？"><a href="#String-intern-的作用？" class="headerlink" title="String.intern()的作用？"></a>String.intern()的作用？</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">native</span> <span class="token class-name">String</span> <span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p><code>String.intern()</code>是一个被<code>native</code>修饰的方法，作用是将指定的字符串对象的引用保存在字符串常量池中</p>
+<ul>
+<li><p>如果字符串常量池中保存了对应的字符串对象的引用，则直接返回该引用</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> s1 <span class="token operator">=</span> <span class="token string">"Java"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s2 <span class="token operator">=</span> s1<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"s1: "</span> <span class="token operator">+</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"@"</span> <span class="token operator">+</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"s2: "</span> <span class="token operator">+</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"@"</span> <span class="token operator">+</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s1 <span class="token operator">==</span> s2<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181107938.png" alt="image-20240418110746900"> </p>
+<p><strong>s2返回了s1在字符串常量池保存的对应的字符串对象的引用，所以二者地址一致</strong></p>
+</li>
+<li><p>如果字符串常量池中没有保存对应的字符串对象的引用，则会在常量池中创建一个指向该字符串对象的引用并返回</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 会在堆中在单独创建一个字符串对象</span>
+<span class="token class-name">String</span> s3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"Java"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 直接返回字符串常量池中字符串对象"Java"对应的引用</span>
+<span class="token class-name">String</span> s4 <span class="token operator">=</span> s3<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"s3: "</span> <span class="token operator">+</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"@"</span> <span class="token operator">+</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"s4: "</span> <span class="token operator">+</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"@"</span> <span class="token operator">+</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s3 <span class="token operator">==</span> s4<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181113615.png" alt="image-20240418111340586"> </p>
+<p>因为s3使用了<code>new</code>关键字创建了新的<code>String</code>对象在对其赋值”abc”字符串</p>
+</li>
+</ul>
+<h2 id="String类型的变量和常量做“-”运算的时候发生了什么？"><a href="#String类型的变量和常量做“-”运算的时候发生了什么？" class="headerlink" title="String类型的变量和常量做“+”运算的时候发生了什么？"></a>String类型的变量和常量做“+”运算的时候发生了什么？</h2><h3 id="不加final关键字时"><a href="#不加final关键字时" class="headerlink" title="不加final关键字时"></a>不加<code>final</code>关键字时</h3><pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token string">"str"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token string">"int"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> str3 <span class="token operator">=</span> <span class="token string">"str"</span> <span class="token operator">+</span> <span class="token string">"ing"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> str4 <span class="token operator">=</span> str1 <span class="token operator">+</span> str2<span class="token punctuation">;</span>
+<span class="token class-name">String</span> str5 <span class="token operator">=</span> <span class="token string">"string"</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str3 <span class="token operator">==</span> str4<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str3 <span class="token operator">==</span> str5<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str4 <span class="token operator">==</span> str5<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span></code></pre>
+
+<blockquote>
+<p>  <strong>Considerations</strong></p>
+<p>  这里比较的是对象的内存地址，而不是字符串的值</p>
+</blockquote>
+<p><strong>得益于编译器的优化，对于编译期可以确定值得字符串，就是常量字符串，JVM会将其存入字符串常量池中，并且字符串常量拼接得到的字符串常量在编译阶段就已经被存放在字符串常量池了</strong></p>
+<p><strong>常量折叠</strong>：把常量表达式得值求出来作为常量嵌在最终生成的代码中，这是Javac编译器哦会对源代码做的极少量优化措施之一（代码优化几乎都在即时编译器中进行）</p>
+<p>对于上面的<code>String str3 = "str" + "ing"</code>，编译器会帮我们优化成：<code>String str3 = "string"</code></p>
+<p>并非所有的常量都会进行折叠，只有编译器在程序编译期就可以确定值得常量才可以，例如：</p>
+<ul>
+<li>基本数据类型（<code>byte</code>、<code>boolean</code>、<code>short</code>、<code>char</code>、<code>int</code>、<code>float</code>、<code>long</code>、<code>double</code>）以及字符串常量</li>
+<li><code>final</code>修饰的基本数据类型和字符串变量</li>
+<li>字符串通过“+”拼接得到的字符串、基本数据类型之间的算术运算（加减乘除）、基本数据类型的位运算（<code>&lt;&lt;</code>、<code>&gt;&gt;</code>、<code>&gt;&gt;&gt;</code>）</li>
+</ul>
+<p><strong>对于在程序编译期间无法确定的值，编译器是无法对其进行优化的</strong></p>
+<p>例如上面的变量str4，对象引用和“+”的字符串拼接方式，实际上是通过<code>StringBuilder</code>调用<code>append()</code>方法实现的，拼接完成之后调用<code>toString()</code>得到一个<code>String</code>对象</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> str4 <span class="token operator">=</span> str1 <span class="token operator">+</span> str2<span class="token punctuation">;</span>
+<span class="token comment">// 等价于</span>
+<span class="token class-name">String</span> str4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<blockquote>
+<p>  我们在日常写代码的时候，应该尽量避免多个字符串对象拼接，因为这样会重新创建对象，如果需要改变字符串的时候，可以使用<code>StringBuilder</code>或者<code>StringBuffer</code></p>
+</blockquote>
+<h3 id="加入final关键字时"><a href="#加入final关键字时" class="headerlink" title="加入final关键字时"></a>加入<code>final</code>关键字时</h3><p>对字符串使用<code>final</code>关键字修饰后，可以让编译器当作常量来访问</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">final</span> <span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token string">"str"</span><span class="token punctuation">;</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token string">"ing"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> stringA <span class="token operator">=</span> <span class="token string">"str"</span> <span class="token operator">+</span> <span class="token string">"ing"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> stringB <span class="token operator">=</span> str1 <span class="token operator">+</span> str2<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stringA <span class="token operator">==</span> stringB<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p>运行结果：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404181304912.png" alt="image-20240418130417846"> </p>
+<p>这是因为被<code>final</code>关键字修饰后的<code>String</code>字符串会被编译器当作常量来处理，编译器在程序编译期就可以确定他的值，其效果就相当于访问常量</p>
+<p>如果我们把常量<code>str2</code>改成运行时才能知道它的值，就没有办法使用<code>常量折叠</code>来进行优化了（和方法加不加<code>final</code>来修饰无关，就算加了也不可以优化）</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token string">"str"</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token function">getStr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> stringA <span class="token operator">=</span> <span class="token string">"str"</span> <span class="token operator">+</span> <span class="token string">"ing"</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> stringB <span class="token operator">=</span> str1 <span class="token operator">+</span> str2<span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stringA <span class="token operator">==</span> stringB<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token function">getStr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"ing"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>运行结果：false</p>
 
                 
             </div>
@@ -1585,7 +1863,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.1k</span>
+                        class="white-color">65.2k</span>
             
             
             
