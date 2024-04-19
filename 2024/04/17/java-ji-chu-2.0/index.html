@@ -53,8 +53,8 @@
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
 <meta name="generator" content="Hexo 7.1.1">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -856,9 +856,21 @@
 </li>
 <li><p><strong>线程安全性</strong></p>
 <ul>
-<li><code>String</code>中的对象是不可变的，即可理解为常量，线程安全，<code>AbstractStringBuilder</code>是<code>StringBuilder</code>与<code>StringBuffer</code>的公共父类，定义类一些字符串的基本操作，例如<code>expandCapacity</code>、<code>append</code>、<code>insert</code>、<code>indexOf</code>等公共方法。</li>
-<li><code>StringBuffer</code>对方法加了同步锁或者对调用的方法加了同步锁，所以是<strong>线程安全</strong>的</li>
-<li><code>StringBuilder</code>并没有对方法进行加同步锁，所以是<strong>非线程安全</strong>的</li>
+<li><p><code>String</code>中的对象是不可变的，即可理解为常量，线程安全，<code>AbstractStringBuilder</code>是<code>StringBuilder</code>与<code>StringBuffer</code>的公共父类，定义类一些字符串的基本操作，例如<code>expandCapacity</code>、<code>append</code>、<code>insert</code>、<code>indexOf</code>等公共方法。</p>
+</li>
+<li><p><code>StringBuffer</code>对方法加了同步锁或者对调用的方法加了同步锁，所以是<strong>线程安全</strong>的</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token class-name">StringBuffer</span> <span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    toStringCache <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+<li><p><code>StringBuilder</code>并没有对方法进行加同步锁，所以是<strong>非线程安全</strong>的</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token class-name">StringBuilder</span> <span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></li>
 </ul>
 </li>
 <li><p><strong>性能</strong></p>
