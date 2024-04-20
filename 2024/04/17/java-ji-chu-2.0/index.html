@@ -886,7 +886,7 @@
 <li>单线程操作字符串缓冲区下大量数据操作：<code>StringBuilder</code>类</li>
 <li>多线程操作字符串缓冲区下大量数据操作：<code>StringBuffer</code>类</li>
 </ul>
-<h2 id="String为什么是不可变的？"><a href="#String为什么是不可变的？" class="headerlink" title="String为什么是不可变的？"></a>String为什么是不可变的？</h2><p>我们来看看String类</p>
+<h2 id="String为什么是不可变的？"><a href="#String为什么是不可变的？" class="headerlink" title="String为什么是不可变的？"></a>String为什么是不可变的？</h2><p>我们来看看<code>String</code>类</p>
 <pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">String</span> <span class="token keyword">implements</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span><span class="token punctuation">,</span> <span class="token class-name">Comparable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span>
     <span class="token comment">/** The value is used for character storage. */</span>
     <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">char</span> value<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -897,8 +897,10 @@
 <p>  看到了吗，<code>String</code>类被<code>final</code>关键字修饰，而被<code>final</code>关键字修饰的类不能被继承，修饰的方法不能被重写，修饰的变量是<strong>基本数据类型</strong>则<strong>值不能改变</strong>，修饰的变量是<strong>引用类型</strong>则<strong>不能再指向其他对象</strong>。因此，<code>final</code>关键字修饰的数组保存字符串并不是<code>String</code>不可变的根本原因，因为这个数组保存的字符串是可变的（引用类型变量的情况）</p>
 <p>  根本原因：</p>
 <ol>
-<li>保存字符串的数组被<code>final</code>修饰且为<code>private</code>，并且<code>String</code>类并没有提供/暴露修改这个字符串的方法</li>
-<li><code>String</code>类被<code>final</code>修饰导致其不能被继承，进而避免了子类破坏<code>String</code>不可变</li>
+<li><p>保存字符串的数组被<code>final</code>修饰且为<code>private</code>，并且<code>String</code>类并没有提供/暴露修改这个字符串的方法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">char</span> value<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre></li>
+<li><p><code>String</code>类被<code>final</code>修饰导致其不能被继承，进而避免了子类破坏<code>String</code>不可变</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">String</span> <span class="token keyword">implements</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span><span class="token punctuation">,</span> <span class="token class-name">Comparable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">CharSequence</span> <span class="token punctuation">{</span></code></pre></li>
 </ol>
 <p>  扩展：<strong>如果<code>String</code>可变会导致什么样的结果？</strong></p>
 <p>  用<code>HashSet</code>做示例，其内的元素是<code>StringBuilder</code></p>
@@ -1873,7 +1875,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">66.2k</span>
+                        class="white-color">66.7k</span>
             
             
             

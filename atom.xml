@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-18T15:20:54.251Z</updated>
+  <updated>2024-04-20T08:57:22.012Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实现可固定大小的本地缓存</title>
+    <link href="https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/"/>
+    <id>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/</id>
+    <published>2024-04-20T08:37:42.000Z</published>
+    <updated>2024-04-20T08:57:22.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;核心实现&quot;&gt;&lt;a href=&quot;#核心实现&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="淘汰算法" scheme="https://qetuop91.github.io/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="缓存" scheme="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/"/>
+    
+    <category term="LRU" scheme="https://qetuop91.github.io/tags/LRU/"/>
+    
+    <category term="LinkedHashMap" scheme="https://qetuop91.github.io/tags/LinkedHashMap/"/>
+    
+  </entry>
   
   <entry>
     <title>Java基础3.0</title>
@@ -49,7 +82,7 @@
     <link href="https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/"/>
     <id>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/</id>
     <published>2024-04-17T13:46:15.000Z</published>
-    <updated>2024-04-19T00:11:44.276Z</updated>
+    <updated>2024-04-19T00:14:34.222Z</updated>
     
     
       
@@ -101,7 +134,7 @@
     <link href="https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/"/>
     <id>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</id>
     <published>2024-04-16T01:47:45.000Z</published>
-    <updated>2024-04-16T03:30:37.838Z</updated>
+    <updated>2024-04-20T08:38:22.117Z</updated>
     
     
       
@@ -125,6 +158,8 @@
     <category term="缓存" scheme="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/"/>
     
     <category term="LRU" scheme="https://qetuop91.github.io/tags/LRU/"/>
+    
+    <category term="LinkedHashMap" scheme="https://qetuop91.github.io/tags/LinkedHashMap/"/>
     
   </entry>
   
@@ -530,31 +565,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Redis管道&quot;&gt;&lt;a href=&quot;#Redis管道&quot; class=&quot;headerlink&quot; title=&quot;Redis管道&quot;&gt;&lt;/a&gt;Redis管道&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
-    
-    
-    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis7-4.0-事务</title>
-    <link href="https://qetuop91.github.io/2024/04/12/redis7-4.0-shi-wu/"/>
-    <id>https://qetuop91.github.io/2024/04/12/redis7-4.0-shi-wu/</id>
-    <published>2024-04-11T16:10:17.000Z</published>
-    <updated>2024-04-11T16:14:02.218Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Redis事务&quot;&gt;&lt;a href=&quot;#Redis事务&quot; class=&quot;headerlink&quot;</summary>
         
       
     
