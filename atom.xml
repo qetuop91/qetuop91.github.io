@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-20T09:07:38.705Z</updated>
+  <updated>2024-04-23T07:00:43.077Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么Java只有值传递？</title>
+    <link href="https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/"/>
+    <id>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/</id>
+    <published>2024-04-23T06:59:05.000Z</published>
+    <updated>2024-04-23T07:00:43.077Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>实现可固定大小的本地缓存</title>
@@ -54,7 +73,7 @@
     <link href="https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/"/>
     <id>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/</id>
     <published>2024-04-18T05:30:37.000Z</published>
-    <updated>2024-04-23T06:41:48.705Z</updated>
+    <updated>2024-04-23T07:02:58.397Z</updated>
     
     
       
@@ -82,7 +101,7 @@
     <link href="https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/"/>
     <id>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/</id>
     <published>2024-04-17T13:46:15.000Z</published>
-    <updated>2024-04-19T00:14:34.222Z</updated>
+    <updated>2024-04-23T07:02:55.346Z</updated>
     
     
       
@@ -134,7 +153,7 @@
     <link href="https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/"/>
     <id>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</id>
     <published>2024-04-16T01:47:45.000Z</published>
-    <updated>2024-04-20T08:38:22.117Z</updated>
+    <updated>2024-04-23T07:02:11.388Z</updated>
     
     
       
@@ -201,7 +220,7 @@
     <link href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/"/>
     <id>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/</id>
     <published>2024-04-15T06:30:58.000Z</published>
-    <updated>2024-04-15T07:20:25.129Z</updated>
+    <updated>2024-04-23T07:02:04.302Z</updated>
     
     
       
@@ -230,7 +249,7 @@
     <link href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/"/>
     <id>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/</id>
     <published>2024-04-15T05:57:44.000Z</published>
-    <updated>2024-04-15T06:30:04.652Z</updated>
+    <updated>2024-04-23T07:02:02.431Z</updated>
     
     
       
@@ -259,7 +278,7 @@
     <link href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/"/>
     <id>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</id>
     <published>2024-04-15T02:53:15.000Z</published>
-    <updated>2024-04-15T05:57:08.972Z</updated>
+    <updated>2024-04-23T07:01:58.853Z</updated>
     
     
       
@@ -288,7 +307,7 @@
     <link href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/"/>
     <id>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/</id>
     <published>2024-04-15T02:47:55.000Z</published>
-    <updated>2024-04-15T02:52:01.895Z</updated>
+    <updated>2024-04-23T07:01:56.602Z</updated>
     
     
       
@@ -317,7 +336,7 @@
     <link href="https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/"/>
     <id>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/</id>
     <published>2024-04-15T02:43:23.000Z</published>
-    <updated>2024-04-17T13:45:35.492Z</updated>
+    <updated>2024-04-23T07:02:50.432Z</updated>
     
     
       
@@ -344,7 +363,7 @@
     <link href="https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/"/>
     <id>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</id>
     <published>2024-04-14T13:50:09.000Z</published>
-    <updated>2024-04-14T14:01:51.655Z</updated>
+    <updated>2024-04-23T07:03:51.272Z</updated>
     
     
       
@@ -372,7 +391,7 @@
     <link href="https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/"/>
     <id>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</id>
     <published>2024-04-13T12:06:10.000Z</published>
-    <updated>2024-04-13T16:24:11.458Z</updated>
+    <updated>2024-04-23T07:03:49.212Z</updated>
     
     
       
@@ -457,7 +476,7 @@
     <link href="https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/"/>
     <id>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/</id>
     <published>2024-04-11T16:12:43.000Z</published>
-    <updated>2024-04-11T16:19:43.110Z</updated>
+    <updated>2024-04-23T07:03:40.266Z</updated>
     
     
       
@@ -482,7 +501,7 @@
     <link href="https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/"/>
     <id>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/</id>
     <published>2024-04-11T16:12:09.000Z</published>
-    <updated>2024-04-11T16:19:40.027Z</updated>
+    <updated>2024-04-23T07:03:37.997Z</updated>
     
     
       
@@ -507,7 +526,7 @@
     <link href="https://qetuop91.github.io/2024/04/12/redis7-7.0-fu-zhi-replica/"/>
     <id>https://qetuop91.github.io/2024/04/12/redis7-7.0-fu-zhi-replica/</id>
     <published>2024-04-11T16:11:11.000Z</published>
-    <updated>2024-04-11T16:19:37.083Z</updated>
+    <updated>2024-04-23T07:03:35.102Z</updated>
     
     
       
@@ -532,7 +551,7 @@
     <link href="https://qetuop91.github.io/2024/04/12/redis7-6.0-fa-bu-ding-yue/"/>
     <id>https://qetuop91.github.io/2024/04/12/redis7-6.0-fa-bu-ding-yue/</id>
     <published>2024-04-11T16:10:54.000Z</published>
-    <updated>2024-04-11T16:19:34.033Z</updated>
+    <updated>2024-04-23T07:03:33.083Z</updated>
     
     
       
@@ -540,31 +559,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Redis发布订阅&quot;&gt;&lt;a href=&quot;#Redis发布订阅&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="https://qetuop91.github.io/categories/Redis/"/>
-    
-    
-    <category term="Redis" scheme="https://qetuop91.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis7-5.0-管道</title>
-    <link href="https://qetuop91.github.io/2024/04/12/redis7-5.0-guan-dao/"/>
-    <id>https://qetuop91.github.io/2024/04/12/redis7-5.0-guan-dao/</id>
-    <published>2024-04-11T16:10:37.000Z</published>
-    <updated>2024-04-11T16:14:34.066Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Redis管道&quot;&gt;&lt;a href=&quot;#Redis管道&quot; class=&quot;headerlink&quot; title=&quot;Redis管道&quot;&gt;&lt;/a&gt;Redis管道&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
         
       
     
