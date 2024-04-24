@@ -477,7 +477,7 @@
 <h1 id="LRU的背景"><a href="#LRU的背景" class="headerlink" title="LRU的背景"></a>LRU的背景</h1><p><strong>LRU</strong>：<code>least-recently-used</code>最近最少使用算法，是一种内存数据淘汰策略，使用常见是当内存不足时，需要淘汰最近最少使用的数据。</p>
 <h1 id="LRU原理"><a href="#LRU原理" class="headerlink" title="LRU原理"></a>LRU原理</h1><p>用一个特殊的栈来保存当前正在使用的各个页面的页面号，当一个新的进程访问某个页面时，将该页面号压入栈顶，如果栈中的内存不够，就把栈底的页面号移除，这样栈顶始终都是最新被访问的页面编号，而栈底则是最近最久未被访问的页面号</p>
 <h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>我们可以通过继承LinkedHashMap，重写removeEldestEntry方法</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * 重写LinkedHashMap的removeEldestEntry方法
  * 在Put的时候判断如果为true就会删除最老的
  * @param eldest
@@ -486,7 +486,7 @@
 <span class="token annotation punctuation">@Override</span>
 <span class="token keyword">protected</span> <span class="token keyword">boolean</span> <span class="token function">removeEldestEntry</span><span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span> eldest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> max<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
@@ -496,7 +496,7 @@
 <p>  直接使用LinkedHashMap实现并不是线程安全的，要做到线程安全，就需要加上<code>synchronized</code>修饰符</p>
 </blockquote>
 <p><strong>具体实现代码</strong></p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * 三种常见的淘汰算法：FIFO、LRU、LFU
  * LRUMap
  * 每次访问数据都会将其放在我们的队尾，如果需要淘汰数据，就只需要淘汰队首即可。
@@ -564,7 +564,7 @@
             <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
                 
@@ -1156,12 +1156,12 @@
                         <span class="chip bg-color">Sunshine</span>
                     </a>
                     
-                    <a href="/tags/EasyVirtualDisplay/">
-                        <span class="chip bg-color">EasyVirtualDisplay</span>
-                    </a>
-                    
                     <a href="/tags/Github%E5%BC%80%E6%BA%90/">
                         <span class="chip bg-color">Github开源</span>
+                    </a>
+                    
+                    <a href="/tags/EasyVirtualDisplay/">
+                        <span class="chip bg-color">EasyVirtualDisplay</span>
                     </a>
                     
                 </div>
@@ -1587,16 +1587,17 @@ $(function () {
     
     
     
-
-    <!-- 雪花特效 -->
-     
+        
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->

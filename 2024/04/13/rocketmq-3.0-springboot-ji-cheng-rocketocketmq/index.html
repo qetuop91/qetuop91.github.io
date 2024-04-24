@@ -460,35 +460,35 @@
             <div id="articleContent">
                 <h1 id="RocketMQ集成SpringBoot"><a href="#RocketMQ集成SpringBoot" class="headerlink" title="RocketMQ集成SpringBoot"></a>RocketMQ集成SpringBoot</h1><p>我们创建两个SpringBoot项目，一个模拟生产者方的服务器，一个模拟消费者方的服务器</p>
 <p>生产者方的application.yml文件</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">rocketmq</span><span class="token punctuation">:</span>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">rocketmq</span><span class="token punctuation">:</span>
     <span class="token key atrule">name-server</span><span class="token punctuation">:</span> 192.168.183.131<span class="token punctuation">:</span><span class="token number">9876</span>
     <span class="token key atrule">producer</span><span class="token punctuation">:</span>
-        <span class="token key atrule">group</span><span class="token punctuation">:</span> boot<span class="token punctuation">-</span>producer<span class="token punctuation">-</span>group<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token key atrule">group</span><span class="token punctuation">:</span> boot<span class="token punctuation">-</span>producer<span class="token punctuation">-</span>group</code></pre>
 
 
 
 <p>消费者方的application.yml文件</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">server</span><span class="token punctuation">:</span>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">server</span><span class="token punctuation">:</span>
     <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span>
 <span class="token key atrule">rocketmq</span><span class="token punctuation">:</span>
     <span class="token key atrule">name-server</span><span class="token punctuation">:</span> 192.168.183.131<span class="token punctuation">:</span><span class="token number">9876</span>
-    <span class="token comment"># 一个boot项目中可以写很多个消费者程序，但是在一般开发中，一个boot项目只对应一个消费者</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token comment"># 一个boot项目中可以写很多个消费者程序，但是在一般开发中，一个boot项目只对应一个消费者</span></code></pre>
 
 
 
 <h1 id="生产者发送消息"><a href="#生产者发送消息" class="headerlink" title="生产者发送消息"></a>生产者发送消息</h1><p>MsgModel</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Data</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Data</span>
 <span class="token annotation punctuation">@AllArgsConstructor</span>
 <span class="token annotation punctuation">@NoArgsConstructor</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MsgModel</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token class-name">String</span> orderSn<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name">Integer</span> userId<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name">String</span> desc<span class="token punctuation">;</span><span class="token comment">// 下单 短信 物流</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
-<h2 id="通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息"><a href="#通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息" class="headerlink" title="通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息"></a>通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// RocketMQTemplate</span>
+<h2 id="通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息"><a href="#通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息" class="headerlink" title="通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息"></a>通过RocketMQTemplate发送同步、异步、单向、延迟、顺序消息</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// RocketMQTemplate</span>
 <span class="token annotation punctuation">@Autowired</span>
 <span class="token keyword">private</span> <span class="token class-name">RocketMQTemplate</span> rocketMQTemplate<span class="token punctuation">;</span>
 
@@ -533,11 +533,11 @@
         <span class="token comment">// 发送顺序消息 一般都是以json的格式进行处理</span>
         rocketMQTemplate<span class="token punctuation">.</span><span class="token function">syncSendOrderly</span><span class="token punctuation">(</span><span class="token string">"bootOrderlyTopic"</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>msgModel<span class="token punctuation">)</span><span class="token punctuation">,</span> msgModel<span class="token punctuation">.</span><span class="token function">getOrderSn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
-<h2 id="发送带Tag的消息"><a href="#发送带Tag的消息" class="headerlink" title="发送带Tag的消息"></a>发送带Tag的消息</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<h2 id="发送带Tag的消息"><a href="#发送带Tag的消息" class="headerlink" title="发送带Tag的消息"></a>发送带Tag的消息</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * 带tag的消息
  *
  * @throws Exception
@@ -554,7 +554,7 @@
             <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     rocketMQTemplate<span class="token punctuation">.</span><span class="token function">syncSend</span><span class="token punctuation">(</span><span class="token string">"bootKeyTopic:tagA"</span><span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
@@ -563,7 +563,7 @@
 <li>集群模式</li>
 <li>广播模式</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * 测试消息消费模式 集群模式、广播模式
  *
  * @throws Exception
@@ -573,13 +573,13 @@
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         rocketMQTemplate<span class="token punctuation">.</span><span class="token function">syncSend</span><span class="token punctuation">(</span><span class="token string">"modeTopic"</span><span class="token punctuation">,</span> <span class="token string">"我是第"</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"条消息"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <h1 id="消费者消费信息"><a href="#消费者消费信息" class="headerlink" title="消费者消费信息"></a>消费者消费信息</h1><p>集成了SpringBoot后，生产者方发送消息几乎都是大差不差，真正有区别的是消费者方</p>
 <h2 id="消费同步、异步、单向、延迟消息"><a href="#消费同步、异步、单向、延迟消息" class="headerlink" title="消费同步、异步、单向、延迟消息"></a>消费同步、异步、单向、延迟消息</h2><p>ABootSimpleMsgListener</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"bootTestTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"boot-test-consumer-group"</span>
@@ -598,7 +598,7 @@
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span><span class="token function">getBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 <p>消费单向消息和延迟消息同理</p>
 <h2 id="消费顺序消息"><a href="#消费顺序消息" class="headerlink" title="消费顺序消息"></a>消费顺序消息</h2><p>在非SpringBoot发送RocketMQ消息里面有提及过并发模式和顺序模式：</p>
@@ -613,7 +613,7 @@
 <li>ORDERLY</li>
 </ul>
 <p>BOrderMsgListener</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"bootOrderlyTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"boot-orderly-consumer-group"</span><span class="token punctuation">,</span>
@@ -627,13 +627,13 @@
         <span class="token class-name">MsgModel</span> msgModel <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parseObject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>messageExt<span class="token punctuation">.</span><span class="token function">getBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token class-name">MsgModel</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>msgModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <h2 id="消费带Tag的消息"><a href="#消费带Tag的消息" class="headerlink" title="消费带Tag的消息"></a>消费带Tag的消息</h2><p>注意一下，在selectorExpression里面的||，是并的意思，不是或，意为消费带tagA和tagB的消息</p>
 <p>CTagMsgListener</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"bootKeyTopic"</span><span class="token punctuation">,</span>
 <span class="token comment">//        topic = "bootTagTopic",</span>
@@ -650,7 +650,7 @@
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>messageExt<span class="token punctuation">.</span><span class="token function">getBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 
 
 
@@ -658,7 +658,7 @@
 <p>在此模式下，同一消费者组中的消费者会对所有的消息进行负载均衡消费，即多个消费者交替消费同一个主题里面的消息</p>
 <p>例如：往某一主题发送了十条消息，则在该模式下，所有的消费者会均摊消费这十条消息。</p>
 <p>DConsumerClustering1</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * [CLUSTERING] 集群模式下，队列会被消费者分摊，队列数量&gt;=消费者数量，RocketMQ服务器会记录消息的消费位点并处理
  * BROADCASTING 广播模式下，消息会被每一个消费者都处理一次，RcoketMQ服务器不会记录消费位点，也不会重试
  */</span>
@@ -675,12 +675,12 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是mode-consumer-group-a组的第一个消费者: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <p>DConsumerClustering2</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"modeTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"mode-consumer-group-a"</span><span class="token punctuation">,</span>
@@ -693,12 +693,12 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是mode-consumer-group-a组的第二个消费者: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <p>DConsumerClustering3</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"modeTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"mode-consumer-group-a"</span><span class="token punctuation">,</span>
@@ -710,14 +710,14 @@
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是mode-consumer-group-a组的第三个消费者: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 
 
 
 <h2 id="BROADCASTING"><a href="#BROADCASTING" class="headerlink" title="BROADCASTING"></a>BROADCASTING</h2><p>广播模式，表示每个消费者都消费一遍订阅的主题的消息</p>
 <p>例如：有五条消息，则每个消费者各都会消费五条，而不是一共消费五条</p>
 <p>DConsumerBroadcasting1</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"modeTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"mode-consumer-group-b"</span><span class="token punctuation">,</span>
@@ -728,12 +728,12 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是mode-consumer-group-b组的第一个消费者: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <p>DConsumerBroadcasting2</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"modeTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"mode-consumer-group-b"</span><span class="token punctuation">,</span>
@@ -744,12 +744,12 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是mode-consumer-group-b组的第二个消费者: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <p>DConsumerBroadcasting3</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@RocketMQMessageListener</span><span class="token punctuation">(</span>
         topic <span class="token operator">=</span> <span class="token string">"modeTopic"</span><span class="token punctuation">,</span>
         consumerGroup <span class="token operator">=</span> <span class="token string">"mode-consumer-group-b"</span><span class="token punctuation">,</span>
@@ -760,7 +760,7 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是mode-consumer-group-b组的第三个消费者: "</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
                 
@@ -1771,16 +1771,17 @@ $(function () {
     
     
     
-
-    <!-- 雪花特效 -->
-     
+        
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->

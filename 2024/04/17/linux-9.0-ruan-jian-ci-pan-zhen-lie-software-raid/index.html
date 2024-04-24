@@ -648,7 +648,7 @@
 <p>  硬件磁盘阵列在Linux下看起来就是一块实际的大磁盘，因此硬件磁盘阵列的设备文件名为<code>/dev/sd[a-p]</code>，因<code>为使用到SCSI的模块。</code></p>
 <p>  软件磁盘阵列则是系统模拟的，因此使用的设备文件名是系统的设备文件，文件名为<code>/dev/md0</code>、<code>/dev/md1</code>等，二者的设备文件名并不相同</p>
 </blockquote>
-<h3 id="软件磁盘阵列的设置"><a href="#软件磁盘阵列的设置" class="headerlink" title="软件磁盘阵列的设置"></a>软件磁盘阵列的设置</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --detail /dev/md0</span>
+<h3 id="软件磁盘阵列的设置"><a href="#软件磁盘阵列的设置" class="headerlink" title="软件磁盘阵列的设置"></a>软件磁盘阵列的设置</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --detail /dev/md0</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx ...</span>
 选项与参数：
 <span class="token parameter variable">--create</span>			：为建立RAID的选项
@@ -657,17 +657,17 @@
 --raid-devices<span class="token operator">=</span>N	：使用几个磁盘分区（partition）作为磁盘阵列的设备
 --spare-devices<span class="token operator">=</span>N	：使用几个磁盘作为备用（spare）设备
 <span class="token parameter variable">--level</span><span class="token operator">=</span><span class="token punctuation">[</span>015<span class="token punctuation">]</span>		：设置这组磁盘阵列的级别，支持很多，不过建议只要用0、1、5即可
-<span class="token parameter variable">--detail</span>			：后面所接的哪个磁盘阵列设备的详细信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token parameter variable">--detail</span>			：后面所接的哪个磁盘阵列设备的详细信息</code></pre>
 
 <p>使用<code>mdadm</code>建立<code>RAID5</code>磁盘阵列</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md0 --auto=yes --level=5 --chunk=256K --raid-devices=4 --spare-devices=1 /dev/sda{5,6,7,8,9}</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md0 --auto=yes --level=5 --chunk=256K --raid-devices=4 --spare-devices=1 /dev/sda{5,6,7,8,9}</span>
 mdadm: Defaulting to version <span class="token number">1.2</span> metadata
-mdadm: array /dev/md0 started.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+mdadm: array /dev/md0 started.</code></pre>
 
 
 
 <p>查看创建的磁盘阵列<code>md0</code></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mdadm --detail /dev/md0</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mdadm --detail /dev/md0</span>
 /dev/md0:
            Version <span class="token builtin class-name">:</span> <span class="token number">1.2</span>
      Creation Time <span class="token builtin class-name">:</span> Wed Apr <span class="token number">17</span> <span class="token number">15</span>:03:01 <span class="token number">2024</span>
@@ -701,18 +701,18 @@ Consistency Policy <span class="token builtin class-name">:</span> resync
        <span class="token number">5</span>       <span class="token number">8</span>        <span class="token number">8</span>        <span class="token number">3</span>      active <span class="token function">sync</span>   /dev/sda8
        <span class="token number">4</span>       <span class="token number">8</span>        <span class="token number">9</span>        -      spare   /dev/sda9     
 <span class="token comment"># 最后五行就是五个设备目前的情况，包括四个active sync一个spare（热磁盘设备）</span>
-<span class="token comment"># RaidDevice是此RAID内的磁盘顺序</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># RaidDevice是此RAID内的磁盘顺序</span></code></pre>
 
 
 
 <p>当然也可以查看<code>/proc/mdstat</code>文件来查看系统软件磁盘阵列的情况</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">       <span class="token number">4</span>       <span class="token number">8</span>        <span class="token number">9</span>        -      spare   /dev/sda9
+<pre class="language-bash" data-language="bash"><code class="language-bash">       <span class="token number">4</span>       <span class="token number">8</span>        <span class="token number">9</span>        -      spare   /dev/sda9
 <span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># cat /proc/mdstat </span>
 Personalities <span class="token builtin class-name">:</span> <span class="token punctuation">[</span>raid6<span class="token punctuation">]</span> <span class="token punctuation">[</span>raid5<span class="token punctuation">]</span> <span class="token punctuation">[</span>raid4<span class="token punctuation">]</span> 
 md0 <span class="token builtin class-name">:</span> active raid5 sda8<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> sda9<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span> sda7<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> sda6<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> sda5<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>					<span class="token operator">&lt;=</span><span class="token operator">=</span>第一行
       <span class="token number">3139584</span> blocks super <span class="token number">1.2</span> level <span class="token number">5</span>, 256k chunk, algorithm <span class="token number">2</span> <span class="token punctuation">[</span><span class="token number">4</span>/4<span class="token punctuation">]</span> <span class="token punctuation">[</span>UUUU<span class="token punctuation">]</span>	<span class="token operator">&lt;=</span><span class="token operator">=</span>第二行
       
-unused devices: <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+unused devices: <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span></code></pre>
 
 <ul>
 <li>第一行：指出md0为raid5，且使用了sda8、sda7、sda6、sda5等四块磁盘设备，每个设备后面的[]内的数字代表此磁盘在RAID中的顺序（RaidDevice），至于sda9后面的S代表其为热磁盘设备</li>
@@ -724,7 +724,7 @@ unused devices: <span class="token operator">&lt;</span>none<span class="token o
 <li>共有4块组成RAID5，因此容量少一块，所以sw=3</li>
 <li>计算出数据宽度为：256k*3=768k</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f -d su=256k,sw=3 -r extsize=768k /dev/md0</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f -d su=256k,sw=3 -r extsize=768k /dev/md0</span>
 meta-data<span class="token operator">=</span>/dev/md0               <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">8</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">98048</span> blks
          <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
          <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
@@ -733,18 +733,18 @@ data     <span class="token operator">=</span>                       <span class
 naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
 log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
          <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">64</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
-realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">786432</span> <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">786432</span> <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span></code></pre>
 
 <p>挂载</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mkdir /srv/raid</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mkdir /srv/raid</span>
 <span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># mount /dev/md0 /srv/raid</span>
 <span class="token punctuation">[</span>root@localhost dev<span class="token punctuation">]</span><span class="token comment"># df -Th /srv/raid</span>
 文件系统       类型  容量  已用  可用 已用% 挂载点
 /dev/md0       xfs   <span class="token number">3</span>.0G   33M  <span class="token number">3</span>.0G    <span class="token number">2</span>% /srv/raid
-<span class="token comment"># 多了一个/dev/md0的设备，挂载的地方在我们创建的/srv/raid中</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 多了一个/dev/md0的设备，挂载的地方在我们创建的/srv/raid中</span></code></pre>
 <h3 id="组建RAID10"><a href="#组建RAID10" class="headerlink" title="组建RAID10"></a>组建<code>RAID10</code></h3><ol>
 <li><p>创建并格式化分区（5，6，7，8）</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1.创建扩展分区4</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1.创建扩展分区4</span>
 <span class="token punctuation">[</span>root@localhost raid<span class="token punctuation">]</span><span class="token comment"># fdisk /dev/sda</span>
 欢迎使用 <span class="token function">fdisk</span> <span class="token punctuation">(</span>util-linux <span class="token number">2.23</span>.2<span class="token punctuation">)</span>。
 
@@ -853,12 +853,12 @@ realtime <span class="token operator">=</span>none                   <span class
 /dev/sda5: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"d7cd45fa-f763-413e-bfd0-1d1ed7888049"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
 /dev/sda6: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"744e3019-7da3-43e3-a3ee-ada2efe82c0c"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
 /dev/sda7: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"8ee54c11-ba26-4738-a619-7a485f00a498"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> 
-/dev/sda8: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"6a9a6a98-e05c-4c40-a080-698f8e611a6d"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+/dev/sda8: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"6a9a6a98-e05c-4c40-a080-698f8e611a6d"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> </code></pre>
 
 
 </li>
 <li><p>将磁盘两两组建<code>RAID1</code></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 5.sda5、sda6组RAID1（md0），sda7、sda8组RAID1（md1）</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 5.sda5、sda6组RAID1（md0），sda7、sda8组RAID1（md1）</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md0 --auto=yes --level=1 --chunk=256K --raid-devices=2 /dev/sda{5,6}</span>
 mdadm: Note: this array has metadata at the start and
     may not be suitable as a boot device.  If you plan to
@@ -877,10 +877,10 @@ mdadm: Note: this array has metadata at the start and
     <span class="token parameter variable">--metadata</span><span class="token operator">=</span><span class="token number">0.90</span>
 Continue creating array? y
 mdadm: Defaulting to version <span class="token number">1.2</span> metadata
-mdadm: array /dev/md1 started.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+mdadm: array /dev/md1 started.</code></pre>
 </li>
 <li><p>将两个<code>RAID1</code>组成一个<code>RAID0</code>（md3）</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 6.将md0和md1组成RAID0（md3）</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 6.将md0和md1组成RAID0（md3）</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mdadm --create /dev/md3 --auto=yes --level=0 --chunk=256K --raid-devices=2 /dev/md{0,1}</span>
 mdadm: Defaulting to version <span class="token number">1.2</span> metadata
 mdadm: array /dev/md3 started.
@@ -911,10 +911,10 @@ Consistency Policy <span class="token builtin class-name">:</span> none
 
     Number   Major   Minor   RaidDevice State
        <span class="token number">0</span>       <span class="token number">9</span>        <span class="token number">0</span>        <span class="token number">0</span>      active <span class="token function">sync</span>   /dev/md0
-       <span class="token number">1</span>       <span class="token number">9</span>        <span class="token number">1</span>        <span class="token number">1</span>      active <span class="token function">sync</span>   /dev/md1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+       <span class="token number">1</span>       <span class="token number">9</span>        <span class="token number">1</span>        <span class="token number">1</span>      active <span class="token function">sync</span>   /dev/md1</code></pre>
 </li>
 <li><p>格式化md3为xfs文件系统</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 7.格式化md3</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 7.格式化md3</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/md3</span>
 meta-data<span class="token operator">=</span>/dev/md3               <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">8</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">65344</span> blks
          <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
@@ -924,10 +924,10 @@ data     <span class="token operator">=</span>                       <span class
 naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
 log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
          <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">64</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
-realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span></code></pre>
 </li>
 <li><p>挂载md3</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 8.将md3挂载到我们自己创建的目录/srv/raid下</span>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 8.将md3挂载到我们自己创建的目录/srv/raid下</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># mount /dev/md3 /srv/raid</span>
 <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment"># df -Th /srv/raid</span>
 文件系统       类型  容量  已用  可用 已用% 挂载点
@@ -965,7 +965,7 @@ sdb               <span class="token number">8</span>:16   <span class="token nu
 └─sdb4            <span class="token number">8</span>:20   <span class="token number">0</span>    1G  <span class="token number">0</span> part  
 sr0              <span class="token number">11</span>:0    <span class="token number">1</span>  <span class="token number">9</span>.6G  <span class="token number">0</span> rom   /run/media/feliks/CentOS <span class="token number">7</span> x86_64
 
-<span class="token comment"># 至此RAID10组建成功</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<span class="token comment"># 至此RAID10组建成功</span></code></pre></li>
 </ol>
 
                 
@@ -1976,16 +1976,17 @@ $(function () {
     
     
     
-
-    <!-- 雪花特效 -->
-     
+        
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->

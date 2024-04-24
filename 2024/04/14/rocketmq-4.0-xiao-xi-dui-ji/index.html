@@ -465,7 +465,7 @@
 <li><p>增加消费者数量，但是消费者数量&lt;=队列数量</p>
 </li>
 <li><p>适当地设置最大的消费线程数量</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * consumeThreadNumber是怎么计算的？
  * 线程池里面的最大核心线程数量（n是当前程序运行电脑的最大处理器数量）：
  *      IO密集型：2n
@@ -485,7 +485,7 @@
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是测试积压的第一个消费者："</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 <p>这里的consumeThreadNumber是根据当前机器的逻辑处理器来算出的，就是公式里的n</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404142157692.png" alt="image-20240414215724613"> </p>
@@ -1507,16 +1507,17 @@ $(function () {
     
     
     
-
-    <!-- 雪花特效 -->
-     
+        
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->

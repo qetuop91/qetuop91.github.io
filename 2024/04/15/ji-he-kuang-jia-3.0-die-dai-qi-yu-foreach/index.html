@@ -463,20 +463,20 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="迭代器（iterator）的作用？"><a href="#迭代器（iterator）的作用？" class="headerlink" title="迭代器（iterator）的作用？"></a>迭代器（iterator）的作用？</h1><p>遍历集合元素</p>
-<h1 id="获取迭代器对象"><a href="#获取迭代器对象" class="headerlink" title="获取迭代器对象"></a>获取迭代器对象</h1><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Iterator</span> iterator <span class="token operator">=</span> coll<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="获取迭代器对象"><a href="#获取迭代器对象" class="headerlink" title="获取迭代器对象"></a>获取迭代器对象</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Iterator</span> iterator <span class="token operator">=</span> coll<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
 
 
-<h1 id="迭代器实现遍历"><a href="#迭代器实现遍历" class="headerlink" title="迭代器实现遍历"></a>迭代器实现遍历</h1><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h1 id="迭代器实现遍历"><a href="#迭代器实现遍历" class="headerlink" title="迭代器实现遍历"></a>迭代器实现遍历</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// next()：①指针下移 ②将下移后集合位置上的元素返回</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
 <h1 id="增强for循环（foreach）"><a href="#增强for循环（foreach）" class="headerlink" title="增强for循环（foreach）"></a>增强for循环（foreach）</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>遍历数组、集合</p>
-<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>要遍历的集合或数组的类型 临时变量 <span class="token operator">:</span> 要遍历的集合或数组变量<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>要遍历的集合或数组的类型 临时变量 <span class="token operator">:</span> 要遍历的集合或数组变量<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	操作临时变量的输出
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span></code></pre>
 
 
 
@@ -1507,16 +1507,17 @@ $(function () {
     
     
     
-
-    <!-- 雪花特效 -->
-     
+        
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->
