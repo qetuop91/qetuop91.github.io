@@ -52,9 +52,10 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
-
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="Feliks" type="application/rss+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -501,7 +502,7 @@
 <li><code>df</code>：列出文件系统的整体磁盘使用量</li>
 <li><code>du</code>：查看文件系统的磁盘使用量（常用在查看目录所占磁盘空间）</li>
 </ul>
-<h4 id="df"><a href="#df" class="headerlink" title="df"></a>df</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token punctuation">[</span>-ahikHTm<span class="token punctuation">]</span> <span class="token punctuation">[</span>目录或文件名<span class="token punctuation">]</span>
+<h4 id="df"><a href="#df" class="headerlink" title="df"></a>df</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token punctuation">[</span>-ahikHTm<span class="token punctuation">]</span> <span class="token punctuation">[</span>目录或文件名<span class="token punctuation">]</span>
 选项与参数：
 -a：列出所有的文件系统，包括系统特有的/proc等文件系统
 -k：以KBytes的容量显示各文件系统
@@ -524,7 +525,7 @@ tmpfs                     <span class="token number">497816</span>       <span c
 tmpfs                      <span class="token number">99564</span>      <span class="token number">52</span>   <span class="token number">99512</span>    <span class="token number">1</span>% /run/user/1000
 tmpfs                      <span class="token number">99564</span>       <span class="token number">0</span>   <span class="token number">99564</span>    <span class="token number">0</span>% /run/user/0
 <span class="token comment"># 在Linux下面如果df没有加任何选项，那么默认会将系统内所有的（不含特殊的内存内的文件系统与swap）</span>
-<span class="token comment"># 都以 1KBytes 的容量来列出来，至于那个/dev/shm是与内存有关的挂载，暂时不予理会</span></code></pre>
+<span class="token comment"># 都以 1KBytes 的容量来列出来，至于那个/dev/shm是与内存有关的挂载，暂时不予理会</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>Filesystem</code>：代表该文件系统是在哪个硬盘分区，所以列出设备名称</li>
@@ -535,7 +536,7 @@ tmpfs                      <span class="token number">99564</span>       <span c
 <li><code>挂载点</code>：Mounted on，就是磁盘的挂载目录</li>
 </ul>
 <p>将容量结果以易读的格式显示出来</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-h</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-h</span>
 文件系统                 容量  已用  可用 已用% 挂载点
 devtmpfs                 470M     <span class="token number">0</span>  470M    <span class="token number">0</span>% /dev
 tmpfs                    487M     <span class="token number">0</span>  487M    <span class="token number">0</span>% /dev/shm
@@ -545,12 +546,12 @@ tmpfs                    487M     <span class="token number">0</span>  487M    <
 /dev/sda2               1014M  174M  841M   <span class="token number">18</span>% /boot
 /dev/mapper/centos-home  <span class="token number">5</span>.0G   39M  <span class="token number">5</span>.0G    <span class="token number">1</span>% /home
 tmpfs                     98M   52K   98M    <span class="token number">1</span>% /run/user/1000
-tmpfs                     98M     <span class="token number">0</span>   98M    <span class="token number">0</span>% /run/user/0</code></pre>
+tmpfs                     98M     <span class="token number">0</span>   98M    <span class="token number">0</span>% /run/user/0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>将系统内的所有特殊文件格式及名称都列出来</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-aT</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-aT</span>
 文件系统                类型               1K-块    已用    可用 已用% 挂载点
 sysfs                   sysfs                  <span class="token number">0</span>       <span class="token number">0</span>       <span class="token number">0</span>     - /sys
 proc                    proc                   <span class="token number">0</span>       <span class="token number">0</span>       <span class="token number">0</span>     - /proc
@@ -585,19 +586,19 @@ fusectl                 fusectl                <span class="token number">0</spa
 sunrpc                  rpc_pipefs             <span class="token number">0</span>       <span class="token number">0</span>       <span class="token number">0</span>     - /var/lib/nfs/rpc_pipefs
 tmpfs                   tmpfs              <span class="token number">99564</span>      <span class="token number">52</span>   <span class="token number">99512</span>    <span class="token number">1</span>% /run/user/1000
 gvfsd-fuse              fuse.gvfsd-fuse        <span class="token number">0</span>       <span class="token number">0</span>       <span class="token number">0</span>     - /run/user/1000/gvfs
-tmpfs                   tmpfs              <span class="token number">99564</span>       <span class="token number">0</span>   <span class="token number">99564</span>    <span class="token number">0</span>% /run/user/0</code></pre>
+tmpfs                   tmpfs              <span class="token number">99564</span>       <span class="token number">0</span>   <span class="token number">99564</span>    <span class="token number">0</span>% /run/user/0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>将/etc下面的可用的磁盘容量以易读的容量格式显示</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-h</span> /etc
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-h</span> /etc
 文件系统                 容量  已用  可用 已用% 挂载点
-/dev/mapper/centos-root   10G  <span class="token number">4</span>.7G  <span class="token number">5</span>.4G   <span class="token number">47</span>% /</code></pre>
+/dev/mapper/centos-root   10G  <span class="token number">4</span>.7G  <span class="token number">5</span>.4G   <span class="token number">47</span>% /<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>将目前各个硬盘分区可用的inode数量列出</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-ih</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">df</span> <span class="token parameter variable">-ih</span>
 文件系统                Inode 已用<span class="token punctuation">(</span>I<span class="token punctuation">)</span> 可用<span class="token punctuation">(</span>I<span class="token punctuation">)</span> 已用<span class="token punctuation">(</span>I<span class="token punctuation">)</span>% 挂载点
 devtmpfs                 118K     <span class="token number">402</span>    117K       <span class="token number">1</span>% /dev
 tmpfs                    122K       <span class="token number">1</span>    122K       <span class="token number">1</span>% /dev/shm
@@ -607,7 +608,7 @@ tmpfs                    122K      <span class="token number">16</span>    122K 
 /dev/sda2                512K     <span class="token number">340</span>    512K       <span class="token number">1</span>% /boot
 /dev/mapper/centos-home  <span class="token number">2</span>.5M     <span class="token number">183</span>    <span class="token number">2</span>.5M       <span class="token number">1</span>% /home
 tmpfs                    122K      <span class="token number">25</span>    122K       <span class="token number">1</span>% /run/user/1000
-tmpfs                    122K       <span class="token number">1</span>    122K       <span class="token number">1</span>% /run/user/0</code></pre>
+tmpfs                    122K       <span class="token number">1</span>    122K       <span class="token number">1</span>% /run/user/0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>  <strong>Considerations</strong></p>
@@ -617,7 +618,7 @@ tmpfs                    122K       <span class="token number">1</span>    122K 
 <li>/dev/shm：是<strong>利用内存虚拟出来的磁盘空间，通常是总物理内存的一半</strong></li>
 </ul>
 </blockquote>
-<h4 id="du"><a href="#du" class="headerlink" title="du"></a>du</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">du</span> <span class="token punctuation">[</span>-ahskm<span class="token punctuation">]</span> 文件或目录名称
+<h4 id="du"><a href="#du" class="headerlink" title="du"></a>du</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">du</span> <span class="token punctuation">[</span>-ahskm<span class="token punctuation">]</span> 文件或目录名称
 选项与参数：
 -a：列出所有的文件与目录容量，因为默认仅统计目录下面的文件量
 -h：以人们较易阅读的容量格式（G/M）显示
@@ -625,12 +626,12 @@ tmpfs                    122K       <span class="token number">1</span>    122K 
 ————————————————————————————————————————————————————————
 -S：不包括子目录下的总计
 -k：以KBytes列出容量显示
--m：以MBytes列出容量显示</code></pre>
+-m：以MBytes列出容量显示<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>列出当前目录下的所有文件容量</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">du</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">du</span>
 <span class="token number">0</span>	./.mozilla/extensions
 <span class="token number">0</span>	./.mozilla/plugins
 <span class="token number">0</span>	./.mozilla
@@ -742,12 +743,12 @@ tmpfs                    122K       <span class="token number">1</span>    122K 
 <span class="token number">5776</span>	<span class="token builtin class-name">.</span>
 <span class="token comment"># 直接输入du没有加任何选项时，则du会分析【当前所在目录】的文件与目录所占用的磁盘空间</span>
 <span class="token comment"># 但是实际显示时，仅会显示目录容量（不含文件），因此（.）目录有很多文件没有被列出来</span>
-<span class="token comment"># 所以全部的目录相加不会登录（.）的容量，此外输出的数值数据为1K大小的容量单位</span></code></pre>
+<span class="token comment"># 所以全部的目录相加不会登录（.）的容量，此外输出的数值数据为1K大小的容量单位</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>将文件的容量也列出来</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">du</span> <span class="token parameter variable">-a</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@localhost ~<span class="token punctuation">]</span>$ <span class="token function">du</span> <span class="token parameter variable">-a</span>
 <span class="token number">0</span>	./.mozilla/extensions
 <span class="token number">0</span>	./.mozilla/plugins
 <span class="token number">0</span>	./.mozilla
@@ -916,12 +917,12 @@ tmpfs                    122K       <span class="token number">1</span>    122K 
 <span class="token number">0</span>	./视频
 <span class="token number">4</span>	./.Xauthority
 <span class="token number">5776</span>	<span class="token builtin class-name">.</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>检查根目录下每个目录所占用的容量</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost feliks<span class="token punctuation">]</span><span class="token comment"># du -sm /*</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost feliks<span class="token punctuation">]</span><span class="token comment"># du -sm /*</span>
 <span class="token number">0</span>	/bin
 <span class="token number">141</span>	/boot
 <span class="token number">0</span>	/dev
@@ -948,7 +949,7 @@ du: 无法访问<span class="token string">"/run/user/1000/gvfs"</span><span cla
 <span class="token number">910</span>	/var
 <span class="token comment"># 利用通配符*来代表每个目录，如果想要检查某个目录下哪个子目录占用最大的容量，可以用这个方法找出来。</span>
 <span class="token comment"># /proc里面的“没有那个文件或目录”（No such file or directory）的错误，只是因为内存中的程序，</span>
-<span class="token comment"># 程序执行结束就会消失，因此会有些目录找不到是正常的</span></code></pre>
+<span class="token comment"># 程序执行结束就会消失，因此会有些目录找不到是正常的</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 <h2 id="磁盘的分区、格式化、检验与挂载"><a href="#磁盘的分区、格式化、检验与挂载" class="headerlink" title="磁盘的分区、格式化、检验与挂载"></a>磁盘的分区、格式化、检验与挂载</h2><p>当我们想要在系统里面新增一块磁盘时</p>
@@ -1042,11 +1043,11 @@ du: 无法访问<span class="token string">"/run/user/1000/gvfs"</span><span cla
 <h3 id="fdisk"><a href="#fdisk" class="headerlink" title="fdisk"></a>fdisk</h3><p>fdisk跟gdisk的使用方式几乎一样，fdisk有时会使用柱面（cylinder）作为分区的最小单位</p>
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404162251099.png" alt="image-20240416225125040"> </p>
 <h2 id="磁盘格式化"><a href="#磁盘格式化" class="headerlink" title="磁盘格式化"></a>磁盘格式化</h2><p>要进行格式化的命令就是【<code>mkfs</code>：makefilesystem】，该命令其实是一个综合命令，它会去调用正确的文件系统格式化工具软件，CentOS7使用XFS作为默认文件系统，先了解mkfs.xfs</p>
-<h3 id="mkfs-xfs"><a href="#mkfs-xfs" class="headerlink" title="mkfs.xfs"></a>mkfs.xfs</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs [-b bsize] [-d parms] [-i parms] [-l parms] [-L label] [-f] [-r parms] 设备名称</span></code></pre>
+<h3 id="mkfs-xfs"><a href="#mkfs-xfs" class="headerlink" title="mkfs.xfs"></a>mkfs.xfs</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs [-b bsize] [-d parms] [-i parms] [-l parms] [-L label] [-f] [-r parms] 设备名称</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404162303418.jpg" alt="9eaf23ce8ee1135d842011b22d43d20"> </p>
 <p>将上面分出来的/dev/sda4格式化为xfs文件系统</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># partprobe -s</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># partprobe -s</span>
 /dev/sda: msdos partitions <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span>
 <span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs -f /dev/sda4</span>
 meta-data<span class="token operator">=</span>/dev/sda4              <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">72684</span> blks
@@ -1057,11 +1058,11 @@ data     <span class="token operator">=</span>                       <span class
 naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
 log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
          <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
-realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span></code></pre>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>使用<code>blkid</code>查看是否格式化完毕</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># blkid /dev/sda4</span>
-/dev/sda4: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"da2a4d8e-e1c8-4022-9a49-47095b158926"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> </code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># blkid /dev/sda4</span>
+/dev/sda4: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">"da2a4d8e-e1c8-4022-9a49-47095b158926"</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">"xfs"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -1685,43 +1686,6 @@ realtime <span class="token operator">=</span>none                   <span class
 </div>
 
 
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: Feliks<br />'
-            + '文章作者: Feliks<br />'
-            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
-
 
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
@@ -2134,17 +2098,16 @@ $(function () {
     
     
     
-        
+
+    <!-- 雪花特效 -->
+     
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
             }
         </script>
-    
-
-    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->

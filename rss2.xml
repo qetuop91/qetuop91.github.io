@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Feliks</title>
+    <link>https://qetuop91.github.io/</link>
+    
+    <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>this is my blog</description>
+    <pubDate>Wed, 24 Apr 2024 09:21:55 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>HashMap</title>
+      <link>https://qetuop91.github.io/2024/04/24/hashmap/</link>
+      <guid>https://qetuop91.github.io/2024/04/24/hashmap/</guid>
+      <pubDate>Wed, 24 Apr 2024 02:41:02 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;HashMap&quot;&gt;&lt;a href=&quot;#HashMap&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/HashMap/">HashMap</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/24/hashmap/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>LinkedHashMap</title>
+      <link>https://qetuop91.github.io/2024/04/24/linkedhashmap/</link>
+      <guid>https://qetuop91.github.io/2024/04/24/linkedhashmap/</guid>
+      <pubDate>Wed, 24 Apr 2024 02:32:36 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;LinkedHashMap&quot;&gt;&lt;a href=&quot;#LinkedHashMap&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LinkedHashMap/">LinkedHashMap</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/24/linkedhashmap/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>为什么Java只有值传递？</title>
+      <link>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/</link>
+      <guid>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/</guid>
+      <pubDate>Tue, 23 Apr 2024 06:59:05 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;形参和实参&quot;&gt;&lt;a href=&quot;#形参和实参&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>实现可固定大小的本地缓存</title>
+      <link>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/</link>
+      <guid>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/</guid>
+      <pubDate>Sat, 20 Apr 2024 08:37:42 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;核心实现&quot;&gt;&lt;a href=&quot;#核心实现&quot; class=&quot;headerlink&quot; title=&quot;核心实现&quot;&gt;&lt;/a&gt;核心实现&lt;/h1&gt;&lt;p&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LinkedHashMap/">LinkedHashMap</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">淘汰算法</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/">缓存</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LRU/">LRU</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Java基础3.0</title>
+      <link>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/</link>
+      <guid>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/</guid>
+      <pubDate>Thu, 18 Apr 2024 05:30:37 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;异常&quot;&gt;&lt;a href=&quot;#异常&quot; class=&quot;headerlink&quot; title=&quot;异常&quot;&gt;&lt;/a&gt;异常&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Java异常类层次结构图概览&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Java基础2.0</title>
+      <link>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/</link>
+      <guid>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/</guid>
+      <pubDate>Wed, 17 Apr 2024 13:46:15 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;面向对象基础&quot;&gt;&lt;a href=&quot;#面向对象基础&quot; class=&quot;headerlink&quot; title=&quot;面向对象基础&quot;&gt;&lt;/a&gt;面向对象基础&lt;/h1&gt;&lt;h2 id=&quot;对象实体与对象引用有什么不同？&quot;&gt;&lt;a href=&quot;#对象实体与对象引用有什么不同？&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Linux-9.0-软件磁盘阵列（Software RAID）</title>
+      <link>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/</link>
+      <guid>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/</guid>
+      <pubDate>Wed, 17 Apr 2024 08:01:01 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;软件磁盘阵列（Software-RAID）&quot;&gt;&lt;a href=&quot;#软件磁盘阵列（Software-RAID）&quot; class=&quot;headerlink&quot; title=&quot;软件磁盘阵列（Software RAID）&quot;&gt;&lt;/a&gt;软件磁盘阵列（Software</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Linux/">Linux</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>继承LinkedHashMap实现简单的LRU算法</title>
+      <link>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</link>
+      <guid>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</guid>
+      <pubDate>Tue, 16 Apr 2024 01:47:45 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;当我们写的项目或应用有了一定流量后，查询数据库就会特别频繁，此时我们可以考虑使用Java自带的HashMap或者ConcurrentHashMap，但是这样实现的缓存机制会有个问题：&lt;code&gt;内存会无限制的增长&lt;/code&gt;，所以HashMap很快也被淘汰了&lt;/p&gt;
+&lt;p</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LinkedHashMap/">LinkedHashMap</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">淘汰算法</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/">缓存</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LRU/">LRU</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>使用EasyVirtualDisplay的副屏方案</title>
+      <link>https://qetuop91.github.io/2024/04/15/2.0-easyvirtualdisplay/</link>
+      <guid>https://qetuop91.github.io/2024/04/15/2.0-easyvirtualdisplay/</guid>
+      <pubDate>Mon, 15 Apr 2024 07:22:09 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;本方案基于Sunshine+Moonlight串流实现，不知道这两个是什么的可以回去自行阅览：&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E4%B8%B2%E6%B5%81/">串流</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%B8%B2%E6%B5%81/">串流</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Moonlight/">Moonlight</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Sunshine/">Sunshine</category>
+      
+      <category domain="https://qetuop91.github.io/tags/EasyVirtualDisplay/">EasyVirtualDisplay</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Github%E5%BC%80%E6%BA%90/">Github开源</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/15/2.0-easyvirtualdisplay/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>集合框架-5.0-Set接口与实现类的使用</title>
+      <link>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/</link>
+      <guid>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/</guid>
+      <pubDate>Mon, 15 Apr 2024 06:30:58 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Set及其实现类特点&quot;&gt;&lt;a href=&quot;#Set及其实现类特点&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>集合框架-4.0-List接口与实现类的使用</title>
+      <link>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/</link>
+      <guid>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/</guid>
+      <pubDate>Mon, 15 Apr 2024 05:57:44 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;List接口中存储数据的特点&quot;&gt;&lt;a href=&quot;#List接口中存储数据的特点&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>集合框架-3.0-迭代器与foreach</title>
+      <link>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</link>
+      <guid>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</guid>
+      <pubDate>Mon, 15 Apr 2024 02:53:15 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;迭代器（iterator）的作用？&quot;&gt;&lt;a href=&quot;#迭代器（iterator）的作用？&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>集合框架-2.0-Collection中的常用方法</title>
+      <link>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/</link>
+      <guid>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/</guid>
+      <pubDate>Mon, 15 Apr 2024 02:47:55 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;常用方法：（Collection中定义了15个抽象方法）&quot;&gt;&lt;a href=&quot;#常用方法：（Collection中定义了15个抽象方法）&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Java基础1.0</title>
+      <link>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/</link>
+      <guid>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/</guid>
+      <pubDate>Mon, 15 Apr 2024 02:43:23 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot; title=&quot;基本语法&quot;&gt;&lt;/a&gt;基本语法&lt;/h1&gt;&lt;h2 id=&quot;在Java中，标识符和关键字的区别是什么？&quot;&gt;&lt;a href=&quot;#在Java中，标识符和关键字的区别是什么？&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>RocketMQ-4.0-消息堆积</title>
+      <link>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</link>
+      <guid>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</guid>
+      <pubDate>Sun, 14 Apr 2024 13:50:09 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;消息堆积问题&quot;&gt;&lt;a href=&quot;#消息堆积问题&quot; class=&quot;headerlink&quot; title=&quot;消息堆积问题&quot;&gt;&lt;/a&gt;消息堆积问题&lt;/h1&gt;&lt;p&gt;一般认为单条队列消息差值&amp;gt;=10w条的时候，就算堆积问题&lt;/p&gt;
+&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/RocketMQ/">RocketMQ</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/RocketMQ/">RocketMQ</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>RocketMQ-3.0-SpringBoot集成RocketocketMQ</title>
+      <link>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</link>
+      <guid>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</guid>
+      <pubDate>Sat, 13 Apr 2024 12:06:10 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;RocketMQ集成SpringBoot&quot;&gt;&lt;a href=&quot;#RocketMQ集成SpringBoot&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/RocketMQ/">RocketMQ</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/RocketMQ/">RocketMQ</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Sunshine+Moonlight串流</title>
+      <link>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/</link>
+      <guid>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/</guid>
+      <pubDate>Sat, 13 Apr 2024 02:35:11 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;串流是什么？&quot;&gt;&lt;a href=&quot;#串流是什么？&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E4%B8%B2%E6%B5%81/">串流</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%B8%B2%E6%B5%81/">串流</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Moonlight/">Moonlight</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Sunshine/">Sunshine</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Github%E5%BC%80%E6%BA%90/">Github开源</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>RocketMQ-1.0-配置与启动RocketMQ</title>
+      <link>https://qetuop91.github.io/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/</link>
+      <guid>https://qetuop91.github.io/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/</guid>
+      <pubDate>Fri, 12 Apr 2024 03:17:05 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;为什么要使用RocketMQ？&quot;&gt;&lt;a href=&quot;#为什么要使用RocketMQ？&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/RocketMQ/">RocketMQ</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/RocketMQ/">RocketMQ</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Redis7-9.0-集群（cluster）</title>
+      <link>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/</link>
+      <guid>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/</guid>
+      <pubDate>Thu, 11 Apr 2024 16:12:43 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Redis集群（cluster）&quot;&gt;&lt;a href=&quot;#Redis集群（cluster）&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Redis/">Redis</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Redis/">Redis</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Redis7-8.0-哨兵（sentinel）</title>
+      <link>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/</link>
+      <guid>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/</guid>
+      <pubDate>Thu, 11 Apr 2024 16:12:09 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Redis哨兵（sentinel）&quot;&gt;&lt;a href=&quot;#Redis哨兵（sentinel）&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Redis/">Redis</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Redis/">Redis</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
