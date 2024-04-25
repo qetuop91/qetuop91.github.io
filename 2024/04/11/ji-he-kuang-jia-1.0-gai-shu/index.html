@@ -428,21 +428,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-17
+                    2024-04-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    222
+                    566
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -462,33 +462,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java集合框架体系"><a href="#Java集合框架体系" class="headerlink" title="Java集合框架体系"></a>Java集合框架体系</h1><p>java.util包下</p>
-<blockquote>
-<p><strong>java.util.Collection:存储一个一个的数据</strong></p>
-</blockquote>
-<ul>
-<li><p>子接口：<code>List</code>：存储有序的，可重复的数据（”动态“数组）</p>
-<ul>
-<li><code>ArrayList</code>(主要实现类)、<code>LinkedList</code>、<code>Vector</code></li>
+                <h1 id="Java集合概述"><a href="#Java集合概述" class="headerlink" title="Java集合概述"></a>Java集合概述</h1><h2 id="Java集合概览"><a href="#Java集合概览" class="headerlink" title="Java集合概览"></a>Java集合概览</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404242334582.png" alt="image-20240424233448524"> </p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404242341337.png" alt="image-20240424234158243"> </p>
+<p>Java集合框架如上图所示，集合也叫做容器，主要有两大接口派生而来：</p>
+<ol>
+<li><code>Collection</code>接口，主要用于存放单一元素<ul>
+<li><code>List</code></li>
+<li><code>Set</code></li>
+<li><code>Queue</code></li>
 </ul>
 </li>
-<li><p>子接口：<code>Set</code>：存储无序的，不可重复的数据（高中集合）</p>
-<ul>
-<li><code>HashSet</code>（主要实现类）、<code>LinkedHashSet</code>、<code>TreeSet</code></li>
-</ul>
+<li><code>Map</code>接口，主要用于存放键值对</li>
+</ol>
+<h2 id="List、Set、Queue、Map四者的区别？"><a href="#List、Set、Queue、Map四者的区别？" class="headerlink" title="List、Set、Queue、Map四者的区别？"></a>List、Set、Queue、Map四者的区别？</h2><p><code>List</code>：存储的元素是有序的、可重复的</p>
+<p><code>Set</code>：存储的元素是不可重复的</p>
+<p><code>Queue</code>：按照特定的排队规则来确定先后顺序（先进先出<code>FIFO</code>），存储的元素是有序的、可重复的</p>
+<p><code>Map</code>：使用键值对（key-value）进行存储，key是无序的、不可重复的，value是无序的、可重复的，每个key最多映射一个value</p>
+<h2 id="集合框架底层数据结构总结"><a href="#集合框架底层数据结构总结" class="headerlink" title="集合框架底层数据结构总结"></a>集合框架底层数据结构总结</h2><p><code>Collection</code>接口下的集合</p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
+<li><p><code>ArrayList</code>：<code>Object[]</code>数组</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404250817929.png" alt="image-20240425081755895"> </p>
+</li>
+<li><p><code>Vector</code>：<code>Object[]</code>数组</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404250819215.png" alt="image-20240425081903187"> </p>
+</li>
+<li><p><code>LinkedList</code>：<code>双向链表</code></p>
 </li>
 </ul>
-<blockquote>
-<p><strong>java.util.Map:存储一对一对的数据（key-value键值对，类似函数y=f(x)，但是不同的key可以指向同一个value）</strong> </p>
-</blockquote>
-<ul>
-<li><code>HashMap</code>（主要实现类）、<code>LinkedHashMap</code>、<code>TreeMap</code>、<code>Hashtable</code>、<code>Properties</code></li>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><ul>
+<li><p><code>HashSet</code>（无序、唯一）：基于<code>HashMap</code>实现，底层采用<code>HashMap</code>来保存元素</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404250933257.png" alt="image-20240425093359195"> </p>
+</li>
+<li><p><code>LinkedHashSet</code>：是<code>HashSet</code>的子类，内部通过<code>LinkedHashMap</code>实现</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404250934901.png" alt="image-20240425093456869"> </p>
+</li>
+<li><p><code>TreeSet</code>（有序、唯一）：红黑树（自平衡的排序二叉树）</p>
+</li>
 </ul>
-<p>学习的程度把握：</p>
-<ul>
-<li>层次1：针对于具体特点的多个数据，知道选择相应的适合的接口的主要实现类，会实例化，会调用常用的方法</li>
-<li>层次2：区分接口中不同的实现类的区别</li>
-<li>层次3：①针对常用的实现类，需要熟悉底层的源码 ②熟悉常见的数据结构</li>
+<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><ul>
+<li><code>PriorityQueue</code>：<code>Object[]</code>数组实现小顶堆</li>
+<li><code>DelayQueue</code>：基于<code>PriorityQueue</code>实现的无界队列</li>
+<li><code>ArrayDeque</code>：可扩容动态双向数组</li>
+</ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
+<li><code>HashMap</code>：JDK1.8以前使用<code>链表+数组</code>的方式实现，数组是<code>HashMap</code>的主体，链表是为了解决哈希冲突存在的（<code>拉链法</code>），在JDK1.8以后，<code>HashMap</code>在解决哈希冲突时有了比较大的变化，当链表长度&gt;=阈值（默认为<code>8</code>）的时候，（在链表转为红黑树之前会先判断数组长度是否小于<code>64</code>，如果小于则对数组扩容，而不是转为红黑树）将链表转化为红黑树以减少搜索时间s</li>
+<li><code>LinkedHashMap</code>：继承自<code>HashMap</code>，所以其底层仍基于拉链式散列结构（由数组和链表和红黑树组成），另外<code>LinkedHashMap</code>在上面结构的基础上增加了一条双向链表，使得上面的结构可以保持键值对的插入顺序，同时对链表进行相应的操作，实现了访问顺序相关逻辑。</li>
+<li><code>Hashtable</code>：数组+链表组成，数组是<code>Hashtable</code>的主体，链表则是主要为了解决哈希冲突而存在的</li>
+<li><code>TreeMap</code>：红黑树，自平衡的排序二叉树</li>
 </ul>
 
                 
@@ -1230,7 +1250,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">82.3k</span>
+                        class="white-color">82.5k</span>
             
             
             
@@ -1569,9 +1589,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>

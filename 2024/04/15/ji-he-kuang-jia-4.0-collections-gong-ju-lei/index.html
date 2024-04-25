@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="集合框架-5.0-Set接口与实现类的使用, Feliks">
+    <meta name="keywords" content="集合框架-4.0-Collections工具类, Feliks">
     <meta name="description" content="Java集合框架">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>集合框架-5.0-Set接口与实现类的使用 | Feliks</title>
+    <title>集合框架-4.0-Collections工具类 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/29.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/28.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">集合框架-5.0-Set接口与实现类的使用</h1>
+                    <h1 class="description center-align post-title">集合框架-4.0-Collections工具类</h1>
                 </div>
             </div>
         </div>
@@ -428,21 +428,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    666
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -462,54 +462,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Set及其实现类特点"><a href="#Set及其实现类特点" class="headerlink" title="Set及其实现类特点"></a>Set及其实现类特点</h1><p>java.util.Collection：存储一个一个的数据</p>
-<ul>
-<li>子接口<strong>Set</strong>：存储无序的、不可重复的数据<ul>
-<li><strong>HashSet</strong>：主要实现类（底层使用HashMap，即使用数组+单链表+红黑树结构进行存储（jdk8中））<ul>
-<li><strong>LinkedHashSet</strong>：是HashSet的子类，在现有的数组+单链表+红黑树结构基础上又添加了一组双向链表用于记录添加元素的先后顺序，便于频繁的查询操作</li>
-</ul>
-</li>
-<li><strong>TreeSet</strong>：底层使用红黑树存储，可以按照添加的元素的置顶的属性大小顺序进行遍历</li>
-</ul>
-</li>
-</ul>
-<h1 id="使用频率"><a href="#使用频率" class="headerlink" title="使用频率"></a>使用频率</h1><blockquote>
-<p>  相较于List、Map来说，使用的频率比较少</p>
-<p>  用来过滤重复的数据</p>
-</blockquote>
-<h1 id="Set中无序性、不可重复性的理解（HashSet及其子类为例）"><a href="#Set中无序性、不可重复性的理解（HashSet及其子类为例）" class="headerlink" title="Set中无序性、不可重复性的理解（HashSet及其子类为例）"></a>Set中无序性、不可重复性的理解（HashSet及其子类为例）</h1><blockquote>
-<p>  无序性：</p>
-<p>  ≠ 随机性</p>
-<p>  添加元素的顺序和遍历元素的顺序不一致，是不是就是无序性？（不是）</p>
-<p>  什么是无序性？与添加元素的位置有关（可以用链表来理解），元素与元素之间的地址不是依次紧密排列的，这里是根据添加元素的哈希值，计算其在数组中的存储位置，此位置不是一次排序的，表现为无序性</p>
-</blockquote>
-<blockquote>
-<p>  不可重复性：</p>
-<p>  添加到Set中的元素是不能相同的</p>
-<p>  比较的标准需要判断hashCode()得到的哈希值以及equals()得到的boolean型的结果</p>
-<p>  哈希值相同且equals()返回true，则认为元素是相同的</p>
-</blockquote>
-<h1 id="添加到HashSet-LinkedHashSet中元素的要求"><a href="#添加到HashSet-LinkedHashSet中元素的要求" class="headerlink" title="添加到HashSet/LinkedHashSet中元素的要求"></a>添加到HashSet/LinkedHashSet中元素的要求</h1><p>元素所在的类要重写两个方法：equals()和hashCode()</p>
-<p>同时，要求equals()和hashCode()要保持一致性，只需要在IDEA中自动生成两个方法的重写即可，既能保证两个方法的一致性</p>
-<h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><h2 id="底层的数据结构"><a href="#底层的数据结构" class="headerlink" title="底层的数据结构"></a>底层的数据结构</h2><blockquote>
-<p>  红黑树</p>
-</blockquote>
-<h2 id="添加数据后的特点"><a href="#添加数据后的特点" class="headerlink" title="添加数据后的特点"></a>添加数据后的特点</h2><blockquote>
-<p>  可以按照添加的元素的置顶的属性大小顺序进行遍历</p>
-</blockquote>
-<h2 id="向TreeSet中添加的元素的要求"><a href="#向TreeSet中添加的元素的要求" class="headerlink" title="向TreeSet中添加的元素的要求"></a>向TreeSet中添加的元素的要求</h2><blockquote>
-<p>  要求添加到TreeSet中的元素必须是同一个类型的对象，否则会报ClassCastException异常</p>
-</blockquote>
-<h2 id="判断数据是否相同的标准"><a href="#判断数据是否相同的标准" class="headerlink" title="判断数据是否相同的标准"></a>判断数据是否相同的标准</h2><blockquote>
-<p>  不再是考虑hashCode()和equals()方法了，意味着添加到TreeSet中的元素所在的类不需要重写hashCode()和equals()方法</p>
-<ul>
-<li>比较元素是否相等的标准就是考虑自然排序或定制排序中compareTo()或compare()的返回值</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>  如果compareTo()或compare()的返回值为0，则认为两个对象时相等的，由于TreeSet中不能存放相同的元素，则后一个相等的元素就不能添加到TreeSet中</p>
-</blockquote>
-
+                
                 
             </div>
             <hr/>
@@ -535,7 +488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/</a>
+                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-collections-gong-ju-lei/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-collections-gong-ju-lei/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1062,12 +1015,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/">
+                <a href="/2024/04/15/ji-he-kuang-jia-3.0-map/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/28.jpg" class="responsive-img" alt="集合框架-4.0-List接口与实现类的使用">
+                        <img src="/medias/myImages/27.jpg" class="responsive-img" alt="集合框架-3.0-Map">
                         
-                        <span class="card-title">集合框架-4.0-List接口与实现类的使用</span>
+                        <span class="card-title">集合框架-3.0-Map</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1265,7 +1218,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">82.3k</span>
+                        class="white-color">82.5k</span>
             
             
             
@@ -1604,9 +1557,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>

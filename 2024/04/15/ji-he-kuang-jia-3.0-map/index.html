@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="集合框架-4.0-List接口与实现类的使用, Feliks">
+    <meta name="keywords" content="集合框架-3.0-Map, Feliks">
     <meta name="description" content="Java集合框架">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>集合框架-4.0-List接口与实现类的使用 | Feliks</title>
+    <title>集合框架-3.0-Map | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/27.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">集合框架-4.0-List接口与实现类的使用</h1>
+                    <h1 class="description center-align post-title">集合框架-3.0-Map</h1>
                 </div>
             </div>
         </div>
@@ -428,14 +428,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    474
+                    0
                 </div>
                 
 
@@ -462,97 +462,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="List接口中存储数据的特点"><a href="#List接口中存储数据的特点" class="headerlink" title="List接口中存储数据的特点"></a>List接口中存储数据的特点</h1><p><strong>用于存储有序的、可以重复的数据 –&gt; 使用List代替数组，“动态”数组</strong></p>
-<h1 id="List中常用的方法"><a href="#List中常用的方法" class="headerlink" title="List中常用的方法"></a>List中常用的方法</h1><h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><ul>
-<li><p>在index位置插入element元素</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>从index位置开始将elements中所有的元素添加进来</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">addAll</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Collection</span> elements<span class="token punctuation">)</span></code></pre></li>
-</ul>
-<h2 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h2><ul>
-<li><p>获取指定index位置的元素</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>返回从fromInedex到toIndex位置的子集合</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">List</span> <span class="token function">subList</span><span class="token punctuation">(</span><span class="token keyword">int</span> fromIndex<span class="token punctuation">,</span> <span class="token keyword">int</span> toIndex<span class="token punctuation">)</span></code></pre></li>
-</ul>
-<h2 id="获取元素索引"><a href="#获取元素索引" class="headerlink" title="获取元素索引"></a>获取元素索引</h2><ul>
-<li><p>返回element在集合中首次出现的位置</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>返回element在当前集合中末次出现的位置</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre></li>
-</ul>
-<h2 id="删除和替换元素"><a href="#删除和替换元素" class="headerlink" title="删除和替换元素"></a>删除和替换元素</h2><ul>
-<li><p>移除指定index位置的元素，并返回此元素</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span></code></pre>
-</li>
-<li><p>设置指定index位置的元素为element</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Object</span> element<span class="token punctuation">)</span></code></pre></li>
-</ul>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ul>
-<li>增<ul>
-<li><code>add(Object element)</code></li>
-<li><code>addAll(int index, Collection elements)</code></li>
-</ul>
-</li>
-<li>删<ul>
-<li><code>remove(Object element)</code></li>
-<li>remove(int index)</li>
-</ul>
-</li>
-<li>改<ul>
-<li><code>set(int index, Object element)</code></li>
-</ul>
-</li>
-<li>查<ul>
-<li><code>get(int index)</code></li>
-</ul>
-</li>
-<li>插<ul>
-<li><code>add(int index, Object element)</code></li>
-<li>addAll(int index, Collection elements)</li>
-</ul>
-</li>
-<li>长度<ul>
-<li><code>size()</code></li>
-</ul>
-</li>
-<li>遍历<ul>
-<li><code>iterator()</code>：使用迭代器进行遍历</li>
-<li>增强for循环（foreach）</li>
-<li>一般的for循环</li>
-</ul>
-</li>
-</ul>
-<h1 id="List及其实现类特点"><a href="#List及其实现类特点" class="headerlink" title="List及其实现类特点"></a>List及其实现类特点</h1><p>java.util.Collection：存储一个一个的数据</p>
-<ul>
-<li>子接口<strong>List</strong>：存储有序的、可重复的数据（“动态”数组）<ul>
-<li><strong>ArrayList</strong><ul>
-<li>List的主要实现类；线程不安全的、效率高；底层使用Object[]数组存储</li>
-<li>在添加、查找数据时效率高；插入、删除数据时效率低</li>
-</ul>
-</li>
-<li><strong>LinkedList</strong><ul>
-<li>底层使用双向链表的方式进行存储；在对集合中的数据进行频繁的删除、插入操作时，建议使用此类</li>
-<li>在插入、删除数据时效率搞；添加、查找数据时效率低</li>
-</ul>
-</li>
-<li><strong>Vector</strong><ul>
-<li>List的古老实现类；线程安全的，效率低</li>
-<li>底层使用Object[]数组存储</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>【面试题】</p>
-<ul>
-<li>ArrayList、Vector的区别是什么？</li>
-<li>ArrayList、LinkedList的区别是什么？</li>
-</ul>
-
+                
                 
             </div>
             <hr/>
@@ -578,7 +488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/</a>
+                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-map/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-map/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1041,12 +951,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/15/ji-he-kuang-jia-5.0-set-jie-kou-yu-shi-xian-lei-de-shi-yong/">
+                <a href="/2024/04/15/ji-he-kuang-jia-4.0-collections-gong-ju-lei/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/29.jpg" class="responsive-img" alt="集合框架-5.0-Set接口与实现类的使用">
+                        <img src="/medias/myImages/28.jpg" class="responsive-img" alt="集合框架-4.0-Collections工具类">
                         
-                        <span class="card-title">集合框架-5.0-Set接口与实现类的使用</span>
+                        <span class="card-title">集合框架-4.0-Collections工具类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1097,12 +1007,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/">
+                <a href="/2024/04/15/ji-he-kuang-jia-2.0-list-set-queue/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/27.jpg" class="responsive-img" alt="集合框架-3.0-迭代器与foreach">
+                        <img src="/medias/myImages/26.jpg" class="responsive-img" alt="集合框架-2.0-List、Set、Queue">
                         
-                        <span class="card-title">集合框架-3.0-迭代器与foreach</span>
+                        <span class="card-title">集合框架-2.0-List、Set、Queue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1300,7 +1210,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">82.3k</span>
+                        class="white-color">82.5k</span>
             
             
             
@@ -1639,9 +1549,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>

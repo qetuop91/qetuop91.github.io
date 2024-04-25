@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="集合框架-2.0-Collection中的常用方法, Feliks">
-    <meta name="description" content="Java集合框架">
+    <meta name="keywords" content="ArrayList, Feliks">
+    <meta name="description" content="ArrayList解析">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>集合框架-2.0-Collection中的常用方法 | Feliks</title>
+    <title>ArrayList | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">集合框架-2.0-Collection中的常用方法</h1>
+                    <h1 class="description center-align post-title">ArrayList</h1>
                 </div>
             </div>
         </div>
@@ -396,6 +396,10 @@
                                 <span class="chip bg-color">集合</span>
                             </a>
                         
+                            <a href="/tags/ArrayList/">
+                                <span class="chip bg-color">ArrayList</span>
+                            </a>
+                        
                             <a href="/tags/%E9%9D%A2%E8%AF%95/">
                                 <span class="chip bg-color">面试</span>
                             </a>
@@ -421,28 +425,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-15
+                    2024-04-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-04-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    126
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -462,25 +466,173 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="常用方法：（Collection中定义了15个抽象方法）"><a href="#常用方法：（Collection中定义了15个抽象方法）" class="headerlink" title="常用方法：（Collection中定义了15个抽象方法）"></a><strong>常用方法：（Collection中定义了15个抽象方法）</strong></h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">addAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">containsAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">retainAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">removeAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span> coll<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">equals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                <h1 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h1><p><code>ArrayList</code>是一个数组队列，相当于动态数组，与Java中的数组相比，它没有固定大小的限制，其容量可以动态增长。</p>
+<p>在添加大量元素前，应用程序可以使用<code>ensureCapacity</code>方法来增加<code>ArrayList</code>实例的容量。这样可以减少递增式再分配的数量</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Increases the capacity of this &lt;tt&gt;ArrayList&lt;/tt&gt; instance, if
+ * necessary, to ensure that it can hold at least the number of elements
+ * specified by the minimum capacity argument.
+ *
+ * @param   minCapacity   the desired minimum capacity
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ensureCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> minExpand <span class="token operator">=</span> <span class="token punctuation">(</span>elementData <span class="token operator">!=</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">)</span>
+        <span class="token comment">// any size if not default element table</span>
+        <span class="token operator">?</span> <span class="token number">0</span>
+        <span class="token comment">// larger than default for default empty table. It's already</span>
+        <span class="token comment">// supposed to be at default size.</span>
+        <span class="token operator">:</span> <span class="token constant">DEFAULT_CAPACITY</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">&gt;</span> minExpand<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 
 
 
-<h1 id="集合与数组之间的转换"><a href="#集合与数组之间的转换" class="headerlink" title="集合与数组之间的转换"></a><strong>集合与数组之间的转换</strong></h1><p><strong>集合</strong> —&gt; <strong>数组</strong>：<code>toArray()</code><br><strong>数组</strong> —&gt; <strong>集合</strong>：调用Arrays的静态方法<code>asList(Object ... objs)</code></p>
-<h1 id="向Collection中添加元素的要求："><a href="#向Collection中添加元素的要求：" class="headerlink" title="向Collection中添加元素的要求："></a><strong>向Collection中添加元素的要求：</strong></h1><p>要求元素所属的类一定要重写<code>equals()</code>!<br>原因：<br>因为Collection中的相关方法（例如：<code>contains()</code>/<code>remove()</code>）在使用时，要调用元素所在类的<code>equals()</code></p>
+<p>来看看<code>ArrayList</code>继承和实现了什么东西</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">extends</span> <span class="token class-name">AbstractList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">implements</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">RandomAccess</span><span class="token punctuation">,</span> <span class="token class-name">Cloneable</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span> <span class="token punctuation">{</span>
+	<span class="token comment">// ......</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>继承了<code>AbstractList</code>抽象类，实现了<code>List</code>、<code>RandomAccess</code>、<code>Cloneable</code>、<code>java.io.Serializable</code>这些接口</p>
+<ul>
+<li><code>List</code>：表明<code>ArrayList</code>是一个列表，支持添加、删除、查找等操作，并且可以通过下标进行访问</li>
+<li><code>RandomAccess</code>：是一个标志接口，表明实现这个接口的<code>List</code>集合是支持<strong>快速随机访问</strong>的，在ArrayList中，我们可以通过元素的下标快速获取元素对象，这就是快速随机访问</li>
+<li><code>Cloneable</code>：表明<code>ArrayList</code>具有拷贝能力，可以进行深拷贝或者浅拷贝</li>
+<li><code>Serializable</code>：表明<code>ArrayList</code>可以进行序列化操作，也就是可以将对象转换为字节流进行持久化存储或网络传输</li>
+</ul>
+<p>在IDEA中的类图：</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404251021070.png" alt="image-20240425102103030"> </p>
+<h2 id="ArrayList和Vector的区别？"><a href="#ArrayList和Vector的区别？" class="headerlink" title="ArrayList和Vector的区别？"></a>ArrayList和Vector的区别？</h2><ul>
+<li><code>ArrayList</code>：是<code>List</code>的主要实现类，底层使用<code>Object[]</code>进行存储适用于频繁的查找工作，线程不安全</li>
+<li><code>Vector</code>：<code>List</code>的古老实现类，底层使用<code>Object[]</code>存储，线程安全</li>
+</ul>
+<h2 id="ArrayList可以添加null值吗？"><a href="#ArrayList可以添加null值吗？" class="headerlink" title="ArrayList可以添加null值吗？"></a>ArrayList可以添加null值吗？</h2><p>可以，<code>AarrayList</code>中可以存储任何类型的对象，包括<code>null</code>值</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> arrayList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    arrayList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"String"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    arrayList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arrayList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>运行结果：</p>
+<pre class="language-text" data-language="text"><code class="language-text">[String, null]</code></pre>
+
+<p>虽然可以添加<code>null</code>值，但是不建议，因为<code>null</code>值无意义，而且会让代码难以维护，比如忘记做判空处理就会导致空指针异常（<code>NPE</code>）</p>
+<h2 id="ArrayList与LinkedList的区别？"><a href="#ArrayList与LinkedList的区别？" class="headerlink" title="ArrayList与LinkedList的区别？"></a>ArrayList与LinkedList的区别？</h2><ul>
+<li><p><code>线程安全？</code></p>
+<ul>
+<li><code>ArrayList</code>和<code>LinkedList</code>都是不同步的，也就是不保证线程安全</li>
+</ul>
+</li>
+<li><p><code>底层数据结构？</code></p>
+<ul>
+<li><code>ArrayList</code>底层使用<code>Object[]</code>数组</li>
+<li><code>LinkedList</code>底层使用<code>双向链表</code>数据结构（JDK1.6以前为循环链表，JDK1.7取消了循环。注意<strong>不是双向循环链表</strong>）</li>
+</ul>
+</li>
+<li><p><code>插入和删除是否受元素位置的影响？</code></p>
+<ul>
+<li><p><code>ArrayList</code>采用数组存储，所以插入和删除的时间复杂度受元素位置影响</p>
+<p>执行<code>add(E e)</code>方法，默认将元素加到元素列表的末尾，这种情况的时间复杂度就是O(1)</p>
+<p>如果是指定位置插入和删除元素（<code>add(index index, E element)</code>），时间复杂度为O(n)</p>
+</li>
+<li><p><code>LinkedList</code>采用双向链表存储，所以在头尾插入和删除元素不受元素位置的影响例如：<code>add(E e)</code>、<code>addFirst(E e)</code>、<code>removeFirst()</code>、<code>removeLast()</code>时间复杂度是0(1)</p>
+<p>如果是指定位置插入和删除元素（<code>add(int index, E element)</code>，<code>remove(Object o)</code>、<code>remove(int index)</code>）时间复杂度为O(n)</p>
+</li>
+</ul>
+</li>
+<li><p><code>是否支持快速随机访问？</code>（快速随机访问：通过元素的序号快速获取元素对象（<code>get(int index)</code>））</p>
+<ul>
+<li><code>LinkedList</code>不支持高效的随机元素访问</li>
+<li><code>ArrayList</code>因为实现了<code>RandomAccess</code>接口，所以支持</li>
+</ul>
+</li>
+<li><p><code>内存空间占用</code></p>
+<ul>
+<li><code>ArrayList</code>的空间花费主要体现在：在list列表的结尾会预留一定的容量空间</li>
+<li><code>LinkedList</code>的空间花费主要体现在：它的每一个元素都要消耗比<code>ArrayList</code>更多的空间（因为要存放<strong>直接前驱</strong>和<strong>直接后继</strong>和<strong>数据</strong>）</li>
+</ul>
+</li>
+</ul>
+<h1 id="ArrayList核心源码"><a href="#ArrayList核心源码" class="headerlink" title="ArrayList核心源码"></a>ArrayList核心源码</h1><h2 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 序列号</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> serialVersionUID <span class="token operator">=</span> <span class="token number">8683452581122892189L</span><span class="token punctuation">;</span>
+<span class="token comment">// 默认初始容量大小</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">DEFAULT_CAPACITY</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment">// 空数组（用于空实例）</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token constant">EMPTY_ELEMENTDATA</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 用于默认大小空实例的共享空数组实例</span>
+<span class="token comment">// 把他从EMPTY_ELEMENTDATA数组中区分出来，以知道在添加第一个元素时容量要增加多少</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 保存ArrayList数据的数组</span>
+<span class="token keyword">transient</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementData<span class="token punctuation">;</span> <span class="token comment">// non-private to simplify nested class access</span>
+<span class="token comment">// ArrayList所包含的元素个数</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> size<span class="token punctuation">;</span>
+<span class="token comment">// 要分配的最大数组大小</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">MAX_ARRAY_SIZE</span> <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MAX_VALUE</span> <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">;</span></code></pre>
+
+
+
+<h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><ul>
+<li><p>带初始容量参数的构造器（用户可以在创建ArrayList对象时自己指定集合的初始大小）</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token keyword">int</span> initialCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>initialCapacity <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>elementData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span>initialCapacity<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>initialCapacity <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>elementData <span class="token operator">=</span> <span class="token constant">EMPTY_ELEMENTDATA</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Illegal Capacity: "</span><span class="token operator">+</span>
+                                           initialCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+<li><p>默认无参构造器（<code>DEFAULTCAPACITY_EMPTY_ELEMENTDATA</code>为0，初始化为10就是说初始其实是空数组，只有当添加第一个元素的时候数组容量才变成10）</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>elementData <span class="token operator">=</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">calculateCapacity</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementData<span class="token punctuation">,</span> <span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>elementData <span class="token operator">==</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token constant">DEFAULT_CAPACITY</span><span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> minCapacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+<li><p>可以指定集合的元素列表的构造器，按照他们由集合的迭代器返回的顺序</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>size <span class="token operator">=</span> a<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token class-name">ArrayList</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            elementData <span class="token operator">=</span> a<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            elementData <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> size<span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// replace with empty array.</span>
+        elementData <span class="token operator">=</span> <span class="token constant">EMPTY_ELEMENTDATA</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>修改当前<code>ArrayList</code>实例的容量为列表当前的大小，可以使用该方法来时ArrayList实例的存储最小化</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">trimToSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">&lt;</span> elementData<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        elementData <span class="token operator">=</span> <span class="token punctuation">(</span>size <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token constant">EMPTY_ELEMENTDATA</span> <span class="token operator">:</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
 
                 
             </div>
@@ -507,7 +659,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/</a>
+                    <a href="https://qetuop91.github.io/2024/04/25/arraylist/">https://qetuop91.github.io/2024/04/25/arraylist/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -551,6 +703,10 @@
                             
                                 <a href="/tags/%E9%9B%86%E5%90%88/">
                                     <span class="chip bg-color">集合</span>
+                                </a>
+                            
+                                <a href="/tags/ArrayList/">
+                                    <span class="chip bg-color">ArrayList</span>
                                 </a>
                             
                                 <a href="/tags/%E9%9D%A2%E8%AF%95/">
@@ -966,28 +1122,90 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/">
+                <a href="/2024/04/25/arraylist/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/27.jpg" class="responsive-img" alt="集合框架-3.0-迭代器与foreach">
+                        <img src="/medias/myImages/21.jpg" class="responsive-img" alt="ArrayList">
                         
-                        <span class="card-title">集合框架-3.0-迭代器与foreach</span>
+                        <span class="card-title">ArrayList</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java集合框架
+                            ArrayList解析
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">集合</span>
+                    </a>
+                    
+                    <a href="/tags/ArrayList/">
+                        <span class="chip bg-color">ArrayList</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/04/24/hashmap/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/myImages/20.jpg" class="responsive-img" alt="HashMap">
+                        
+                        <span class="card-title">HashMap</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HashMap解析
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1015,56 +1233,8 @@
                         <span class="chip bg-color">面试</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/04/15/java-ji-chu-1.0/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/myImages/0.jpg" class="responsive-img" alt="Java基础1.0">
-                        
-                        <span class="card-title">Java基础1.0</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Java基础
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
+                    <a href="/tags/HashMap/">
+                        <span class="chip bg-color">HashMap</span>
                     </a>
                     
                 </div>
@@ -1225,7 +1395,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">82.3k</span>
+                        class="white-color">82.5k</span>
             
             
             
@@ -1564,9 +1734,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>

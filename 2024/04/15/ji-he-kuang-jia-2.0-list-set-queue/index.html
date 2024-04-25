@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="集合框架-3.0-迭代器与foreach, Feliks">
+    <meta name="keywords" content="集合框架-2.0-List、Set、Queue, Feliks">
     <meta name="description" content="Java集合框架">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>集合框架-3.0-迭代器与foreach | Feliks</title>
+    <title>集合框架-2.0-List、Set、Queue | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -360,12 +360,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/26.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">集合框架-3.0-迭代器与foreach</h1>
+                    <h1 class="description center-align post-title">集合框架-2.0-List、Set、Queue</h1>
                 </div>
             </div>
         </div>
@@ -428,14 +428,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    201
+                    0
                 </div>
                 
 
@@ -462,39 +462,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="迭代器（iterator）的作用？"><a href="#迭代器（iterator）的作用？" class="headerlink" title="迭代器（iterator）的作用？"></a>迭代器（iterator）的作用？</h1><p>遍历集合元素</p>
-<h1 id="获取迭代器对象"><a href="#获取迭代器对象" class="headerlink" title="获取迭代器对象"></a>获取迭代器对象</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Iterator</span> iterator <span class="token operator">=</span> coll<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
-
-
-<h1 id="迭代器实现遍历"><a href="#迭代器实现遍历" class="headerlink" title="迭代器实现遍历"></a>迭代器实现遍历</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// next()：①指针下移 ②将下移后集合位置上的元素返回</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h1 id="增强for循环（foreach）"><a href="#增强for循环（foreach）" class="headerlink" title="增强for循环（foreach）"></a>增强for循环（foreach）</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>遍历数组、集合</p>
-<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>要遍历的集合或数组的类型 临时变量 <span class="token operator">:</span> 要遍历的集合或数组变量<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	操作临时变量的输出
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><blockquote>
-<ul>
-<li><p>针对集合来说，增强for循环的底层仍然是使用迭代器</p>
-<ul>
-<li><p>增强for循环的执行过程中，是将集合或数组元素中的元素一次赋值给临时变量</p>
-<p>注意：循环体中对临时变量的修改可能</p>
-</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>  不会导致原有集合或数组中元素的修改</p>
-</blockquote>
-
+                
                 
             </div>
             <hr/>
@@ -520,7 +488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-3.0-die-dai-qi-yu-foreach/</a>
+                    <a href="https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-list-set-queue/">https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-list-set-queue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -983,12 +951,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/15/ji-he-kuang-jia-4.0-list-jie-kou-yu-shi-xian-lei-de-shi-yong/">
+                <a href="/2024/04/15/ji-he-kuang-jia-3.0-map/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/28.jpg" class="responsive-img" alt="集合框架-4.0-List接口与实现类的使用">
+                        <img src="/medias/myImages/27.jpg" class="responsive-img" alt="集合框架-3.0-Map">
                         
-                        <span class="card-title">集合框架-4.0-List接口与实现类的使用</span>
+                        <span class="card-title">集合框架-3.0-Map</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1039,18 +1007,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/15/ji-he-kuang-jia-2.0-collection-zhong-de-chang-yong-fang-fa/">
+                <a href="/2024/04/15/java-ji-chu-1.0/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/26.jpg" class="responsive-img" alt="集合框架-2.0-Collection中的常用方法">
+                        <img src="/medias/myImages/0.jpg" class="responsive-img" alt="Java基础1.0">
                         
-                        <span class="card-title">集合框架-2.0-Collection中的常用方法</span>
+                        <span class="card-title">Java基础1.0</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java集合框架
+                            Java基础
                         
                     </div>
                     <div class="publish-info">
@@ -1074,10 +1042,6 @@
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9B%86%E5%90%88/">
-                        <span class="chip bg-color">集合</span>
                     </a>
                     
                     <a href="/tags/%E9%9D%A2%E8%AF%95/">
@@ -1242,7 +1206,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">82.3k</span>
+                        class="white-color">82.5k</span>
             
             
             
@@ -1581,9 +1545,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>
