@@ -439,14 +439,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    21 分
                 </div>
                 
 
@@ -879,6 +879,7 @@
     size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token comment">// 按指定集合的Iterator返回的顺序，将指定集合c中的所有元素追加到当前ArrayList对象的末尾</span>
 <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">addAll</span><span class="token punctuation">(</span><span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> numNew <span class="token operator">=</span> a<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -888,6 +889,7 @@
     <span class="token keyword">return</span> numNew <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token comment">// 将指定集合中的所有元素插入到此列表中，从指定的位置开始</span>
 <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">addAll</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">rangeCheckForAdd</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -905,6 +907,8 @@
     <span class="token keyword">return</span> numNew <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token comment">// 从此列表中删除所有索引为fromIndex （含）和toIndex之间的元素</span>
+<span class="token comment">// 将任何后续元素移动到左侧（减少其索引）</span>
 <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">removeRange</span><span class="token punctuation">(</span><span class="token keyword">int</span> fromIndex<span class="token punctuation">,</span> <span class="token keyword">int</span> toIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     modCount<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> numMoved <span class="token operator">=</span> size <span class="token operator">-</span> toIndex<span class="token punctuation">;</span>
@@ -1031,6 +1035,143 @@
 
 
 
+<h1 id="AarrayList扩容机制"><a href="#AarrayList扩容机制" class="headerlink" title="AarrayList扩容机制"></a>AarrayList扩容机制</h1><p>以无参构造器创建的<code>ArrayList</code>来分析一下</p>
+<p>默认无参构造器（<code>DEFAULTCAPACITY_EMPTY_ELEMENTDATA</code>为0，初始化为10就是说初始其实是空数组，只有当添加第一个元素的时候数组容量才变成10）</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>elementData <span class="token operator">=</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">calculateCapacity</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementData<span class="token punctuation">,</span> <span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>elementData <span class="token operator">==</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token constant">DEFAULT_CAPACITY</span><span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> minCapacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+<h2 id="add"><a href="#add" class="headerlink" title="add()"></a>add()</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 将元素e添加到当前ArrayList对象的末尾</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在添加元素之前先调用ensureCapacityInternal方法，以确保内部容量达到指定的最小容量</span>
+    <span class="token comment">// size：当前ArrayList对象拥有的元素数量</span>
+    <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span>size <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Increments modCount!!</span>
+    elementData<span class="token punctuation">[</span>size<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<blockquote>
+<p>  <code>JDK11</code>移除了 <code>ensureCapacityInternal()</code> 和 <code>ensureExplicitCapacity()</code> 方法</p>
+<p>  <code>ensureCapacityInternal</code>：</p>
+  <pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 确保内部容量达到指定的最小容量。</span>
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span><span class="token function">calculateCapacity</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>  <code>ensureCapacityInternal</code>内部直接调用了<code>ensureExplicitCapacity</code>方法</p>
+<p>  <code>calculateCapacity</code>：</p>
+  <pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 根据给定的最小容量和当前数组元素来计算所需容量。</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">calculateCapacity</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementData<span class="token punctuation">,</span> <span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// 如果当前数组元素为空数组（初始情况），返回默认容量和最小容量中的较大值作为所需容量</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>elementData <span class="token operator">==</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token constant">DEFAULT_CAPACITY</span><span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token comment">// 否则直接返回最小容量</span>
+   <span class="token keyword">return</span> minCapacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>  <code>ensureExplicitCapacity</code>：</p>
+  <pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//判断是否需要扩容</span>
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+   <span class="token comment">//判断当前数组容量是否足以存储minCapacity个元素</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">-</span> elementData<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+       <span class="token comment">//调用grow方法进行扩容</span>
+       <span class="token function">grow</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</blockquote>
+<ul>
+<li>当我们<code>add</code>第一个元素到<code>ArrayList</code>时，<code>elementData.length</code> 为 0 （因为还是一个空的 list），因为执行了 <code>ensureCapacityInternal()</code> 方法 ，所以 <code>minCapacity</code> 此时为 10。此时，<code>minCapacity - elementData.length &gt; 0</code>成立，所以会进入 <code>grow(minCapacity)</code> 方法。</li>
+<li>当 <code>add</code> 第 2 个元素时，<code>minCapacity</code> 为 2，此时 <code>elementData.length</code>(容量)在添加第一个元素后扩容成 <code>10</code> 了。此时，<code>minCapacity - elementData.length &gt; 0</code> 不成立，所以不会进入 （执行）<code>grow(minCapacity)</code> 方法。</li>
+<li>添加第 3、4···到第 10 个元素时，依然不会执行 grow 方法，数组容量都为 10。</li>
+</ul>
+<p>直到添加第11个元素，<code>minCapacity</code>（为11）比<code>elementData</code>（为10）要大，就进入<code>grow</code>方法进行扩容</p>
+<h2 id="grow"><a href="#grow" class="headerlink" title="grow()"></a>grow()</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">grow</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// overflow-conscious code</span>
+    <span class="token keyword">int</span> oldCapacity <span class="token operator">=</span> elementData<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> newCapacity <span class="token operator">=</span> oldCapacity <span class="token operator">+</span> <span class="token punctuation">(</span>oldCapacity <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>newCapacity <span class="token operator">-</span> minCapacity <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        newCapacity <span class="token operator">=</span> minCapacity<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>newCapacity <span class="token operator">-</span> <span class="token constant">MAX_ARRAY_SIZE</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        newCapacity <span class="token operator">=</span> <span class="token function">hugeCapacity</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// minCapacity is usually close to size, so this is a win:</span>
+    elementData <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> newCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><strong><code>int newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1);</code></strong><code>ArrayList</code>扩充容量为原来的1.5倍由此可见，如果<code>oldCapacity</code>的值为偶数就是1.5倍，如果是奇数就是1.5倍左右，因为奇数在进行运算的时候会丢掉小数（33+33/2=49）</p>
+<blockquote>
+<p>  位移运算符（&gt;&gt;）：&gt;&gt;1右移一位相当于除以2，<code>右移n位相当于除以2的n次幂</code></p>
+<p>  这里<code>oldCapacity</code>明显右移一位，所以相当于<code>oldCapacity/2</code>，对于大数据的二进制位运算，位移运算符比普通的运算符要快很多，因为程序仅仅只是移动了一下而非计算，这样可以提高效率节省资源</p>
+</blockquote>
+<ul>
+<li>当我们<code>add</code>第<code>1</code>个元素到<code>ArrayList</code>时，<code>oldCapacity</code>=0，第一个if判断成立，<code>newCapacity = minCapacity</code>（是10），第二个if判断不会成立，不会进入<code>hugeCapacity</code>，此时数组容量为10，在<code>add()</code>中size变为1</li>
+<li>当<code>add</code>到第<code>11</code>个元素到<code>ArrayList</code>时，<code>newCapacity</code>（为15）比<code>minCapacity</code>（为11）大，第一个if判断不成立，<code>newCapacity</code>也不大于<code>MAX_ARRAY_SIZE</code>（数组最大size），第二个if判断也不成立，不会进入<code>hugeCapacity()</code>。数组容量扩容到<code>newCapacity</code>即15，回到<code>add()</code>中size变为11。</li>
+</ul>
+<h2 id="hugeCapacity"><a href="#hugeCapacity" class="headerlink" title="hugeCapacity()"></a>hugeCapacity()</h2><p>在<code>grow()</code>方法中，当我们的新容量大于数组最大size的时候就会调用<code>hugeCapacity()</code>，用来比较<code>minCapacity</code>和<code>MAX_ARRAY_SIZE</code>，如果<code>minCapacity</code>大于最大容量则新容量就为<code>Integer.MAX_VALUE</code>(2^31 - 1)，否则就为<code>Integer.MAX_VALUE - 8</code></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">hugeCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// overflow</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">OutOfMemoryError</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">&gt;</span> <span class="token constant">MAX_ARRAY_SIZE</span><span class="token punctuation">)</span> <span class="token operator">?</span>
+        <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MAX_VALUE</span> <span class="token operator">:</span>
+        <span class="token constant">MAX_ARRAY_SIZE</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span>   <span class="token constant">MAX_VALUE</span> <span class="token operator">=</span> <span class="token number">0x7fffffff</span><span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">MAX_ARRAY_SIZE</span> <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MAX_VALUE</span> <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">;</span></code></pre>
+
+
+
+<h2 id="ensureCapacity"><a href="#ensureCapacity" class="headerlink" title="ensureCapacity()"></a>ensureCapacity()</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ensureCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> minExpand <span class="token operator">=</span> <span class="token punctuation">(</span>elementData <span class="token operator">!=</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">)</span>
+        <span class="token comment">// any size if not default element table</span>
+        <span class="token operator">?</span> <span class="token number">0</span>
+        <span class="token comment">// larger than default for default empty table. It's already</span>
+        <span class="token comment">// supposed to be at default size.</span>
+        <span class="token operator">:</span> <span class="token constant">DEFAULT_CAPACITY</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">&gt;</span> minExpand<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>理论上来说，最好在向 <code>ArrayList</code> 添加大量元素之前用 <code>ensureCapacity</code> 方法，以减少增量重新分配的次数</p>
+<p>测试：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testEnsureCapacity1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token class-name">N</span> <span class="token operator">=</span> <span class="token number">10000000</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token class-name">N</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"使用ensureCapacity方法前："</span><span class="token operator">+</span><span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404262315403.png" alt="image-20240426231514340"> </p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testEnsureCapacity2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token class-name">N</span> <span class="token operator">=</span> <span class="token number">10000000</span><span class="token punctuation">;</span>
+    list<span class="token punctuation">.</span><span class="token function">ensureCapacity</span><span class="token punctuation">(</span><span class="token class-name">N</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> startTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token class-name">N</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">long</span> endTime <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"使用ensureCapacity方法后："</span><span class="token operator">+</span><span class="token punctuation">(</span>endTime <span class="token operator">-</span> startTime<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404262315192.png" alt="image-20240426231557163"> </p>
+<p>通过运行结果，我们可以看出向 <code>ArrayList</code> 添加大量元素之前使用<code>ensureCapacity</code> 方法可以提升性能。不过，这个性能差距几乎可以忽略不计。而且，实际项目根本也不可能往 <code>ArrayList</code> 里面添加这么多元素。</p>
 
                 
             </div>
@@ -1793,7 +1934,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">84.6k</span>
+                        class="white-color">85.9k</span>
             
             
             
