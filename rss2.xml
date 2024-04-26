@@ -9,8 +9,23 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Fri, 26 Apr 2024 15:16:21 GMT</pubDate>
+    <pubDate>Fri, 26 Apr 2024 15:23:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>LinkedList</title>
+      <link>https://qetuop91.github.io/2024/04/26/linkedlist/</link>
+      <guid>https://qetuop91.github.io/2024/04/26/linkedlist/</guid>
+      <pubDate>Fri, 26 Apr 2024 15:23:45 GMT</pubDate>
+      
+      
+      
+      
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/26/linkedlist/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>ArrayList</title>
@@ -575,33 +590,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Redis7-8.0-哨兵（sentinel）</title>
-      <link>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/</link>
-      <guid>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/</guid>
-      <pubDate>Thu, 11 Apr 2024 16:12:09 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;Redis哨兵（sentinel）&quot;&gt;&lt;a href=&quot;#Redis哨兵（sentinel）&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Redis/">Redis</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Redis/">Redis</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/12/redis7-8.0-shao-bing-sentinel/#disqus_thread</comments>
       
     </item>
     

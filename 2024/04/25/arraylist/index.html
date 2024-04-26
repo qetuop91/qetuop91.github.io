@@ -439,7 +439,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    4.6k
                 </div>
                 
 
@@ -1129,7 +1129,8 @@
 
 
 
-<h2 id="ensureCapacity"><a href="#ensureCapacity" class="headerlink" title="ensureCapacity()"></a>ensureCapacity()</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ensureCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h2 id="ensureCapacity"><a href="#ensureCapacity" class="headerlink" title="ensureCapacity()"></a>ensureCapacity()</h2><p>一开始就提到过这个方法，在添加大量元素前，应用程序可以使用<code>ensureCapacity</code>方法来增加<code>ArrayList</code>实例的容量。这样可以减少递增式再分配的数量</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ensureCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> minExpand <span class="token operator">=</span> <span class="token punctuation">(</span>elementData <span class="token operator">!=</span> <span class="token constant">DEFAULTCAPACITY_EMPTY_ELEMENTDATA</span><span class="token punctuation">)</span>
         <span class="token comment">// any size if not default element table</span>
         <span class="token operator">?</span> <span class="token number">0</span>
@@ -1171,7 +1172,6 @@
 <span class="token punctuation">}</span></code></pre>
 
 <p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404262315192.png" alt="image-20240426231557163"> </p>
-<p>通过运行结果，我们可以看出向 <code>ArrayList</code> 添加大量元素之前使用<code>ensureCapacity</code> 方法可以提升性能。不过，这个性能差距几乎可以忽略不计。而且，实际项目根本也不可能往 <code>ArrayList</code> 里面添加这么多元素。</p>
 
                 
             </div>
@@ -1661,61 +1661,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/25/arraylist/">
+                <a href="/2024/04/26/linkedlist/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/21.jpg" class="responsive-img" alt="ArrayList">
                         
-                        <span class="card-title">ArrayList</span>
+                        <img src="/medias/myImages/11.jpg" class="responsive-img" alt="LinkedList">
+                        
+                        <span class="card-title">LinkedList</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ArrayList解析
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-26
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Feliks
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9B%86%E5%90%88/">
-                        <span class="chip bg-color">集合</span>
-                    </a>
-                    
-                    <a href="/tags/ArrayList/">
-                        <span class="chip bg-color">ArrayList</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
-                    </a>
-                    
                 </div>
                 
             </div>
