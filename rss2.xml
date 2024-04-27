@@ -9,8 +9,132 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Sat, 27 Apr 2024 10:55:44 GMT</pubDate>
+    <pubDate>Sat, 27 Apr 2024 13:33:13 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>P1001 A+B Problem</title>
+      <link>https://qetuop91.github.io/2024/04/27/p1001-a-b-problem/</link>
+      <guid>https://qetuop91.github.io/2024/04/27/p1001-a-b-problem/</guid>
+      <pubDate>Sat, 27 Apr 2024 13:32:31 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;A-B-Problem&quot;&gt;&lt;a href=&quot;#A-B-Problem&quot; class=&quot;headerlink&quot; title=&quot;A+B Problem&quot;&gt;&lt;/a&gt;A+B Problem&lt;/h1&gt;&lt;h2 id=&quot;题目背景&quot;&gt;&lt;a href=&quot;#题目背景&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/27/p1001-a-b-problem/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P1000 超级玛丽游戏</title>
+      <link>https://qetuop91.github.io/2024/04/27/p1000-chao-ji-ma-li-you-xi/</link>
+      <guid>https://qetuop91.github.io/2024/04/27/p1000-chao-ji-ma-li-you-xi/</guid>
+      <pubDate>Sat, 27 Apr 2024 13:07:28 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;超级玛丽游戏&quot;&gt;&lt;a href=&quot;#超级玛丽游戏&quot; class=&quot;headerlink&quot; title=&quot;超级玛丽游戏&quot;&gt;&lt;/a&gt;超级玛丽游戏&lt;/h1&gt;&lt;h2 id=&quot;题目背景&quot;&gt;&lt;a href=&quot;#题目背景&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/27/p1000-chao-ji-ma-li-you-xi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>B2025 输出字符菱形</title>
+      <link>https://qetuop91.github.io/2024/04/27/b2025-shu-chu-zi-fu-ling-xing/</link>
+      <guid>https://qetuop91.github.io/2024/04/27/b2025-shu-chu-zi-fu-ling-xing/</guid>
+      <pubDate>Sat, 27 Apr 2024 12:35:27 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;输出字符菱形&quot;&gt;&lt;a href=&quot;#输出字符菱形&quot; class=&quot;headerlink&quot; title=&quot;输出字符菱形&quot;&gt;&lt;/a&gt;输出字符菱形&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/27/b2025-shu-chu-zi-fu-ling-xing/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>B2002 Hello,World!</title>
+      <link>https://qetuop91.github.io/2024/04/27/b2002-hello-world/</link>
+      <guid>https://qetuop91.github.io/2024/04/27/b2002-hello-world/</guid>
+      <pubDate>Sat, 27 Apr 2024 12:29:29 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello,World!&quot;&gt;&lt;/a&gt;Hello,World!&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/27/b2002-hello-world/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>289.生命游戏</title>
@@ -483,127 +607,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-2.0-list-set-queue/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Java基础1.0</title>
-      <link>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/</link>
-      <guid>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/</guid>
-      <pubDate>Mon, 15 Apr 2024 02:43:23 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot; title=&quot;基本语法&quot;&gt;&lt;/a&gt;基本语法&lt;/h1&gt;&lt;h2 id=&quot;在Java中，标识符和关键字的区别是什么？&quot;&gt;&lt;a href=&quot;#在Java中，标识符和关键字的区别是什么？&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>RocketMQ-4.0-消息堆积</title>
-      <link>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</link>
-      <guid>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</guid>
-      <pubDate>Sun, 14 Apr 2024 13:50:09 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;消息堆积问题&quot;&gt;&lt;a href=&quot;#消息堆积问题&quot; class=&quot;headerlink&quot; title=&quot;消息堆积问题&quot;&gt;&lt;/a&gt;消息堆积问题&lt;/h1&gt;&lt;p&gt;一般认为单条队列消息差值&amp;gt;=10w条的时候，就算堆积问题&lt;/p&gt;
-&lt;h2</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/RocketMQ/">RocketMQ</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/RocketMQ/">RocketMQ</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>RocketMQ-3.0-SpringBoot集成RocketocketMQ</title>
-      <link>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</link>
-      <guid>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</guid>
-      <pubDate>Sat, 13 Apr 2024 12:06:10 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;RocketMQ集成SpringBoot&quot;&gt;&lt;a href=&quot;#RocketMQ集成SpringBoot&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/RocketMQ/">RocketMQ</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/RocketMQ/">RocketMQ</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Sunshine+Moonlight串流</title>
-      <link>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/</link>
-      <guid>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/</guid>
-      <pubDate>Sat, 13 Apr 2024 02:35:11 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;串流是什么？&quot;&gt;&lt;a href=&quot;#串流是什么？&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E4%B8%B2%E6%B5%81/">串流</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/%E4%B8%B2%E6%B5%81/">串流</category>
-      
-      <category domain="https://qetuop91.github.io/tags/Moonlight/">Moonlight</category>
-      
-      <category domain="https://qetuop91.github.io/tags/Sunshine/">Sunshine</category>
-      
-      <category domain="https://qetuop91.github.io/tags/Github%E5%BC%80%E6%BA%90/">Github开源</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/#disqus_thread</comments>
       
     </item>
     

@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-04-27T10:55:44.309Z</updated>
+  <updated>2024-04-27T13:33:13.748Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,122 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P1001 A+B Problem</title>
+    <link href="https://qetuop91.github.io/2024/04/27/p1001-a-b-problem/"/>
+    <id>https://qetuop91.github.io/2024/04/27/p1001-a-b-problem/</id>
+    <published>2024-04-27T13:32:31.000Z</published>
+    <updated>2024-04-27T13:33:13.748Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;A-B-Problem&quot;&gt;&lt;a href=&quot;#A-B-Problem&quot; class=&quot;headerlink&quot; title=&quot;A+B Problem&quot;&gt;&lt;/a&gt;A+B Problem&lt;/h1&gt;&lt;h2 id=&quot;题目背景&quot;&gt;&lt;a href=&quot;#题目背景&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P1000 超级玛丽游戏</title>
+    <link href="https://qetuop91.github.io/2024/04/27/p1000-chao-ji-ma-li-you-xi/"/>
+    <id>https://qetuop91.github.io/2024/04/27/p1000-chao-ji-ma-li-you-xi/</id>
+    <published>2024-04-27T13:07:28.000Z</published>
+    <updated>2024-04-27T13:31:25.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;超级玛丽游戏&quot;&gt;&lt;a href=&quot;#超级玛丽游戏&quot; class=&quot;headerlink&quot; title=&quot;超级玛丽游戏&quot;&gt;&lt;/a&gt;超级玛丽游戏&lt;/h1&gt;&lt;h2 id=&quot;题目背景&quot;&gt;&lt;a href=&quot;#题目背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>B2025 输出字符菱形</title>
+    <link href="https://qetuop91.github.io/2024/04/27/b2025-shu-chu-zi-fu-ling-xing/"/>
+    <id>https://qetuop91.github.io/2024/04/27/b2025-shu-chu-zi-fu-ling-xing/</id>
+    <published>2024-04-27T12:35:27.000Z</published>
+    <updated>2024-04-27T13:07:07.621Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;输出字符菱形&quot;&gt;&lt;a href=&quot;#输出字符菱形&quot; class=&quot;headerlink&quot; title=&quot;输出字符菱形&quot;&gt;&lt;/a&gt;输出字符菱形&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>B2002 Hello,World!</title>
+    <link href="https://qetuop91.github.io/2024/04/27/b2002-hello-world/"/>
+    <id>https://qetuop91.github.io/2024/04/27/b2002-hello-world/</id>
+    <published>2024-04-27T12:29:29.000Z</published>
+    <updated>2024-04-27T12:34:36.904Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello,World!&quot;&gt;&lt;/a&gt;Hello,World!&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>289.生命游戏</title>
@@ -455,119 +571,6 @@
     <category term="集合" scheme="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/"/>
     
     <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java基础1.0</title>
-    <link href="https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/"/>
-    <id>https://qetuop91.github.io/2024/04/15/java-ji-chu-1.0/</id>
-    <published>2024-04-15T02:43:23.000Z</published>
-    <updated>2024-04-23T07:02:50.432Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot; title=&quot;基本语法&quot;&gt;&lt;/a&gt;基本语法&lt;/h1&gt;&lt;h2 id=&quot;在Java中，标识符和关键字的区别是什么？&quot;&gt;&lt;a href=&quot;#在Java中，标识符和关键字的区别是什么？&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RocketMQ-4.0-消息堆积</title>
-    <link href="https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/"/>
-    <id>https://qetuop91.github.io/2024/04/14/rocketmq-4.0-xiao-xi-dui-ji/</id>
-    <published>2024-04-14T13:50:09.000Z</published>
-    <updated>2024-04-23T07:03:51.272Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;消息堆积问题&quot;&gt;&lt;a href=&quot;#消息堆积问题&quot; class=&quot;headerlink&quot; title=&quot;消息堆积问题&quot;&gt;&lt;/a&gt;消息堆积问题&lt;/h1&gt;&lt;p&gt;一般认为单条队列消息差值&amp;gt;=10w条的时候，就算堆积问题&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="RocketMQ" scheme="https://qetuop91.github.io/categories/RocketMQ/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="RocketMQ" scheme="https://qetuop91.github.io/tags/RocketMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RocketMQ-3.0-SpringBoot集成RocketocketMQ</title>
-    <link href="https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/"/>
-    <id>https://qetuop91.github.io/2024/04/13/rocketmq-3.0-springboot-ji-cheng-rocketocketmq/</id>
-    <published>2024-04-13T12:06:10.000Z</published>
-    <updated>2024-04-23T07:03:49.212Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;RocketMQ集成SpringBoot&quot;&gt;&lt;a href=&quot;#RocketMQ集成SpringBoot&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="RocketMQ" scheme="https://qetuop91.github.io/categories/RocketMQ/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="RocketMQ" scheme="https://qetuop91.github.io/tags/RocketMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sunshine+Moonlight串流</title>
-    <link href="https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/"/>
-    <id>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/</id>
-    <published>2024-04-13T02:35:11.000Z</published>
-    <updated>2024-04-17T15:52:11.495Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;串流是什么？&quot;&gt;&lt;a href=&quot;#串流是什么？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="串流" scheme="https://qetuop91.github.io/categories/%E4%B8%B2%E6%B5%81/"/>
-    
-    
-    <category term="串流" scheme="https://qetuop91.github.io/tags/%E4%B8%B2%E6%B5%81/"/>
-    
-    <category term="Moonlight" scheme="https://qetuop91.github.io/tags/Moonlight/"/>
-    
-    <category term="Sunshine" scheme="https://qetuop91.github.io/tags/Sunshine/"/>
-    
-    <category term="Github开源" scheme="https://qetuop91.github.io/tags/Github%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
