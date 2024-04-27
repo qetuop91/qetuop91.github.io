@@ -9,8 +9,70 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Fri, 26 Apr 2024 15:23:45 GMT</pubDate>
+    <pubDate>Sat, 27 Apr 2024 10:52:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>289.生命游戏</title>
+      <link>https://qetuop91.github.io/2024/04/27/289-sheng-ming-you-xi/</link>
+      <guid>https://qetuop91.github.io/2024/04/27/289-sheng-ming-you-xi/</guid>
+      <pubDate>Sat, 27 Apr 2024 10:42:32 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;289-生命游戏&quot;&gt;&lt;a href=&quot;#289-生命游戏&quot; class=&quot;headerlink&quot; title=&quot;289. 生命游戏&quot;&gt;&lt;/a&gt;289. 生命游戏&lt;/h1&gt;&lt;p&gt;根据 &lt;code&gt;百度百科&lt;/code&gt; ，</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/27/289-sheng-ming-you-xi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>54.螺旋矩阵</title>
+      <link>https://qetuop91.github.io/2024/04/27/54-luo-xuan-ju-zhen/</link>
+      <guid>https://qetuop91.github.io/2024/04/27/54-luo-xuan-ju-zhen/</guid>
+      <pubDate>Sat, 27 Apr 2024 05:39:04 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;54-螺旋矩阵&quot;&gt;&lt;a href=&quot;#54-螺旋矩阵&quot; class=&quot;headerlink&quot; title=&quot;54.螺旋矩阵&quot;&gt;&lt;/a&gt;54.螺旋矩阵&lt;/h1&gt;&lt;p&gt;提示&lt;br&gt;给你一个 &lt;code&gt;m&lt;/code&gt; 行 &lt;code&gt;n&lt;/code&gt; 列的矩阵</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/27/54-luo-xuan-ju-zhen/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>LinkedList</title>
@@ -542,62 +604,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/13/1.0-sunshine-moonlight-chuan-liu/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>RocketMQ-1.0-配置与启动RocketMQ</title>
-      <link>https://qetuop91.github.io/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/</link>
-      <guid>https://qetuop91.github.io/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/</guid>
-      <pubDate>Fri, 12 Apr 2024 03:17:05 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;为什么要使用RocketMQ？&quot;&gt;&lt;a href=&quot;#为什么要使用RocketMQ？&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/RocketMQ/">RocketMQ</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/RocketMQ/">RocketMQ</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/12/rocketmq-1.0-pei-zhi-yu-qi-dong-rocketmq/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Redis7-9.0-集群（cluster）</title>
-      <link>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/</link>
-      <guid>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/</guid>
-      <pubDate>Thu, 11 Apr 2024 16:12:43 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;Redis集群（cluster）&quot;&gt;&lt;a href=&quot;#Redis集群（cluster）&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Redis/">Redis</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Redis/">Redis</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/12/redis7-9.0-ji-qun-cluster/#disqus_thread</comments>
       
     </item>
     
