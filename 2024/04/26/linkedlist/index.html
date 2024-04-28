@@ -5,7 +5,7 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="LinkedList, Feliks">
-    <meta name="description" content="">
+    <meta name="description" content="LinkedList解析">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -357,10 +357,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('该文章已被加密无法查看！')).toString(CryptoJS.enc.Hex)) {
+                alert('即将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/11.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -386,12 +399,37 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9B%86%E5%90%88/">
+                                <span class="chip bg-color">集合</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                            <a href="/tags/LinkedList/">
+                                <span class="chip bg-color">LinkedList</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -407,14 +445,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-26
+                    2024-04-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    212
                 </div>
                 
 
@@ -441,7 +479,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h1><p><code>LinkedList</code>底层数据结构通过双向链表来实现，也正因如此，对于头插和尾插操作以及删除元素的操作，其事件复杂度近似O(1)，所以，并非将<code>LinkedList</code>作为链表就最适合元素增删的场景，它在除了上述情况意外对元素进行增删操作的时间复杂度都是O(n)</p>
+<h2 id="为什么LinkedList不能实现RandomAccess接口？"><a href="#为什么LinkedList不能实现RandomAccess接口？" class="headerlink" title="为什么LinkedList不能实现RandomAccess接口？"></a>为什么LinkedList不能实现RandomAccess接口？</h2><p><code>RandomAccess</code>接口是一个标记接口，用来表示实现了该接口的集合类可以通过随机访问元素的方式来提高访问效率，但是<code>LinkedList</code>的底层数据接口是链表，其内存地址并不连续，只能通过指针的方式来定位，不支持随机快速访问，所以不能实现<code>RandomAccess</code>接口</p>
+<h1 id="LinkedList源码"><a href="#LinkedList源码" class="headerlink" title="LinkedList源码"></a>LinkedList源码</h1><h1 id="LinkedList测试代码"><a href="#LinkedList测试代码" class="headerlink" title="LinkedList测试代码"></a>LinkedList测试代码</h1>
                 
             </div>
             <hr/>
@@ -504,7 +544,23 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9B%86%E5%90%88/">
+                                    <span class="chip bg-color">集合</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
+                                <a href="/tags/LinkedList/">
+                                    <span class="chip bg-color">LinkedList</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1181,7 +1237,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">90.4k</span>
+                        class="white-color">90.7k</span>
             
             
             

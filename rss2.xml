@@ -9,8 +9,219 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Sun, 28 Apr 2024 02:01:38 GMT</pubDate>
+    <pubDate>Sun, 28 Apr 2024 14:03:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>P5708 【深基2.习2】三角形面积</title>
+      <link>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/</guid>
+      <pubDate>Sun, 28 Apr 2024 13:52:39 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基2-习2】三角形面积&quot;&gt;&lt;a href=&quot;#【深基2-习2】三角形面积&quot; class=&quot;headerlink&quot; title=&quot;【深基2.习2】三角形面积&quot;&gt;&lt;/a&gt;【深基2.习2】三角形面积&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5706 【深基2.例8】再分肥宅水</title>
+      <link>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/</guid>
+      <pubDate>Sun, 28 Apr 2024 13:45:45 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基2-例8】再分肥宅水&quot;&gt;&lt;a href=&quot;#【深基2-例8】再分肥宅水&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例8】再分肥宅水&quot;&gt;&lt;/a&gt;【深基2.例8】再分肥宅水&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5705 【深基2.例7】数字反转</title>
+      <link>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/</guid>
+      <pubDate>Sun, 28 Apr 2024 13:27:31 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基2-例7】数字反转&quot;&gt;&lt;a href=&quot;#【深基2-例7】数字反转&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例7】数字反转&quot;&gt;&lt;/a&gt;【深基2.例7】数字反转&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5704 【深基2.例6】字母转换</title>
+      <link>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/</guid>
+      <pubDate>Sun, 28 Apr 2024 13:22:40 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基2-例6】字母转换&quot;&gt;&lt;a href=&quot;#【深基2-例6】字母转换&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例6】字母转换&quot;&gt;&lt;/a&gt;【深基2.例6】字母转换&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5703 【深基2.例5】苹果采购</title>
+      <link>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/</guid>
+      <pubDate>Sun, 28 Apr 2024 13:16:59 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基2-例5】苹果采购&quot;&gt;&lt;a href=&quot;#【深基2-例5】苹果采购&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例5】苹果采购&quot;&gt;&lt;/a&gt;【深基2.例5】苹果采购&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>B2005 字符三角形</title>
+      <link>https://qetuop91.github.io/2024/04/28/b2005-zi-fu-san-jiao-xing/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/b2005-zi-fu-san-jiao-xing/</guid>
+      <pubDate>Sun, 28 Apr 2024 13:14:03 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;字符三角形&quot;&gt;&lt;a href=&quot;#字符三角形&quot; class=&quot;headerlink&quot; title=&quot;字符三角形&quot;&gt;&lt;/a&gt;字符三角形&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/b2005-zi-fu-san-jiao-xing/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>PriorityQueue</title>
+      <link>https://qetuop91.github.io/2024/04/28/priorityqueue/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/priorityqueue/</guid>
+      <pubDate>Sun, 28 Apr 2024 07:17:56 GMT</pubDate>
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      <category domain="https://qetuop91.github.io/tags/PriorityQueue/">PriorityQueue</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/priorityqueue/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>73.矩阵置零</title>
@@ -266,9 +477,27 @@
       <guid>https://qetuop91.github.io/2024/04/26/linkedlist/</guid>
       <pubDate>Fri, 26 Apr 2024 15:23:45 GMT</pubDate>
       
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;LinkedList&quot;&gt;&lt;a href=&quot;#LinkedList&quot; class=&quot;headerlink&quot;</description>
+          
+        
       
       
       
+      
+      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LinkedList/">LinkedList</category>
       
       
       <comments>https://qetuop91.github.io/2024/04/26/linkedlist/#disqus_thread</comments>
@@ -400,221 +629,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>实现可固定大小的本地缓存</title>
-      <link>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/</link>
-      <guid>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/</guid>
-      <pubDate>Sat, 20 Apr 2024 08:37:42 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;核心实现&quot;&gt;&lt;a href=&quot;#核心实现&quot; class=&quot;headerlink&quot; title=&quot;核心实现&quot;&gt;&lt;/a&gt;核心实现&lt;/h1&gt;&lt;p&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LinkedHashMap/">LinkedHashMap</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">淘汰算法</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/">缓存</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LRU/">LRU</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/20/shi-xian-ke-gu-ding-da-xiao-de-ben-di-huan-cun/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Java基础3.0</title>
-      <link>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/</link>
-      <guid>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/</guid>
-      <pubDate>Thu, 18 Apr 2024 05:30:37 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;异常&quot;&gt;&lt;a href=&quot;#异常&quot; class=&quot;headerlink&quot; title=&quot;异常&quot;&gt;&lt;/a&gt;异常&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Java异常类层次结构图概览&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/18/java-ji-chu-3.0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Java基础2.0</title>
-      <link>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/</link>
-      <guid>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/</guid>
-      <pubDate>Wed, 17 Apr 2024 13:46:15 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;面向对象基础&quot;&gt;&lt;a href=&quot;#面向对象基础&quot; class=&quot;headerlink&quot; title=&quot;面向对象基础&quot;&gt;&lt;/a&gt;面向对象基础&lt;/h1&gt;&lt;h2 id=&quot;对象实体与对象引用有什么不同？&quot;&gt;&lt;a href=&quot;#对象实体与对象引用有什么不同？&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/17/java-ji-chu-2.0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Linux-9.0-软件磁盘阵列（Software RAID）</title>
-      <link>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/</link>
-      <guid>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/</guid>
-      <pubDate>Wed, 17 Apr 2024 08:01:01 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;软件磁盘阵列（Software-RAID）&quot;&gt;&lt;a href=&quot;#软件磁盘阵列（Software-RAID）&quot; class=&quot;headerlink&quot; title=&quot;软件磁盘阵列（Software RAID）&quot;&gt;&lt;/a&gt;软件磁盘阵列（Software</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Linux/">Linux</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Linux/">Linux</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/17/linux-9.0-ruan-jian-ci-pan-zhen-lie-software-raid/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>继承LinkedHashMap实现简单的LRU算法</title>
-      <link>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</link>
-      <guid>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/</guid>
-      <pubDate>Tue, 16 Apr 2024 01:47:45 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;当我们写的项目或应用有了一定流量后，查询数据库就会特别频繁，此时我们可以考虑使用Java自带的HashMap或者ConcurrentHashMap，但是这样实现的缓存机制会有个问题：&lt;code&gt;内存会无限制的增长&lt;/code&gt;，所以HashMap很快也被淘汰了&lt;/p&gt;
-&lt;p</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LinkedHashMap/">LinkedHashMap</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B7%98%E6%B1%B0%E7%AE%97%E6%B3%95/">淘汰算法</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%BC%93%E5%AD%98/">缓存</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LRU/">LRU</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>使用EasyVirtualDisplay的副屏方案</title>
-      <link>https://qetuop91.github.io/2024/04/15/2.0-easyvirtualdisplay/</link>
-      <guid>https://qetuop91.github.io/2024/04/15/2.0-easyvirtualdisplay/</guid>
-      <pubDate>Mon, 15 Apr 2024 07:22:09 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;本方案基于Sunshine+Moonlight串流实现，不知道这两个是什么的可以回去自行阅览：&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E4%B8%B2%E6%B5%81/">串流</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/%E4%B8%B2%E6%B5%81/">串流</category>
-      
-      <category domain="https://qetuop91.github.io/tags/Moonlight/">Moonlight</category>
-      
-      <category domain="https://qetuop91.github.io/tags/Sunshine/">Sunshine</category>
-      
-      <category domain="https://qetuop91.github.io/tags/Github%E5%BC%80%E6%BA%90/">Github开源</category>
-      
-      <category domain="https://qetuop91.github.io/tags/EasyVirtualDisplay/">EasyVirtualDisplay</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/15/2.0-easyvirtualdisplay/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>集合框架-4.0-Collections工具类</title>
-      <link>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-collections-gong-ju-lei/</link>
-      <guid>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-collections-gong-ju-lei/</guid>
-      <pubDate>Mon, 15 Apr 2024 05:57:44 GMT</pubDate>
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/15/ji-he-kuang-jia-4.0-collections-gong-ju-lei/#disqus_thread</comments>
       
     </item>
     

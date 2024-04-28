@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="单例模式, Feliks">
-    <meta name="description" content="设计模式学习笔记">
+    <meta name="keywords" content="P5704 【深基2.例6】字母转换, Feliks">
+    <meta name="description" content="洛谷题单">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>单例模式 | Feliks</title>
+    <title>P5704 【深基2.例6】字母转换 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -357,15 +357,28 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('该文章已被加密无法查看！')).toString(CryptoJS.enc.Hex)) {
+                alert('即将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/23.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/25.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">单例模式</h1>
+                    <h1 class="description center-align post-title">P5704 【深基2.例6】字母转换</h1>
                 </div>
             </div>
         </div>
@@ -392,16 +405,12 @@
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">设计模式</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">算法题</span>
                             </a>
                         
-                            <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">创建型模式</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">单例模式</span>
+                            <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                                <span class="chip bg-color">洛谷</span>
                             </a>
                         
                     </div>
@@ -412,8 +421,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -425,28 +434,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-09
+                    2024-04-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-04-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    93
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
 
@@ -466,191 +475,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><blockquote>
-<p>涉及到一个单一的类，由该类<strong>负责创建自己的对象</strong>且同时<strong>确保只有一个对象被创建</strong>。</p>
-<p>提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象</p>
-</blockquote>
-<blockquote>
-<p><strong>注意：</strong></p>
-<ol>
-<li>单例类只能有一个实例</li>
-<li>单例类必须创建自己的唯一实例</li>
-<li>单例类必须给所有其他对象提供这一实例</li>
-</ol>
-</blockquote>
-<blockquote>
-<p><strong>解决了什么？</strong><br>一个全局使用的类被频繁的创建与销毁</p>
-<p><strong>什么时候使用？</strong><br>当想控制实例的数目、节省系统资源的时候</p>
-<p><strong>怎么实现？</strong><br>创建一个方法去判断系统是否已经拥有这个单例，有则返回，没有则创建</p>
-</blockquote>
-<blockquote>
-<p><strong>优点</strong></p>
-<ol>
-<li>在内存里只有一个实例，减少了内存的开销，尤其是频繁的对类的创建和销毁</li>
-<li>避免对资源的多重占用（写文件操作）</li>
-</ol>
-</blockquote>
-<blockquote>
-<p><strong>缺点</strong><br>没有接口、不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化</p>
-</blockquote>
-<blockquote>
-<p><strong>使用场景</strong></p>
-<ol>
-<li>要求生产唯一序列号</li>
-<li>WEB中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来</li>
-<li>创建的一个对象需要消耗的资源过多，比如I/O与数据库的连接等</li>
-</ol>
-</blockquote>
-<blockquote>
-<p><strong>Considerations</strong></p>
-<p>getInstance()方法中需要使用同步锁synchronized(Singleton.class)防止多线程同时进入造成instance被多次实例化</p>
-</blockquote>
-<p><strong>代码</strong></p>
-<p>SingleObject（基本实现）</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token comment">//创建一个SingleObject的私有对象</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//把构造器私有化，不允许外部直接创建该类</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <h1 id="【深基2-例6】字母转换"><a href="#【深基2-例6】字母转换" class="headerlink" title="【深基2.例6】字母转换"></a>【深基2.例6】字母转换</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>输入一个小写字母，输出其对应的大写字母。例如输入 q[回车] 时，会输出 Q。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre class="language-none"><code class="language-none">q</code></pre>
 
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"SingleObject被创建"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre class="language-none"><code class="language-none">Q</code></pre>
+
+
+
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> lowercase <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>lowercase<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 
-
-
-<h2 id="懒汉式，线程不安全的"><a href="#懒汉式，线程不安全的" class="headerlink" title="懒汉式，线程不安全的"></a>懒汉式，线程不安全的</h2><ul>
-<li>是否Lazy初始化：是</li>
-<li>是否多线程安全：否</li>
-<li>因为没有加锁synchronized，所以严格意义上不算单例模式</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 懒汉式 线程不安全的</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
-    <span class="token comment">//私有化空参构造器</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h2 id="懒汉式，线程安全的"><a href="#懒汉式，线程安全的" class="headerlink" title="懒汉式，线程安全的"></a>懒汉式，线程安全的</h2><ul>
-<li>是否Lazy初始化：是</li>
-<li>是否多线程安全：是</li>
-<li>优点：第一次调用才初始化，避免内存浪费</li>
-<li>缺点：必须加锁synchronized才能保证单例，但是加锁会影响效率</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 懒汉式 线程安全的</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
-    <span class="token comment">//私有化空参构造器</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><ul>
-<li>是否Lazy初始化：否</li>
-<li>是否多线程安全：是</li>
-<li>优点：没有加锁，执行效率提高</li>
-<li>缺点：类在加载的时候就会初始化，浪费内存</li>
-<li>基于classloader机制避免了多线程的同步问题，但是instance在类装载的时候就实例化，虽然导致类装载的原因有很多种，在单例模式中大多是嗲用getInstance方法， 但是也不能确保有其他的方式或者其他的静态方法导致类装载，这时候初始化instance明显没有打到lazy loading（懒加载）的效果</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 饿汉式 线程安全的</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//私有化空参构造器</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token comment">//在获取对象的时候判断全局instance是否为null</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h2 id="双检锁-双重校验锁（DCL-double-checked-locking）"><a href="#双检锁-双重校验锁（DCL-double-checked-locking）" class="headerlink" title="双检锁/双重校验锁（DCL: double checked locking）"></a>双检锁/双重校验锁（DCL: double checked locking）</h2><ul>
-<li>是否Lazy初始化：是</li>
-<li>是否多线程安全：是</li>
-<li>采用双锁机制，安全且在多线程情况下保持高性能</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 双检锁</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> instance<span class="token punctuation">;</span>
-
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// 线程1、2同时到达判断instance是否为null</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 线程1进去，线程2被阻塞</span>
-            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token class-name">SingleObject</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment">//1创建完对象后，instance就不为null，2不会进入if，避免多次初始化</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h2 id="登记式-静态内部类"><a href="#登记式-静态内部类" class="headerlink" title="登记式/静态内部类"></a>登记式/静态内部类</h2><ul>
-<li>是否Lazy初始化：是</li>
-<li>是否多线程安全：是</li>
-<li>能达到双检锁方式一样的功效，但实现更简单，对静态域使用延迟初始化，应该使用这种方式而不是双检锁。只适用于静态域的情况，双检锁的方式可以在实例域需要延迟初始化的时候使用。</li>
-<li>利用classloader机制保证初始化instance时只有一个线程，跟饿汉式不同的是：饿汉式只要SingletObject类被装载了，那么instance就会被实例化，没有打到懒加载的效果，而这种方式是SingleObject类被装载了，但是instance不一定被初始化，因为SingletonHolder类没有被主动使用，只有显式调用getInstance方法才会显式装载SingletonHolder从而实例化instance</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 登记式/静态内部类</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SingletonHolder</span> <span class="token punctuation">{</span>
-        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">private</span> <span class="token class-name">SingleObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">SingleObject</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token class-name">SingletonHolder</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-
-<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><ul>
-<li>是否Lazy初始化：否</li>
-<li>是否多线程安全：是</li>
-<li><strong>实现单例模式的最佳方法</strong></li>
-<li>避免多线程同步的问题，而且还自动支持序列化机制，防止反序列化重新创建新的对象，绝对防止多次实例化</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">// 枚举</span>
-<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">SingleObject</span> <span class="token punctuation">{</span>
-    <span class="token constant">INSTANCE</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">msg</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"枚举类型的实例"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-<blockquote>
-<p>Considerations<br>一般情况下不建议使用懒汉式，不管是线程安全还是线程不安全的，比较建议使用饿汉式。而在我们需要明确实现懒加载（lazy loading）的效果时，才会使用登记式（静态内部类）的方式。在涉及到反序列化创建对象的时候，可以使用枚举的方式，其他的特殊需求可以考虑双检锁的方式。</p>
-</blockquote>
 
                 
             </div>
@@ -677,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/09/dan-li-mo-shi/">https://qetuop91.github.io/2024/04/09/dan-li-mo-shi/</a>
+                    <a href="https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/">https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -719,16 +559,12 @@
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">设计模式</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">算法题</span>
                                 </a>
                             
-                                <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">创建型模式</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">单例模式</span>
+                                <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                                    <span class="chip bg-color">洛谷</span>
                                 </a>
                             
                         </div>
@@ -1144,30 +980,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/09/jian-zao-zhe-mo-shi/">
+                <a href="/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/24.jpg" class="responsive-img" alt="建造者模式">
+                        <img src="/medias/myImages/24.jpg" class="responsive-img" alt="P5705 【深基2.例7】数字反转">
                         
-                        <span class="card-title">建造者模式</span>
+                        <span class="card-title">P5705 【深基2.例7】数字反转</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            设计模式学习笔记
+                            洛谷题单
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-28
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1181,16 +1017,12 @@
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
                     </a>
                     
-                    <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">创建型模式</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">建造者模式</span>
+                    <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                        <span class="chip bg-color">洛谷</span>
                     </a>
                     
                 </div>
@@ -1204,30 +1036,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/09/chou-xiang-gong-han-mo-shi/">
+                <a href="/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/22.jpg" class="responsive-img" alt="抽象工厂模式">
+                        <img src="/medias/myImages/26.jpg" class="responsive-img" alt="P5703 【深基2.例5】苹果采购">
                         
-                        <span class="card-title">抽象工厂模式</span>
+                        <span class="card-title">P5703 【深基2.例5】苹果采购</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            设计模式学习笔记
+                            洛谷题单
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1241,16 +1073,12 @@
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
                     </a>
                     
-                    <a href="/tags/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">创建型模式</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">抽象工厂模式</span>
+                    <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                        <span class="chip bg-color">洛谷</span>
                     </a>
                     
                 </div>
@@ -1411,7 +1239,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">90.4k</span>
+                        class="white-color">90.7k</span>
             
             
             
