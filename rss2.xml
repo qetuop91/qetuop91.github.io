@@ -9,8 +9,135 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Sun, 28 Apr 2024 14:03:53 GMT</pubDate>
+    <pubDate>Mon, 29 Apr 2024 08:04:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>402.移掉K位数字</title>
+      <link>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/</link>
+      <guid>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/</guid>
+      <pubDate>Mon, 29 Apr 2024 02:56:52 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;402-移掉-K-位数字&quot;&gt;&lt;a href=&quot;#402-移掉-K-位数字&quot; class=&quot;headerlink&quot; title=&quot;402. 移掉 K 位数字&quot;&gt;&lt;/a&gt;402. 移掉 K 位数字&lt;/h1&gt;&lt;p&gt;给你一个以字符串表示的非负整数</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>94.二叉树的中序遍历</title>
+      <link>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/</link>
+      <guid>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/</guid>
+      <pubDate>Mon, 29 Apr 2024 02:36:16 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回 &lt;em&gt;它的 &lt;strong&gt;中序&lt;/strong&gt; 遍历&lt;/em&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>20.有效的括号</title>
+      <link>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/</link>
+      <guid>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/</guid>
+      <pubDate>Mon, 29 Apr 2024 00:34:06 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
+&lt;p&gt;给定一个只包括</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5707 【深基2.例12】上学迟到</title>
+      <link>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/</link>
+      <guid>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/</guid>
+      <pubDate>Sun, 28 Apr 2024 15:38:05 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基2-例12】上学迟到&quot;&gt;&lt;a href=&quot;#【深基2-例12】上学迟到&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例12】上学迟到&quot;&gt;&lt;/a&gt;【深基2.例12】上学迟到&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>P5708 【深基2.习2】三角形面积</title>
@@ -501,134 +628,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/26/linkedlist/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>ArrayList</title>
-      <link>https://qetuop91.github.io/2024/04/25/arraylist/</link>
-      <guid>https://qetuop91.github.io/2024/04/25/arraylist/</guid>
-      <pubDate>Thu, 25 Apr 2024 01:29:54 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;ArrayList&quot;&gt;&lt;a href=&quot;#ArrayList&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
-      
-      <category domain="https://qetuop91.github.io/tags/ArrayList/">ArrayList</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/25/arraylist/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>HashMap</title>
-      <link>https://qetuop91.github.io/2024/04/24/hashmap/</link>
-      <guid>https://qetuop91.github.io/2024/04/24/hashmap/</guid>
-      <pubDate>Wed, 24 Apr 2024 02:41:02 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;HashMap&quot;&gt;&lt;a href=&quot;#HashMap&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      <category domain="https://qetuop91.github.io/tags/HashMap/">HashMap</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/24/hashmap/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>LinkedHashMap</title>
-      <link>https://qetuop91.github.io/2024/04/24/linkedhashmap/</link>
-      <guid>https://qetuop91.github.io/2024/04/24/linkedhashmap/</guid>
-      <pubDate>Wed, 24 Apr 2024 02:32:36 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;LinkedHashMap&quot;&gt;&lt;a href=&quot;#LinkedHashMap&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9B%86%E5%90%88/">集合</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LinkedHashMap/">LinkedHashMap</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/24/linkedhashmap/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>为什么Java只有值传递？</title>
-      <link>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/</link>
-      <guid>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/</guid>
-      <pubDate>Tue, 23 Apr 2024 06:59:05 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;形参和实参&quot;&gt;&lt;a href=&quot;#形参和实参&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/Java/">Java</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/">面试</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/23/wei-shi-me-java-zhi-you-zhi-chuan-di/#disqus_thread</comments>
       
     </item>
     
