@@ -4,6 +4,122 @@
   
     
     <entry>
+      <title>P3954 [NOIP2017 普及组] 成绩</title>
+      <link href="/2024/04/29/p3954-noip2017-pu-ji-zu-cheng-ji/"/>
+      <url>/2024/04/29/p3954-noip2017-pu-ji-zu-cheng-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="NOIP2017-普及组-成绩"><a href="#NOIP2017-普及组-成绩" class="headerlink" title="[NOIP2017 普及组] 成绩"></a>[NOIP2017 普及组] 成绩</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>NOIP2017 普及组 T1</p><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>牛牛最近学习了 C++ 入门课程，这门课程的总成绩计算方法是：</p><p>$$<br>\text{总成绩}=\text{作业成绩}\times 20%+\text{小测成绩}×30%+\text{期末考试成绩} \times 50%<br>$$</p><p>牛牛想知道，这门课程自己最终能得到多少分。</p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>三个非负整数 $A,B,C$，分别表示牛牛的作业成绩、小测成绩和期末考试成绩。相邻两个数之间用一个空格隔开，三项成绩满分都是 $100$ 分。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>一个整数，即牛牛这门课程的总成绩，满分也是 $100$ 分。</p><h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre class="language-none"><code class="language-none">100 100 80</code></pre><h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre class="language-none"><code class="language-none">90</code></pre><h2 id="样例-2"><a href="#样例-2" class="headerlink" title="样例 #2"></a>样例 #2</h2><h3 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入 #2"></a>样例输入 #2</h3><pre class="language-none"><code class="language-none">60 90 80</code></pre><h3 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出 #2"></a>样例输出 #2</h3><pre class="language-none"><code class="language-none">79</code></pre><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p><strong>样例 1 说明</strong></p><p>牛牛的作业成绩是 $100$ 分，小测成绩是 $100$ 分，期末考试成绩是 $80$ 分，总成绩是 $100 \times 20%+100 \times 30%+80 \times 50%=20+30+40=90$。</p><p><strong>样例 2 说明</strong></p><p>牛牛的作业成绩是 $60$ 分，小测成绩是 $90$ 分，期末考试成绩是 $80$ 分，总成绩是 $60 \times 20%+90 \times 30%+80 \times 50%=12+27+40=79$。</p><p><strong>数据说明</strong></p><p>对于 $30%$ 的数据，$A=B=0$。</p><p>对于另外 $30%$ 的数据，$A=B=100$。</p><p>对于 $100%$ 的数据，$0≤A,B,C≤100$ 且 $A,B,C$ 都是 $10$ 的整数倍。</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> a <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> b <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> c <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> <span class="token number">0.2</span> <span class="token operator">+</span> b <span class="token operator">*</span> <span class="token number">0.3</span> <span class="token operator">+</span> c <span class="token operator">*</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 算法题 </tag>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>P1421 小玉买文具</title>
+      <link href="/2024/04/29/p1421-xiao-yu-mai-wen-ju/"/>
+      <url>/2024/04/29/p1421-xiao-yu-mai-wen-ju/</url>
+      
+        <content type="html"><![CDATA[<h1 id="小玉买文具"><a href="#小玉买文具" class="headerlink" title="小玉买文具"></a>小玉买文具</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>班主任给小玉一个任务，到文具店里买尽量多的签字笔。已知一只签字笔的价格是 $1$ 元 $9$ 角，而班主任给小玉的钱是 $a$ 元 $b$ 角，小玉想知道，她最多能买多少只签字笔呢。</p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>输入只有一行两个整数，分别表示 $a$ 和 $b$。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一行一个整数，表示小玉最多能买多少只签字笔。</p><h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre class="language-none"><code class="language-none">10 3</code></pre><h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre class="language-none"><code class="language-none">5</code></pre><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><h4 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h4><p>对于全部的测试点，保证 $0 \leq a \leq 10^4$，$0 \leq b \leq 9$。</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> a <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> b <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> sum <span class="token operator">=</span> a <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">+</span> b<span class="token punctuation">;</span>        <span class="token keyword">int</span> res <span class="token operator">=</span> sum <span class="token operator">/</span> <span class="token number">19</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 算法题 </tag>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>P1425 小鱼的游泳时间</title>
+      <link href="/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/"/>
+      <url>/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="小鱼的游泳时间"><a href="#小鱼的游泳时间" class="headerlink" title="小鱼的游泳时间"></a>小鱼的游泳时间</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>伦敦奥运会要到了，小鱼在拼命练习游泳准备参加游泳比赛，可怜的小鱼并不知道鱼类是不能参加人类的奥运会的。</p><p>这一天，小鱼给自己的游泳时间做了精确的计时（本题中的计时都按 $24$ 小时制计算），它发现自己从 $a$ 时 $b$ 分一直游泳到当天的 $c$ 时 $d$ 分，请你帮小鱼计算一下，它这天一共游了多少时间呢？</p><p>小鱼游的好辛苦呀，你可不要算错了哦。</p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>一行内输入四个整数，以空格隔开，分别表示题目中的 $a, b, c, d$。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>一行内输出两个整数 $e$ 和 $f$，用空格间隔，依次表示小鱼这天一共游了多少小时多少分钟。其中表示分钟的整数 $f$ 应该小于 $60$。</p><h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre class="language-none"><code class="language-none">12 50 19 10</code></pre><h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre class="language-none"><code class="language-none">6 20</code></pre><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>对于全部测试数据，$0\le a,c \le 24$，$0\le b,d \le 60$，且结束时间一定晚于开始时间。</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> a <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> b <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> c <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> d <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        a <span class="token operator">*=</span> <span class="token number">60</span><span class="token punctuation">;</span>        c <span class="token operator">*=</span> <span class="token number">60</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> min1 <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>        <span class="token keyword">int</span> min2 <span class="token operator">=</span> c <span class="token operator">+</span> d<span class="token punctuation">;</span>        <span class="token keyword">int</span> diff <span class="token operator">=</span> min2 <span class="token operator">-</span> min1<span class="token punctuation">;</span>        <span class="token keyword">int</span> hour <span class="token operator">=</span> diff <span class="token operator">/</span> <span class="token number">60</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> min <span class="token operator">=</span> diff <span class="token operator">%</span> <span class="token number">60</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hour <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> min<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 算法题 </tag>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>B2029 大象喝水</title>
+      <link href="/2024/04/29/b2029-da-xiang-he-shui/"/>
+      <url>/2024/04/29/b2029-da-xiang-he-shui/</url>
+      
+        <content type="html"><![CDATA[<h1 id="大象喝水"><a href="#大象喝水" class="headerlink" title="大象喝水"></a>大象喝水</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>一只大象口渴了，要喝 $20$ 升水才能解渴，但现在只有一个深 $h$ 厘米，底面半径为 $r$ 厘米的小圆桶 （$h$ 和 $r$ 都是整数）。问大象至少要喝多少桶水才会解渴。</p><p><strong>Update：数据更新，这里我们近似地取圆周率 $\pi = 3.14$。</strong></p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>输入有一行：包行两个整数，以一个空格分开，分别表示小圆桶的深 $h$ 和底面半径 $r$，单位都是厘米。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一行，包含一个整数，表示大象至少要喝水的桶数。</p><h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre class="language-none"><code class="language-none">23 11</code></pre><h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre class="language-none"><code class="language-none">3</code></pre><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><h3 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a>数据规模与约定</h3><p>对于全部的测试点，保证 $1 \leq h \leq 500$，$1 \leq r \leq 100$。</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> h <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> r <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 立方厘米（一个桶）</span>        <span class="token keyword">double</span> v <span class="token operator">=</span> <span class="token number">3.14</span> <span class="token operator">*</span> r <span class="token operator">*</span> r <span class="token operator">*</span> h<span class="token punctuation">;</span>        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">20000</span> <span class="token operator">%</span> v <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            res <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">20000</span> <span class="token operator">/</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>            res <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token number">20000</span> <span class="token operator">/</span> v<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 算法题 </tag>
+            
+            <tag> 洛谷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>402.移掉K位数字</title>
       <link href="/2024/04/29/402-yi-diao-k-wei-shu-zi/"/>
       <url>/2024/04/29/402-yi-diao-k-wei-shu-zi/</url>
@@ -561,7 +677,7 @@
       <link href="/2024/04/26/linkedlist/"/>
       <url>/2024/04/26/linkedlist/</url>
       
-        <content type="html"><![CDATA[<h1 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h1><p><code>LinkedList</code>底层数据结构通过双向链表来实现，也正因如此，对于头插和尾插操作以及删除元素的操作，其事件复杂度近似O(1)，所以，并非将<code>LinkedList</code>作为链表就最适合元素增删的场景，它在除了上述情况意外对元素进行增删操作的时间复杂度都是O(n)</p><h2 id="为什么LinkedList不能实现RandomAccess接口？"><a href="#为什么LinkedList不能实现RandomAccess接口？" class="headerlink" title="为什么LinkedList不能实现RandomAccess接口？"></a>为什么LinkedList不能实现RandomAccess接口？</h2><p><code>RandomAccess</code>接口是一个标记接口，用来表示实现了该接口的集合类可以通过随机访问元素的方式来提高访问效率，但是<code>LinkedList</code>的底层数据接口是链表，其内存地址并不连续，只能通过指针的方式来定位，不支持随机快速访问，所以不能实现<code>RandomAccess</code>接口</p><h1 id="LinkedList源码"><a href="#LinkedList源码" class="headerlink" title="LinkedList源码"></a>LinkedList源码</h1><h1 id="LinkedList测试代码"><a href="#LinkedList测试代码" class="headerlink" title="LinkedList测试代码"></a>LinkedList测试代码</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h1><p><code>LinkedList</code>底层数据结构通过双向链表来实现，也正因如此，对于头插和尾插操作以及删除元素的操作，其事件复杂度近似O(1)，所以，并非将<code>LinkedList</code>作为链表就最适合元素增删的场景，它在除了上述情况意外对元素进行增删操作的时间复杂度都是O(n)</p><h2 id="为什么LinkedList不能实现RandomAccess接口？"><a href="#为什么LinkedList不能实现RandomAccess接口？" class="headerlink" title="为什么LinkedList不能实现RandomAccess接口？"></a>为什么LinkedList不能实现RandomAccess接口？</h2><p><code>RandomAccess</code>接口是一个标记接口，用来表示实现了该接口的集合类可以通过随机访问元素的方式来提高访问效率，但是<code>LinkedList</code>的底层数据接口是链表，其内存地址并不连续，只能通过指针的方式来定位，不支持随机快速访问，所以不能实现<code>RandomAccess</code>接口</p><h1 id="LinkedList源码"><a href="#LinkedList源码" class="headerlink" title="LinkedList源码"></a>LinkedList源码</h1><p><code>LinkedList</code>类：</p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">extends</span> <span class="token class-name">AbstractSequentialList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">implements</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">Cloneable</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span> <span class="token punctuation">{</span>    <span class="token comment">// ......</span><span class="token punctuation">}</span></code></pre><p><code>LinkedList</code>与<code>ArrayList</code>有大部分方法相似是因为：<code>LinkedList</code>继承自<code>AbstractSequentialList</code>，<code>AbstractSequentialList</code>继承自<code>AbstractList</code>，而<code>ArrayList</code>也继承自<code>AbstractList</code></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404291721215.png" alt="image-20240429172105152"> </p><p><code>LinkedList</code>实现的接口：</p><ul><li><code>List</code>：表明<code>LinkedList</code>是一个列表，支持对元素增删改查等操作，且可以通过<code>get(int index)</code>方法使用下标获取元素。</li><li><code>Deque</code>：</li><li><code>Cloneable</code>：</li><li><code>Serializable</code>：</li></ul><h1 id="LinkedList测试代码"><a href="#LinkedList测试代码" class="headerlink" title="LinkedList测试代码"></a>LinkedList测试代码</h1>]]></content>
       
       
       <categories>
@@ -875,9 +991,9 @@
             
             <tag> Sunshine </tag>
             
-            <tag> Github开源 </tag>
-            
             <tag> EasyVirtualDisplay </tag>
+            
+            <tag> Github开源 </tag>
             
         </tags>
       

@@ -52,10 +52,10 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/libs/prism/prism.min.css">
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
-<link rel="alternate" href="/rss2.xml" title="Feliks" type="application/rss+xml">
-
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Feliks" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="Feliks" type="application/rss+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -445,14 +445,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-28
+                    2024-04-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    212
+                    313
                 </div>
                 
 
@@ -481,7 +481,21 @@
             <div id="articleContent">
                 <h1 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h1><p><code>LinkedList</code>底层数据结构通过双向链表来实现，也正因如此，对于头插和尾插操作以及删除元素的操作，其事件复杂度近似O(1)，所以，并非将<code>LinkedList</code>作为链表就最适合元素增删的场景，它在除了上述情况意外对元素进行增删操作的时间复杂度都是O(n)</p>
 <h2 id="为什么LinkedList不能实现RandomAccess接口？"><a href="#为什么LinkedList不能实现RandomAccess接口？" class="headerlink" title="为什么LinkedList不能实现RandomAccess接口？"></a>为什么LinkedList不能实现RandomAccess接口？</h2><p><code>RandomAccess</code>接口是一个标记接口，用来表示实现了该接口的集合类可以通过随机访问元素的方式来提高访问效率，但是<code>LinkedList</code>的底层数据接口是链表，其内存地址并不连续，只能通过指针的方式来定位，不支持随机快速访问，所以不能实现<code>RandomAccess</code>接口</p>
-<h1 id="LinkedList源码"><a href="#LinkedList源码" class="headerlink" title="LinkedList源码"></a>LinkedList源码</h1><h1 id="LinkedList测试代码"><a href="#LinkedList测试代码" class="headerlink" title="LinkedList测试代码"></a>LinkedList测试代码</h1>
+<h1 id="LinkedList源码"><a href="#LinkedList源码" class="headerlink" title="LinkedList源码"></a>LinkedList源码</h1><p><code>LinkedList</code>类：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">extends</span> <span class="token class-name">AbstractSequentialList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">implements</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">Cloneable</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ......</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><code>LinkedList</code>与<code>ArrayList</code>有大部分方法相似是因为：<code>LinkedList</code>继承自<code>AbstractSequentialList</code>，<code>AbstractSequentialList</code>继承自<code>AbstractList</code>，而<code>ArrayList</code>也继承自<code>AbstractList</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202404291721215.png" alt="image-20240429172105152"> </p>
+<p><code>LinkedList</code>实现的接口：</p>
+<ul>
+<li><code>List</code>：表明<code>LinkedList</code>是一个列表，支持对元素增删改查等操作，且可以通过<code>get(int index)</code>方法使用下标获取元素。</li>
+<li><code>Deque</code>：</li>
+<li><code>Cloneable</code>：</li>
+<li><code>Serializable</code>：</li>
+</ul>
+<h1 id="LinkedList测试代码"><a href="#LinkedList测试代码" class="headerlink" title="LinkedList测试代码"></a>LinkedList测试代码</h1>
                 
             </div>
             <hr/>
@@ -1237,7 +1251,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">92k</span>
+                        class="white-color">93.3k</span>
             
             
             
@@ -1576,9 +1590,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
