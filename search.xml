@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>387.字符串中的第一个唯一字符</title>
+      <link href="/2024/05/01/387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/"/>
+      <url>/2024/05/01/387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="387-字符串中的第一个唯一字符"><a href="#387-字符串中的第一个唯一字符" class="headerlink" title="387.字符串中的第一个唯一字符"></a>387.字符串中的第一个唯一字符</h1><p>给定一个字符串 <code>s</code> ，找到 <em>它的第一个不重复的字符，并返回它的索引</em> 。如果不存在，则返回 <code>-1</code> 。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入: s = “leetcode”<br>  输出: 0</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>  输入: s = “loveleetcode”<br>  输出: 2</p></blockquote><p><strong>示例 3:</strong></p><blockquote><p>  输入: s = “aabb”<br>  输出: -1</p></blockquote><p><strong>提示:</strong></p><ul><li><code>1 &lt;= s.length &lt;= 105</code></li><li><code>s</code> 只包含小写字母</li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">firstUniqChar</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            nums<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token char">'a'</span><span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token char">'a'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token keyword">return</span> i<span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>321.拼接最大数</title>
       <link href="/2024/05/01/321-pin-jie-zui-da-shu/"/>
       <url>/2024/05/01/321-pin-jie-zui-da-shu/</url>
@@ -1049,9 +1078,9 @@
             
             <tag> Sunshine </tag>
             
-            <tag> Github开源 </tag>
-            
             <tag> EasyVirtualDisplay </tag>
+            
+            <tag> Github开源 </tag>
             
         </tags>
       
