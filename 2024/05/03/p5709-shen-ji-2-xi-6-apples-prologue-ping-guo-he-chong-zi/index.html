@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Linux2.0 文件权限概念, Feliks">
-    <meta name="description" content="我的Linux学习笔记">
+    <meta name="keywords" content="P5709 【深基2.习6】Apples Prologue / 苹果和虫子, Feliks">
+    <meta name="description" content="洛谷题单">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux2.0 文件权限概念 | Feliks</title>
+    <title>P5709 【深基2.习6】Apples Prologue / 苹果和虫子 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -373,12 +373,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux2.0 文件权限概念</h1>
+                    <h1 class="description center-align post-title">P5709 【深基2.习6】Apples Prologue / 苹果和虫子</h1>
                 </div>
             </div>
         </div>
@@ -401,8 +401,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">算法题</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                                <span class="chip bg-color">洛谷</span>
                             </a>
                         
                     </div>
@@ -413,8 +421,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux/" class="post-category">
-                                Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -426,28 +434,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-08
+                    2024-05-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-05-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    265
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    1 分
                 </div>
                 
 
@@ -467,193 +475,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linux文件权限概念"><a href="#Linux文件权限概念" class="headerlink" title="Linux文件权限概念"></a>Linux文件权限概念</h1><p>作为一个初学者，文件的权限与属性是学习Linux相当重要的一环，如果屏幕中出现了【Permission deny】的时候，肯定是权限设置错误。</p>
-<h2 id="Linux文件属性"><a href="#Linux文件属性" class="headerlink" title="Linux文件属性"></a>Linux文件属性</h2><p>【ls】是一个查看文件的命令</p>
-<p>【su -】切换身份为root</p>
-<p>登录自己账户系统后，使用【su -】切换身份，执行【ls -al】看看</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309200832684.png" alt="image-20230920083217640"> </p>
-<p><strong>本章后续的chgrp、chown等命令可能都需要使用root的身份才能够处理，所以建议用root的身份来学习，但是不建议直接用root登录系统，建议使用【su -】来切换身份，离开root则使用exit回到Feliks（自己的账号）即可</strong></p>
-<p>ls是list的意思，重点在显示文件的文件名和相关属性，而选项【-al】则表示列出所有的文件详细的权限与属性（包含隐藏文件，就是文件名第一个字符为【.】的文件）</p>
-<p>-rw-r–r–. 1 root root 1857 8月 15 11:39 initial-setup-ks.cfg</p>
-<ul>
-<li><p>第一栏-rw-r–r–：文件的类型与权限（permission）</p>
-<ul>
-<li>第一个字符代表这个文件是目录、文件或链接文件等:</li>
-<li>当为【d】则是目录，例如图里的【.config】文件</li>
-<li>当为【-】则是文件，例如图里的【initial- setup- ks.cfg】文件</li>
-<li>若是【l】则表示为链接文件（link file）</li>
-<li>若是【b】则表示为设备文件里面的 可供存储的周边设备</li>
-<li>若是【c】则表示为设备文件里面的串行端口设备，例如键盘、鼠标等</li>
-<li>接下来的字符是三个为一组且均为【rwx】的三个参数的组合。<ul>
-<li>第一组：文件拥有者可具备的权限</li>
-<li>第二组：加入此用户组的账号的权限</li>
-<li>第三组：非本人且没有加入本用户组的其他账号的权限</li>
-<li>r：可读（read）</li>
-<li>w：可写（write）</li>
-<li>x：可执行（execute）</li>
-<li>如果没有权限则是【-】</li>
-</ul>
-</li>
-</ul>
-<p>例：【-rwxr-xr–】意义？</p>
-<p>[-] :1  [rwx] : 234  [r-x] : 567  [r–] : 890</p>
-<p>1是代表这个文件名为目录或文件</p>
-<p>234是拥有者的权限（可读可写可执行）</p>
-<p>567是同用户组的用户权限（可读可执行）</p>
-<p>890是其他用户权限（可读）</p>
-</li>
-<li><p>第二栏1：表示有多少文件名链接到此节点（inode）</p>
-<ul>
-<li>每个文件都会将他的权限与属性记录到文件系统的inode中，</li>
-</ul>
-</li>
-<li><p>第三栏root：表示这个文件（或目录）的拥有者账号</p>
-</li>
-<li><p>第四栏root：表示这个文件的所属用户组</p>
-<ul>
-<li>在Linux系统中，一个账号会加入一个或多个用户组中。</li>
-</ul>
-</li>
-<li><p>第五栏1857：表示这个文件的容量大小，默认单位是Bytes</p>
-</li>
-<li><p>第六栏：表示这个文件的创建日期或者是最近的修改日期</p>
-<ul>
-<li>如果这个文件被修改的时间距离现在太久，那么时间部分会仅显示年份而已</li>
-<li>显示完整的时间格式：【ls -l –full-time】</li>
-</ul>
-</li>
-<li><p>第七栏：表示文件名</p>
-</li>
-</ul>
-<p><strong>文件和目录是不一样的，目录如果没有x权限则不能进入</strong></p>
-<h2 id="如何修改文件属性与权限"><a href="#如何修改文件属性与权限" class="headerlink" title="如何修改文件属性与权限"></a>如何修改文件属性与权限</h2><ul>
-<li><p>chgrp：修改文件所属用户组</p>
-</li>
-<li><p>chown：修改文件拥有者</p>
-</li>
-<li><p>chmod：修改文件的权限，SUID、SGID、SBIT等特性</p>
-</li>
-</ul>
-<h3 id="修改所属用户组chgrp"><a href="#修改所属用户组chgrp" class="headerlink" title="修改所属用户组chgrp"></a>修改所属用户组chgrp</h3><p><strong>change group的缩写</strong></p>
-<p>命令：<code>chgrp -R dirname/filename</code></p>
-<ul>
-<li>-R：进行递归（recursive）修改，连同子目录下的所有文件、目录都更新成为这个用户组的意思，常常用来修改某一目录内所有的文件的情况</li>
-</ul>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201058714.png" alt="image-20230920105857692"> </p>
-<p>文件的用户组被修改成了users</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309241652837.png" alt="image-20230920110008058"> </p>
-<p>因为testing组不存在，所以修改用户组失败</p>
-<h3 id="修改文件拥有者chown"><a href="#修改文件拥有者chown" class="headerlink" title="修改文件拥有者chown"></a>修改文件拥有者chown</h3><p><strong>change owner的缩写</strong></p>
-<p>命令：</p>
-<p><code>chown -R 账号名称 文件或目录  </code></p>
-<p><code>chown -R 账号名称:用户组名称 文件或目录  </code></p>
-<ul>
-<li>-R：进行递归（recursive）修改，连同子目录下的所有文件都修改</li>
-</ul>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201107487.png" alt="image-20230920110753464"> </p>
-<p>文件的拥有者被修改成了bin这个账号</p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201109827.png" alt="image-20230920110923809"> </p>
-<p>把文件的拥有者和用户组改回root</p>
-<p><strong>事实上，chown也可以使用【chown user.group file】，但是有些人喜欢设置账号的时候加小数点，这样会造成系统的误判，所以还是比较建议使用【:】</strong></p>
-<p><strong>什么时候使用chgrp、chown？比如要把文件复制给另一个人的时候，会把拥有者和用户组也给复制过去，这时就要用chgrp和chown来修改别人才能修改</strong></p>
-<h3 id="修改权限chmod"><a href="#修改权限chmod" class="headerlink" title="修改权限chmod"></a>修改权限chmod</h3><p>权限的设置方法有两种：数字或者符号</p>
-<h4 id="数字类型修改文件权限"><a href="#数字类型修改文件权限" class="headerlink" title="数字类型修改文件权限"></a>数字类型修改文件权限</h4><p>r:4</p>
-<p>w:2</p>
-<p>x:1</p>
-<p>rwx权限=4+2+1=7</p>
-<p>例如：【-rwxrwx—】owner=rwx=7	group=rwx=7	others=—=0</p>
-<p>所以权限数字就是770</p>
-<p>命令：</p>
-<p><code>chmod -R xyz 文件或目录</code></p>
-<ul>
-<li>xyz：就是上面的数字类型的权限属性，rwx属性数值相加</li>
-<li>-R：进行递归（recursive）修改，连同子目录下的所有文件都会修改</li>
-</ul>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201418200.png" alt="image-20230920141837160"> </p>
-<h4 id="符号类型修改文件权限"><a href="#符号类型修改文件权限" class="headerlink" title="符号类型修改文件权限"></a>符号类型修改文件权限</h4><p>u：user</p>
-<p>g：group</p>
-<p>o：other</p>
-<p>a：all</p>
-<p>+：加入</p>
-<p>-：移除</p>
-<p>=：设置</p>
-<p>命令：</p>
-<p><code>chmod u=rwx,g=rwx,o=rwx [filename]</code></p>
-<p>如果要设置文件【-rwxr-xr-x】</p>
-<p><code>chmod u=rwx,go=rx .bashrc</code></p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201427645.png" alt="image-20230920142734622"> </p>
-<p>只想增加某个文件所有人都可以写入的权限：</p>
-<p><code>chmod a+w .bashrc</code></p>
-<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202309201431222.png" alt="image-20230920143151195"> </p>
-<h2 id="目录与文件的权限意义"><a href="#目录与文件的权限意义" class="headerlink" title="目录与文件的权限意义"></a>目录与文件的权限意义</h2><ul>
-<li><p>权限对文件的重要性</p>
-<ul>
-<li>文件是实际含有数据的地方，包括一般文本文件，数据库文件，二进制可执行文件（binary program）等</li>
-<li>r（read）：可读取此文件的实际内容，如读取文本文件的文字内容等</li>
-<li>w（write）：可以编辑、新增或是修改该文件的内容（但不包含删除文件）</li>
-<li>x（execute）：该文件具有可以被系统执行的权限</li>
-</ul>
-<p><strong>在Linux下，文件是否能被执行，是借由是否具有x这个权限来决定的，和文件名后缀没有绝对的关系</strong></p>
-</li>
-<li><p>权限对目录的重要性</p>
-<ul>
-<li><p>目录主要的内容在记录文件名列表，文件名与目录有强烈的关联</p>
-</li>
-<li><p>r（read contents in directory）：表示具有读取目录结构列表的权限，有该权限代表可以查询该目录下的文件名数据，可以利用ls命令将目录的内容列表展示出来</p>
-</li>
-<li><p>w（modify contents of directory）：表示具有改动该目录结构列表的权限</p>
-<ul>
-<li>建立新的文件与目录的权限</li>
-<li>删除已经存在的文件和目录权限（无论该文件的权限是什么）</li>
-<li>将已存在的文件或目录进行更名的权限</li>
-<li>移动该目录内的文件、目录位置的权限</li>
-</ul>
-</li>
-<li><p>x（access directory）：目录的x权限代表用户是否能进入该目录成为工作目录的用途</p>
-<ul>
-<li><p>工作目录就是当前所在的目录</p>
-</li>
-<li><p>例：有目录是<code>drwxr--r-- root root</code>这样的权限，系统有个账号为vbird，并不支持root组，那vbird对此目录有何权限？</p>
-<p>答：vbird对此目录仅具有r的权限，因此vbird可以查询此目录下的文件名列表，但是因为没有x权限，所以不能切换到此目录内</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Linux文件种类与扩展名"><a href="#Linux文件种类与扩展名" class="headerlink" title="Linux文件种类与扩展名"></a>Linux文件种类与扩展名</h2><p>除了前面的一般文件【-】和目录文件【d】之外还有别的种类的文件</p>
-<ul>
-<li><p>文件种类</p>
-<ul>
-<li>常规文件<ul>
-<li>纯文本文件（ASCII）：是Linux系统中最多的一种文件类型，可以直接执行【cat ~/ .bashrc】就可以看到文件的内容</li>
-<li>二进制文件（binary）</li>
-<li>数据文件（data）</li>
-</ul>
-</li>
-<li>目录（directory）：第一个属性为【d】</li>
-<li>链接文件（link）：第一个属性为【l】</li>
-<li>设备与设备文件（device）<ul>
-<li>区块（block）设备文件：第一个属性为【b】，硬盘和软盘就是</li>
-<li>字符（character）设备文件：第一个属性为【c】，串行端口的接口设备，硬盘和鼠标就是</li>
-</ul>
-</li>
-<li>数据接口文件（sockets）：第一个属性为【s】</li>
-<li>数据输送文件（FIFO，pipe）：first-in-first-out，管道，第一个属性为【p】</li>
-</ul>
-</li>
-<li><p>Linux文件扩展名：一个Linux文件能否被执行，与他的第一栏是个属性有关，与文件名没有一点关系，只要权限有【x】，则代表这个文件具有可以被执行的能力</p>
-<ul>
-<li>.sh：脚本或批处理文件</li>
-<li>.Z .tar .tar.gz .zip .tgz：压缩文件</li>
-</ul>
-</li>
-<li><p>Linux文件名长度限制</p>
-<ul>
-<li>单一文件或目录最大容许文件名是255字节</li>
-</ul>
-</li>
-</ul>
+                <h1 id="【深基2-习6】Apples-Prologue-苹果和虫子"><a href="#【深基2-习6】Apples-Prologue-苹果和虫子" class="headerlink" title="【深基2.习6】Apples Prologue / 苹果和虫子"></a>【深基2.习6】Apples Prologue / 苹果和虫子</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>小 B 喜欢吃苹果。她现在有 $m$（$1 \le m \le 100$）个苹果，吃完一个苹果需要花费 $t$（$0 \le t \le 100$）分钟，吃完一个后立刻开始吃下一个。现在时间过去了 $s$（$1 \le s \le 10000$）分钟，请问她还有几个完整的苹果？</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>输入三个<strong>非负整数</strong>表示 $m, t, s$。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一个整数表示答案。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><pre class="language-none"><code class="language-none">50 10 200</code></pre>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><pre class="language-none"><code class="language-none">30</code></pre>
+
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>如果你出现了 RE，不如检查一下被零除？</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> m <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> t <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> s <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 不能除以0</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>t <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// s分钟一共吃了多少苹果        </span>
+        <span class="token keyword">int</span> apple <span class="token operator">=</span> s <span class="token operator">/</span> t<span class="token punctuation">;</span>
+        <span class="token comment">// 正在吃，没吃完的不能算完整的苹果</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">%</span> t <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            apple<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 吃太快了，苹果不可能是负数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">-</span> apple <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>m <span class="token operator">-</span> apple<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
 
                 
             </div>
@@ -680,7 +536,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/08/linux-2.0-wen-jian-quan-xian-gai-nian/">https://qetuop91.github.io/2024/04/08/linux-2.0-wen-jian-quan-xian-gai-nian/</a>
+                    <a href="https://qetuop91.github.io/2024/05/03/p5709-shen-ji-2-xi-6-apples-prologue-ping-guo-he-chong-zi/">https://qetuop91.github.io/2024/05/03/p5709-shen-ji-2-xi-6-apples-prologue-ping-guo-he-chong-zi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -718,8 +574,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">算法题</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                                    <span class="chip bg-color">洛谷</span>
                                 </a>
                             
                         </div>
@@ -1131,45 +995,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/08/linux-3.0-mu-lu-pei-zhi/">
+                <a href="/2024/05/03/p5709-shen-ji-2-xi-6-apples-prologue-ping-guo-he-chong-zi/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/7.jpg" class="responsive-img" alt="Linux3.0 目录配置">
+                        <img src="/medias/myImages/23.jpg" class="responsive-img" alt="P5709 【深基2.习6】Apples Prologue / 苹果和虫子">
                         
-                        <span class="card-title">Linux3.0 目录配置</span>
+                        <span class="card-title">P5709 【深基2.习6】Apples Prologue / 苹果和虫子</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Linux学习笔记
+                            洛谷题单
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                        <span class="chip bg-color">洛谷</span>
                     </a>
                     
                 </div>
@@ -1183,30 +1057,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/08/linux-1.0-yong-hu-yu-yong-hu-zu/">
+                <a href="/2024/05/02/14-zui-chang-gong-gong-qian-zhui/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/5.jpg" class="responsive-img" alt="Linux1.0 用户与用户组">
+                        <img src="/medias/myImages/12.jpg" class="responsive-img" alt="14.最长公共前缀">
                         
-                        <span class="card-title">Linux1.0 用户与用户组</span>
+                        <span class="card-title">14.最长公共前缀</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Linux学习笔记
+                            14.最长公共前缀
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1216,8 +1090,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
                     </a>
                     
                 </div>
