@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-02T16:27:40.235Z</updated>
+  <updated>2024-05-02T16:43:37.831Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P5710 【深基3.例2】数的性质</title>
+    <link href="https://qetuop91.github.io/2024/05/03/p5710-shen-ji-3-li-2-shu-de-xing-zhi/"/>
+    <id>https://qetuop91.github.io/2024/05/03/p5710-shen-ji-3-li-2-shu-de-xing-zhi/</id>
+    <published>2024-05-02T16:42:34.000Z</published>
+    <updated>2024-05-02T16:43:37.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【深基3-例2】数的性质&quot;&gt;&lt;a href=&quot;#【深基3-例2】数的性质&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例2】数的性质&quot;&gt;&lt;/a&gt;【深基3.例2】数的性质&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>P5709 【深基2.习6】Apples Prologue / 苹果和虫子</title>
@@ -556,35 +585,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;【深基2-例6】字母转换&quot;&gt;&lt;a href=&quot;#【深基2-例6】字母转换&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例6】字母转换&quot;&gt;&lt;/a&gt;【深基2.例6】字母转换&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P5703 【深基2.例5】苹果采购</title>
-    <link href="https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/"/>
-    <id>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/</id>
-    <published>2024-04-28T13:16:59.000Z</published>
-    <updated>2024-04-28T13:21:49.520Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【深基2-例5】苹果采购&quot;&gt;&lt;a href=&quot;#【深基2-例5】苹果采购&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例5】苹果采购&quot;&gt;&lt;/a&gt;【深基2.例5】苹果采购&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
         
       
     

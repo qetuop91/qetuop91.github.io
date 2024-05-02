@@ -9,8 +9,39 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Thu, 02 May 2024 16:27:40 GMT</pubDate>
+    <pubDate>Thu, 02 May 2024 16:43:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>P5710 【深基3.例2】数的性质</title>
+      <link>https://qetuop91.github.io/2024/05/03/p5710-shen-ji-3-li-2-shu-de-xing-zhi/</link>
+      <guid>https://qetuop91.github.io/2024/05/03/p5710-shen-ji-3-li-2-shu-de-xing-zhi/</guid>
+      <pubDate>Thu, 02 May 2024 16:42:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基3-例2】数的性质&quot;&gt;&lt;a href=&quot;#【深基3-例2】数的性质&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例2】数的性质&quot;&gt;&lt;/a&gt;【深基3.例2】数的性质&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/03/p5710-shen-ji-3-li-2-shu-de-xing-zhi/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>P5709 【深基2.习6】Apples Prologue / 苹果和虫子</title>
@@ -603,37 +634,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5703 【深基2.例5】苹果采购</title>
-      <link>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/</link>
-      <guid>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/</guid>
-      <pubDate>Sun, 28 Apr 2024 13:16:59 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基2-例5】苹果采购&quot;&gt;&lt;a href=&quot;#【深基2-例5】苹果采购&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例5】苹果采购&quot;&gt;&lt;/a&gt;【深基2.例5】苹果采购&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/28/p5703-shen-ji-2-li-5-ping-guo-cai-gou/#disqus_thread</comments>
       
     </item>
     
