@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Linux7.0 vim程序编辑器, Feliks">
-    <meta name="description" content="我的Linux学习笔记">
+    <meta name="keywords" content="26.删除有序数组中的重复项, Feliks">
+    <meta name="description" content="26.删除有序数组中的重复项">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux7.0 vim程序编辑器 | Feliks</title>
+    <title>26.删除有序数组中的重复项 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -373,12 +373,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux7.0 vim程序编辑器</h1>
+                    <h1 class="description center-align post-title">26.删除有序数组中的重复项</h1>
                 </div>
             </div>
         </div>
@@ -401,8 +401,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/LeetCode/">
+                                <span class="chip bg-color">LeetCode</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">算法题</span>
                             </a>
                         
                     </div>
@@ -413,8 +421,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux/" class="post-category">
-                                Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -426,28 +434,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-08
+                    2024-05-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-23
+                    2024-05-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    552
+                    455
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -467,68 +475,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="vim程序编辑器"><a href="#vim程序编辑器" class="headerlink" title="vim程序编辑器"></a>vim程序编辑器</h1><h2 id="vi与vim"><a href="#vi与vim" class="headerlink" title="vi与vim"></a>vi与vim</h2><p>为什么要学vim？</p>
+                <h1 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26.删除有序数组中的重复项"></a>26.删除有序数组中的重复项</h1><p>给你一个 <strong>非严格递增排列</strong> 的数组 <code>nums</code> ，请你**<a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95"> 原地</a>** 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。然后返回 <code>nums</code> 中唯一元素的个数。</p>
+<p>考虑 <code>nums</code> 的唯一元素的数量为 <code>k</code> ，你需要做以下事情确保你的题解可以被通过：</p>
 <ul>
-<li>所有的UNIX-like系统都会内置vi文本编辑器，其他的文本编辑器不一定会存在</li>
-<li>vim具有程序编辑的能力，可以主动地以字体颜色辨别语法的正确性，方便程序设计</li>
+<li>更改数组 <code>nums</code> ，使 <code>nums</code> 的前 <code>k</code> 个元素包含唯一元素，并按照它们最初在 <code>nums</code> 中出现的顺序排列。<code>nums</code> 的其余元素与 <code>nums</code> 的大小不重要。</li>
+<li>返回 <code>k</code> 。</li>
 </ul>
-<h2 id="vi的使用"><a href="#vi的使用" class="headerlink" title="vi的使用"></a>vi的使用</h2><p><strong>vi分三种模式，一般命令模式、编辑模式、命令行模式</strong></p>
-<ul>
-<li>一般命令模式（command mode）：<ul>
-<li>默认的模式，可以使用【上下左右】按键来移动光标，使用【删除字符】或【删除整行】来处理文件内容，也可以使用【复制、粘贴】来处理文件内容</li>
-</ul>
-</li>
-<li>编辑模式（insert mode）：<ul>
-<li>在一般模式中可以进行删除、复制、粘贴等操作，但是无法编辑文件内容，需要按下【i、l、o、O、a、A、r、R】等任何一个字母后才会进入编辑模式。如果要回到一般模式就要按下【ESC】</li>
-</ul>
-</li>
-<li>命令行模式（command-line mode）：<ul>
-<li>在一般模式，输入【: / ?】三个中任何一个按钮，就可以将光标移动到最下面一行，在这个模式中，可以进行读取、保存、批量替换字符、退出vi、显示行号等操作</li>
-</ul>
-</li>
-</ul>
-<p>详细的按键设置及其功能见《鸟哥的Liunx私房菜（基础学习篇第四版）》P293~P296</p>
-<h2 id="可视区块（Visual-Block）"><a href="#可视区块（Visual-Block）" class="headerlink" title="可视区块（Visual Block）"></a>可视区块（Visual Block）</h2><table>
-<thead>
-<tr>
-<th>v</th>
-<th>字符选择，会将光标经过的地方反白</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>V</td>
-<td>行选择，会将光标经过的行反白</td>
-</tr>
-<tr>
-<td>[ctrl] + v</td>
-<td>可视区块，可以用矩形的方式选择数据</td>
-</tr>
-<tr>
-<td>y</td>
-<td>将反白的地方复制起来</td>
-</tr>
-<tr>
-<td>d</td>
-<td>将反白的地方删除掉</td>
-</tr>
-<tr>
-<td>p</td>
-<td>将刚刚复制的区块，在光标所在的地方粘贴</td>
-</tr>
-</tbody></table>
-<h2 id="vim常用命令示意图"><a href="#vim常用命令示意图" class="headerlink" title="vim常用命令示意图"></a>vim常用命令示意图</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202310231433850.jpg" alt="0b032ba58634867aac9579f1e589ad8"> </p>
-<h2 id="中文编码问题"><a href="#中文编码问题" class="headerlink" title="中文编码问题"></a>中文编码问题</h2><p>通常需要考虑的方面：</p>
-<ol>
-<li>Linux系统默认支持的语系数据：与/etc/locale.conf有关</li>
-<li>与终端（bash）的语系：LANG、LC_ALL这几个变量有关</li>
-<li>文件原本的编码</li>
-<li>打开终端的软件，例如GNOME下的窗口界面</li>
-</ol>
-<p>修正语系编码：</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>feliks@study ~<span class="token punctuation">]</span> $ <span class="token assign-left variable"><span class="token environment constant">LANG</span></span><span class="token operator">=</span>zh_CN.gb18030
-<span class="token punctuation">[</span>feliks@study ~<span class="token punctuation">]</span> $ <span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">LC_ALL</span></span><span class="token operator">=</span>zh_CN.gb18030</code></pre>
+<p><strong>判题标准:</strong></p>
+<p>系统会用下面的代码来测试你的题解:</p>
+<pre class="language-none"><code class="language-none">int[] nums = [...]; // 输入数组
+int[] expectedNums = [...]; // 长度正确的期望答案
 
-<p>然后在终端工具栏的【终端】 –&gt; 【设置字符编码】 –&gt; 【中文（简体）】 选项</p>
+int k = removeDuplicates(nums); // 调用
+
+assert k == expectedNums.length;
+for (int i = 0; i &lt; k; i++) {
+    assert nums[i] == expectedNums[i];
+}</code></pre>
+
+<p>如果所有断言都通过，那么您的题解将被 <strong>通过</strong>。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>  输入：nums = [1,1,2]<br>  输出：2, nums = [1,2,_]<br>  解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>  输入：nums = [0,0,1,1,1,2,2,3,3,4]<br>  输出：5, nums = [0,1,2,3,4]<br>  解释：函数应该返回新的长度 5 ， 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4 。不需要考虑数组中超出新长度后面的元素。</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 3 * 104</code></li>
+<li><code>-104 &lt;= nums[i] &lt;= 104</code></li>
+<li><code>nums</code> 已按 <strong>非严格递增</strong> 排列</li>
+</ul>
+<p><strong>题解：</strong></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">removeDuplicates</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 双指针</span>
+        <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                k<span class="token operator">++</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
 
                 
             </div>
@@ -555,7 +549,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/04/08/linux-7.0-vim-cheng-xu-bian-ji-qi/">https://qetuop91.github.io/2024/04/08/linux-7.0-vim-cheng-xu-bian-ji-qi/</a>
+                    <a href="https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/">https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -593,8 +587,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/LeetCode/">
+                                    <span class="chip bg-color">LeetCode</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">算法题</span>
                                 </a>
                             
                         </div>
@@ -1010,30 +1012,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/08/linux-8.0-bash/">
+                <a href="/2024/05/03/27-yi-chu-yuan-su/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/14.jpg" class="responsive-img" alt="Linux8.0 BASH">
+                        <img src="/medias/myImages/6.jpg" class="responsive-img" alt="27.移除元素">
                         
-                        <span class="card-title">Linux8.0 BASH</span>
+                        <span class="card-title">27.移除元素</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Linux学习笔记
+                            27.移除元素
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-03
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1043,8 +1045,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
                     </a>
                     
                 </div>
@@ -1058,30 +1068,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/04/08/linux-6.0-wen-jian-yu-wen-jian-xi-tong-de-ya-suo/">
+                <a href="/2024/05/03/p5710-shen-ji-3-li-2-shu-de-xing-zhi/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/12.jpg" class="responsive-img" alt="Linux6.0 文件与文件系统的压缩">
+                        <img src="/medias/myImages/24.jpg" class="responsive-img" alt="P5710 【深基3.例2】数的性质">
                         
-                        <span class="card-title">Linux6.0 文件与文件系统的压缩</span>
+                        <span class="card-title">P5710 【深基3.例2】数的性质</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我的Linux学习笔记
+                            洛谷题单
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1091,8 +1101,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                        <span class="chip bg-color">洛谷</span>
                     </a>
                     
                 </div>

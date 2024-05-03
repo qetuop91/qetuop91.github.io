@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-02T16:55:03.105Z</updated>
+  <updated>2024-05-03T04:29:59.635Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>27.移除元素</title>
+    <link href="https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/"/>
+    <id>https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/</id>
+    <published>2024-05-03T04:27:03.000Z</published>
+    <updated>2024-05-03T04:29:59.635Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;27-移除元素&quot;&gt;&lt;a href=&quot;#27-移除元素&quot; class=&quot;headerlink&quot; title=&quot;27.移除元素&quot;&gt;&lt;/a&gt;27.移除元素&lt;/h1&gt;&lt;p&gt;给你一个数组 &lt;code&gt;nums&lt;/code&gt; 和一个值</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>26.删除有序数组中的重复项</title>
+    <link href="https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/"/>
+    <id>https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/</id>
+    <published>2024-05-03T03:48:07.000Z</published>
+    <updated>2024-05-03T04:27:53.399Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;26-删除有序数组中的重复项&quot;&gt;&lt;a href=&quot;#26-删除有序数组中的重复项&quot; class=&quot;headerlink&quot; title=&quot;26.删除有序数组中的重复项&quot;&gt;&lt;/a&gt;26.删除有序数组中的重复项&lt;/h1&gt;&lt;p&gt;给你一个</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>P5710 【深基3.例2】数的性质</title>
@@ -108,15 +166,14 @@
     <link href="https://qetuop91.github.io/2024/05/02/13-luo-ma-shu-zi-zhuan-zheng-shu/"/>
     <id>https://qetuop91.github.io/2024/05/02/13-luo-ma-shu-zi-zhuan-zheng-shu/</id>
     <published>2024-05-02T06:31:44.000Z</published>
-    <updated>2024-05-02T06:35:13.837Z</updated>
+    <updated>2024-05-03T04:27:59.751Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;13-罗马数字转整数&quot;&gt;&lt;a href=&quot;#13-罗马数字转整数&quot; class=&quot;headerlink&quot; title=&quot;13.罗马数字转整数&quot;&gt;&lt;/a&gt;13.罗马数字转整数&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
-&lt;p&gt;罗马数字包含以下七种字符:</summary>
+    <summary type="html">&lt;h1 id=&quot;13-罗马数字转整数&quot;&gt;&lt;a href=&quot;#13-罗马数字转整数&quot; class=&quot;headerlink&quot; title=&quot;13.罗马数字转整数&quot;&gt;&lt;/a&gt;13.罗马数字转整数&lt;/h1&gt;&lt;p&gt;罗马数字包含以下七种字符: &lt;code&gt;I&lt;/code&gt;，</summary>
         
       
     
@@ -138,15 +195,14 @@
     <link href="https://qetuop91.github.io/2024/05/02/9-hui-wen-shu/"/>
     <id>https://qetuop91.github.io/2024/05/02/9-hui-wen-shu/</id>
     <published>2024-05-02T05:15:53.000Z</published>
-    <updated>2024-05-02T16:58:48.285Z</updated>
+    <updated>2024-05-03T04:28:02.021Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;9-回文数&quot;&gt;&lt;a href=&quot;#9-回文数&quot; class=&quot;headerlink&quot; title=&quot;9.回文数&quot;&gt;&lt;/a&gt;9.回文数&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
-&lt;p&gt;给你一个整数 &lt;code&gt;x&lt;/code&gt; ，如果 &lt;code&gt;x&lt;/code&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;9-回文数&quot;&gt;&lt;a href=&quot;#9-回文数&quot; class=&quot;headerlink&quot; title=&quot;9.回文数&quot;&gt;&lt;/a&gt;9.回文数&lt;/h1&gt;&lt;p&gt;给你一个整数 &lt;code&gt;x&lt;/code&gt; ，如果 &lt;code&gt;x&lt;/code&gt; 是一个回文整数，返回</summary>
         
       
     
@@ -400,16 +456,14 @@
     <link href="https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/"/>
     <id>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/</id>
     <published>2024-04-29T02:36:16.000Z</published>
-    <updated>2024-04-29T02:55:37.921Z</updated>
+    <updated>2024-05-03T04:28:26.910Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回 &lt;em&gt;它的 &lt;strong&gt;中序&lt;/strong&gt; 遍历&lt;/em&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;h1 id=&quot;94-二叉树的中序遍历&quot;&gt;&lt;a href=&quot;#94-二叉树的中序遍历&quot; class=&quot;headerlink&quot; title=&quot;94.二叉树的中序遍历&quot;&gt;&lt;/a&gt;94.二叉树的中序遍历&lt;/h1&gt;&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回</summary>
         
       
     
@@ -431,15 +485,14 @@
     <link href="https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/"/>
     <id>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/</id>
     <published>2024-04-29T00:34:06.000Z</published>
-    <updated>2024-04-29T02:28:58.948Z</updated>
+    <updated>2024-05-03T04:27:55.688Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
-&lt;p&gt;给定一个只包括</summary>
+    <summary type="html">&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;给定一个只包括</summary>
         
       
     
@@ -527,64 +580,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;【深基2-例8】再分肥宅水&quot;&gt;&lt;a href=&quot;#【深基2-例8】再分肥宅水&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例8】再分肥宅水&quot;&gt;&lt;/a&gt;【深基2.例8】再分肥宅水&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P5705 【深基2.例7】数字反转</title>
-    <link href="https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/"/>
-    <id>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/</id>
-    <published>2024-04-28T13:27:31.000Z</published>
-    <updated>2024-05-02T16:58:08.627Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【深基2-例7】数字反转&quot;&gt;&lt;a href=&quot;#【深基2-例7】数字反转&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例7】数字反转&quot;&gt;&lt;/a&gt;【深基2.例7】数字反转&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P5704 【深基2.例6】字母转换</title>
-    <link href="https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/"/>
-    <id>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/</id>
-    <published>2024-04-28T13:22:40.000Z</published>
-    <updated>2024-05-02T16:58:11.724Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【深基2-例6】字母转换&quot;&gt;&lt;a href=&quot;#【深基2-例6】字母转换&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例6】字母转换&quot;&gt;&lt;/a&gt;【深基2.例6】字母转换&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
         
       
     

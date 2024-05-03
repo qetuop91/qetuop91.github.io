@@ -9,8 +9,70 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Thu, 02 May 2024 16:55:03 GMT</pubDate>
+    <pubDate>Fri, 03 May 2024 04:29:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>27.移除元素</title>
+      <link>https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/</link>
+      <guid>https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/</guid>
+      <pubDate>Fri, 03 May 2024 04:27:03 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;27-移除元素&quot;&gt;&lt;a href=&quot;#27-移除元素&quot; class=&quot;headerlink&quot; title=&quot;27.移除元素&quot;&gt;&lt;/a&gt;27.移除元素&lt;/h1&gt;&lt;p&gt;给你一个数组 &lt;code&gt;nums&lt;/code&gt; 和一个值</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>26.删除有序数组中的重复项</title>
+      <link>https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/</link>
+      <guid>https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/</guid>
+      <pubDate>Fri, 03 May 2024 03:48:07 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;26-删除有序数组中的重复项&quot;&gt;&lt;a href=&quot;#26-删除有序数组中的重复项&quot; class=&quot;headerlink&quot; title=&quot;26.删除有序数组中的重复项&quot;&gt;&lt;/a&gt;26.删除有序数组中的重复项&lt;/h1&gt;&lt;p&gt;给你一个</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>P5710 【深基3.例2】数的性质</title>
@@ -115,8 +177,7 @@
         
           
           
-      <description>&lt;h1 id=&quot;13-罗马数字转整数&quot;&gt;&lt;a href=&quot;#13-罗马数字转整数&quot; class=&quot;headerlink&quot; title=&quot;13.罗马数字转整数&quot;&gt;&lt;/a&gt;13.罗马数字转整数&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
-&lt;p&gt;罗马数字包含以下七种字符:</description>
+      <description>&lt;h1 id=&quot;13-罗马数字转整数&quot;&gt;&lt;a href=&quot;#13-罗马数字转整数&quot; class=&quot;headerlink&quot; title=&quot;13.罗马数字转整数&quot;&gt;&lt;/a&gt;13.罗马数字转整数&lt;/h1&gt;&lt;p&gt;罗马数字包含以下七种字符: &lt;code&gt;I&lt;/code&gt;，</description>
           
         
       
@@ -147,8 +208,7 @@
         
           
           
-      <description>&lt;h1 id=&quot;9-回文数&quot;&gt;&lt;a href=&quot;#9-回文数&quot; class=&quot;headerlink&quot; title=&quot;9.回文数&quot;&gt;&lt;/a&gt;9.回文数&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
-&lt;p&gt;给你一个整数 &lt;code&gt;x&lt;/code&gt; ，如果 &lt;code&gt;x&lt;/code&gt;</description>
+      <description>&lt;h1 id=&quot;9-回文数&quot;&gt;&lt;a href=&quot;#9-回文数&quot; class=&quot;headerlink&quot; title=&quot;9.回文数&quot;&gt;&lt;/a&gt;9.回文数&lt;/h1&gt;&lt;p&gt;给你一个整数 &lt;code&gt;x&lt;/code&gt; ，如果 &lt;code&gt;x&lt;/code&gt; 是一个回文整数，返回</description>
           
         
       
@@ -427,9 +487,7 @@
         
           
           
-      <description>&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回 &lt;em&gt;它的 &lt;strong&gt;中序&lt;/strong&gt; 遍历&lt;/em&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</description>
+      <description>&lt;h1 id=&quot;94-二叉树的中序遍历&quot;&gt;&lt;a href=&quot;#94-二叉树的中序遍历&quot; class=&quot;headerlink&quot; title=&quot;94.二叉树的中序遍历&quot;&gt;&lt;/a&gt;94.二叉树的中序遍历&lt;/h1&gt;&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回</description>
           
         
       
@@ -460,8 +518,7 @@
         
           
           
-      <description>&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;提示&lt;/p&gt;
-&lt;p&gt;给定一个只包括</description>
+      <description>&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;给定一个只包括</description>
           
         
       
@@ -572,68 +629,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5705 【深基2.例7】数字反转</title>
-      <link>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/</link>
-      <guid>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/</guid>
-      <pubDate>Sun, 28 Apr 2024 13:27:31 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基2-例7】数字反转&quot;&gt;&lt;a href=&quot;#【深基2-例7】数字反转&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例7】数字反转&quot;&gt;&lt;/a&gt;【深基2.例7】数字反转&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/28/p5705-shen-ji-2-li-7-shu-zi-fan-zhuan/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5704 【深基2.例6】字母转换</title>
-      <link>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/</link>
-      <guid>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/</guid>
-      <pubDate>Sun, 28 Apr 2024 13:22:40 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基2-例6】字母转换&quot;&gt;&lt;a href=&quot;#【深基2-例6】字母转换&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例6】字母转换&quot;&gt;&lt;/a&gt;【深基2.例6】字母转换&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/28/p5704-shen-ji-2-li-6-zi-mu-zhuan-huan/#disqus_thread</comments>
       
     </item>
     
