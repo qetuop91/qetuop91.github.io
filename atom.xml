@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-03T04:29:59.635Z</updated>
+  <updated>2024-05-04T03:28:15.138Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,151 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>66.加一</title>
+    <link href="https://qetuop91.github.io/2024/05/04/66-jia-yi/"/>
+    <id>https://qetuop91.github.io/2024/05/04/66-jia-yi/</id>
+    <published>2024-05-04T03:27:10.000Z</published>
+    <updated>2024-05-04T03:28:15.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;66-加一&quot;&gt;&lt;a href=&quot;#66-加一&quot; class=&quot;headerlink&quot; title=&quot;66.加一&quot;&gt;&lt;/a&gt;66.加一&lt;/h1&gt;&lt;p&gt;给定一个由 &lt;strong&gt;整数&lt;/strong&gt; 组成的 &lt;strong&gt;非空&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>58.最后一个单词的长度</title>
+    <link href="https://qetuop91.github.io/2024/05/04/58-zui-hou-yi-ge-dan-ci-de-chang-du/"/>
+    <id>https://qetuop91.github.io/2024/05/04/58-zui-hou-yi-ge-dan-ci-de-chang-du/</id>
+    <published>2024-05-04T02:20:00.000Z</published>
+    <updated>2024-05-04T02:21:39.573Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;58-最后一个单词的长度&quot;&gt;&lt;a href=&quot;#58-最后一个单词的长度&quot; class=&quot;headerlink&quot; title=&quot;58.最后一个单词的长度&quot;&gt;&lt;/a&gt;58.最后一个单词的长度&lt;/h1&gt;&lt;p&gt;给你一个字符串</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>35.搜索插入位置</title>
+    <link href="https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/"/>
+    <id>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/</id>
+    <published>2024-05-04T02:10:29.000Z</published>
+    <updated>2024-05-04T02:20:40.881Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;35-搜索插入位置&quot;&gt;&lt;a href=&quot;#35-搜索插入位置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>28.找出字符串中第一个匹配项的下标</title>
+    <link href="https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/"/>
+    <id>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/</id>
+    <published>2024-05-04T02:09:52.000Z</published>
+    <updated>2024-05-04T02:11:29.432Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;28-找出字符串中第一个匹配项的下标&quot;&gt;&lt;a href=&quot;#28-找出字符串中第一个匹配项的下标&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1491.去掉最低工资和最高工资后的工资平均值</title>
+    <link href="https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/"/>
+    <id>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/</id>
+    <published>2024-05-03T08:34:46.000Z</published>
+    <updated>2024-05-03T08:38:53.741Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1491-去掉最低工资和最高工资后的工资平均值&quot;&gt;&lt;a href=&quot;#1491-去掉最低工资和最高工资后的工资平均值&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>27.移除元素</title>
@@ -448,151 +593,6 @@
     <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>94.二叉树的中序遍历</title>
-    <link href="https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/"/>
-    <id>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/</id>
-    <published>2024-04-29T02:36:16.000Z</published>
-    <updated>2024-05-03T04:28:26.910Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;94-二叉树的中序遍历&quot;&gt;&lt;a href=&quot;#94-二叉树的中序遍历&quot; class=&quot;headerlink&quot; title=&quot;94.二叉树的中序遍历&quot;&gt;&lt;/a&gt;94.二叉树的中序遍历&lt;/h1&gt;&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>20.有效的括号</title>
-    <link href="https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/"/>
-    <id>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/</id>
-    <published>2024-04-29T00:34:06.000Z</published>
-    <updated>2024-05-03T04:27:55.688Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;给定一个只包括</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P5707 【深基2.例12】上学迟到</title>
-    <link href="https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/"/>
-    <id>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/</id>
-    <published>2024-04-28T15:38:05.000Z</published>
-    <updated>2024-05-02T16:55:30.544Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【深基2-例12】上学迟到&quot;&gt;&lt;a href=&quot;#【深基2-例12】上学迟到&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例12】上学迟到&quot;&gt;&lt;/a&gt;【深基2.例12】上学迟到&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P5708 【深基2.习2】三角形面积</title>
-    <link href="https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/"/>
-    <id>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/</id>
-    <published>2024-04-28T13:52:39.000Z</published>
-    <updated>2024-05-02T16:55:27.218Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【深基2-习2】三角形面积&quot;&gt;&lt;a href=&quot;#【深基2-习2】三角形面积&quot; class=&quot;headerlink&quot; title=&quot;【深基2.习2】三角形面积&quot;&gt;&lt;/a&gt;【深基2.习2】三角形面积&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P5706 【深基2.例8】再分肥宅水</title>
-    <link href="https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/"/>
-    <id>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/</id>
-    <published>2024-04-28T13:45:45.000Z</published>
-    <updated>2024-05-02T16:58:04.786Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;【深基2-例8】再分肥宅水&quot;&gt;&lt;a href=&quot;#【深基2-例8】再分肥宅水&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例8】再分肥宅水&quot;&gt;&lt;/a&gt;【深基2.例8】再分肥宅水&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
     
   </entry>
   

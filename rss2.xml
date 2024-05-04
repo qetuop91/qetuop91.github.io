@@ -9,8 +9,163 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Fri, 03 May 2024 04:29:59 GMT</pubDate>
+    <pubDate>Sat, 04 May 2024 03:28:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>66.加一</title>
+      <link>https://qetuop91.github.io/2024/05/04/66-jia-yi/</link>
+      <guid>https://qetuop91.github.io/2024/05/04/66-jia-yi/</guid>
+      <pubDate>Sat, 04 May 2024 03:27:10 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;66-加一&quot;&gt;&lt;a href=&quot;#66-加一&quot; class=&quot;headerlink&quot; title=&quot;66.加一&quot;&gt;&lt;/a&gt;66.加一&lt;/h1&gt;&lt;p&gt;给定一个由 &lt;strong&gt;整数&lt;/strong&gt; 组成的 &lt;strong&gt;非空&lt;/strong&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/04/66-jia-yi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>58.最后一个单词的长度</title>
+      <link>https://qetuop91.github.io/2024/05/04/58-zui-hou-yi-ge-dan-ci-de-chang-du/</link>
+      <guid>https://qetuop91.github.io/2024/05/04/58-zui-hou-yi-ge-dan-ci-de-chang-du/</guid>
+      <pubDate>Sat, 04 May 2024 02:20:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;58-最后一个单词的长度&quot;&gt;&lt;a href=&quot;#58-最后一个单词的长度&quot; class=&quot;headerlink&quot; title=&quot;58.最后一个单词的长度&quot;&gt;&lt;/a&gt;58.最后一个单词的长度&lt;/h1&gt;&lt;p&gt;给你一个字符串</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/04/58-zui-hou-yi-ge-dan-ci-de-chang-du/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>35.搜索插入位置</title>
+      <link>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/</link>
+      <guid>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/</guid>
+      <pubDate>Sat, 04 May 2024 02:10:29 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;35-搜索插入位置&quot;&gt;&lt;a href=&quot;#35-搜索插入位置&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>28.找出字符串中第一个匹配项的下标</title>
+      <link>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/</link>
+      <guid>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/</guid>
+      <pubDate>Sat, 04 May 2024 02:09:52 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;28-找出字符串中第一个匹配项的下标&quot;&gt;&lt;a href=&quot;#28-找出字符串中第一个匹配项的下标&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>1491.去掉最低工资和最高工资后的工资平均值</title>
+      <link>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/</link>
+      <guid>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/</guid>
+      <pubDate>Fri, 03 May 2024 08:34:46 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;1491-去掉最低工资和最高工资后的工资平均值&quot;&gt;&lt;a href=&quot;#1491-去掉最低工资和最高工资后的工资平均值&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>27.移除元素</title>
@@ -474,161 +629,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>94.二叉树的中序遍历</title>
-      <link>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/</link>
-      <guid>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/</guid>
-      <pubDate>Mon, 29 Apr 2024 02:36:16 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;94-二叉树的中序遍历&quot;&gt;&lt;a href=&quot;#94-二叉树的中序遍历&quot; class=&quot;headerlink&quot; title=&quot;94.二叉树的中序遍历&quot;&gt;&lt;/a&gt;94.二叉树的中序遍历&lt;/h1&gt;&lt;p&gt;给定一个二叉树的根节点 &lt;code&gt;root&lt;/code&gt; ，返回</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/29/94-er-cha-shu-de-zhong-xu-bian-li/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>20.有效的括号</title>
-      <link>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/</link>
-      <guid>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/</guid>
-      <pubDate>Mon, 29 Apr 2024 00:34:06 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;20-有效的括号&quot;&gt;&lt;a href=&quot;#20-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;20. 有效的括号&quot;&gt;&lt;/a&gt;20. 有效的括号&lt;/h1&gt;&lt;p&gt;给定一个只包括</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/29/20-you-xiao-de-gua-hao/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5707 【深基2.例12】上学迟到</title>
-      <link>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/</link>
-      <guid>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/</guid>
-      <pubDate>Sun, 28 Apr 2024 15:38:05 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基2-例12】上学迟到&quot;&gt;&lt;a href=&quot;#【深基2-例12】上学迟到&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例12】上学迟到&quot;&gt;&lt;/a&gt;【深基2.例12】上学迟到&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/28/p5707-shen-ji-2-li-12-shang-xue-chi-dao/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5708 【深基2.习2】三角形面积</title>
-      <link>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/</link>
-      <guid>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/</guid>
-      <pubDate>Sun, 28 Apr 2024 13:52:39 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基2-习2】三角形面积&quot;&gt;&lt;a href=&quot;#【深基2-习2】三角形面积&quot; class=&quot;headerlink&quot; title=&quot;【深基2.习2】三角形面积&quot;&gt;&lt;/a&gt;【深基2.习2】三角形面积&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/28/p5708-shen-ji-2-xi-2-san-jiao-xing-mian-ji/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5706 【深基2.例8】再分肥宅水</title>
-      <link>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/</link>
-      <guid>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/</guid>
-      <pubDate>Sun, 28 Apr 2024 13:45:45 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基2-例8】再分肥宅水&quot;&gt;&lt;a href=&quot;#【深基2-例8】再分肥宅水&quot; class=&quot;headerlink&quot; title=&quot;【深基2.例8】再分肥宅水&quot;&gt;&lt;/a&gt;【深基2.例8】再分肥宅水&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/28/p5706-shen-ji-2-li-8-zai-fen-fei-zhai-shui/#disqus_thread</comments>
       
     </item>
     
