@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-04T03:28:15.138Z</updated>
+  <updated>2024-05-05T09:46:02.609Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>69.x的平方根</title>
+    <link href="https://qetuop91.github.io/2024/05/05/69-x-de-ping-fang-gen/"/>
+    <id>https://qetuop91.github.io/2024/05/05/69-x-de-ping-fang-gen/</id>
+    <published>2024-05-05T09:45:02.000Z</published>
+    <updated>2024-05-05T09:46:02.609Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;69-x的平方根&quot;&gt;&lt;a href=&quot;#69-x的平方根&quot; class=&quot;headerlink&quot; title=&quot;69.x的平方根&quot;&gt;&lt;/a&gt;69.x的平方根&lt;/h1&gt;&lt;p&gt;给你一个非负整数 &lt;code&gt;x&lt;/code&gt; ，计算并返回 &lt;code&gt;x&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1652.拆炸弹</title>
+    <link href="https://qetuop91.github.io/2024/05/05/1652-chai-zha-dan/"/>
+    <id>https://qetuop91.github.io/2024/05/05/1652-chai-zha-dan/</id>
+    <published>2024-05-05T08:44:25.000Z</published>
+    <updated>2024-05-05T09:46:25.939Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1652-拆炸弹&quot;&gt;&lt;a href=&quot;#1652-拆炸弹&quot; class=&quot;headerlink&quot; title=&quot;1652.拆炸弹&quot;&gt;&lt;/a&gt;1652.拆炸弹&lt;/h1&gt;&lt;p&gt;你有一个炸弹需要拆除，时间紧迫！你的情报员会给你一个长度为 &lt;code&gt;n&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>67.二进制求和</title>
+    <link href="https://qetuop91.github.io/2024/05/04/67-er-jin-zhi-qiu-he/"/>
+    <id>https://qetuop91.github.io/2024/05/04/67-er-jin-zhi-qiu-he/</id>
+    <published>2024-05-04T09:08:30.000Z</published>
+    <updated>2024-05-04T09:09:18.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;67-二进制求和&quot;&gt;&lt;a href=&quot;#67-二进制求和&quot; class=&quot;headerlink&quot; title=&quot;67.二进制求和&quot;&gt;&lt;/a&gt;67.二进制求和&lt;/h1&gt;&lt;p&gt;给你两个二进制字符串 &lt;code&gt;a&lt;/code&gt; 和 &lt;code&gt;b&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>66.加一</title>
@@ -506,93 +593,6 @@
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
     <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>P1425 小鱼的游泳时间</title>
-    <link href="https://qetuop91.github.io/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/"/>
-    <id>https://qetuop91.github.io/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/</id>
-    <published>2024-04-29T14:11:28.000Z</published>
-    <updated>2024-04-29T14:12:13.589Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;小鱼的游泳时间&quot;&gt;&lt;a href=&quot;#小鱼的游泳时间&quot; class=&quot;headerlink&quot; title=&quot;小鱼的游泳时间&quot;&gt;&lt;/a&gt;小鱼的游泳时间&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>B2029 大象喝水</title>
-    <link href="https://qetuop91.github.io/2024/04/29/b2029-da-xiang-he-shui/"/>
-    <id>https://qetuop91.github.io/2024/04/29/b2029-da-xiang-he-shui/</id>
-    <published>2024-04-29T13:54:15.000Z</published>
-    <updated>2024-05-02T16:58:26.047Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;大象喝水&quot;&gt;&lt;a href=&quot;#大象喝水&quot; class=&quot;headerlink&quot; title=&quot;大象喝水&quot;&gt;&lt;/a&gt;大象喝水&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>402.移掉K位数字</title>
-    <link href="https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/"/>
-    <id>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/</id>
-    <published>2024-04-29T02:56:52.000Z</published>
-    <updated>2024-04-30T03:34:51.908Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;402-移掉-K-位数字&quot;&gt;&lt;a href=&quot;#402-移掉-K-位数字&quot; class=&quot;headerlink&quot; title=&quot;402. 移掉 K 位数字&quot;&gt;&lt;/a&gt;402. 移掉 K 位数字&lt;/h1&gt;&lt;p&gt;给你一个以字符串表示的非负整数</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
   </entry>
   

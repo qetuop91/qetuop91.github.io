@@ -9,8 +9,101 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Sat, 04 May 2024 03:28:15 GMT</pubDate>
+    <pubDate>Sun, 05 May 2024 09:46:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>69.x的平方根</title>
+      <link>https://qetuop91.github.io/2024/05/05/69-x-de-ping-fang-gen/</link>
+      <guid>https://qetuop91.github.io/2024/05/05/69-x-de-ping-fang-gen/</guid>
+      <pubDate>Sun, 05 May 2024 09:45:02 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;69-x的平方根&quot;&gt;&lt;a href=&quot;#69-x的平方根&quot; class=&quot;headerlink&quot; title=&quot;69.x的平方根&quot;&gt;&lt;/a&gt;69.x的平方根&lt;/h1&gt;&lt;p&gt;给你一个非负整数 &lt;code&gt;x&lt;/code&gt; ，计算并返回 &lt;code&gt;x&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/05/69-x-de-ping-fang-gen/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>1652.拆炸弹</title>
+      <link>https://qetuop91.github.io/2024/05/05/1652-chai-zha-dan/</link>
+      <guid>https://qetuop91.github.io/2024/05/05/1652-chai-zha-dan/</guid>
+      <pubDate>Sun, 05 May 2024 08:44:25 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;1652-拆炸弹&quot;&gt;&lt;a href=&quot;#1652-拆炸弹&quot; class=&quot;headerlink&quot; title=&quot;1652.拆炸弹&quot;&gt;&lt;/a&gt;1652.拆炸弹&lt;/h1&gt;&lt;p&gt;你有一个炸弹需要拆除，时间紧迫！你的情报员会给你一个长度为 &lt;code&gt;n&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/05/1652-chai-zha-dan/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>67.二进制求和</title>
+      <link>https://qetuop91.github.io/2024/05/04/67-er-jin-zhi-qiu-he/</link>
+      <guid>https://qetuop91.github.io/2024/05/04/67-er-jin-zhi-qiu-he/</guid>
+      <pubDate>Sat, 04 May 2024 09:08:30 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;67-二进制求和&quot;&gt;&lt;a href=&quot;#67-二进制求和&quot; class=&quot;headerlink&quot; title=&quot;67.二进制求和&quot;&gt;&lt;/a&gt;67.二进制求和&lt;/h1&gt;&lt;p&gt;给你两个二进制字符串 &lt;code&gt;a&lt;/code&gt; 和 &lt;code&gt;b&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/04/67-er-jin-zhi-qiu-he/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>66.加一</title>
@@ -536,99 +629,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/04/29/p1421-xiao-yu-mai-wen-ju/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P1425 小鱼的游泳时间</title>
-      <link>https://qetuop91.github.io/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/</link>
-      <guid>https://qetuop91.github.io/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/</guid>
-      <pubDate>Mon, 29 Apr 2024 14:11:28 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;小鱼的游泳时间&quot;&gt;&lt;a href=&quot;#小鱼的游泳时间&quot; class=&quot;headerlink&quot; title=&quot;小鱼的游泳时间&quot;&gt;&lt;/a&gt;小鱼的游泳时间&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/29/p1425-xiao-yu-de-you-yong-shi-jian/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>B2029 大象喝水</title>
-      <link>https://qetuop91.github.io/2024/04/29/b2029-da-xiang-he-shui/</link>
-      <guid>https://qetuop91.github.io/2024/04/29/b2029-da-xiang-he-shui/</guid>
-      <pubDate>Mon, 29 Apr 2024 13:54:15 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;大象喝水&quot;&gt;&lt;a href=&quot;#大象喝水&quot; class=&quot;headerlink&quot; title=&quot;大象喝水&quot;&gt;&lt;/a&gt;大象喝水&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/29/b2029-da-xiang-he-shui/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>402.移掉K位数字</title>
-      <link>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/</link>
-      <guid>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/</guid>
-      <pubDate>Mon, 29 Apr 2024 02:56:52 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;402-移掉-K-位数字&quot;&gt;&lt;a href=&quot;#402-移掉-K-位数字&quot; class=&quot;headerlink&quot; title=&quot;402. 移掉 K 位数字&quot;&gt;&lt;/a&gt;402. 移掉 K 位数字&lt;/h1&gt;&lt;p&gt;给你一个以字符串表示的非负整数</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/04/29/402-yi-diao-k-wei-shu-zi/#disqus_thread</comments>
       
     </item>
     
