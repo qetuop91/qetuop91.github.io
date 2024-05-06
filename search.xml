@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>112.路径总和</title>
+      <link href="/2024/05/06/112-lu-jing-zong-he/"/>
+      <url>/2024/05/06/112-lu-jing-zong-he/</url>
+      
+        <content type="html"><![CDATA[<h1 id="112-路径总和"><a href="#112-路径总和" class="headerlink" title="112.路径总和"></a>112.路径总和</h1><p>给你二叉树的根节点 <code>root</code> 和一个表示目标和的整数 <code>targetSum</code> 。判断该树中是否存在 <strong>根节点到叶子节点</strong> 的路径，这条路径上所有节点值相加等于目标和 <code>targetSum</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p><p><strong>叶子节点</strong> 是指没有子节点的节点。</p><p><strong>示例 1：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405061102493.jpeg" alt="img"> </p><blockquote><p>  输入：root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22<br>  输出：true<br>  解释：等于目标和的根节点到叶节点路径如上图所示。</p></blockquote><p><strong>示例 2：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405061102441.jpeg" alt="img"> </p><blockquote><p>  输入：root = [1,2,3], targetSum = 5<br>  输出：false<br>  解释：树中存在两条根节点到叶子节点的路径：<br>  (1 –&gt; 2): 和为 3<br>  (1 –&gt; 3): 和为 4<br>  不存在 sum = 5 的根节点到叶子节点的路径。</p></blockquote><p><strong>示例 3：</strong></p><blockquote><p>  输入：root = [], targetSum = 0<br>  输出：false<br>  解释：由于树是空的，所以不存在根节点到叶子节点的路径。</p></blockquote><p><strong>提示：</strong></p><ul><li>树中节点的数目在范围 <code>[0, 5000]</code> 内</li><li><code>-1000 &lt;= Node.val &lt;= 1000</code></li><li><code>-1000 &lt;= targetSum &lt;= 1000</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/** * Definition for a binary tree node. * public class TreeNode { *     int val; *     TreeNode left; *     TreeNode right; *     TreeNode() {} *     TreeNode(int val) { this.val = val; } *     TreeNode(int val, TreeNode left, TreeNode right) { *         this.val = val; *         this.left = left; *         this.right = right; *     } * } */</span><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasPathSum</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">,</span> <span class="token keyword">int</span> targetSum<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> targetSum<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> node<span class="token punctuation">,</span> <span class="token keyword">int</span> sum<span class="token punctuation">,</span> <span class="token keyword">int</span> targetSum<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token comment">/**            1.sum加当前遍历到节点的值            2.判断当前节点是不是叶子节点且sum的值是否等于目标值         */</span>        sum <span class="token operator">+=</span> node<span class="token punctuation">.</span>val<span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">==</span> targetSum <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token comment">// 遍历左子树和右子树，只要其中之一能够返回true即可</span>        <span class="token keyword">return</span> <span class="token function">dfs</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span> sum<span class="token punctuation">,</span> targetSum<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">dfs</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span> sum<span class="token punctuation">,</span> targetSum<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>111.二叉树的最小深度</title>
+      <link href="/2024/05/06/111-er-cha-shu-de-zui-xiao-shen-du/"/>
+      <url>/2024/05/06/111-er-cha-shu-de-zui-xiao-shen-du/</url>
+      
+        <content type="html"><![CDATA[<h1 id="111-二叉树的最小深度"><a href="#111-二叉树的最小深度" class="headerlink" title="111.二叉树的最小深度"></a>111.二叉树的最小深度</h1><p>给定一个二叉树，找出其最小深度。</p><p>最小深度是从根节点到最近叶子节点的最短路径上的节点数量。</p><p><strong>说明：</strong>叶子节点是指没有子节点的节点。</p><p><strong>示例 1：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405061041451.jpeg" alt="img"> </p><blockquote><p>  输入：root = [3,9,20,null,null,15,7]<br>  输出：2</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：root = [2,null,3,null,4,null,5,null,6]<br>  输出：5</p></blockquote><p><strong>提示：</strong></p><ul><li>树中节点数的范围在 <code>[0, 105]</code> 内</li><li><code>-1000 &lt;= Node.val &lt;= 1000</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/** * Definition for a binary tree node. * public class TreeNode { *     int val; *     TreeNode left; *     TreeNode right; *     TreeNode() {} *     TreeNode(int val) { this.val = val; } *     TreeNode(int val, TreeNode left, TreeNode right) { *         this.val = val; *         this.left = left; *         this.right = right; *     } * } */</span><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minDepth</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token comment">// 如果当前节点的左节点为null，右节点不为null则进入右节点</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>root<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> root<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token function">minDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token comment">// 如果当前节点的右节点为null，左节点不为null则进入左节点</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>root<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> root<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token function">minDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>                <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token function">minDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">minDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>110.平衡二叉树</title>
       <link href="/2024/05/06/110-ping-heng-er-cha-shu/"/>
       <url>/2024/05/06/110-ping-heng-er-cha-shu/</url>
