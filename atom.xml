@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-06T03:02:59.611Z</updated>
+  <updated>2024-05-06T05:07:25.549Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>119.杨辉三角II</title>
+    <link href="https://qetuop91.github.io/2024/05/06/119-yang-hui-san-jiao-ii/"/>
+    <id>https://qetuop91.github.io/2024/05/06/119-yang-hui-san-jiao-ii/</id>
+    <published>2024-05-06T05:06:02.000Z</published>
+    <updated>2024-05-06T05:07:25.549Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;119-杨辉三角-II&quot;&gt;&lt;a href=&quot;#119-杨辉三角-II&quot; class=&quot;headerlink&quot; title=&quot;119.杨辉三角 II&quot;&gt;&lt;/a&gt;119.杨辉三角 II&lt;/h1&gt;&lt;p&gt;给定一个非负索引</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>118.杨辉三角</title>
+    <link href="https://qetuop91.github.io/2024/05/06/118-yang-hui-san-jiao/"/>
+    <id>https://qetuop91.github.io/2024/05/06/118-yang-hui-san-jiao/</id>
+    <published>2024-05-06T05:05:27.000Z</published>
+    <updated>2024-05-06T05:08:08.281Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;118-杨辉三角&quot;&gt;&lt;a href=&quot;#118-杨辉三角&quot; class=&quot;headerlink&quot; title=&quot;118.杨辉三角&quot;&gt;&lt;/a&gt;118.杨辉三角&lt;/h1&gt;&lt;p&gt;给定一个非负整数</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>112.路径总和</title>
@@ -523,64 +581,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;1491-去掉最低工资和最高工资后的工资平均值&quot;&gt;&lt;a href=&quot;#1491-去掉最低工资和最高工资后的工资平均值&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>27.移除元素</title>
-    <link href="https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/"/>
-    <id>https://qetuop91.github.io/2024/05/03/27-yi-chu-yuan-su/</id>
-    <published>2024-05-03T04:27:03.000Z</published>
-    <updated>2024-05-03T04:29:59.635Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;27-移除元素&quot;&gt;&lt;a href=&quot;#27-移除元素&quot; class=&quot;headerlink&quot; title=&quot;27.移除元素&quot;&gt;&lt;/a&gt;27.移除元素&lt;/h1&gt;&lt;p&gt;给你一个数组 &lt;code&gt;nums&lt;/code&gt; 和一个值</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>26.删除有序数组中的重复项</title>
-    <link href="https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/"/>
-    <id>https://qetuop91.github.io/2024/05/03/26-shan-chu-you-xu-shu-zu-zhong-de-chong-fu-xiang/</id>
-    <published>2024-05-03T03:48:07.000Z</published>
-    <updated>2024-05-03T04:27:53.399Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;26-删除有序数组中的重复项&quot;&gt;&lt;a href=&quot;#26-删除有序数组中的重复项&quot; class=&quot;headerlink&quot; title=&quot;26.删除有序数组中的重复项&quot;&gt;&lt;/a&gt;26.删除有序数组中的重复项&lt;/h1&gt;&lt;p&gt;给你一个</summary>
         
       
     
