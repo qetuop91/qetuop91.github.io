@@ -808,7 +808,7 @@ Collections.sort(arrayList)：
 <li><code>ArrayDeque</code>插入时可能存在扩容过程，不过均摊后的插入操作事件复杂度依然为O(1)，<code>LinkedList</code>虽然不需要扩容，但是每次插入数据时都要申请新的对空间，均摊性能相比更慢</li>
 </ul>
 <p>在性能的角度上，<code>ArrayDeque</code>来实现队列要比<code>LinkedList</code>要更好，此外<code>ArrayDeque</code>也可以用于实现栈</p>
-<h2 id="PriorityQueue？（熟练使用）"><a href="#PriorityQueue？（熟练使用）" class="headerlink" title="PriorityQueue？（熟练使用）"></a>PriorityQueue？（熟练使用）</h2><p><code>PriorityQueue</code>是在JDK1.5被引入的，其与<code>Queue</code>的区别在于元素出队顺序是与优先级相关的，总是<strong>优先级最高的先出队</strong></p>
+<h2 id="⭐PriorityQueue？"><a href="#⭐PriorityQueue？" class="headerlink" title="⭐PriorityQueue？"></a>⭐PriorityQueue？</h2><p><code>PriorityQueue</code>是在JDK1.5被引入的，其与<code>Queue</code>的区别在于元素出队顺序是与优先级相关的，总是<strong>优先级最高的先出队</strong></p>
 <ul>
 <li><code>PriorityQueue</code>利用了二叉堆的数据结构来实现，底层使用可变长的数组来存储数据</li>
 <li><code>PriorityQueue</code>通过堆元素的上浮和下沉，实现了在O(logn)的事件复杂度内插入元素和删除堆顶元素</li>
