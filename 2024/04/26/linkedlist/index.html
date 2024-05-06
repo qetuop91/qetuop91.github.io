@@ -674,126 +674,113 @@
 <li><p><code>removeFirst()</code></p>
 <ul>
 <li><p>移除并返回链表的第一个元素</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">removeFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> f <span class="token operator">=</span> first<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>f <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NoSuchElementException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">unlinkFirst</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></li>
+</ul>
 </li>
-<li><pre><code class="java">public E removeFirst() {
-    final Node&lt;E&gt; f = first;
-    if (f == null)
-        throw new NoSuchElementException();
-    return unlinkFirst(f);
-}
-<pre class="language-none"><code class="language-none">
--   `removeLast()`
-
-    -   删除并返回链表的最后一个元素
-
-    -   ```java
-        public E removeLast() {
-            final Node&lt;E&gt; l = last;
-            if (l == null)
-                throw new NoSuchElementException();
-            return unlinkLast(l);
-        }</code></pre>
-</code></pre>
-</li>
+<li><p><code>removeLast()</code></p>
+<ul>
+<li><p>删除并返回链表的最后一个元素</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">removeLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> l <span class="token operator">=</span> last<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NoSuchElementException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">unlinkLast</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></li>
 </ul>
 </li>
 <li><p><code>remove(int index)</code></p>
 <ul>
 <li><p>删除并返回指定索引的链表元素</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">checkElementIndex</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token function">node</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></li>
+</ul>
 </li>
-<li><pre><code class="java">public E remove(int index) {
-    checkElementIndex(index);
-    return unlink(node(index));
-}
-<pre class="language-none"><code class="language-none">
--   `remove(Object o)`
-
-    -   删除链表中首次出现的指定元素，删除成功返回`true`，失败返回`false`
-
-    -   ```java
-        public boolean remove(Object o) {
-            if (o == null) {
-                for (Node&lt;E&gt; x = first; x != null; x = x.next) {
-                    if (x.item == null) {
-                        unlink(x);
-                        return true;
-                    }
-                }
-            } else {
-                for (Node&lt;E&gt; x = first; x != null; x = x.next) {
-                    if (o.equals(x.item)) {
-                        unlink(x);
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }</code></pre>
-</code></pre>
-</li>
+<li><p><code>remove(Object o)</code></p>
+<ul>
+<li><p>删除链表中首次出现的指定元素，删除成功返回<code>true</code>，失败返回<code>false</code></p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x <span class="token operator">=</span> first<span class="token punctuation">;</span> x <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> x <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token punctuation">.</span>item <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">unlink</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x <span class="token operator">=</span> first<span class="token punctuation">;</span> x <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> x <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>o<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">unlink</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></li>
 </ul>
 </li>
 <li><p><code>void clear()</code></p>
 <ul>
 <li><p>清空链表中的所有元素</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x <span class="token operator">=</span> first<span class="token punctuation">;</span> x <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> next <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>item <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        x <span class="token operator">=</span> next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    first <span class="token operator">=</span> last <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></li>
+</ul>
 </li>
-<li><pre><code class="java">public void clear() {
-    for (Node&lt;E&gt; x = first; x != null; ) {
-        Node&lt;E&gt; next = x.next;
-        x.item = null;
-        x.next = null;
-        x.prev = null;
-        x = next;
-    }
-    first = last = null;
-    size = 0;
-    modCount++;
-}
-<pre class="language-none"><code class="language-none">
-`unlink`方法
+</ul>
+<p><code>unlink</code>方法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">E</span> <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// assert x != null;</span>
+    <span class="token comment">// x为待删节点</span>
+    <span class="token comment">// 获取x的值、前驱和后继节点</span>
+    <span class="token keyword">final</span> <span class="token class-name">E</span> element <span class="token operator">=</span> x<span class="token punctuation">.</span>item<span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> next <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">Node</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> prev <span class="token operator">=</span> x<span class="token punctuation">.</span>prev<span class="token punctuation">;</span>
 
-```java
-E unlink(Node&lt;E&gt; x) {
-    // assert x != null;
-    // x为待删节点
-    // 获取x的值、前驱和后继节点
-    final E element = x.item;
-    final Node&lt;E&gt; next = x.next;
-    final Node&lt;E&gt; prev = x.prev;
+    <span class="token comment">// 如果x的前驱节点为null则说明当前节点为头结点</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>prev <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 直接让表头指向当前节点的下一个节点</span>
+        first <span class="token operator">=</span> next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 如果当前节点不是头结点则将前驱节点的下一个节点指向当前节点的下一个节点</span>
+        prev<span class="token punctuation">.</span>next <span class="token operator">=</span> next<span class="token punctuation">;</span>
+        <span class="token comment">// 此时没有引用指向x节点，要将x的后继节点指向null方便gc回收</span>
+        x<span class="token punctuation">.</span>prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    // 如果x的前驱节点为null则说明当前节点为头结点
-    if (prev == null) {
-        // 直接让表头指向当前节点的下一个节点
-        first = next;
-    } else {
-        // 如果当前节点不是头结点则将前驱节点的下一个节点指向当前节点的下一个节点
-        prev.next = next;
-        // 此时没有引用指向x节点，要将x的后继节点指向null方便gc回收
-        x.prev = null;
-    }
-
-    // 如果后继节点为null则说明当前节点为链表末尾节点
-    if (next == null) {
-        // 将指向链表末尾节点的引用指向前驱节点
-        last = prev;
-    } else {
-        // 如果当前节点不是链表的末尾节点则将下一个节点的前驱节点指向当前节点的前驱节点
-        next.prev = prev;
-        // 将x的后继节点指向null，方便gc回收
-        x.next = null;
-    }
+    <span class="token comment">// 如果后继节点为null则说明当前节点为链表末尾节点</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>next <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 将指向链表末尾节点的引用指向前驱节点</span>
+        last <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 如果当前节点不是链表的末尾节点则将下一个节点的前驱节点指向当前节点的前驱节点</span>
+        next<span class="token punctuation">.</span>prev <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+        <span class="token comment">// 将x的后继节点指向null，方便gc回收</span>
+        x<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 	
-    // 将x的值置为null方便gc回收
-    x.item = null;
-    size--;
-    modCount++;
-    return element;
-}</code></pre>
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
+    <span class="token comment">// 将x的值置为null方便gc回收</span>
+    x<span class="token punctuation">.</span>item <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    size<span class="token operator">--</span><span class="token punctuation">;</span>
+    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> element<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
 <blockquote>
 <p>  <code>unlink</code>方法</p>
 <ol>
@@ -1924,9 +1911,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
 
 </html>
