@@ -9,8 +9,101 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Mon, 06 May 2024 05:07:25 GMT</pubDate>
+    <pubDate>Mon, 06 May 2024 15:12:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>136.只出现一次的数字</title>
+      <link>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/</link>
+      <guid>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/</guid>
+      <pubDate>Mon, 06 May 2024 15:11:40 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;136-只出现一次的数字&quot;&gt;&lt;a href=&quot;#136-只出现一次的数字&quot; class=&quot;headerlink&quot; title=&quot;136.只出现一次的数字&quot;&gt;&lt;/a&gt;136.只出现一次的数字&lt;/h1&gt;&lt;p&gt;给你一个 &lt;strong&gt;非空&lt;/strong&gt; 整数数组</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>125.验证回文串</title>
+      <link>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/</link>
+      <guid>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/</guid>
+      <pubDate>Mon, 06 May 2024 14:44:54 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;125-验证回文串&quot;&gt;&lt;a href=&quot;#125-验证回文串&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>121.买卖股票的最佳时机</title>
+      <link>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/</link>
+      <guid>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/</guid>
+      <pubDate>Mon, 06 May 2024 13:50:32 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;121-买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#121-买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;121.买卖股票的最佳时机&quot;&gt;&lt;/a&gt;121.买卖股票的最佳时机&lt;/h1&gt;&lt;p&gt;给定一个数组</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>119.杨辉三角II</title>
@@ -537,99 +630,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/04/58-zui-hou-yi-ge-dan-ci-de-chang-du/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>35.搜索插入位置</title>
-      <link>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/</link>
-      <guid>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/</guid>
-      <pubDate>Sat, 04 May 2024 02:10:29 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;35-搜索插入位置&quot;&gt;&lt;a href=&quot;#35-搜索插入位置&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/04/35-sou-suo-cha-ru-wei-zhi/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>28.找出字符串中第一个匹配项的下标</title>
-      <link>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/</link>
-      <guid>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/</guid>
-      <pubDate>Sat, 04 May 2024 02:09:52 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;28-找出字符串中第一个匹配项的下标&quot;&gt;&lt;a href=&quot;#28-找出字符串中第一个匹配项的下标&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/04/28-zhao-chu-zi-fu-chuan-zhong-di-yi-ge-pi-pei-xiang-de-xia-biao/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>1491.去掉最低工资和最高工资后的工资平均值</title>
-      <link>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/</link>
-      <guid>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/</guid>
-      <pubDate>Fri, 03 May 2024 08:34:46 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;1491-去掉最低工资和最高工资后的工资平均值&quot;&gt;&lt;a href=&quot;#1491-去掉最低工资和最高工资后的工资平均值&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/03/1491-qu-diao-zui-di-gong-zi-he-zui-gao-gong-zi-hou-de-gong-zi-ping-jun-zhi/#disqus_thread</comments>
       
     </item>
     
