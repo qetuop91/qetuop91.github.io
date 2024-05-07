@@ -4,6 +4,267 @@
   
     
     <entry>
+      <title>183.从不订购的客户</title>
+      <link href="/2024/05/07/183-cong-bu-ding-gou-de-ke-hu/"/>
+      <url>/2024/05/07/183-cong-bu-ding-gou-de-ke-hu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="183-从不订购的客户"><a href="#183-从不订购的客户" class="headerlink" title="183.从不订购的客户"></a>183.从不订购的客户</h1><p><code>Customers</code> 表：</p><blockquote><p>  +————-+———+<br>  | Column Name | Type    |<br>  +————-+———+<br>  | id          | int     |<br>  | name        | varchar |<br>  +————-+———+<br>  在 SQL 中，id 是该表的主键。<br>  该表的每一行都表示客户的 ID 和名称。</p></blockquote><p><code>Orders</code> 表：</p><blockquote><p>  +————-+——+<br>  | Column Name | Type |<br>  +————-+——+<br>  | id          | int  |<br>  | customerId  | int  |<br>  +————-+——+<br>  在 SQL 中，id 是该表的主键。<br>  customerId 是 Customers 表中 ID 的外键( Pandas 中的连接键)。<br>  该表的每一行都表示订单的 ID 和订购该订单的客户的 ID。</p></blockquote><p>找出所有从不点任何东西的顾客。</p><p>以 <strong>任意顺序</strong> 返回结果表。</p><p>结果格式如下所示。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入：<br>  Customers table:<br>  +—-+——-+<br>  | id | name  |<br>  +—-+——-+<br>  | 1  | Joe   |<br>  | 2  | Henry |<br>  | 3  | Sam   |<br>  | 4  | Max   |<br>  +—-+——-+<br>  Orders table:<br>  +—-+————+<br>  | id | customerId |<br>  +—-+————+<br>  | 1  | 3          |<br>  | 2  | 1          |<br>  +—-+————+<br>  输出：<br>  +———–+<br>  | Customers |<br>  +———–+<br>  | Henry     |<br>  | Max       |<br>  +———–+</p></blockquote><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java">select    c<span class="token punctuation">.</span>name as <span class="token class-name">Customers</span>from     <span class="token class-name">Customers</span> as cleft join    <span class="token class-name">Orders</span> as oon    c<span class="token punctuation">.</span>id <span class="token operator">=</span> o<span class="token punctuation">.</span>customerIdwhere    o<span class="token punctuation">.</span>customerId is <span class="token keyword">null</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>182.查找重复的电子邮箱</title>
+      <link href="/2024/05/07/182-cha-zhao-chong-fu-de-dian-zi-you-xiang/"/>
+      <url>/2024/05/07/182-cha-zhao-chong-fu-de-dian-zi-you-xiang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="182-查找重复的电子邮箱"><a href="#182-查找重复的电子邮箱" class="headerlink" title="182.查找重复的电子邮箱"></a>182.查找重复的电子邮箱</h1><p>表: <code>Person</code></p><blockquote><p>  +————-+———+<br>  | Column Name | Type    |<br>  +————-+———+<br>  | id          | int     |<br>  | email       | varchar |<br>  +————-+———+<br>  id 是该表的主键（具有唯一值的列）。<br>  此表的每一行都包含一封电子邮件。电子邮件不包含大写字母。</p></blockquote><p>编写解决方案来报告所有重复的电子邮件。 请注意，可以保证电子邮件字段不为 NULL。</p><p>以 <strong>任意顺序</strong> 返回结果表。</p><p>结果格式如下例。</p><p><strong>示例 1:</strong></p><blockquote><p>  输入:<br>  Person 表:<br>  +—-+———+<br>  | id | email   |<br>  +—-+———+<br>  | 1  | <a href="mailto:a@b.com">a@b.com</a> |<br>  | 2  | <a href="mailto:c@d.com">c@d.com</a> |<br>  | 3  | <a href="mailto:a@b.com">a@b.com</a> |<br>  +—-+———+<br>  输出:<br>  +———+<br>  | Email   |<br>  +———+<br>  | <a href="mailto:a@b.com">a@b.com</a> |<br>  +———+<br>  解释: <a href="mailto:a@b.com">a@b.com</a> 出现了两次。</p></blockquote><p><strong>题解：</strong></p><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select     email as Emailfrom (    select email, count(email) as sum    from Person    group by email) as tempwhere     sum &gt; 1</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>181.超过经理收入的员工</title>
+      <link href="/2024/05/07/181-chao-guo-jing-li-shou-ru-de-yuan-gong/"/>
+      <url>/2024/05/07/181-chao-guo-jing-li-shou-ru-de-yuan-gong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="181-超过经理收入的员工"><a href="#181-超过经理收入的员工" class="headerlink" title="181.超过经理收入的员工"></a>181.超过经理收入的员工</h1><p>表：<code>Employee</code> </p><blockquote><p>  +————-+———+<br>  | Column Name | Type    |<br>  +————-+———+<br>  | id          | int     |<br>  | name        | varchar |<br>  | salary      | int     |<br>  | managerId   | int     |<br>  +————-+———+<br>  id 是该表的主键（具有唯一值的列）。<br>  该表的每一行都表示雇员的ID、姓名、工资和经理的ID。</p></blockquote><p>编写解决方案，找出收入比经理高的员工。</p><p>以 <strong>任意顺序</strong> 返回结果表。</p><p>结果格式如下所示。</p><p><strong>示例 1:</strong></p><blockquote><p>  输入:<br>  Employee 表:<br>  +—-+——-+——–+———–+<br>  | id | name  | salary | managerId |<br>  +—-+——-+——–+———–+<br>  | 1  | Joe   | 70000  | 3         |<br>  | 2  | Henry | 80000  | 4         |<br>  | 3  | Sam   | 60000  | Null      |<br>  | 4  | Max   | 90000  | Null      |<br>  +—-+——-+——–+———–+<br>  输出:<br>  +———-+<br>  | Employee |<br>  +———-+<br>  | Joe      |<br>  +———-+<br>  解释: Joe 是唯一挣得比经理多的雇员。</p></blockquote><p><strong>题解：</strong></p><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select     employee.name as Employeefrom     Employee as employeejoin     Employee as manageron     employee.managerId = manager.id and     employee.salary &gt; manager.salary</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>175.组合两个表</title>
+      <link href="/2024/05/07/175-zu-he-liang-ge-biao/"/>
+      <url>/2024/05/07/175-zu-he-liang-ge-biao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="175-组合两个表"><a href="#175-组合两个表" class="headerlink" title="175.组合两个表"></a>175.组合两个表</h1><p>表: <code>Person</code></p><blockquote><p>  +————-+———+<br>  | 列名         | 类型     |<br>  +————-+———+<br>  | PersonId    | int     |<br>  | FirstName   | varchar |<br>  | LastName    | varchar |<br>  +————-+———+<br>  personId 是该表的主键（具有唯一值的列）。<br>  该表包含一些人的 ID 和他们的姓和名的信息。</p></blockquote><p>表: <code>Address</code></p><blockquote><p>  +————-+———+<br>  | 列名         | 类型    |<br>  +————-+———+<br>  | AddressId   | int     |<br>  | PersonId    | int     |<br>  | City        | varchar |<br>  | State       | varchar |<br>  +————-+———+<br>  addressId 是该表的主键（具有唯一值的列）。<br>  该表的每一行都包含一个 ID = PersonId 的人的城市和州的信息。</p></blockquote><p>编写解决方案，报告 <code>Person</code> 表中每个人的姓、名、城市和州。如果 <code>personId</code> 的地址不在 <code>Address</code> 表中，则报告为 <code>null</code> 。</p><p>以 <strong>任意顺序</strong> 返回结果表。</p><p>结果格式如下所示。</p><p><strong>示例 1:</strong></p><blockquote><p>  输入:<br>  Person表:<br>  +———-+———-+———–+<br>  | personId | lastName | firstName |<br>  +———-+———-+———–+<br>  | 1        | Wang     | Allen     |<br>  | 2        | Alice    | Bob       |<br>  +———-+———-+———–+<br>  Address表:<br>  +———–+———-+—————+————+<br>  | addressId | personId | city          | state      |<br>  +———–+———-+—————+————+<br>  | 1         | 2        | New York City | New York   |<br>  | 2         | 3        | Leetcode      | California |<br>  +———–+———-+—————+————+<br>  输出:<br>  +———–+———-+—————+———-+<br>  | firstName | lastName | city          | state    |<br>  +———–+———-+—————+———-+<br>  | Allen     | Wang     | Null          | Null     |<br>  | Bob       | Alice    | New York City | New York |<br>  +———–+———-+—————+———-+<br>  解释:<br>  地址表中没有 personId = 1 的地址，所以它们的城市和州返回 null。<br>  addressId = 1 包含了 personId = 2 的地址信息。</p></blockquote><p><strong>题解：</strong></p><pre class="language-mysql" data-language="mysql"><code class="language-mysql">select     p.firstName, p.lastName, a.city, a.state from     Person pleft join     Address aon     p.personId = a.personId</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>171.Excel表列序号</title>
+      <link href="/2024/05/07/171-excel-biao-lie-xu-hao/"/>
+      <url>/2024/05/07/171-excel-biao-lie-xu-hao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="171-Excel-表列序号"><a href="#171-Excel-表列序号" class="headerlink" title="171.Excel 表列序号"></a>171.Excel 表列序号</h1><p>给你一个字符串 <code>columnTitle</code> ，表示 Excel 表格中的列名称。返回 <em>该列名称对应的列序号</em> 。</p><p>例如：</p><blockquote><p>  A -&gt; 1<br>  B -&gt; 2<br>  C -&gt; 3<br>  …<br>  Z -&gt; 26<br>  AA -&gt; 27<br>  AB -&gt; 28<br>  …</p></blockquote><p><strong>示例 1:</strong></p><blockquote><p>  输入: columnTitle = “A”<br>  输出: 1</p></blockquote><p><strong>示例 2:</strong></p><blockquote><p>  输入: columnTitle = “AB”<br>  输出: 28</p></blockquote><p><strong>示例 3:</strong></p><blockquote><p>  输入: columnTitle = “ZY”<br>  输出: 701</p></blockquote><p><strong>提示：</strong></p><ul><li><code>1 &lt;= columnTitle.length &lt;= 7</code></li><li><code>columnTitle</code> 仅由大写英文组成</li><li><code>columnTitle</code> 在范围 <code>["A", "FXSHRXW"]</code> 内</li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">titleToNumber</span><span class="token punctuation">(</span><span class="token class-name">String</span> columnTitle<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> str <span class="token operator">=</span> columnTitle<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> ch <span class="token operator">:</span> str<span class="token punctuation">)</span> <span class="token punctuation">{</span>            res <span class="token operator">=</span> res <span class="token operator">*</span> <span class="token number">26</span> <span class="token operator">+</span> <span class="token punctuation">(</span>ch <span class="token operator">-</span> <span class="token char">'A'</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> res<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>169.多数元素</title>
+      <link href="/2024/05/07/169-duo-shu-yuan-su/"/>
+      <url>/2024/05/07/169-duo-shu-yuan-su/</url>
+      
+        <content type="html"><![CDATA[<h1 id="169-多数元素"><a href="#169-多数元素" class="headerlink" title="169.多数元素"></a>169.多数元素</h1><p>给定一个大小为 <code>n</code> 的数组 <code>nums</code> ，返回其中的多数元素。多数元素是指在数组中出现次数 <strong>大于</strong> <code>⌊ n/2 ⌋</code> 的元素。</p><p>你可以假设数组是非空的，并且给定的数组总是存在多数元素。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入：nums = [3,2,3]<br>  输出：3</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：nums = [2,2,1,1,1,2,2]<br>  输出：2</p></blockquote><p><strong>提示：</strong></p><ul><li><code>n == nums.length</code></li><li><code>1 &lt;= n &lt;= 5 * 104</code></li><li><code>-109 &lt;= nums[i] &lt;= 109</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">majorityElement</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token class-name">Integer</span> num <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                num<span class="token operator">++</span><span class="token punctuation">;</span>                map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>                map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> entry <span class="token operator">:</span> map<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token class-name">Integer</span> key <span class="token operator">=</span> entry<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>entry<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> n <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token keyword">return</span> key<span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token comment">// public int majorityElement(int[] nums) {</span>    <span class="token comment">//     Arrays.sort(nums);</span>    <span class="token comment">//     return nums[nums.length / 2];</span>    <span class="token comment">// }</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>168.Excel表列名称</title>
+      <link href="/2024/05/07/168-excel-biao-lie-ming-cheng/"/>
+      <url>/2024/05/07/168-excel-biao-lie-ming-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="168-Excel表列名称"><a href="#168-Excel表列名称" class="headerlink" title="168.Excel表列名称"></a>168.Excel表列名称</h1><p>给你一个整数 <code>columnNumber</code> ，返回它在 Excel 表中相对应的列名称。</p><p>例如：</p><blockquote><p>  A -&gt; 1<br>  B -&gt; 2<br>  C -&gt; 3<br>  …<br>  Z -&gt; 26<br>  AA -&gt; 27<br>  AB -&gt; 28<br>  …</p></blockquote><p><strong>示例 1：</strong></p><blockquote><p>  输入：columnNumber = 1<br>  输出：”A”</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：columnNumber = 28<br>  输出：”AB”</p></blockquote><p><strong>示例 3：</strong></p><blockquote><p>  输入：columnNumber = 701<br>  输出：”ZY”</p></blockquote><p><strong>示例 4：</strong></p><blockquote><p>  输入：columnNumber = 2147483647<br>  输出：”FXSHRXW”</p></blockquote><p><strong>提示：</strong></p><ul><li><code>1 &lt;= columnNumber &lt;= 231 - 1</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">convertToTitle</span><span class="token punctuation">(</span><span class="token keyword">int</span> columnNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">StringBuilder</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">/**            和正常的26进制（1~26）比，本质上是每一位多加了1（变成0~25，26是AA），原来A==0、B==1，AB==26*0+1*1            AB此时变成26*(0+1)+1*(1+1)         */</span>        <span class="token keyword">while</span> <span class="token punctuation">(</span>columnNumber <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            columnNumber<span class="token operator">--</span><span class="token punctuation">;</span>            <span class="token keyword">int</span> cur <span class="token operator">=</span> columnNumber <span class="token operator">%</span> <span class="token number">26</span><span class="token punctuation">;</span>            res<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>cur <span class="token operator">+</span> <span class="token char">'A'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            columnNumber <span class="token operator">/=</span> <span class="token number">26</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>145.二叉树的后序遍历</title>
+      <link href="/2024/05/07/145-er-cha-shu-de-hou-xu-bian-li/"/>
+      <url>/2024/05/07/145-er-cha-shu-de-hou-xu-bian-li/</url>
+      
+        <content type="html"><![CDATA[<h1 id="145-二叉树的后序遍历"><a href="#145-二叉树的后序遍历" class="headerlink" title="145.二叉树的后序遍历"></a>145.二叉树的后序遍历</h1><p>给你一棵二叉树的根节点 <code>root</code> ，返回其节点值的 <strong>后序遍历</strong> 。</p><p><strong>示例 1：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405070827876.jpeg" alt="img"> </p><blockquote><p>  输入：root = [1,null,2,3]<br>  输出：[3,2,1]</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：root = []<br>  输出：[]</p></blockquote><p><strong>示例 3：</strong></p><blockquote><p>  输入：root = [1]<br>  输出：[1]</p></blockquote><p><strong>提示：</strong></p><ul><li>树中节点的数目在范围 <code>[0, 100]</code> 内</li><li><code>-100 &lt;= Node.val &lt;= 100</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/** * Definition for a binary tree node. * public class TreeNode { *     int val; *     TreeNode left; *     TreeNode right; *     TreeNode() {} *     TreeNode(int val) { this.val = val; } *     TreeNode(int val, TreeNode left, TreeNode right) { *         this.val = val; *         this.left = left; *         this.right = right; *     } * } */</span><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> <span class="token function">postorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">inorder</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">return</span> res<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">inorder</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">,</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token function">inorder</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">inorder</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>        res<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>144.二叉树的前序遍历</title>
+      <link href="/2024/05/07/144-er-cha-shu-de-qian-xu-bian-li/"/>
+      <url>/2024/05/07/144-er-cha-shu-de-qian-xu-bian-li/</url>
+      
+        <content type="html"><![CDATA[<h1 id="144-二叉树的前序遍历"><a href="#144-二叉树的前序遍历" class="headerlink" title="144.二叉树的前序遍历"></a>144.二叉树的前序遍历</h1><p>给你二叉树的根节点 <code>root</code> ，返回它节点值的 <strong>前序</strong> 遍历。</p><p><strong>示例 1：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405070823730.jpeg" alt="img"> </p><blockquote><p>  输入：root = [1,null,2,3]<br>  输出：[1,2,3]</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：root = []<br>  输出：[]</p></blockquote><p><strong>示例 3：</strong></p><blockquote><p>  输入：root = [1]<br>  输出：[1]</p></blockquote><p><strong>示例 4：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405070823725.jpeg" alt="img"> </p><blockquote><p>  输入：root = [1,2]<br>  输出：[1,2]</p></blockquote><p><strong>示例 5：</strong></p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405070823710.jpeg" alt="img"> </p><blockquote><p>  输入：root = [1,null,2]<br>  输出：[1,2]</p></blockquote><p><strong>提示：</strong></p><ul><li>树中节点数目在范围 <code>[0, 100]</code> 内</li><li><code>-100 &lt;= Node.val &lt;= 100</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">/** * Definition for a binary tree node. * public class TreeNode { *     int val; *     TreeNode left; *     TreeNode right; *     TreeNode() {} *     TreeNode(int val) { this.val = val; } *     TreeNode(int val, TreeNode left, TreeNode right) { *         this.val = val; *         this.left = left; *         this.right = right; *     } * } */</span><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> <span class="token function">preorderTraversal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">inorder</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">return</span> res<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">inorder</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">,</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token punctuation">;</span>        <span class="token punctuation">}</span>        res<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">inorder</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">inorder</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>136.只出现一次的数字</title>
       <link href="/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/"/>
       <url>/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/</url>
