@@ -9,8 +9,70 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Wed, 08 May 2024 14:07:35 GMT</pubDate>
+    <pubDate>Wed, 08 May 2024 15:15:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>P5712 【深基3.例4】Apples</title>
+      <link>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/</guid>
+      <pubDate>Wed, 08 May 2024 15:14:34 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基3-例4】Apples&quot;&gt;&lt;a href=&quot;#【深基3-例4】Apples&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例4】Apples&quot;&gt;&lt;/a&gt;【深基3.例4】Apples&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5711 【深基3.例3】闰年判断</title>
+      <link>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/</guid>
+      <pubDate>Wed, 08 May 2024 15:10:04 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基3-例3】闰年判断&quot;&gt;&lt;a href=&quot;#【深基3-例3】闰年判断&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例3】闰年判断&quot;&gt;&lt;/a&gt;【深基3.例3】闰年判断&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>202.快乐数</title>
@@ -561,68 +623,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>125.验证回文串</title>
-      <link>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/</guid>
-      <pubDate>Mon, 06 May 2024 14:44:54 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;125-验证回文串&quot;&gt;&lt;a href=&quot;#125-验证回文串&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>121.买卖股票的最佳时机</title>
-      <link>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/</guid>
-      <pubDate>Mon, 06 May 2024 13:50:32 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;121-买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#121-买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;121.买卖股票的最佳时机&quot;&gt;&lt;/a&gt;121.买卖股票的最佳时机&lt;/h1&gt;&lt;p&gt;给定一个数组</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/#disqus_thread</comments>
       
     </item>
     

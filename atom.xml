@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-08T14:07:35.668Z</updated>
+  <updated>2024-05-08T15:15:11.035Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P5712 【深基3.例4】Apples</title>
+    <link href="https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/"/>
+    <id>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/</id>
+    <published>2024-05-08T15:14:34.000Z</published>
+    <updated>2024-05-08T15:15:11.035Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【深基3-例4】Apples&quot;&gt;&lt;a href=&quot;#【深基3-例4】Apples&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例4】Apples&quot;&gt;&lt;/a&gt;【深基3.例4】Apples&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P5711 【深基3.例3】闰年判断</title>
+    <link href="https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/"/>
+    <id>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/</id>
+    <published>2024-05-08T15:10:04.000Z</published>
+    <updated>2024-05-08T15:11:30.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【深基3-例3】闰年判断&quot;&gt;&lt;a href=&quot;#【深基3-例3】闰年判断&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例3】闰年判断&quot;&gt;&lt;/a&gt;【深基3.例3】闰年判断&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="洛谷" scheme="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>202.快乐数</title>
@@ -516,64 +574,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;136-只出现一次的数字&quot;&gt;&lt;a href=&quot;#136-只出现一次的数字&quot; class=&quot;headerlink&quot; title=&quot;136.只出现一次的数字&quot;&gt;&lt;/a&gt;136.只出现一次的数字&lt;/h1&gt;&lt;p&gt;给你一个 &lt;strong&gt;非空&lt;/strong&gt; 整数数组</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>125.验证回文串</title>
-    <link href="https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/"/>
-    <id>https://qetuop91.github.io/2024/05/06/125-yan-zheng-hui-wen-chuan/</id>
-    <published>2024-05-06T14:44:54.000Z</published>
-    <updated>2024-05-06T14:45:44.958Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;125-验证回文串&quot;&gt;&lt;a href=&quot;#125-验证回文串&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>121.买卖股票的最佳时机</title>
-    <link href="https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/"/>
-    <id>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/</id>
-    <published>2024-05-06T13:50:32.000Z</published>
-    <updated>2024-05-06T13:55:45.314Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;121-买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#121-买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;121.买卖股票的最佳时机&quot;&gt;&lt;/a&gt;121.买卖股票的最佳时机&lt;/h1&gt;&lt;p&gt;给定一个数组</summary>
         
       
     
