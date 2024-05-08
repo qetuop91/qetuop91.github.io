@@ -9,8 +9,159 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Wed, 08 May 2024 08:03:36 GMT</pubDate>
+    <pubDate>Wed, 08 May 2024 14:07:35 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>202.快乐数</title>
+      <link>https://qetuop91.github.io/2024/05/08/202-kuai-le-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/202-kuai-le-shu/</guid>
+      <pubDate>Wed, 08 May 2024 14:03:53 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;202-快乐数&quot;&gt;&lt;a href=&quot;#202-快乐数&quot; class=&quot;headerlink&quot; title=&quot;202.快乐数&quot;&gt;&lt;/a&gt;202.快乐数&lt;/h1&gt;&lt;p&gt;编写一个算法来判断一个数 &lt;code&gt;n&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/202-kuai-le-shu/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>197.上升的温度</title>
+      <link>https://qetuop91.github.io/2024/05/08/197-shang-sheng-de-wen-du/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/197-shang-sheng-de-wen-du/</guid>
+      <pubDate>Wed, 08 May 2024 12:49:52 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;197-上升的温度&quot;&gt;&lt;a href=&quot;#197-上升的温度&quot; class=&quot;headerlink&quot; title=&quot;197.上升的温度&quot;&gt;&lt;/a&gt;197.上升的温度&lt;/h1&gt;&lt;p&gt;表：</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/MySQL/">MySQL</category>
+      
+      <category domain="https://qetuop91.github.io/tags/SQL%E9%A2%98/">SQL题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/197-shang-sheng-de-wen-du/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>196.删除重复的电子邮箱</title>
+      <link>https://qetuop91.github.io/2024/05/08/196-shan-chu-chong-fu-de-dian-zi-you-xiang/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/196-shan-chu-chong-fu-de-dian-zi-you-xiang/</guid>
+      <pubDate>Wed, 08 May 2024 12:32:47 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;196-删除重复的电子邮箱&quot;&gt;&lt;a href=&quot;#196-删除重复的电子邮箱&quot; class=&quot;headerlink&quot; title=&quot;196.删除重复的电子邮箱&quot;&gt;&lt;/a&gt;196.删除重复的电子邮箱&lt;/h1&gt;&lt;p&gt;表:</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/MySQL/">MySQL</category>
+      
+      <category domain="https://qetuop91.github.io/tags/SQL%E9%A2%98/">SQL题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/196-shan-chu-chong-fu-de-dian-zi-you-xiang/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>195.第十行</title>
+      <link>https://qetuop91.github.io/2024/05/08/195-di-shi-xing/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/195-di-shi-xing/</guid>
+      <pubDate>Wed, 08 May 2024 12:27:05 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;195-第十行&quot;&gt;&lt;a href=&quot;#195-第十行&quot; class=&quot;headerlink&quot; title=&quot;195.第十行&quot;&gt;&lt;/a&gt;195.第十行&lt;/h1&gt;&lt;p&gt;给定一个文本文件</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Linux/">Linux</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Shell/">Shell</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/195-di-shi-xing/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>193.有效电话号码</title>
+      <link>https://qetuop91.github.io/2024/05/08/193-you-xiao-dian-hua-hao-ma/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/193-you-xiao-dian-hua-hao-ma/</guid>
+      <pubDate>Wed, 08 May 2024 12:18:56 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;193-有效电话号码&quot;&gt;&lt;a href=&quot;#193-有效电话号码&quot; class=&quot;headerlink&quot; title=&quot;193.有效电话号码&quot;&gt;&lt;/a&gt;193.有效电话号码&lt;/h1&gt;&lt;p&gt;给定一个包含电话号码列表（一行一个电话号码）的文本文件</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/Linux/">Linux</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/Shell/">Shell</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/193-you-xiao-dian-hua-hao-ma/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>基于小顶堆实现的优先队列PriorityQueue</title>
@@ -84,7 +235,7 @@
         
           
           
-      <description>&lt;h1 id=&quot;Java实现小顶堆&quot;&gt;&lt;a href=&quot;#Java实现小顶堆&quot; class=&quot;headerlink&quot; title=&quot;Java实现小顶堆&quot;&gt;&lt;/a&gt;Java实现小顶堆&lt;/h1&gt;&lt;pre class=&quot;language-java&quot;</description>
+      <description>&lt;h1 id=&quot;Java实现小顶堆&quot;&gt;&lt;a href=&quot;#Java实现小顶堆&quot; class=&quot;headerlink&quot; title=&quot;Java实现小顶堆&quot;&gt;&lt;/a&gt;Java实现小顶堆&lt;/h1&gt;&lt;h2 id=&quot;二叉堆&quot;&gt;&lt;a href=&quot;#二叉堆&quot;</description>
           
         
       
@@ -472,161 +623,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/06/121-mai-mai-gu-piao-de-zui-jia-shi-ji/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>119.杨辉三角II</title>
-      <link>https://qetuop91.github.io/2024/05/06/119-yang-hui-san-jiao-ii/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/119-yang-hui-san-jiao-ii/</guid>
-      <pubDate>Mon, 06 May 2024 05:06:02 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;119-杨辉三角-II&quot;&gt;&lt;a href=&quot;#119-杨辉三角-II&quot; class=&quot;headerlink&quot; title=&quot;119.杨辉三角 II&quot;&gt;&lt;/a&gt;119.杨辉三角 II&lt;/h1&gt;&lt;p&gt;给定一个非负索引</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/119-yang-hui-san-jiao-ii/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>118.杨辉三角</title>
-      <link>https://qetuop91.github.io/2024/05/06/118-yang-hui-san-jiao/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/118-yang-hui-san-jiao/</guid>
-      <pubDate>Mon, 06 May 2024 05:05:27 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;118-杨辉三角&quot;&gt;&lt;a href=&quot;#118-杨辉三角&quot; class=&quot;headerlink&quot; title=&quot;118.杨辉三角&quot;&gt;&lt;/a&gt;118.杨辉三角&lt;/h1&gt;&lt;p&gt;给定一个非负整数</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/118-yang-hui-san-jiao/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>112.路径总和</title>
-      <link>https://qetuop91.github.io/2024/05/06/112-lu-jing-zong-he/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/112-lu-jing-zong-he/</guid>
-      <pubDate>Mon, 06 May 2024 03:01:23 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;112-路径总和&quot;&gt;&lt;a href=&quot;#112-路径总和&quot; class=&quot;headerlink&quot; title=&quot;112.路径总和&quot;&gt;&lt;/a&gt;112.路径总和&lt;/h1&gt;&lt;p&gt;给你二叉树的根节点 &lt;code&gt;root&lt;/code&gt; 和一个表示目标和的整数</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/112-lu-jing-zong-he/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>111.二叉树的最小深度</title>
-      <link>https://qetuop91.github.io/2024/05/06/111-er-cha-shu-de-zui-xiao-shen-du/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/111-er-cha-shu-de-zui-xiao-shen-du/</guid>
-      <pubDate>Mon, 06 May 2024 02:40:59 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;111-二叉树的最小深度&quot;&gt;&lt;a href=&quot;#111-二叉树的最小深度&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/111-er-cha-shu-de-zui-xiao-shen-du/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>110.平衡二叉树</title>
-      <link>https://qetuop91.github.io/2024/05/06/110-ping-heng-er-cha-shu/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/110-ping-heng-er-cha-shu/</guid>
-      <pubDate>Mon, 06 May 2024 02:22:35 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;110-平衡二叉树&quot;&gt;&lt;a href=&quot;#110-平衡二叉树&quot; class=&quot;headerlink&quot; title=&quot;110.平衡二叉树&quot;&gt;&lt;/a&gt;110.平衡二叉树&lt;/h1&gt;&lt;p&gt;给定一个二叉树，判断它是否是</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/110-ping-heng-er-cha-shu/#disqus_thread</comments>
       
     </item>
     

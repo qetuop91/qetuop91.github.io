@@ -445,14 +445,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-05-06
+                    2024-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    24
+                    399
                 </div>
                 
 
@@ -479,8 +479,42 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="PriorityQueue"><a href="#PriorityQueue" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h1><p><code>PriorityQueue</code>，优先队列，同样也遵循<code>FIFO</code>的原则，根据优先级来处理对象</p>
-
+                <h1 id="PriorityQueue"><a href="#PriorityQueue" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h1><p><code>PriorityQueue</code>，优先队列，同样也遵循<code>FIFO</code>的原则，但是会根据优先级来处理对象</p>
+<p>普通队列和<code>PriorityQueue</code>的区别：</p>
+<ul>
+<li><code>元素出队</code>：<ul>
+<li>普通队列会按照先进的元素先出队，后进的元素后出队的规则维护队列</li>
+<li>优先队列会按照元素的优先级来决定出队的顺序，默认情况下优先级越小的优先出队</li>
+</ul>
+</li>
+<li><code>逻辑存储结构</code>：<ul>
+<li><code>PriorityQueue</code>底层实际上是使用<strong>小顶堆</strong>形式的二叉堆，值最小的元素优先出队</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>  <strong>二叉堆的性质</strong></p>
+<ol>
+<li><p>二叉堆是一棵<strong>完全二叉树</strong>，在节点个数无法构成满二叉树（每层都放满节点）时，叶子节点会出现在最后一层，且不满足双数情况下的叶子节点会尽可能地靠左。 </p>
+</li>
+<li><p>小顶堆的情况下，父节点的值永远比其两个子节点要小，大顶堆反之</p>
+</li>
+<li><p>二叉堆的大小关系永远只针对父子孙这样的层级，拿小顶堆来举例，我们不能说第二层的节点就一定比第三层节点小</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405081638018.png" alt="image-20240508163816996"></p>
+</li>
+</ol>
+</blockquote>
+<p><code>PriorityQueue</code>适合解决找最大值或最小值的问题</p>
+<h1 id="基于MinHeap实现一个简单的PriorityQueue"><a href="#基于MinHeap实现一个简单的PriorityQueue" class="headerlink" title="基于MinHeap实现一个简单的PriorityQueue"></a>基于MinHeap实现一个简单的PriorityQueue</h1><p><a target="_blank" rel="noopener" href="https://feliks.netlify.app/2024/05/07/shi-xian-yi-ge-jian-dan-de-xiao-ding-dui-minheap/">实现一个简单的小顶堆（MinHeap） | Feliks</a></p>
+<p><a target="_blank" rel="noopener" href="https://feliks.netlify.app/2024/05/08/ji-yu-xiao-ding-dui-shi-xian-de-you-xian-dui-lie-priorityqueue/">基于小顶堆实现的优先队列PriorityQueue | Feliks</a></p>
+<h1 id="JDK自带的PriorityQueue分析"><a href="#JDK自带的PriorityQueue分析" class="headerlink" title="JDK自带的PriorityQueue分析"></a>JDK自带的PriorityQueue分析</h1><p>从以下四方面来查看源码：</p>
+<ol>
+<li>构造器</li>
+<li>入队操作</li>
+<li>出队操作</li>
+<li>查看优先级最高的元素</li>
+</ol>
+<h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><h2 id="入队操作"><a href="#入队操作" class="headerlink" title="入队操作"></a>入队操作</h2><h2 id="出队操作"><a href="#出队操作" class="headerlink" title="出队操作"></a>出队操作</h2><h2 id="查看优先级最高的元素"><a href="#查看优先级最高的元素" class="headerlink" title="查看优先级最高的元素"></a>查看优先级最高的元素</h2>
                 
             </div>
             <hr/>
@@ -1232,7 +1266,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">109.9k</span>
+                        class="white-color">111.6k</span>
             
             
             
@@ -1571,9 +1605,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>

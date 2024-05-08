@@ -444,14 +444,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -471,7 +471,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java实现小顶堆"><a href="#Java实现小顶堆" class="headerlink" title="Java实现小顶堆"></a>Java实现小顶堆</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token class-name">Queue</span><span class="token punctuation">;</span>
+                <h1 id="Java实现小顶堆"><a href="#Java实现小顶堆" class="headerlink" title="Java实现小顶堆"></a>Java实现小顶堆</h1><h2 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h2><p>二叉堆在逻辑结构上完全可以看成是一棵完全二叉树，完全二叉树的性质：</p>
+<ul>
+<li>非叶子节点层次尽可能排满</li>
+<li>叶子节点数量为：<code>2^(h-1)</code>个（h&gt;=1），如果不满，则叶子节点要尽可能的靠左排列</li>
+</ul>
+<p>按照排序的规则可划分为：</p>
+<ul>
+<li>小顶堆（小根堆）</li>
+<li>大顶堆（大根堆）</li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>使用<code>ArrayList</code>动态数组实现二叉堆</p>
+<h3 id="为什么不用链表？"><a href="#为什么不用链表？" class="headerlink" title="为什么不用链表？"></a>为什么不用链表？</h3><p>数组和链表在入队和出队的操作上的时间复杂度都是<code>O(logn)</code>，但是由于链表需要使用额外的空间来存储节点之间的父子关系，而数组的地址是连续且固定的，可以用简单的公式来表示父子关系，因此采用动态数组而不是链表</p>
+<h3 id="父子节点索引关系"><a href="#父子节点索引关系" class="headerlink" title="父子节点索引关系"></a>父子节点索引关系</h3><p>父节点索引：<code>parentIndex = (index - 1) / 2</code>（index表示不管是左子节点还是右子节点都可以，计算机在运算时会默认向下取整）</p>
+<p>左子节点索引：<code>leftIndex = parentIndex * 2 + 1</code></p>
+<p>右子节点索引：<code>rightIndex = parentIndex * 2 + 2</code></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token class-name">Queue</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
@@ -1491,7 +1506,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">109.9k</span>
+                        class="white-color">111.6k</span>
             
             
             
@@ -1830,9 +1845,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body>
+<script src="/live2d_models/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":300,"hOffset":60,"vOffset":-35},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
