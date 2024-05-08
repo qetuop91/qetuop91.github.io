@@ -9,8 +9,70 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Wed, 08 May 2024 15:15:11 GMT</pubDate>
+    <pubDate>Wed, 08 May 2024 16:13:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>P5714 【深基3.例7】肥胖问题</title>
+      <link>https://qetuop91.github.io/2024/05/09/p5714-shen-ji-3-li-7-fei-pang-wen-ti/</link>
+      <guid>https://qetuop91.github.io/2024/05/09/p5714-shen-ji-3-li-7-fei-pang-wen-ti/</guid>
+      <pubDate>Wed, 08 May 2024 16:12:21 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基3-例7】肥胖问题&quot;&gt;&lt;a href=&quot;#【深基3-例7】肥胖问题&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例7】肥胖问题&quot;&gt;&lt;/a&gt;【深基3.例7】肥胖问题&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/09/p5714-shen-ji-3-li-7-fei-pang-wen-ti/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>P5713 【深基3.例5】洛谷团队系统</title>
+      <link>https://qetuop91.github.io/2024/05/08/p5713-shen-ji-3-li-5-luo-gu-tuan-dui-xi-tong/</link>
+      <guid>https://qetuop91.github.io/2024/05/08/p5713-shen-ji-3-li-5-luo-gu-tuan-dui-xi-tong/</guid>
+      <pubDate>Wed, 08 May 2024 15:50:42 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;【深基3-例5】洛谷团队系统&quot;&gt;&lt;a href=&quot;#【深基3-例5】洛谷团队系统&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例5】洛谷团队系统&quot;&gt;&lt;/a&gt;【深基3.例5】洛谷团队系统&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/08/p5713-shen-ji-3-li-5-luo-gu-tuan-dui-xi-tong/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>P5712 【深基3.例4】Apples</title>
@@ -561,68 +623,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/07/145-er-cha-shu-de-hou-xu-bian-li/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>144.二叉树的前序遍历</title>
-      <link>https://qetuop91.github.io/2024/05/07/144-er-cha-shu-de-qian-xu-bian-li/</link>
-      <guid>https://qetuop91.github.io/2024/05/07/144-er-cha-shu-de-qian-xu-bian-li/</guid>
-      <pubDate>Tue, 07 May 2024 00:22:51 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;144-二叉树的前序遍历&quot;&gt;&lt;a href=&quot;#144-二叉树的前序遍历&quot; class=&quot;headerlink&quot; title=&quot;144.二叉树的前序遍历&quot;&gt;&lt;/a&gt;144.二叉树的前序遍历&lt;/h1&gt;&lt;p&gt;给你二叉树的根节点 &lt;code&gt;root&lt;/code&gt;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/07/144-er-cha-shu-de-qian-xu-bian-li/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>136.只出现一次的数字</title>
-      <link>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/</link>
-      <guid>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/</guid>
-      <pubDate>Mon, 06 May 2024 15:11:40 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;136-只出现一次的数字&quot;&gt;&lt;a href=&quot;#136-只出现一次的数字&quot; class=&quot;headerlink&quot; title=&quot;136.只出现一次的数字&quot;&gt;&lt;/a&gt;136.只出现一次的数字&lt;/h1&gt;&lt;p&gt;给你一个 &lt;strong&gt;非空&lt;/strong&gt; 整数数组</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/06/136-zhi-chu-xian-yi-ci-de-shu-zi/#disqus_thread</comments>
       
     </item>
     
