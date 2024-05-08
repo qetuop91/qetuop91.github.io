@@ -164,7 +164,7 @@
     </item>
     
     <item>
-      <title>基于小顶堆实现的优先队列PriorityQueue</title>
+      <title>实现简单的优先队列（PriorityQueue）</title>
       <link>https://qetuop91.github.io/2024/05/08/ji-yu-xiao-ding-dui-shi-xian-de-you-xian-dui-lie-priorityqueue/</link>
       <guid>https://qetuop91.github.io/2024/05/08/ji-yu-xiao-ding-dui-shi-xian-de-you-xian-dui-lie-priorityqueue/</guid>
       <pubDate>Wed, 08 May 2024 07:18:46 GMT</pubDate>
