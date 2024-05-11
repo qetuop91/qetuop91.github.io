@@ -727,7 +727,7 @@
 
 
 
-<h1 id="PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？"><a href="#PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？" class="headerlink" title="PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？"></a>PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？</h1><p>因为带有完全二叉树性质的二叉堆，其入队和出队操作的时间复杂度都是O(log^n)，而使用数组来实现的话，未排序的情况下入队操作的时间复杂度是O(1)，出队操作的时间复杂度是O(n)，而如果是有序数组的情况下入队是O(n)，出队是O(n)，使用二叉堆折中的情况更为合适</p>
+<h1 id="PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？"><a href="#PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？" class="headerlink" title="PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？"></a>PriorityQueue为什么要用二叉堆实现？用二叉堆实现的优势在哪？</h1><p>因为带有完全二叉树性质的二叉堆，其入队和出队操作的时间复杂度都是O(nlogn)，而使用数组来实现的话，未排序的情况下入队操作的时间复杂度是O(1)，出队操作的时间复杂度是O(n)，而如果是有序数组的情况下入队是O(n)，出队是O(n)，使用二叉堆折中的情况更为合适</p>
 <h1 id="PriorityQueue线程安全吗？"><a href="#PriorityQueue线程安全吗？" class="headerlink" title="PriorityQueue线程安全吗？"></a>PriorityQueue线程安全吗？</h1><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">offer</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>e <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
         <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NullPointerException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
