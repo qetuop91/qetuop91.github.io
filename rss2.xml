@@ -9,8 +9,70 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Thu, 16 May 2024 02:37:41 GMT</pubDate>
+    <pubDate>Thu, 16 May 2024 14:57:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>350.两个数组的交集II</title>
+      <link>https://qetuop91.github.io/2024/05/16/350-liang-ge-shu-zu-de-jiao-ji-ii/</link>
+      <guid>https://qetuop91.github.io/2024/05/16/350-liang-ge-shu-zu-de-jiao-ji-ii/</guid>
+      <pubDate>Thu, 16 May 2024 14:56:11 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;350-两个数组的交集-II&quot;&gt;&lt;a href=&quot;#350-两个数组的交集-II&quot; class=&quot;headerlink&quot; title=&quot;350.两个数组的交集 II&quot;&gt;&lt;/a&gt;350.两个数组的交集 II&lt;/h1&gt;&lt;p&gt;给你两个整数数组</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/16/350-liang-ge-shu-zu-de-jiao-ji-ii/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>1979.找出数组的最大公约数</title>
+      <link>https://qetuop91.github.io/2024/05/16/1979-zhao-chu-shu-zu-de-zui-da-gong-yue-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/16/1979-zhao-chu-shu-zu-de-zui-da-gong-yue-shu/</guid>
+      <pubDate>Thu, 16 May 2024 03:21:23 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;1979-找出数组的最大公约数&quot;&gt;&lt;a href=&quot;#1979-找出数组的最大公约数&quot; class=&quot;headerlink&quot; title=&quot;1979.找出数组的最大公约数&quot;&gt;&lt;/a&gt;1979.找出数组的最大公约数&lt;/h1&gt;&lt;p&gt;给你一个整数数组</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/16/1979-zhao-chu-shu-zu-de-zui-da-gong-yue-shu/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>409.最长回文串</title>
@@ -567,68 +629,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/13/994-fu-lan-de-ju-zi/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>278.第一个错误的版本</title>
-      <link>https://qetuop91.github.io/2024/05/12/278-di-yi-ge-cuo-wu-de-ban-ben/</link>
-      <guid>https://qetuop91.github.io/2024/05/12/278-di-yi-ge-cuo-wu-de-ban-ben/</guid>
-      <pubDate>Sun, 12 May 2024 13:59:35 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;278-第一个错误的版本&quot;&gt;&lt;a href=&quot;#278-第一个错误的版本&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/12/278-di-yi-ge-cuo-wu-de-ban-ben/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>268.丢失的数字</title>
-      <link>https://qetuop91.github.io/2024/05/12/268-diu-shi-de-shu-zi/</link>
-      <guid>https://qetuop91.github.io/2024/05/12/268-diu-shi-de-shu-zi/</guid>
-      <pubDate>Sun, 12 May 2024 13:21:30 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;268-丢失的数字&quot;&gt;&lt;a href=&quot;#268-丢失的数字&quot; class=&quot;headerlink&quot; title=&quot;268.丢失的数字&quot;&gt;&lt;/a&gt;268.丢失的数字&lt;/h1&gt;&lt;p&gt;给定一个包含 &lt;code&gt;[0, n]&lt;/code&gt; 中</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/12/268-diu-shi-de-shu-zi/#disqus_thread</comments>
       
     </item>
     
