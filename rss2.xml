@@ -9,51 +9,20 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Sat, 11 May 2024 10:40:17 GMT</pubDate>
+    <pubDate>Thu, 16 May 2024 02:37:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>347.前K个高频元素</title>
-      <link>https://qetuop91.github.io/2024/05/11/347-qian-k-ge-gao-pin-yuan-su/</link>
-      <guid>https://qetuop91.github.io/2024/05/11/347-qian-k-ge-gao-pin-yuan-su/</guid>
-      <pubDate>Sat, 11 May 2024 10:38:58 GMT</pubDate>
+      <title>409.最长回文串</title>
+      <link>https://qetuop91.github.io/2024/05/16/409-zui-chang-hui-wen-chuan/</link>
+      <guid>https://qetuop91.github.io/2024/05/16/409-zui-chang-hui-wen-chuan/</guid>
+      <pubDate>Thu, 16 May 2024 02:29:48 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;347-前K个高频元素&quot;&gt;&lt;a href=&quot;#347-前K个高频元素&quot; class=&quot;headerlink&quot; title=&quot;347.前K个高频元素&quot;&gt;&lt;/a&gt;347.前K个高频元素&lt;/h1&gt;&lt;p&gt;给你一个整数数组 &lt;code&gt;nums&lt;/code&gt; 和一个整数</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/11/347-qian-k-ge-gao-pin-yuan-su/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>228.汇总区间</title>
-      <link>https://qetuop91.github.io/2024/05/11/228-hui-zong-qu-jian/</link>
-      <guid>https://qetuop91.github.io/2024/05/11/228-hui-zong-qu-jian/</guid>
-      <pubDate>Sat, 11 May 2024 03:21:11 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;228-汇总区间&quot;&gt;&lt;a href=&quot;#228-汇总区间&quot; class=&quot;headerlink&quot; title=&quot;228.汇总区间&quot;&gt;&lt;/a&gt;228.汇总区间&lt;/h1&gt;&lt;p&gt;给定一个  &lt;strong&gt;无重复元素&lt;/strong&gt; 的</description>
+      <description>&lt;h1 id=&quot;409-最长回文串&quot;&gt;&lt;a href=&quot;#409-最长回文串&quot; class=&quot;headerlink&quot; title=&quot;409.最长回文串&quot;&gt;&lt;/a&gt;409.最长回文串&lt;/h1&gt;&lt;p&gt;给定一个包含大写字母和小写字母的字符串 &lt;code&gt;s&lt;/code&gt; ，返回</description>
           
         
       
@@ -70,21 +39,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/11/228-hui-zong-qu-jian/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/16/409-zui-chang-hui-wen-chuan/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>226.翻转二叉树</title>
-      <link>https://qetuop91.github.io/2024/05/11/226-fan-zhuan-er-cha-shu/</link>
-      <guid>https://qetuop91.github.io/2024/05/11/226-fan-zhuan-er-cha-shu/</guid>
-      <pubDate>Sat, 11 May 2024 01:53:37 GMT</pubDate>
+      <title>1953.你可以工作的最大周数</title>
+      <link>https://qetuop91.github.io/2024/05/16/1953-ni-ke-yi-gong-zuo-de-zui-da-zhou-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/16/1953-ni-ke-yi-gong-zuo-de-zui-da-zhou-shu/</guid>
+      <pubDate>Thu, 16 May 2024 01:32:11 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;226-翻转二叉树&quot;&gt;&lt;a href=&quot;#226-翻转二叉树&quot; class=&quot;headerlink&quot; title=&quot;226.翻转二叉树&quot;&gt;&lt;/a&gt;226.翻转二叉树&lt;/h1&gt;&lt;p&gt;给你一棵二叉树的根节点 &lt;code&gt;root&lt;/code&gt;</description>
+      <description>&lt;h1 id=&quot;1953-你可以工作的最大周数&quot;&gt;&lt;a href=&quot;#1953-你可以工作的最大周数&quot; class=&quot;headerlink&quot; title=&quot;1953.你可以工作的最大周数&quot;&gt;&lt;/a&gt;1953.你可以工作的最大周数&lt;/h1&gt;&lt;p&gt;给你 &lt;code&gt;n&lt;/code&gt;</description>
           
         
       
@@ -101,21 +70,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/11/226-fan-zhuan-er-cha-shu/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/16/1953-ni-ke-yi-gong-zuo-de-zui-da-zhou-shu/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>225.用队列实现栈</title>
-      <link>https://qetuop91.github.io/2024/05/11/225-yong-dui-lie-shi-xian-zhan/</link>
-      <guid>https://qetuop91.github.io/2024/05/11/225-yong-dui-lie-shi-xian-zhan/</guid>
-      <pubDate>Sat, 11 May 2024 01:23:59 GMT</pubDate>
+      <title>21.合并两个有序链表</title>
+      <link>https://qetuop91.github.io/2024/05/15/21-he-bing-liang-ge-you-xu-lian-biao/</link>
+      <guid>https://qetuop91.github.io/2024/05/15/21-he-bing-liang-ge-you-xu-lian-biao/</guid>
+      <pubDate>Wed, 15 May 2024 09:06:47 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;225-用队列实现栈&quot;&gt;&lt;a href=&quot;#225-用队列实现栈&quot; class=&quot;headerlink&quot;</description>
+      <description>&lt;h1 id=&quot;21-合并两个有序链表&quot;&gt;&lt;a href=&quot;#21-合并两个有序链表&quot; class=&quot;headerlink&quot; title=&quot;21.合并两个有序链表&quot;&gt;&lt;/a&gt;21.合并两个有序链表&lt;/h1&gt;&lt;p&gt;将两个升序链表合并为一个新的</description>
           
         
       
@@ -132,21 +101,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/11/225-yong-dui-lie-shi-xian-zhan/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/15/21-he-bing-liang-ge-you-xu-lian-biao/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>2391.收集垃圾的最少总时间</title>
-      <link>https://qetuop91.github.io/2024/05/11/2391-shou-ji-la-ji-de-zui-shao-zong-shi-jian/</link>
-      <guid>https://qetuop91.github.io/2024/05/11/2391-shou-ji-la-ji-de-zui-shao-zong-shi-jian/</guid>
-      <pubDate>Sat, 11 May 2024 00:49:57 GMT</pubDate>
+      <title>215.数组中的第K个最大元素</title>
+      <link>https://qetuop91.github.io/2024/05/15/215-shu-zu-zhong-de-di-k-ge-zui-da-yuan-su/</link>
+      <guid>https://qetuop91.github.io/2024/05/15/215-shu-zu-zhong-de-di-k-ge-zui-da-yuan-su/</guid>
+      <pubDate>Wed, 15 May 2024 02:21:47 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;2391-收集垃圾的最少总时间&quot;&gt;&lt;a href=&quot;#2391-收集垃圾的最少总时间&quot; class=&quot;headerlink&quot; title=&quot;2391.收集垃圾的最少总时间&quot;&gt;&lt;/a&gt;2391.收集垃圾的最少总时间&lt;/h1&gt;&lt;p&gt;给你一个下标从</description>
+      <description>&lt;h1 id=&quot;215-数组中的第K个最大元素&quot;&gt;&lt;a href=&quot;#215-数组中的第K个最大元素&quot; class=&quot;headerlink&quot; title=&quot;215.数组中的第K个最大元素&quot;&gt;&lt;/a&gt;215.数组中的第K个最大元素&lt;/h1&gt;&lt;p&gt;给定整数数组</description>
           
         
       
@@ -163,21 +132,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/11/2391-shou-ji-la-ji-de-zui-shao-zong-shi-jian/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/15/215-shu-zu-zhong-de-di-k-ge-zui-da-yuan-su/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>222.完全二叉树的节点个数</title>
-      <link>https://qetuop91.github.io/2024/05/10/222-wan-quan-er-cha-shu-de-jie-dian-ge-shu/</link>
-      <guid>https://qetuop91.github.io/2024/05/10/222-wan-quan-er-cha-shu-de-jie-dian-ge-shu/</guid>
-      <pubDate>Fri, 10 May 2024 13:52:13 GMT</pubDate>
+      <title>933.最近的请求次数</title>
+      <link>https://qetuop91.github.io/2024/05/15/933-zui-jin-de-qing-qiu-ci-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/15/933-zui-jin-de-qing-qiu-ci-shu/</guid>
+      <pubDate>Wed, 15 May 2024 01:01:34 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;222-完全二叉树的节点个数&quot;&gt;&lt;a href=&quot;#222-完全二叉树的节点个数&quot; class=&quot;headerlink&quot; title=&quot;222.完全二叉树的节点个数&quot;&gt;&lt;/a&gt;222.完全二叉树的节点个数&lt;/h1&gt;&lt;p&gt;给你一棵</description>
+      <description>&lt;h1 id=&quot;933-最近的请求次数&quot;&gt;&lt;a href=&quot;#933-最近的请求次数&quot; class=&quot;headerlink&quot; title=&quot;933.最近的请求次数&quot;&gt;&lt;/a&gt;933.最近的请求次数&lt;/h1&gt;&lt;p&gt;写一个 &lt;code&gt;RecentCounter&lt;/code&gt;</description>
           
         
       
@@ -194,21 +163,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/10/222-wan-quan-er-cha-shu-de-jie-dian-ge-shu/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/15/933-zui-jin-de-qing-qiu-ci-shu/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>219.存在重复元素II</title>
-      <link>https://qetuop91.github.io/2024/05/10/219-cun-zai-chong-fu-yuan-su-ii/</link>
-      <guid>https://qetuop91.github.io/2024/05/10/219-cun-zai-chong-fu-yuan-su-ii/</guid>
-      <pubDate>Fri, 10 May 2024 01:18:22 GMT</pubDate>
+      <title>5.最长回文子串</title>
+      <link>https://qetuop91.github.io/2024/05/15/5-zui-chang-hui-wen-zi-chuan/</link>
+      <guid>https://qetuop91.github.io/2024/05/15/5-zui-chang-hui-wen-zi-chuan/</guid>
+      <pubDate>Wed, 15 May 2024 00:51:21 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;219-存在重复元素-II&quot;&gt;&lt;a href=&quot;#219-存在重复元素-II&quot; class=&quot;headerlink&quot; title=&quot;219.存在重复元素 II&quot;&gt;&lt;/a&gt;219.存在重复元素 II&lt;/h1&gt;&lt;p&gt;给你一个整数数组</description>
+      <description>&lt;h1 id=&quot;5-最长回文子串&quot;&gt;&lt;a href=&quot;#5-最长回文子串&quot; class=&quot;headerlink&quot; title=&quot;5.最长回文子串&quot;&gt;&lt;/a&gt;5.最长回文子串&lt;/h1&gt;&lt;p&gt;给你一个字符串 &lt;code&gt;s&lt;/code&gt;，找到 &lt;code&gt;s&lt;/code&gt;</description>
           
         
       
@@ -225,21 +194,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/10/219-cun-zai-chong-fu-yuan-su-ii/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/15/5-zui-chang-hui-wen-zi-chuan/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>203.移除链表元素</title>
-      <link>https://qetuop91.github.io/2024/05/10/203-yi-chu-lian-biao-yuan-su/</link>
-      <guid>https://qetuop91.github.io/2024/05/10/203-yi-chu-lian-biao-yuan-su/</guid>
-      <pubDate>Fri, 10 May 2024 00:50:16 GMT</pubDate>
+      <title>349.两个数组的交集</title>
+      <link>https://qetuop91.github.io/2024/05/14/349-liang-ge-shu-zu-de-jiao-ji/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/349-liang-ge-shu-zu-de-jiao-ji/</guid>
+      <pubDate>Tue, 14 May 2024 15:23:32 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;203-移除链表元素&quot;&gt;&lt;a href=&quot;#203-移除链表元素&quot; class=&quot;headerlink&quot; title=&quot;203.移除链表元素&quot;&gt;&lt;/a&gt;203.移除链表元素&lt;/h1&gt;&lt;p&gt;给你一个链表的头节点 &lt;code&gt;head&lt;/code&gt; 和一个整数</description>
+      <description>&lt;h1 id=&quot;349-两个数组的交集&quot;&gt;&lt;a href=&quot;#349-两个数组的交集&quot; class=&quot;headerlink&quot; title=&quot;349.两个数组的交集&quot;&gt;&lt;/a&gt;349.两个数组的交集&lt;/h1&gt;&lt;p&gt;给定两个数组 &lt;code&gt;nums1&lt;/code&gt; 和</description>
           
         
       
@@ -256,21 +225,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/10/203-yi-chu-lian-biao-yuan-su/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/349-liang-ge-shu-zu-de-jiao-ji/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>2960.统计已测试设备</title>
-      <link>https://qetuop91.github.io/2024/05/10/2960-tong-ji-yi-ce-shi-she-bei/</link>
-      <guid>https://qetuop91.github.io/2024/05/10/2960-tong-ji-yi-ce-shi-she-bei/</guid>
-      <pubDate>Fri, 10 May 2024 00:24:53 GMT</pubDate>
+      <title>345.反转字符串中的元音字母</title>
+      <link>https://qetuop91.github.io/2024/05/14/345-fan-zhuan-zi-fu-chuan-zhong-de-yuan-yin-zi-mu/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/345-fan-zhuan-zi-fu-chuan-zhong-de-yuan-yin-zi-mu/</guid>
+      <pubDate>Tue, 14 May 2024 15:03:54 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;2960-统计已测试设备&quot;&gt;&lt;a href=&quot;#2960-统计已测试设备&quot; class=&quot;headerlink&quot; title=&quot;2960.统计已测试设备&quot;&gt;&lt;/a&gt;2960.统计已测试设备&lt;/h1&gt;&lt;p&gt;给你一个长度为 &lt;code&gt;n&lt;/code&gt; 、下标从</description>
+      <description>&lt;h1 id=&quot;345-反转字符串中的元音字母&quot;&gt;&lt;a href=&quot;#345-反转字符串中的元音字母&quot; class=&quot;headerlink&quot; title=&quot;345.反转字符串中的元音字母&quot;&gt;&lt;/a&gt;345.反转字符串中的元音字母&lt;/h1&gt;&lt;p&gt;给你一个字符串</description>
           
         
       
@@ -287,21 +256,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/10/2960-tong-ji-yi-ce-shi-she-bei/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/345-fan-zhuan-zi-fu-chuan-zhong-de-yuan-yin-zi-mu/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>217.存在重复元素</title>
-      <link>https://qetuop91.github.io/2024/05/10/217-cun-zai-chong-fu-yuan-su/</link>
-      <guid>https://qetuop91.github.io/2024/05/10/217-cun-zai-chong-fu-yuan-su/</guid>
-      <pubDate>Thu, 09 May 2024 16:06:03 GMT</pubDate>
+      <title>344.反转字符串</title>
+      <link>https://qetuop91.github.io/2024/05/14/344-fan-zhuan-zi-fu-chuan/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/344-fan-zhuan-zi-fu-chuan/</guid>
+      <pubDate>Tue, 14 May 2024 14:25:05 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;217-存在重复元素&quot;&gt;&lt;a href=&quot;#217-存在重复元素&quot; class=&quot;headerlink&quot; title=&quot;217.存在重复元素&quot;&gt;&lt;/a&gt;217.存在重复元素&lt;/h1&gt;&lt;p&gt;给你一个整数数组 &lt;code&gt;nums&lt;/code&gt;</description>
+      <description>&lt;h1 id=&quot;344-反转字符串&quot;&gt;&lt;a href=&quot;#344-反转字符串&quot; class=&quot;headerlink&quot; title=&quot;344.反转字符串&quot;&gt;&lt;/a&gt;344.反转字符串&lt;/h1&gt;&lt;p&gt;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组</description>
           
         
       
@@ -318,21 +287,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/10/217-cun-zai-chong-fu-yuan-su/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/344-fan-zhuan-zi-fu-chuan/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>206.反转链表</title>
-      <link>https://qetuop91.github.io/2024/05/09/206-fan-zhuan-lian-biao/</link>
-      <guid>https://qetuop91.github.io/2024/05/09/206-fan-zhuan-lian-biao/</guid>
-      <pubDate>Thu, 09 May 2024 11:03:20 GMT</pubDate>
+      <title>338.比特位计数</title>
+      <link>https://qetuop91.github.io/2024/05/14/338-bi-te-wei-ji-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/338-bi-te-wei-ji-shu/</guid>
+      <pubDate>Tue, 14 May 2024 14:10:49 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;206-反转链表&quot;&gt;&lt;a href=&quot;#206-反转链表&quot; class=&quot;headerlink&quot; title=&quot;206.反转链表&quot;&gt;&lt;/a&gt;206.反转链表&lt;/h1&gt;&lt;p&gt;给你单链表的头节点 &lt;code&gt;head&lt;/code&gt;</description>
+      <description>&lt;h1 id=&quot;338-比特位计数&quot;&gt;&lt;a href=&quot;#338-比特位计数&quot; class=&quot;headerlink&quot; title=&quot;338.比特位计数&quot;&gt;&lt;/a&gt;338.比特位计数&lt;/h1&gt;&lt;p&gt;给你一个整数 &lt;code&gt;n&lt;/code&gt; ，对于 &lt;code&gt;0 &amp;lt;= i</description>
           
         
       
@@ -349,21 +318,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/09/206-fan-zhuan-lian-biao/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/338-bi-te-wei-ji-shu/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>205.同构字符串</title>
-      <link>https://qetuop91.github.io/2024/05/09/205-tong-gou-zi-fu-chuan/</link>
-      <guid>https://qetuop91.github.io/2024/05/09/205-tong-gou-zi-fu-chuan/</guid>
-      <pubDate>Thu, 09 May 2024 04:02:37 GMT</pubDate>
+      <title>342.4的幂</title>
+      <link>https://qetuop91.github.io/2024/05/14/342-4-de-mi/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/342-4-de-mi/</guid>
+      <pubDate>Tue, 14 May 2024 07:28:27 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;205-同构字符串&quot;&gt;&lt;a href=&quot;#205-同构字符串&quot; class=&quot;headerlink&quot; title=&quot;205.同构字符串&quot;&gt;&lt;/a&gt;205.同构字符串&lt;/h1&gt;&lt;p&gt;给定两个字符串 &lt;code&gt;s&lt;/code&gt; 和 &lt;code&gt;t&lt;/code&gt;</description>
+      <description>&lt;h1 id=&quot;342-4的幂&quot;&gt;&lt;a href=&quot;#342-4的幂&quot; class=&quot;headerlink&quot; title=&quot;342.4的幂&quot;&gt;&lt;/a&gt;342.4的幂&lt;/h1&gt;&lt;p&gt;给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回</description>
           
         
       
@@ -380,21 +349,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/09/205-tong-gou-zi-fu-chuan/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/342-4-de-mi/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>2105.给植物浇水II</title>
-      <link>https://qetuop91.github.io/2024/05/09/2105-gei-zhi-wu-jiao-shui-ii/</link>
-      <guid>https://qetuop91.github.io/2024/05/09/2105-gei-zhi-wu-jiao-shui-ii/</guid>
-      <pubDate>Thu, 09 May 2024 03:48:22 GMT</pubDate>
+      <title>326.3的幂</title>
+      <link>https://qetuop91.github.io/2024/05/14/326-3-de-mi/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/326-3-de-mi/</guid>
+      <pubDate>Tue, 14 May 2024 07:28:12 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;2105-给植物浇水-II&quot;&gt;&lt;a href=&quot;#2105-给植物浇水-II&quot; class=&quot;headerlink&quot; title=&quot;2105.给植物浇水 II&quot;&gt;&lt;/a&gt;2105.给植物浇水 II&lt;/h1&gt;&lt;p&gt;Alice 和 Bob 打算给花园里的</description>
+      <description>&lt;h1 id=&quot;326-3的幂&quot;&gt;&lt;a href=&quot;#326-3的幂&quot; class=&quot;headerlink&quot; title=&quot;326.3的幂&quot;&gt;&lt;/a&gt;326.3的幂&lt;/h1&gt;&lt;p&gt;给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回</description>
           
         
       
@@ -411,145 +380,21 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/09/2105-gei-zhi-wu-jiao-shui-ii/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/326-3-de-mi/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>P5714 【深基3.例7】肥胖问题</title>
-      <link>https://qetuop91.github.io/2024/05/09/p5714-shen-ji-3-li-7-fei-pang-wen-ti/</link>
-      <guid>https://qetuop91.github.io/2024/05/09/p5714-shen-ji-3-li-7-fei-pang-wen-ti/</guid>
-      <pubDate>Wed, 08 May 2024 16:12:21 GMT</pubDate>
+      <title>303.区域和检索-数组不可变</title>
+      <link>https://qetuop91.github.io/2024/05/14/303-qu-yu-he-jian-suo-shu-zu-bu-ke-bian/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/303-qu-yu-he-jian-suo-shu-zu-bu-ke-bian/</guid>
+      <pubDate>Tue, 14 May 2024 06:53:35 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;【深基3-例7】肥胖问题&quot;&gt;&lt;a href=&quot;#【深基3-例7】肥胖问题&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例7】肥胖问题&quot;&gt;&lt;/a&gt;【深基3.例7】肥胖问题&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/09/p5714-shen-ji-3-li-7-fei-pang-wen-ti/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5713 【深基3.例5】洛谷团队系统</title>
-      <link>https://qetuop91.github.io/2024/05/08/p5713-shen-ji-3-li-5-luo-gu-tuan-dui-xi-tong/</link>
-      <guid>https://qetuop91.github.io/2024/05/08/p5713-shen-ji-3-li-5-luo-gu-tuan-dui-xi-tong/</guid>
-      <pubDate>Wed, 08 May 2024 15:50:42 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基3-例5】洛谷团队系统&quot;&gt;&lt;a href=&quot;#【深基3-例5】洛谷团队系统&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例5】洛谷团队系统&quot;&gt;&lt;/a&gt;【深基3.例5】洛谷团队系统&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/08/p5713-shen-ji-3-li-5-luo-gu-tuan-dui-xi-tong/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5712 【深基3.例4】Apples</title>
-      <link>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/</link>
-      <guid>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/</guid>
-      <pubDate>Wed, 08 May 2024 15:14:34 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基3-例4】Apples&quot;&gt;&lt;a href=&quot;#【深基3-例4】Apples&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例4】Apples&quot;&gt;&lt;/a&gt;【深基3.例4】Apples&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/08/p5712-shen-ji-3-li-4-apples/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>P5711 【深基3.例3】闰年判断</title>
-      <link>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/</link>
-      <guid>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/</guid>
-      <pubDate>Wed, 08 May 2024 15:10:04 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;【深基3-例3】闰年判断&quot;&gt;&lt;a href=&quot;#【深基3-例3】闰年判断&quot; class=&quot;headerlink&quot; title=&quot;【深基3.例3】闰年判断&quot;&gt;&lt;/a&gt;【深基3.例3】闰年判断&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%B4%9B%E8%B0%B7/">洛谷</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/08/p5711-shen-ji-3-li-3-run-nian-pan-duan/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>202.快乐数</title>
-      <link>https://qetuop91.github.io/2024/05/08/202-kuai-le-shu/</link>
-      <guid>https://qetuop91.github.io/2024/05/08/202-kuai-le-shu/</guid>
-      <pubDate>Wed, 08 May 2024 14:03:53 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;202-快乐数&quot;&gt;&lt;a href=&quot;#202-快乐数&quot; class=&quot;headerlink&quot; title=&quot;202.快乐数&quot;&gt;&lt;/a&gt;202.快乐数&lt;/h1&gt;&lt;p&gt;编写一个算法来判断一个数 &lt;code&gt;n&lt;/code&gt;</description>
+      <description>&lt;h1 id=&quot;303-区域和检索-数组不可变&quot;&gt;&lt;a href=&quot;#303-区域和检索-数组不可变&quot; class=&quot;headerlink&quot; title=&quot;303.区域和检索 - 数组不可变&quot;&gt;&lt;/a&gt;303.区域和检索 - 数组不可变&lt;/h1&gt;&lt;p&gt;给定一个整数数组 </description>
           
         
       
@@ -566,69 +411,224 @@
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/08/202-kuai-le-shu/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/303-qu-yu-he-jian-suo-shu-zu-bu-ke-bian/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>197.上升的温度</title>
-      <link>https://qetuop91.github.io/2024/05/08/197-shang-sheng-de-wen-du/</link>
-      <guid>https://qetuop91.github.io/2024/05/08/197-shang-sheng-de-wen-du/</guid>
-      <pubDate>Wed, 08 May 2024 12:49:52 GMT</pubDate>
+      <title>2244.完成所有任务需要的最少轮数</title>
+      <link>https://qetuop91.github.io/2024/05/14/2244-wan-cheng-suo-you-ren-wu-xu-yao-de-zui-shao-lun-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/14/2244-wan-cheng-suo-you-ren-wu-xu-yao-de-zui-shao-lun-shu/</guid>
+      <pubDate>Tue, 14 May 2024 03:05:15 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;197-上升的温度&quot;&gt;&lt;a href=&quot;#197-上升的温度&quot; class=&quot;headerlink&quot; title=&quot;197.上升的温度&quot;&gt;&lt;/a&gt;197.上升的温度&lt;/h1&gt;&lt;p&gt;表：</description>
+      <description>&lt;h1 id=&quot;2244-完成所有任务需要的最少轮数&quot;&gt;&lt;a href=&quot;#2244-完成所有任务需要的最少轮数&quot; class=&quot;headerlink&quot;</description>
           
         
       
       
       
       
-      <category domain="https://qetuop91.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</category>
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
       
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
       
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
-      <category domain="https://qetuop91.github.io/tags/MySQL/">MySQL</category>
-      
-      <category domain="https://qetuop91.github.io/tags/SQL%E9%A2%98/">SQL题</category>
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/08/197-shang-sheng-de-wen-du/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/14/2244-wan-cheng-suo-you-ren-wu-xu-yao-de-zui-shao-lun-shu/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>196.删除重复的电子邮箱</title>
-      <link>https://qetuop91.github.io/2024/05/08/196-shan-chu-chong-fu-de-dian-zi-you-xiang/</link>
-      <guid>https://qetuop91.github.io/2024/05/08/196-shan-chu-chong-fu-de-dian-zi-you-xiang/</guid>
-      <pubDate>Wed, 08 May 2024 12:32:47 GMT</pubDate>
+      <title>292.Nim游戏</title>
+      <link>https://qetuop91.github.io/2024/05/13/292-nim-you-xi/</link>
+      <guid>https://qetuop91.github.io/2024/05/13/292-nim-you-xi/</guid>
+      <pubDate>Mon, 13 May 2024 15:12:52 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;h1 id=&quot;196-删除重复的电子邮箱&quot;&gt;&lt;a href=&quot;#196-删除重复的电子邮箱&quot; class=&quot;headerlink&quot; title=&quot;196.删除重复的电子邮箱&quot;&gt;&lt;/a&gt;196.删除重复的电子邮箱&lt;/h1&gt;&lt;p&gt;表:</description>
+      <description>&lt;h1 id=&quot;292-Nim-游戏&quot;&gt;&lt;a href=&quot;#292-Nim-游戏&quot; class=&quot;headerlink&quot; title=&quot;292.Nim 游戏&quot;&gt;&lt;/a&gt;292.Nim 游戏&lt;/h1&gt;&lt;p&gt;你和你的朋友，两个人一起玩 &lt;a</description>
           
         
       
       
       
       
-      <category domain="https://qetuop91.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</category>
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
       
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
       
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
-      <category domain="https://qetuop91.github.io/tags/MySQL/">MySQL</category>
-      
-      <category domain="https://qetuop91.github.io/tags/SQL%E9%A2%98/">SQL题</category>
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
       
-      <comments>https://qetuop91.github.io/2024/05/08/196-shan-chu-chong-fu-de-dian-zi-you-xiang/#disqus_thread</comments>
+      <comments>https://qetuop91.github.io/2024/05/13/292-nim-you-xi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>290.单词规律</title>
+      <link>https://qetuop91.github.io/2024/05/13/290-dan-ci-gui-lu/</link>
+      <guid>https://qetuop91.github.io/2024/05/13/290-dan-ci-gui-lu/</guid>
+      <pubDate>Mon, 13 May 2024 14:56:02 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;290-单词规律&quot;&gt;&lt;a href=&quot;#290-单词规律&quot; class=&quot;headerlink&quot; title=&quot;290.单词规律&quot;&gt;&lt;/a&gt;290.单词规律&lt;/h1&gt;&lt;p&gt;给定一种规律 &lt;code&gt;pattern&lt;/code&gt; 和一个字符串</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/13/290-dan-ci-gui-lu/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>283.移动零</title>
+      <link>https://qetuop91.github.io/2024/05/13/283-yi-dong-ling/</link>
+      <guid>https://qetuop91.github.io/2024/05/13/283-yi-dong-ling/</guid>
+      <pubDate>Mon, 13 May 2024 14:54:40 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;283-移动零&quot;&gt;&lt;a href=&quot;#283-移动零&quot; class=&quot;headerlink&quot; title=&quot;283.移动零&quot;&gt;&lt;/a&gt;283.移动零&lt;/h1&gt;&lt;p&gt;给定一个数组 &lt;code&gt;nums&lt;/code&gt;，编写一个函数将所有 &lt;code&gt;0&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/13/283-yi-dong-ling/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>994.腐烂的橘子</title>
+      <link>https://qetuop91.github.io/2024/05/13/994-fu-lan-de-ju-zi/</link>
+      <guid>https://qetuop91.github.io/2024/05/13/994-fu-lan-de-ju-zi/</guid>
+      <pubDate>Sun, 12 May 2024 17:24:48 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;994-腐烂的橘子&quot;&gt;&lt;a href=&quot;#994-腐烂的橘子&quot; class=&quot;headerlink&quot; title=&quot;994.腐烂的橘子&quot;&gt;&lt;/a&gt;994.腐烂的橘子&lt;/h1&gt;&lt;p&gt;在给定的 &lt;code&gt;m x n&lt;/code&gt; 网格</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/13/994-fu-lan-de-ju-zi/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>278.第一个错误的版本</title>
+      <link>https://qetuop91.github.io/2024/05/12/278-di-yi-ge-cuo-wu-de-ban-ben/</link>
+      <guid>https://qetuop91.github.io/2024/05/12/278-di-yi-ge-cuo-wu-de-ban-ben/</guid>
+      <pubDate>Sun, 12 May 2024 13:59:35 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;278-第一个错误的版本&quot;&gt;&lt;a href=&quot;#278-第一个错误的版本&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/12/278-di-yi-ge-cuo-wu-de-ban-ben/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>268.丢失的数字</title>
+      <link>https://qetuop91.github.io/2024/05/12/268-diu-shi-de-shu-zi/</link>
+      <guid>https://qetuop91.github.io/2024/05/12/268-diu-shi-de-shu-zi/</guid>
+      <pubDate>Sun, 12 May 2024 13:21:30 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;268-丢失的数字&quot;&gt;&lt;a href=&quot;#268-丢失的数字&quot; class=&quot;headerlink&quot; title=&quot;268.丢失的数字&quot;&gt;&lt;/a&gt;268.丢失的数字&lt;/h1&gt;&lt;p&gt;给定一个包含 &lt;code&gt;[0, n]&lt;/code&gt; 中</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/12/268-diu-shi-de-shu-zi/#disqus_thread</comments>
       
     </item>
     
