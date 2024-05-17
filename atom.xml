@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-16T14:57:14.313Z</updated>
+  <updated>2024-05-17T01:20:17.901Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2828.判别首字母缩略词</title>
+    <link href="https://qetuop91.github.io/2024/05/17/2828-pan-bie-shou-zi-mu-suo-lue-ci/"/>
+    <id>https://qetuop91.github.io/2024/05/17/2828-pan-bie-shou-zi-mu-suo-lue-ci/</id>
+    <published>2024-05-17T01:19:30.000Z</published>
+    <updated>2024-05-17T01:20:17.901Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2828-判别首字母缩略词&quot;&gt;&lt;a href=&quot;#2828-判别首字母缩略词&quot; class=&quot;headerlink&quot; title=&quot;2828.判别首字母缩略词&quot;&gt;&lt;/a&gt;2828.判别首字母缩略词&lt;/h1&gt;&lt;p&gt;给你一个字符串数组</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>826.安排工作以达到最大收益</title>
+    <link href="https://qetuop91.github.io/2024/05/17/826-an-pai-gong-zuo-yi-da-dao-zui-da-shou-yi/"/>
+    <id>https://qetuop91.github.io/2024/05/17/826-an-pai-gong-zuo-yi-da-dao-zui-da-shou-yi/</id>
+    <published>2024-05-17T01:07:16.000Z</published>
+    <updated>2024-05-17T01:09:07.476Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;826-安排工作以达到最大收益&quot;&gt;&lt;a href=&quot;#826-安排工作以达到最大收益&quot; class=&quot;headerlink&quot; title=&quot;826.安排工作以达到最大收益&quot;&gt;&lt;/a&gt;826.安排工作以达到最大收益&lt;/h1&gt;&lt;p&gt;你有 &lt;code&gt;n&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>350.两个数组的交集II</title>
@@ -522,64 +580,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;290-单词规律&quot;&gt;&lt;a href=&quot;#290-单词规律&quot; class=&quot;headerlink&quot; title=&quot;290.单词规律&quot;&gt;&lt;/a&gt;290.单词规律&lt;/h1&gt;&lt;p&gt;给定一种规律 &lt;code&gt;pattern&lt;/code&gt; 和一个字符串</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>283.移动零</title>
-    <link href="https://qetuop91.github.io/2024/05/13/283-yi-dong-ling/"/>
-    <id>https://qetuop91.github.io/2024/05/13/283-yi-dong-ling/</id>
-    <published>2024-05-13T14:54:40.000Z</published>
-    <updated>2024-05-13T14:55:34.412Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;283-移动零&quot;&gt;&lt;a href=&quot;#283-移动零&quot; class=&quot;headerlink&quot; title=&quot;283.移动零&quot;&gt;&lt;/a&gt;283.移动零&lt;/h1&gt;&lt;p&gt;给定一个数组 &lt;code&gt;nums&lt;/code&gt;，编写一个函数将所有 &lt;code&gt;0&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>994.腐烂的橘子</title>
-    <link href="https://qetuop91.github.io/2024/05/13/994-fu-lan-de-ju-zi/"/>
-    <id>https://qetuop91.github.io/2024/05/13/994-fu-lan-de-ju-zi/</id>
-    <published>2024-05-12T17:24:48.000Z</published>
-    <updated>2024-05-12T17:26:51.184Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;994-腐烂的橘子&quot;&gt;&lt;a href=&quot;#994-腐烂的橘子&quot; class=&quot;headerlink&quot; title=&quot;994.腐烂的橘子&quot;&gt;&lt;/a&gt;994.腐烂的橘子&lt;/h1&gt;&lt;p&gt;在给定的 &lt;code&gt;m x n&lt;/code&gt; 网格</summary>
         
       
     
