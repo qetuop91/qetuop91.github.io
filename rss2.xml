@@ -9,8 +9,93 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Fri, 17 May 2024 01:20:17 GMT</pubDate>
+    <pubDate>Sat, 18 May 2024 06:44:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>264.丑数II</title>
+      <link>https://qetuop91.github.io/2024/05/18/264-chou-shu-ii/</link>
+      <guid>https://qetuop91.github.io/2024/05/18/264-chou-shu-ii/</guid>
+      <pubDate>Sat, 18 May 2024 06:43:13 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;264-丑数II&quot;&gt;&lt;a href=&quot;#264-丑数II&quot; class=&quot;headerlink&quot; title=&quot;264. 丑数II&quot;&gt;&lt;/a&gt;264. 丑数II&lt;/h1&gt;&lt;p&gt;给你一个整数 &lt;code&gt;n&lt;/code&gt; ，请你找出并返回第</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/18/264-chou-shu-ii/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>2644.找出可整除性得分最大的整数</title>
+      <link>https://qetuop91.github.io/2024/05/18/2644-zhao-chu-ke-zheng-chu-xing-de-fen-zui-da-de-zheng-shu/</link>
+      <guid>https://qetuop91.github.io/2024/05/18/2644-zhao-chu-ke-zheng-chu-xing-de-fen-zui-da-de-zheng-shu/</guid>
+      <pubDate>Sat, 18 May 2024 03:25:05 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;2644-找出可整除性得分最大的整数&quot;&gt;&lt;a href=&quot;#2644-找出可整除性得分最大的整数&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/18/2644-zhao-chu-ke-zheng-chu-xing-de-fen-zui-da-de-zheng-shu/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>计算机操作系统</title>
+      <link>https://qetuop91.github.io/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/</link>
+      <guid>https://qetuop91.github.io/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/</guid>
+      <pubDate>Fri, 17 May 2024 02:27:59 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;操作系统的特征&quot;&gt;&lt;a href=&quot;#操作系统的特征&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>2828.判别首字母缩略词</title>
@@ -536,99 +621,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/14/303-qu-yu-he-jian-suo-shu-zu-bu-ke-bian/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>2244.完成所有任务需要的最少轮数</title>
-      <link>https://qetuop91.github.io/2024/05/14/2244-wan-cheng-suo-you-ren-wu-xu-yao-de-zui-shao-lun-shu/</link>
-      <guid>https://qetuop91.github.io/2024/05/14/2244-wan-cheng-suo-you-ren-wu-xu-yao-de-zui-shao-lun-shu/</guid>
-      <pubDate>Tue, 14 May 2024 03:05:15 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;2244-完成所有任务需要的最少轮数&quot;&gt;&lt;a href=&quot;#2244-完成所有任务需要的最少轮数&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/14/2244-wan-cheng-suo-you-ren-wu-xu-yao-de-zui-shao-lun-shu/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>292.Nim游戏</title>
-      <link>https://qetuop91.github.io/2024/05/13/292-nim-you-xi/</link>
-      <guid>https://qetuop91.github.io/2024/05/13/292-nim-you-xi/</guid>
-      <pubDate>Mon, 13 May 2024 15:12:52 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;292-Nim-游戏&quot;&gt;&lt;a href=&quot;#292-Nim-游戏&quot; class=&quot;headerlink&quot; title=&quot;292.Nim 游戏&quot;&gt;&lt;/a&gt;292.Nim 游戏&lt;/h1&gt;&lt;p&gt;你和你的朋友，两个人一起玩 &lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/13/292-nim-you-xi/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>290.单词规律</title>
-      <link>https://qetuop91.github.io/2024/05/13/290-dan-ci-gui-lu/</link>
-      <guid>https://qetuop91.github.io/2024/05/13/290-dan-ci-gui-lu/</guid>
-      <pubDate>Mon, 13 May 2024 14:56:02 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;290-单词规律&quot;&gt;&lt;a href=&quot;#290-单词规律&quot; class=&quot;headerlink&quot; title=&quot;290.单词规律&quot;&gt;&lt;/a&gt;290.单词规律&lt;/h1&gt;&lt;p&gt;给定一种规律 &lt;code&gt;pattern&lt;/code&gt; 和一个字符串</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/13/290-dan-ci-gui-lu/#disqus_thread</comments>
       
     </item>
     

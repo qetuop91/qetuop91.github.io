@@ -4,6 +4,77 @@
   
     
     <entry>
+      <title>264.丑数II</title>
+      <link href="/2024/05/18/264-chou-shu-ii/"/>
+      <url>/2024/05/18/264-chou-shu-ii/</url>
+      
+        <content type="html"><![CDATA[<h1 id="264-丑数II"><a href="#264-丑数II" class="headerlink" title="264. 丑数II"></a>264. 丑数II</h1><p>给你一个整数 <code>n</code> ，请你找出并返回第 <code>n</code> 个 <strong>丑数</strong> 。</p><p><strong>丑数</strong> 就是质因子只包含 <code>2</code>、<code>3</code> 和 <code>5</code> 的正整数。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入：n = 10<br>  输出：12<br>  解释：[1, 2, 3, 4, 5, 6, 8, 9, 10, 12] 是由前 10 个丑数组成的序列。</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：n = 1<br>  输出：1<br>  解释：1 通常被视为丑数。</p></blockquote><p><strong>提示：</strong></p><ul><li><code>1 &lt;= n &lt;= 1690</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">nthUglyNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        dp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> p2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> p3 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> p5 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">int</span> num2 <span class="token operator">=</span> dp<span class="token punctuation">[</span>p2<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>            <span class="token keyword">int</span> num3 <span class="token operator">=</span> dp<span class="token punctuation">[</span>p3<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span>            <span class="token keyword">int</span> num5 <span class="token operator">=</span> dp<span class="token punctuation">[</span>p5<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">5</span><span class="token punctuation">;</span>            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>num3<span class="token punctuation">,</span> num5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> num2<span class="token punctuation">)</span> <span class="token punctuation">{</span>                p2<span class="token operator">++</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> num3<span class="token punctuation">)</span> <span class="token punctuation">{</span>                p3<span class="token operator">++</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> num5<span class="token punctuation">)</span> <span class="token punctuation">{</span>                p5<span class="token operator">++</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2644.找出可整除性得分最大的整数</title>
+      <link href="/2024/05/18/2644-zhao-chu-ke-zheng-chu-xing-de-fen-zui-da-de-zheng-shu/"/>
+      <url>/2024/05/18/2644-zhao-chu-ke-zheng-chu-xing-de-fen-zui-da-de-zheng-shu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2644-找出可整除性得分最大的整数"><a href="#2644-找出可整除性得分最大的整数" class="headerlink" title="2644.找出可整除性得分最大的整数"></a>2644.找出可整除性得分最大的整数</h1><p>给你两个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和 <code>divisors</code> 。</p><p><code>divisors[i]</code> 的 <strong>可整除性得分</strong> 等于满足 <code>nums[j]</code> 能被 <code>divisors[i]</code> 整除的下标 <code>j</code> 的数量。</p><p>返回 <strong>可整除性得分</strong> 最大的整数 <code>divisors[i]</code> 。如果有多个整数具有最大得分，则返回数值最小的一个。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入：nums = [4,7,9,3,9], divisors = [5,2,3]<br>  输出：3<br>  解释：divisors 中每个元素的可整除性得分为：<br>  divisors[0] 的可整除性得分为 0 ，因为 nums 中没有任何数字能被 5 整除。<br>  divisors[1] 的可整除性得分为 1 ，因为 nums[0] 能被 2 整除。<br>  divisors[2] 的可整除性得分为 3 ，因为 nums[2]、nums[3] 和 nums[4] 都能被 3 整除。<br>  因此，返回 divisors[2] ，它的可整除性得分最大。</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：nums = [20,14,21,10], divisors = [5,7,5]<br>  输出：5<br>  解释：divisors 中每个元素的可整除性得分为：<br>  divisors[0] 的可整除性得分为 2 ，因为 nums[0] 和 nums[3] 都能被 5 整除。<br>  divisors[1] 的可整除性得分为 2 ，因为 nums[1] 和 nums[2] 都能被 7 整除。<br>  divisors[2] 的可整除性得分为 2 ，因为 nums[0] 和 nums[3] 都能被5整除。<br>  由于 divisors[0]、divisors[1] 和 divisors[2] 的可整除性得分都是最大的，因此，我们返回数值最小的一个，即 divisors[2] 。</p></blockquote><p><strong>示例 3：</strong></p><blockquote><p>  输入：nums = [12], divisors = [10,16]<br>  输出：10<br>  解释：divisors 中每个元素的可整除性得分为：<br>  divisors[0] 的可整除性得分为 0 ，因为 nums 中没有任何数字能被 10 整除。<br>  divisors[1] 的可整除性得分为 0 ，因为 nums 中没有任何数字能被 16 整除。<br>  由于 divisors[0] 和 divisors[1] 的可整除性得分都是最大的，因此，我们返回数值最小的一个，即 divisors[0] 。</p></blockquote><p><strong>提示：</strong></p><ul><li><code>1 &lt;= nums.length, divisors.length &lt;= 1000</code></li><li><code>1 &lt;= nums[i], divisors[i] &lt;= 109</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxDivScore</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> divisors<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> divisors<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">int</span> temp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">%</span> divisors<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                    temp<span class="token operator">++</span><span class="token punctuation">;</span>                <span class="token punctuation">}</span>            <span class="token punctuation">}</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>temp <span class="token operator">&gt;</span> count <span class="token operator">||</span> <span class="token punctuation">(</span>temp <span class="token operator">==</span> count <span class="token operator">&amp;&amp;</span> ans <span class="token operator">&gt;</span> divisors<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                count <span class="token operator">=</span> temp<span class="token punctuation">;</span>                ans <span class="token operator">=</span> divisors<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机操作系统</title>
+      <link href="/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/"/>
+      <url>/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="操作系统的特征"><a href="#操作系统的特征" class="headerlink" title="操作系统的特征"></a>操作系统的特征</h2><ul><li><code>并发</code><ul><li>指两个或多个事件在同一时间间隔内发生，宏观上同时发生，微观上交替发生</li><li>并行：指两个或多个事件在同一时刻同时发生</li><li><code>单核CPU同一时刻只能执行一个程序，各个程序只能并发地执行</code></li><li><code>多核CPU同一时刻可以同时执行多个程序，多个程序可以并行地执行</code></li></ul></li><li><code>共享</code><ul><li><code>互斥共享方式</code>：一个时间段内只允许一个进程访问访问资源</li><li><code>同时共享方式</code>：允许一个时间段内多个进程同时堆资源进行访问</li></ul></li><li>虚拟<ul><li>把一个物理上的实体变为若干个逻辑上的对应物</li><li><code>空分复用技术</code></li><li><code>时分复用技术</code></li></ul></li><li>异步<ul><li>在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行是走走停停的，以不可预知的速度向前推进，这就是进程的异步性</li><li><code>只有系统有并发性，才会有可能有异步性</code></li></ul></li></ul><blockquote><p>  并发和并行的区别</p><p>  并发和共享互为存在条件</p><p>  没有并发和共享，就没有虚拟和异步，因此并发和共享是操作系统的两个最基本的特征</p></blockquote><h2 id="操作系统的发展与分类"><a href="#操作系统的发展与分类" class="headerlink" title="操作系统的发展与分类"></a>操作系统的发展与分类</h2><ul><li>手工操作阶段<ul><li>纸带机（用户独占全机，缺点：人机速度矛盾）</li></ul></li><li>批处理阶段（单道）<ul><li>单道批处理系统（外围机——磁带）<ul><li>优点：缓解人机速度矛盾</li><li>缺点：资源利用率依然很低</li></ul></li><li>多道批处理系统（操作系统开始出现）<ul><li>优点：多道程序并发执行，资源利用率高</li><li>缺点：不提供人机交互功能</li></ul></li></ul></li><li>分时操作系统<ul><li>轮流处理作业</li><li>不能处理紧急任务</li></ul></li><li>实时操作系统<ul><li>优先处理紧急任务</li><li>硬实时系统：必须在严格的时间内完成处理</li><li>软实时系统：可以偶尔犯错</li></ul></li><li>网络操作系统</li><li>分布式操作系统</li><li>个人计算机操作系统</li></ul><h2 id="操作系统的运行机制"><a href="#操作系统的运行机制" class="headerlink" title="操作系统的运行机制"></a>操作系统的运行机制</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405171130839.png" alt="image-20240517113053734"> </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2828.判别首字母缩略词</title>
       <link href="/2024/05/17/2828-pan-bie-shou-zi-mu-suo-lue-ci/"/>
       <url>/2024/05/17/2828-pan-bie-shou-zi-mu-suo-lue-ci/</url>
