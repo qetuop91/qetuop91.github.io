@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title>1673.找出最具竞争力的子序列</title>
+      <link href="/2024/05/24/1673-zhao-chu-zui-ju-jing-zheng-li-de-zi-xu-lie/"/>
+      <url>/2024/05/24/1673-zhao-chu-zui-ju-jing-zheng-li-de-zi-xu-lie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1673-找出最具竞争力的子序列"><a href="#1673-找出最具竞争力的子序列" class="headerlink" title="1673.找出最具竞争力的子序列"></a>1673.找出最具竞争力的子序列</h1><p>给你一个整数数组 <code>nums</code> 和一个正整数 <code>k</code> ，返回长度为 <code>k</code> 且最具 <strong>竞争力</strong> 的 <code>nums</code> 子序列。</p><p>数组的子序列是从数组中删除一些元素（可能不删除元素）得到的序列。</p><p>在子序列 <code>a</code> 和子序列 <code>b</code> 第一个不相同的位置上，如果 <code>a</code> 中的数字小于 <code>b</code> 中对应的数字，那么我们称子序列 <code>a</code> 比子序列 <code>b</code>（相同长度下）更具 <strong>竞争力</strong> 。 例如，<code>[1,3,4]</code> 比 <code>[1,3,5]</code> 更具竞争力，在第一个不相同的位置，也就是最后一个位置上， <code>4</code> 小于 <code>5</code> 。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入：nums = [3,5,2,6], k = 2<br>  输出：[2,6]<br>  解释：在所有可能的子序列集合 {[3,5], [3,2], [3,6], [5,2], [5,6], [2,6]} 中，[2,6] 最具竞争力。</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：nums = [2,4,3,3,5,4,9,6], k = 4<br>  输出：[2,3,3,4]</p></blockquote><p><strong>提示：</strong></p><ul><li><code>1 &lt;= nums.length &lt;= 105</code></li><li><code>0 &lt;= nums[i] &lt;= 109</code></li><li><code>1 &lt;= k &lt;= nums.length</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">mostCompetitive</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>        <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 先不管长度，直接找出最小子序列</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">while</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> k <span class="token operator">-</span> stack<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> n <span class="token operator">-</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>                stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> res<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            res<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> res<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+            <tag> 栈 </tag>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 单调栈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>415.字符串相加</title>
       <link href="/2024/05/22/415-zi-fu-chuan-xiang-jia/"/>
       <url>/2024/05/22/415-zi-fu-chuan-xiang-jia/</url>
@@ -472,7 +509,7 @@
       <link href="/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/"/>
       <url>/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/</url>
       
-        <content type="html"><![CDATA[<h2 id="操作系统的特征"><a href="#操作系统的特征" class="headerlink" title="操作系统的特征"></a>操作系统的特征</h2><ul><li><code>并发</code><ul><li>指两个或多个事件在同一时间间隔内发生，宏观上同时发生，微观上交替发生</li><li>并行：指两个或多个事件在同一时刻同时发生</li><li><code>单核CPU同一时刻只能执行一个程序，各个程序只能并发地执行</code></li><li><code>多核CPU同一时刻可以同时执行多个程序，多个程序可以并行地执行</code></li></ul></li><li><code>共享</code><ul><li><code>互斥共享方式</code>：一个时间段内只允许一个进程访问访问资源</li><li><code>同时共享方式</code>：允许一个时间段内多个进程同时堆资源进行访问</li></ul></li><li>虚拟<ul><li>把一个物理上的实体变为若干个逻辑上的对应物</li><li><code>空分复用技术</code></li><li><code>时分复用技术</code></li></ul></li><li>异步<ul><li>在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行是走走停停的，以不可预知的速度向前推进，这就是进程的异步性</li><li><code>只有系统有并发性，才会有可能有异步性</code></li></ul></li></ul><blockquote><p>  并发和并行的区别</p><p>  并发和共享互为存在条件</p><p>  没有并发和共享，就没有虚拟和异步，因此并发和共享是操作系统的两个最基本的特征</p></blockquote><h2 id="操作系统的发展与分类"><a href="#操作系统的发展与分类" class="headerlink" title="操作系统的发展与分类"></a>操作系统的发展与分类</h2><ul><li>手工操作阶段<ul><li>纸带机（用户独占全机，缺点：人机速度矛盾）</li></ul></li><li>批处理阶段（单道）<ul><li>单道批处理系统（外围机——磁带）<ul><li>优点：缓解人机速度矛盾</li><li>缺点：资源利用率依然很低</li></ul></li><li>多道批处理系统（操作系统开始出现）<ul><li>优点：多道程序并发执行，资源利用率高</li><li>缺点：不提供人机交互功能</li></ul></li></ul></li><li>分时操作系统<ul><li>轮流处理作业</li><li>不能处理紧急任务</li></ul></li><li>实时操作系统<ul><li>优先处理紧急任务</li><li>硬实时系统：必须在严格的时间内完成处理</li><li>软实时系统：可以偶尔犯错</li></ul></li><li>网络操作系统</li><li>分布式操作系统</li><li>个人计算机操作系统</li></ul><h2 id="操作系统的运行机制"><a href="#操作系统的运行机制" class="headerlink" title="操作系统的运行机制"></a>操作系统的运行机制</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405171130839.png" alt="image-20240517113053734"> </p><p><code>在CPU设计和生产的时候就划分了特权指令和非特权指令</code>，因此CPU执行一条指令前就能判断出其类型</p><p>CPU能判断出指令类型，但是他是怎么区分此时正在运行的程序是<code>内核程序</code>还是<code>应用程序</code>？</p><p>CPU的状态：<code>内核态</code>&amp;<code>用户态</code></p><p>处于<code>内核态</code>时，说明此时正在运行的是内核程序，此时可以执行特权指令</p><p>处于<code>用户态</code>时，说明此时正在运行的时应用程序，此时只能执行非特权指令</p><blockquote><p>  CPU中有一个寄存器叫<code>程序状态字寄存器（PSW）</code>，其中有个二进制位，1表示“内核态”，0表示“用户态”</p></blockquote><p><code>内核态 -&gt; 用户态</code>：执行一条<code>特权指令</code>–<code>修改PSW</code>的标志位为“用户态”，这个动作意味着操作系统将主动让出CPU使用权</p><p><code>用户态 -&gt; 内核态</code>：由“<code>中断</code>”引发，<code>硬件自动完成变态过程</code>，触发中断信号意味着操作系统将强行夺回CPU的使用权</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>简单了解程序的运行原理<ul><li>高级语言编写代码 -&gt; 机器指令</li><li>程序运行的过程就是CPU执行指令的过程</li></ul></li><li>两类程序<ul><li>内核程序</li><li>应用程序</li></ul></li><li>两类指令<ul><li>特权指令</li><li>非特权指令</li></ul></li><li>两种处理器状态<ul><li>内核态/核心态/管态</li><li>用户态/目态</li></ul></li><li>内核<ul><li>内核是操作系统最重要最核心的部分</li><li>由很多内核程序组成操作系统的内核</li></ul></li><li>如何变态<ul><li>内核态 -&gt; 用户态：一条修改PSW的特权指令</li><li>用户态 -&gt; 内核态：由中断引起，硬件自动完成</li></ul></li></ul><h2 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h2><h3 id="中断的作用"><a href="#中断的作用" class="headerlink" title="中断的作用"></a>中断的作用</h3><p>中断是<code>让操作系统内核夺回CPU使用权</code>的唯一途径</p><p>中断会使CPU由用户态变为内核态，使操作系统重新夺回对CPU的控制权</p><p><strong>如果没有中断机制，那么一旦应用程序在CPU上运行，CPU就会一直运行这个应用程序，谈何并发？</strong></p><h3 id="中断的类型"><a href="#中断的类型" class="headerlink" title="中断的类型"></a>中断的类型</h3><ul><li><p>内中断（异常、例外）：与当前执行的指令<code>有关</code>，中断信号来源于<code>CPU内部</code></p><ul><li>陷入（trap）：陷入指令引发（应用程序故意引发的）</li><li>故障（fault）：错误条件引起的，例如<code>缺页故障</code></li><li>终止（abort）：致命错误引起，例如除数为0、非法使用特权指令</li></ul></li><li><p>外中断（中断）：与当前执行的指令<code>无关</code>，中断信号来源于<code>CPU外部</code></p><ul><li>时钟中断</li><li>I/O中断</li></ul></li></ul><p>内中断的例子：</p><ol><li>试图在用户态下执行特权指令</li><li>执行除法指令时发现除数是0</li><li>有时候应用程序想请求操作系统内核的服务，此时会执行一条特殊的指令：<code>陷入指令</code>，该指令会引发一个内部中断信号（执行陷入指令意味着应用程序主动的将CPU控制权还给操作系统内核。”<code>系统调用</code>“就是通过陷入指令完成的）</li></ol><p>外中断的例子</p><ol><li><p>时钟中断，由时钟部件（每隔一个时间片例如50ms，会给CPU发送一个时钟中断信号）发来的中断信号</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240831283.png" alt="image-20240524083124201"> </p></li><li><p>I/O中断，由输入/输出设备发来的中断信号（当输入/输出任务完成时，向CPU发送中断信号）</p></li></ol><h3 id="中断的基本原理"><a href="#中断的基本原理" class="headerlink" title="中断的基本原理"></a>中断的基本原理</h3><p><code>不同的中断信号，需要用不同的中断处理程序来处理</code>，当CPU监测到中断信号后，会根据中断信号的类型去查询“<code>中断向量表</code>”，以此找到相应的中断处理程序在内存中的存放位置（指针）</p><table><thead><tr><th>中断信号类型</th><th>中断处理程序指针</th></tr></thead><tbody><tr><td>0</td><td>指向0中断处理程序</td></tr><tr><td>1</td><td>指向1中断处理程序</td></tr><tr><td>2</td><td>…</td></tr><tr><td>3</td><td>…</td></tr><tr><td>4</td><td>…</td></tr><tr><td>5</td><td>…</td></tr><tr><td>…</td><td>…</td></tr></tbody></table><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240854721.png" alt="中断和异常"> </p><h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><h3 id="系统调用？"><a href="#系统调用？" class="headerlink" title="系统调用？"></a>系统调用？</h3><p>是操作系统提供给应用程序使用的接口，可理解为一种可供应用程序调用的特殊函数，<code>应用程序可以通过系统调用来请求获取系统内核的服务</code></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="操作系统的特征"><a href="#操作系统的特征" class="headerlink" title="操作系统的特征"></a>操作系统的特征</h2><ul><li><code>并发</code><ul><li>指两个或多个事件在同一时间间隔内发生，宏观上同时发生，微观上交替发生</li><li>并行：指两个或多个事件在同一时刻同时发生</li><li><code>单核CPU同一时刻只能执行一个程序，各个程序只能并发地执行</code></li><li><code>多核CPU同一时刻可以同时执行多个程序，多个程序可以并行地执行</code></li></ul></li><li><code>共享</code><ul><li><code>互斥共享方式</code>：一个时间段内只允许一个进程访问访问资源</li><li><code>同时共享方式</code>：允许一个时间段内多个进程同时堆资源进行访问</li></ul></li><li>虚拟<ul><li>把一个物理上的实体变为若干个逻辑上的对应物</li><li><code>空分复用技术</code></li><li><code>时分复用技术</code></li></ul></li><li>异步<ul><li>在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行是走走停停的，以不可预知的速度向前推进，这就是进程的异步性</li><li><code>只有系统有并发性，才会有可能有异步性</code></li></ul></li></ul><blockquote><p>  并发和并行的区别</p><p>  并发和共享互为存在条件</p><p>  没有并发和共享，就没有虚拟和异步，因此并发和共享是操作系统的两个最基本的特征</p></blockquote><h2 id="操作系统的发展与分类"><a href="#操作系统的发展与分类" class="headerlink" title="操作系统的发展与分类"></a>操作系统的发展与分类</h2><ul><li>手工操作阶段<ul><li>纸带机（用户独占全机，缺点：人机速度矛盾）</li></ul></li><li>批处理阶段（单道）<ul><li>单道批处理系统（外围机——磁带）<ul><li>优点：缓解人机速度矛盾</li><li>缺点：资源利用率依然很低</li></ul></li><li>多道批处理系统（操作系统开始出现）<ul><li>优点：多道程序并发执行，资源利用率高</li><li>缺点：不提供人机交互功能</li></ul></li></ul></li><li>分时操作系统<ul><li>轮流处理作业</li><li>不能处理紧急任务</li></ul></li><li>实时操作系统<ul><li>优先处理紧急任务</li><li>硬实时系统：必须在严格的时间内完成处理</li><li>软实时系统：可以偶尔犯错</li></ul></li><li>网络操作系统</li><li>分布式操作系统</li><li>个人计算机操作系统</li></ul><h2 id="操作系统的运行机制"><a href="#操作系统的运行机制" class="headerlink" title="操作系统的运行机制"></a>操作系统的运行机制</h2><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405171130839.png" alt="image-20240517113053734"> </p><p><code>在CPU设计和生产的时候就划分了特权指令和非特权指令</code>，因此CPU执行一条指令前就能判断出其类型</p><p>CPU能判断出指令类型，但是他是怎么区分此时正在运行的程序是<code>内核程序</code>还是<code>应用程序</code>？</p><p>CPU的状态：<code>内核态</code>&amp;<code>用户态</code></p><p>处于<code>内核态</code>时，说明此时正在运行的是内核程序，此时可以执行特权指令</p><p>处于<code>用户态</code>时，说明此时正在运行的时应用程序，此时只能执行非特权指令</p><blockquote><p>  CPU中有一个寄存器叫<code>程序状态字寄存器（PSW）</code>，其中有个二进制位，1表示“内核态”，0表示“用户态”</p></blockquote><p><code>内核态 -&gt; 用户态</code>：执行一条<code>特权指令</code>–<code>修改PSW</code>的标志位为“用户态”，这个动作意味着操作系统将主动让出CPU使用权</p><p><code>用户态 -&gt; 内核态</code>：由“<code>中断</code>”引发，<code>硬件自动完成变态过程</code>，触发中断信号意味着操作系统将强行夺回CPU的使用权</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>简单了解程序的运行原理<ul><li>高级语言编写代码 -&gt; 机器指令</li><li>程序运行的过程就是CPU执行指令的过程</li></ul></li><li>两类程序<ul><li>内核程序</li><li>应用程序</li></ul></li><li>两类指令<ul><li>特权指令</li><li>非特权指令</li></ul></li><li>两种处理器状态<ul><li>内核态/核心态/管态</li><li>用户态/目态</li></ul></li><li>内核<ul><li>内核是操作系统最重要最核心的部分</li><li>由很多内核程序组成操作系统的内核</li></ul></li><li>如何变态<ul><li>内核态 -&gt; 用户态：一条修改PSW的特权指令</li><li>用户态 -&gt; 内核态：由中断引起，硬件自动完成</li></ul></li></ul><h2 id="中断和异常"><a href="#中断和异常" class="headerlink" title="中断和异常"></a>中断和异常</h2><h3 id="中断的作用"><a href="#中断的作用" class="headerlink" title="中断的作用"></a>中断的作用</h3><p>中断是<code>让操作系统内核夺回CPU使用权</code>的唯一途径</p><p>中断会使CPU由用户态变为内核态，使操作系统重新夺回对CPU的控制权</p><p><strong>如果没有中断机制，那么一旦应用程序在CPU上运行，CPU就会一直运行这个应用程序，谈何并发？</strong></p><h3 id="中断的类型"><a href="#中断的类型" class="headerlink" title="中断的类型"></a>中断的类型</h3><ul><li><p>内中断（异常、例外）：与当前执行的指令<code>有关</code>，中断信号来源于<code>CPU内部</code></p><ul><li>陷入（trap）：陷入指令引发（应用程序故意引发的）</li><li>故障（fault）：错误条件引起的，例如<code>缺页故障</code></li><li>终止（abort）：致命错误引起，例如除数为0、非法使用特权指令</li></ul></li><li><p>外中断（中断）：与当前执行的指令<code>无关</code>，中断信号来源于<code>CPU外部</code></p><ul><li>时钟中断</li><li>I/O中断</li></ul></li></ul><p>内中断的例子：</p><ol><li>试图在用户态下执行特权指令</li><li>执行除法指令时发现除数是0</li><li>有时候应用程序想请求操作系统内核的服务，此时会执行一条特殊的指令：<code>陷入指令</code>，该指令会引发一个内部中断信号（执行陷入指令意味着应用程序主动的将CPU控制权还给操作系统内核。”<code>系统调用</code>“就是通过陷入指令完成的）</li></ol><p>外中断的例子</p><ol><li><p>时钟中断，由时钟部件（每隔一个时间片例如50ms，会给CPU发送一个时钟中断信号）发来的中断信号</p><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240831283.png" alt="image-20240524083124201"> </p></li><li><p>I/O中断，由输入/输出设备发来的中断信号（当输入/输出任务完成时，向CPU发送中断信号）</p></li></ol><h3 id="中断的基本原理"><a href="#中断的基本原理" class="headerlink" title="中断的基本原理"></a>中断的基本原理</h3><p><code>不同的中断信号，需要用不同的中断处理程序来处理</code>，当CPU监测到中断信号后，会根据中断信号的类型去查询“<code>中断向量表</code>”，以此找到相应的中断处理程序在内存中的存放位置（指针）</p><table><thead><tr><th>中断信号类型</th><th>中断处理程序指针</th></tr></thead><tbody><tr><td>0</td><td>指向0中断处理程序</td></tr><tr><td>1</td><td>指向1中断处理程序</td></tr><tr><td>2</td><td>…</td></tr><tr><td>3</td><td>…</td></tr><tr><td>4</td><td>…</td></tr><tr><td>5</td><td>…</td></tr><tr><td>…</td><td>…</td></tr></tbody></table><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240922453.png" alt="中断和异常"> </p><h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><h3 id="系统调用？"><a href="#系统调用？" class="headerlink" title="系统调用？"></a>系统调用？</h3><p>是操作系统提供给应用程序使用的接口，可理解为一种可供应用程序调用的特殊函数，<code>应用程序可以通过系统调用来请求获取系统内核的服务</code></p><h3 id="系统调用和库函数的区别"><a href="#系统调用和库函数的区别" class="headerlink" title="系统调用和库函数的区别"></a>系统调用和库函数的区别</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240910502.png" alt="image-20240524091055438"> </p><table><thead><tr><th>普通应用程序</th><th>可以直接进行系统调用，也可以使用库函数，有的库函数设计系统调用，有的不涉及</th></tr></thead><tbody><tr><td>编程语言</td><td>向上提供库函数，有时会将系统调用封装成库函数，以隐藏系统调用的一些细节，方便编程操作</td></tr><tr><td>操作系统</td><td>向上提供系统调用，使得上层程序能请求内核的服务</td></tr><tr><td>裸机</td><td></td></tr></tbody></table><blockquote><p>  <strong>为什么系统调用是必须的？</strong></p><p>  处理并发情况，如果两个进程可以随意且并发地访问打印机资源，很明显不河里，要让操作系统内核对共享资源进行统一管理，并向上提供系统调用，用户进程要访问打印机资源时只能通过系统调用向操作系统内核发出请求，内核协调处理各个请求</p></blockquote><h3 id="按功能分"><a href="#按功能分" class="headerlink" title="按功能分"></a>按功能分</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240923519.png" alt="系统调用"> </p>]]></content>
       
       
       <categories>
@@ -689,6 +726,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 递归 </tag>
+            
+            <tag> 链表 </tag>
+            
         </tags>
       
     </entry>
@@ -775,6 +816,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 动态规划 </tag>
             
         </tags>
       
@@ -2684,6 +2731,14 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 树 </tag>
+            
+            <tag> 深度优先搜索 </tag>
+            
+            <tag> 广度优先搜索 </tag>
+            
+            <tag> 二叉树 </tag>
+            
         </tags>
       
     </entry>
@@ -2712,6 +2767,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 树 </tag>
+            
+            <tag> 深度优先搜索 </tag>
+            
+            <tag> 广度优先搜索 </tag>
+            
+            <tag> 二叉树 </tag>
             
         </tags>
       
@@ -2742,6 +2805,14 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 树 </tag>
+            
+            <tag> 深度优先搜索 </tag>
+            
+            <tag> 广度优先搜索 </tag>
+            
+            <tag> 二叉树 </tag>
+            
         </tags>
       
     </entry>
@@ -2770,6 +2841,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -2800,6 +2877,8 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 链表 </tag>
+            
         </tags>
       
     </entry>
@@ -2829,6 +2908,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数学 </tag>
+            
+            <tag> 动态规划 </tag>
+            
+            <tag> 记忆化搜索 </tag>
+            
         </tags>
       
     </entry>
@@ -2857,6 +2942,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 二分查找 </tag>
             
         </tags>
       
@@ -2916,6 +3005,14 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数学 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 模拟 </tag>
+            
+            <tag> 位运算 </tag>
+            
         </tags>
       
     </entry>
@@ -2944,6 +3041,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 数组 </tag>
             
         </tags>
       
@@ -2974,6 +3075,8 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 字符串 </tag>
+            
         </tags>
       
     </entry>
@@ -3003,6 +3106,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 二分查找 </tag>
+            
         </tags>
       
     </entry>
@@ -3031,6 +3138,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 字符串匹配 </tag>
             
         </tags>
       
@@ -3090,6 +3203,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
         </tags>
       
     </entry>
@@ -3118,6 +3235,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -3206,6 +3327,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 字符串 </tag>
+            
+            <tag> 字典树 </tag>
+            
         </tags>
       
     </entry>
@@ -3235,6 +3360,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 哈希表 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 字符串 </tag>
+            
         </tags>
       
     </entry>
@@ -3263,6 +3394,8 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -3525,6 +3658,14 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 树 </tag>
+            
+            <tag> 深度优先搜索 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+            <tag> 栈 </tag>
+            
         </tags>
       
     </entry>
@@ -3553,6 +3694,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 栈 </tag>
             
         </tags>
       
@@ -3817,6 +3962,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 哈希表 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 矩阵 </tag>
+            
         </tags>
       
     </entry>
@@ -3845,6 +3996,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 矩阵 </tag>
             
         </tags>
       
@@ -4019,6 +4176,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 矩阵 </tag>
+            
+            <tag> 模拟 </tag>
             
         </tags>
       

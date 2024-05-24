@@ -440,14 +440,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -642,8 +642,34 @@
 <td>…</td>
 </tr>
 </tbody></table>
-<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240854721.png" alt="中断和异常"> </p>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240922453.png" alt="中断和异常"> </p>
 <h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><h3 id="系统调用？"><a href="#系统调用？" class="headerlink" title="系统调用？"></a>系统调用？</h3><p>是操作系统提供给应用程序使用的接口，可理解为一种可供应用程序调用的特殊函数，<code>应用程序可以通过系统调用来请求获取系统内核的服务</code></p>
+<h3 id="系统调用和库函数的区别"><a href="#系统调用和库函数的区别" class="headerlink" title="系统调用和库函数的区别"></a>系统调用和库函数的区别</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240910502.png" alt="image-20240524091055438"> </p>
+<table>
+<thead>
+<tr>
+<th>普通应用程序</th>
+<th>可以直接进行系统调用，也可以使用库函数，有的库函数设计系统调用，有的不涉及</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编程语言</td>
+<td>向上提供库函数，有时会将系统调用封装成库函数，以隐藏系统调用的一些细节，方便编程操作</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>向上提供系统调用，使得上层程序能请求内核的服务</td>
+</tr>
+<tr>
+<td>裸机</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>  <strong>为什么系统调用是必须的？</strong></p>
+<p>  处理并发情况，如果两个进程可以随意且并发地访问打印机资源，很明显不河里，要让操作系统内核对共享资源进行统一管理，并向上提供系统调用，用户进程要访问打印机资源时只能通过系统调用向操作系统内核发出请求，内核协调处理各个请求</p>
+</blockquote>
+<h3 id="按功能分"><a href="#按功能分" class="headerlink" title="按功能分"></a>按功能分</h3><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405240923519.png" alt="系统调用"> </p>
 
                 
             </div>
@@ -1384,7 +1410,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">136.6k</span>
+                        class="white-color">137.2k</span>
             
             
             

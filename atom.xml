@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-22T04:41:25.507Z</updated>
+  <updated>2024-05-24T02:19:55.888Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1673.找出最具竞争力的子序列</title>
+    <link href="https://qetuop91.github.io/2024/05/24/1673-zhao-chu-zui-ju-jing-zheng-li-de-zi-xu-lie/"/>
+    <id>https://qetuop91.github.io/2024/05/24/1673-zhao-chu-zui-ju-jing-zheng-li-de-zi-xu-lie/</id>
+    <published>2024-05-24T02:17:58.000Z</published>
+    <updated>2024-05-24T02:19:55.888Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1673-找出最具竞争力的子序列&quot;&gt;&lt;a href=&quot;#1673-找出最具竞争力的子序列&quot; class=&quot;headerlink&quot; title=&quot;1673.找出最具竞争力的子序列&quot;&gt;&lt;/a&gt;1673.找出最具竞争力的子序列&lt;/h1&gt;&lt;p&gt;给你一个整数数组</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="栈" scheme="https://qetuop91.github.io/tags/%E6%A0%88/"/>
+    
+    <category term="贪心" scheme="https://qetuop91.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="单调栈" scheme="https://qetuop91.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>415.字符串相加</title>
@@ -487,7 +524,7 @@
     <link href="https://qetuop91.github.io/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/"/>
     <id>https://qetuop91.github.io/2024/05/17/ji-suan-ji-cao-zuo-xi-tong/</id>
     <published>2024-05-17T02:27:59.000Z</published>
-    <updated>2024-05-24T01:03:00.343Z</updated>
+    <updated>2024-05-24T01:30:41.353Z</updated>
     
     
       
@@ -549,35 +586,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;826-安排工作以达到最大收益&quot;&gt;&lt;a href=&quot;#826-安排工作以达到最大收益&quot; class=&quot;headerlink&quot; title=&quot;826.安排工作以达到最大收益&quot;&gt;&lt;/a&gt;826.安排工作以达到最大收益&lt;/h1&gt;&lt;p&gt;你有 &lt;code&gt;n&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>350.两个数组的交集II</title>
-    <link href="https://qetuop91.github.io/2024/05/16/350-liang-ge-shu-zu-de-jiao-ji-ii/"/>
-    <id>https://qetuop91.github.io/2024/05/16/350-liang-ge-shu-zu-de-jiao-ji-ii/</id>
-    <published>2024-05-16T14:56:11.000Z</published>
-    <updated>2024-05-16T14:57:14.313Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;350-两个数组的交集-II&quot;&gt;&lt;a href=&quot;#350-两个数组的交集-II&quot; class=&quot;headerlink&quot; title=&quot;350.两个数组的交集 II&quot;&gt;&lt;/a&gt;350.两个数组的交集 II&lt;/h1&gt;&lt;p&gt;给你两个整数数组</summary>
         
       
     
