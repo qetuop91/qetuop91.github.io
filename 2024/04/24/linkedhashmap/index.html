@@ -445,21 +445,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-05-06
+                    2024-05-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -479,7 +479,124 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h1>
+                <h1 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h1><p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405181717536.png" alt="image-20240518171708470"> </p>
+<p><code>LinkedHashMap</code>使一个集合类，继承了<code>HashMap</code>，并且在<code>HashMap</code>的基础上维护了一条<code>双向链表</code>，使其具有如下特性：</p>
+<ul>
+<li>支持遍历时会按照插入顺序有序的进行迭代</li>
+<li>支持按照元素访问顺序排序，适用于封装LRU缓存策略的工具（<a target="_blank" rel="noopener" href="https://feliks.netlify.app/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/">继承LinkedHashMap实现简单的LRU算法 | Feliks</a>）</li>
+<li>因为内部使用双向链表维护各个节点，所以遍历时的效率和元素个数成正比，相较于和容量成正比的<code>HashMap</code>来说，迭代效率会高很多</li>
+</ul>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405181723819.png" alt="image-20240518172327775"> </p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182038652.png" alt="image-20240518203850599"> </p>
+<p><code>LinkedHashMap</code>是在<code>HashMap</code>的基础上在各个节点之间维护一条双向链表，使得原本散列在数组不同位置上的节点、链表、红黑树关联起来</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182040185.png" alt="image-20240518204008159"> </p>
+<h1 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h1><h3 id="插入顺序遍历"><a href="#插入顺序遍历" class="headerlink" title="插入顺序遍历"></a>插入顺序遍历</h3><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"d"</span><span class="token punctuation">,</span> <span class="token string">"4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"e"</span><span class="token punctuation">,</span> <span class="token string">"5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> entry <span class="token operator">:</span> map<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" : "</span> <span class="token operator">+</span> entry<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>输出</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182135294.png" alt="image-20240518213507261"> </p>
+<p><code>LinkedHashMap</code>的迭代顺序和插入顺序都是一致的，这是<code>HashMap</code>不具备的</p>
+<h3 id="访问顺序遍历"><a href="#访问顺序遍历" class="headerlink" title="访问顺序遍历"></a>访问顺序遍历</h3><p><code>LinkedHashMap</code>定义了排序模式<code>accessOrder</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182150727.png" alt="image-20240518215002696"> </p>
+<p>boolean类型，默认为false（访问顺序则为true，插入顺序则为false）</p>
+<p>在使用<code>LinkedHashMap</code>构造器的时候可以传入<code>accessOrder</code>属性，将其设置为true，代表其具备访问有序性</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">0.75f</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"one"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"two"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"three"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">"four"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">"five"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 访问元素，该元素会被移动至链表末端</span>
+    map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Map<span class="token punctuation">.</span>Entry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> entry <span class="token operator">:</span> map<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" : "</span> <span class="token operator">+</span> entry<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p>输出</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182155954.png" alt="image-20240518215533934"> </p>
+<p>可见，<code>LinkedHashMap</code>的迭代顺序和访问顺序是一致的</p>
+<h2 id="LRU缓存"><a href="#LRU缓存" class="headerlink" title="LRU缓存"></a>LRU缓存</h2><p><a target="_blank" rel="noopener" href="https://feliks.netlify.app/2024/04/16/ji-cheng-linkedhashmap-shi-xian-jian-dan-de-lru-suan-fa/">继承LinkedHashMap实现简单的LRU算法 | Feliks</a></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182304442.png" alt="image-20240518230426405"> </p>
+<ul>
+<li><p>继承<code>LinkedeHashMap</code></p>
+</li>
+<li><p>构造器中指定<code>accessOrder</code>为true，在这样访问元素，该元素会被移动至链表末端，链表首元素就是最近最少被访问的元素</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182312575.png" alt="image-20240518231224548"> </p>
+</li>
+<li><p>重写<code>removeEldestEntry</code>方法，该方法会返回一个<code>boolean</code>指，告知<code>LinkedHashMap</code>是否需要移除链表首元素（因为缓存空间是有限的）</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182311892.png" alt="image-20240518231128874"></p>
+</li>
+</ul>
+<p>测试代码是重写了<code>LinkedHashMap</code>中的<code>removeEldestEntry</code>方法实现的本地缓存</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>feliks<span class="token punctuation">.</span>core<span class="token punctuation">.</span></span><span class="token class-name">MyCache</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>feliks<span class="token punctuation">.</span>core<span class="token punctuation">.</span></span><span class="token class-name">MyCacheBs</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashMap</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> testMyCache <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyCache</span> cache <span class="token operator">=</span> <span class="token class-name">MyCacheBs</span>
+                <span class="token punctuation">.</span><span class="token function">newBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setLock</span><span class="token punctuation">(</span>testMyCache<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        cache<span class="token punctuation">.</span><span class="token function">putValue</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"test1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cache<span class="token punctuation">.</span><span class="token function">putValue</span><span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"test2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cache<span class="token punctuation">.</span><span class="token function">putValue</span><span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">,</span> <span class="token string">"test3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        cache<span class="token punctuation">.</span><span class="token function">putValue</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"test1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        cache<span class="token punctuation">.</span><span class="token function">putValue</span><span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">,</span> <span class="token string">"test3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        cache<span class="token punctuation">.</span><span class="token function">putValue</span><span class="token punctuation">(</span><span class="token string">"4"</span><span class="token punctuation">,</span> <span class="token string">"test4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token string">"4"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cache<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405182318912.png" alt="image-20240420170734920"> </p>
+<h1 id="LinkedHashMap源码"><a href="#LinkedHashMap源码" class="headerlink" title="LinkedHashMap源码"></a>LinkedHashMap源码</h1><h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><p><code>HashMap</code>的数组上的因为冲突转为链表的节点会在符合以下两个条件时会将链表转为红黑树</p>
+<ol>
+<li>链表长度&gt;=阈值（<code>TREEIFY_THRESHOLD</code>）-1时</li>
+<li>数组的长度达到最小树化容量（<code>MIN_TREEIFY_CAPACITY</code>）时</li>
+</ol>
+<p><code>LinkedHashMap</code>是在<code>HashMap</code>数组的基础上为每一个节点建立一条双向链表（可以在<code>LinkedHashMap</code>的源码中看到前驱和后继节点：<code>Entry&lt;K, V&gt; before, after</code>），但是这样的话就使得红黑树的树节点也需要具备双向链表节点的特性，即每个树节点都需要拥有两个引用存储前驱节点和后继节点的地址。</p>
+<ol>
+<li><p><code>LinkedHashMap</code>的节点内部类<code>Entry</code>基于<code>HashMap</code>的基础上增加了<code>before</code>和<code>after</code>指针使节点具备双向链表的特性</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405211452702.png" alt="image-20240521145051638"> </p>
+</li>
+<li><p><code>HashMap</code>的红黑树节点<code>TreeNode</code>继承了具备双向链表特性的<code>LinkedHashMap</code>的<code>Entry</code></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405211455108.png" alt="image-20240521145556009"></p>
+</li>
+</ol>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405211517701.png" alt="35d93d52-53a9-474c-90b8-21e22c799607"> </p>
+<blockquote>
+<p>  <strong>为什么<code>HashMap</code>的<code>TreeNode</code>要通过<code>LinkedHashMap</code>获取双向链表的特性？</strong></p>
+<p>  因为<code>LinkedHashMap</code>是在<code>HashMap</code>基础上对节点增加双向指针实现双向链表的特性，所以<code>LinkedHashMap</code>内部链表转为红黑树时，对应的节点会转为<code>TreeNode</code>，为了保证使用<code>LinkedHashMap</code>时的树节点具备双向链表的特性，所以树节点<code>TreeNode</code>需要继承<code>LinkedHashMap</code>的<code>Entry</code></p>
+</blockquote>
+<blockquote>
+<p>  <strong>为什么不直接在<code>Node</code>上实现前驱和后继指针？</strong></p>
+<p>  因为如果这么做的话会在使用<code>HashMap</code>的时候让节点携带多了两个没有必要的引用，占用没必要的内存空间</p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -1231,7 +1348,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">130.7k</span>
+                        class="white-color">136.5k</span>
             
             
             
