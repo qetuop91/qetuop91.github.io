@@ -4,8 +4,8 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="181.超过经理收入的员工, Feliks">
-    <meta name="description" content="181.超过经理收入的员工">
+    <meta name="keywords" content="441.排列硬币, Feliks">
+    <meta name="description" content="441.排列硬币">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>181.超过经理收入的员工 | Feliks</title>
+    <title>441.排列硬币 | Feliks</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -373,12 +373,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/myImages/31.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">181.超过经理收入的员工</h1>
+                    <h1 class="description center-align post-title">441.排列硬币</h1>
                 </div>
             </div>
         </div>
@@ -401,20 +401,24 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
                             <a href="/tags/LeetCode/">
                                 <span class="chip bg-color">LeetCode</span>
                             </a>
                         
-                            <a href="/tags/MySQL/">
-                                <span class="chip bg-color">MySQL</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">算法题</span>
                             </a>
                         
-                            <a href="/tags/SQL%E9%A2%98/">
-                                <span class="chip bg-color">SQL题</span>
+                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                                <span class="chip bg-color">二分查找</span>
                             </a>
                         
                     </div>
@@ -425,8 +429,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -438,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-05-07
+                    2024-05-25
                 </div>
                 
 
@@ -452,7 +456,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    166
+                    214
                 </div>
                 
 
@@ -479,28 +483,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="181-超过经理收入的员工"><a href="#181-超过经理收入的员工" class="headerlink" title="181.超过经理收入的员工"></a>181.超过经理收入的员工</h1><p>表：<code>Employee</code> </p>
+                <h1 id="441-排列硬币"><a href="#441-排列硬币" class="headerlink" title="441.排列硬币"></a>441.排列硬币</h1><p>你总共有 <code>n</code> 枚硬币，并计划将它们按阶梯状排列。对于一个由 <code>k</code> 行组成的阶梯，其第 <code>i</code> 行必须正好有 <code>i</code> 枚硬币。阶梯的最后一行 <strong>可能</strong> 是不完整的。</p>
+<p>给你一个数字 <code>n</code> ，计算并返回可形成 <strong>完整阶梯行</strong> 的总行数。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405251524510.jpeg" alt="img"> </p>
 <blockquote>
-<p>  +————-+———+<br>  | Column Name | Type    |<br>  +————-+———+<br>  | id          | int     |<br>  | name        | varchar |<br>  | salary      | int     |<br>  | managerId   | int     |<br>  +————-+———+<br>  id 是该表的主键（具有唯一值的列）。<br>  该表的每一行都表示雇员的ID、姓名、工资和经理的ID。</p>
+<p>  输入：n = 5<br>  输出：2<br>  解释：因为第三行不完整，所以返回 2 。</p>
 </blockquote>
-<p>编写解决方案，找出收入比经理高的员工。</p>
-<p>以 <strong>任意顺序</strong> 返回结果表。</p>
-<p>结果格式如下所示。</p>
-<p><strong>示例 1:</strong></p>
+<p><strong>示例 2：</strong></p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405251524344.jpeg" alt="img"> </p>
 <blockquote>
-<p>  输入:<br>  Employee 表:<br>  +—-+——-+——–+———–+<br>  | id | name  | salary | managerId |<br>  +—-+——-+——–+———–+<br>  | 1  | Joe   | 70000  | 3         |<br>  | 2  | Henry | 80000  | 4         |<br>  | 3  | Sam   | 60000  | Null      |<br>  | 4  | Max   | 90000  | Null      |<br>  +—-+——-+——–+———–+<br>  输出:<br>  +———-+<br>  | Employee |<br>  +———-+<br>  | Joe      |<br>  +———-+<br>  解释: Joe 是唯一挣得比经理多的雇员。</p>
+<p>  输入：n = 8<br>  输出：3<br>  解释：因为第四行不完整，所以返回 3 。</p>
 </blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= n &lt;= 231 - 1</code></li>
+</ul>
 <p><strong>题解：</strong></p>
-<pre class="language-mysql" data-language="mysql"><code class="language-mysql">select 
-    employee.name as Employee
-from 
-    Employee as employee
-join 
-    Employee as manager
-on 
-    employee.managerId = manager.id 
-and 
-    employee.salary &gt; manager.salary</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">arrangeCoins</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">+</span> left<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span> mid <span class="token operator">*</span> <span class="token punctuation">(</span>mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span> <span class="token number">2</span> <span class="token operator">*</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                left <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// public int arrangeCoins(int n) {</span>
+    <span class="token comment">//     int sum = 0;</span>
+    <span class="token comment">//     for (int i = 1; i &lt;= n; i++) {</span>
+    <span class="token comment">//         if (n &gt;= i) {</span>
+    <span class="token comment">//             n -= i;</span>
+    <span class="token comment">//             sum++;</span>
+    <span class="token comment">//         }</span>
+    <span class="token comment">//     }</span>
+    <span class="token comment">//     return sum;</span>
+    <span class="token comment">// }</span>
+<span class="token punctuation">}</span></code></pre>
 
 
                 
@@ -528,7 +552,7 @@ and
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qetuop91.github.io/2024/05/07/181-chao-guo-jing-li-shou-ru-de-yuan-gong/">https://qetuop91.github.io/2024/05/07/181-chao-guo-jing-li-shou-ru-de-yuan-gong/</a>
+                    <a href="https://qetuop91.github.io/2024/05/25/441-pai-lie-ying-bi/">https://qetuop91.github.io/2024/05/25/441-pai-lie-ying-bi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,20 +590,24 @@ and
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                                 <a href="/tags/LeetCode/">
                                     <span class="chip bg-color">LeetCode</span>
                                 </a>
                             
-                                <a href="/tags/MySQL/">
-                                    <span class="chip bg-color">MySQL</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">算法题</span>
                                 </a>
                             
-                                <a href="/tags/SQL%E9%A2%98/">
-                                    <span class="chip bg-color">SQL题</span>
+                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                                    <span class="chip bg-color">数学</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
+                                <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                                    <span class="chip bg-color">二分查找</span>
                                 </a>
                             
                         </div>
@@ -991,57 +1019,63 @@ and
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/05/07/182-cha-zhao-chong-fu-de-dian-zi-you-xiang/">
+                <a href="/2024/05/25/441-pai-lie-ying-bi/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/4.jpg" class="responsive-img" alt="182.查找重复的电子邮箱">
+                        <img src="/medias/myImages/31.jpg" class="responsive-img" alt="441.排列硬币">
                         
-                        <span class="card-title">182.查找重复的电子邮箱</span>
+                        <span class="card-title">441.排列硬币</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            182.查找重复的电子邮箱
+                            441.排列硬币
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
                     
                     <a href="/tags/LeetCode/">
                         <span class="chip bg-color">LeetCode</span>
                     </a>
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
                     </a>
                     
-                    <a href="/tags/SQL%E9%A2%98/">
-                        <span class="chip bg-color">SQL题</span>
+                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                        <span class="chip bg-color">二分查找</span>
                     </a>
                     
                 </div>
@@ -1055,30 +1089,30 @@ and
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/05/07/175-zu-he-liang-ge-biao/">
+                <a href="/2024/05/25/2903-zhao-chu-man-zu-chai-zhi-tiao-jian-de-xia-biao-i/">
                     <div class="card-image">
                         
-                        <img src="/medias/myImages/2.jpg" class="responsive-img" alt="175.组合两个表">
+                        <img src="/medias/myImages/18.jpg" class="responsive-img" alt="2903.找出满足差值条件的下标 I">
                         
-                        <span class="card-title">175.组合两个表</span>
+                        <span class="card-title">2903.找出满足差值条件的下标 I</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            171.Excel表列序号
+                            2903.找出满足差值条件的下标 I
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1088,20 +1122,24 @@ and
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
                     <a href="/tags/LeetCode/">
                         <span class="chip bg-color">LeetCode</span>
                     </a>
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
                     </a>
                     
-                    <a href="/tags/SQL%E9%A2%98/">
-                        <span class="chip bg-color">SQL题</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                        <span class="chip bg-color">双指针</span>
                     </a>
                     
                 </div>
