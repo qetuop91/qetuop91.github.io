@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>2028.找出缺失的观测数据</title>
+      <link href="/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/"/>
+      <url>/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2028-找出缺失的观测数据"><a href="#2028-找出缺失的观测数据" class="headerlink" title="2028.找出缺失的观测数据"></a>2028.找出缺失的观测数据</h1><p>现有一份 <code>n + m</code> 次投掷单个 <strong>六面</strong> 骰子的观测数据，骰子的每个面从 <code>1</code> 到 <code>6</code> 编号。观测数据中缺失了 <code>n</code> 份，你手上只拿到剩余 <code>m</code> 次投掷的数据。幸好你有之前计算过的这 <code>n + m</code> 次投掷数据的 <strong>平均值</strong> 。</p><p>给你一个长度为 <code>m</code> 的整数数组 <code>rolls</code> ，其中 <code>rolls[i]</code> 是第 <code>i</code> 次观测的值。同时给你两个整数 <code>mean</code> 和 <code>n</code> 。</p><p>返回一个长度为 <code>n</code> 的数组，包含所有缺失的观测数据，且满足这 <code>n + m</code> 次投掷的 <strong>平均值</strong> 是 <code>mean</code> 。如果存在多组符合要求的答案，只需要返回其中任意一组即可。如果不存在答案，返回一个空数组。</p><p><code>k</code> 个数字的 <strong>平均值</strong> 为这些数字求和后再除以 <code>k</code> 。</p><p>注意 <code>mean</code> 是一个整数，所以 <code>n + m</code> 次投掷的总和需要被 <code>n + m</code> 整除。</p><p><strong>示例 1：</strong></p><blockquote><p>  输入：rolls = [3,2,4,3], mean = 4, n = 2<br>  输出：[6,6]<br>  解释：所有 n + m 次投掷的平均值是 (3 + 2 + 4 + 3 + 6 + 6) / 6 = 4 。</p></blockquote><p><strong>示例 2：</strong></p><blockquote><p>  输入：rolls = [1,5,6], mean = 3, n = 4<br>  输出：[2,3,2,2]<br>  解释：所有 n + m 次投掷的平均值是 (1 + 5 + 6 + 2 + 3 + 2 + 2) / 7 = 3 。</p></blockquote><p><strong>示例 3：</strong></p><blockquote><p>  输入：rolls = [1,2,3,4], mean = 6, n = 4<br>  输出：[]<br>  解释：无论丢失的 4 次数据是什么，平均值都不可能是 6 。</p></blockquote><p><strong>示例 4：</strong></p><blockquote><p>  输入：rolls = [1], mean = 3, n = 1<br>  输出：[5]<br>  解释：所有 n + m 次投掷的平均值是 (1 + 5) / 2 = 3 。</p></blockquote><p><strong>提示：</strong></p><ul><li><code>m == rolls.length</code></li><li><code>1 &lt;= n, m &lt;= 105</code></li><li><code>1 &lt;= rolls[i], mean &lt;= 6</code></li></ul><p><strong>题解：</strong></p><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>    <span class="token comment">// mean：n + m的平均值</span>    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">missingRolls</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> rolls<span class="token punctuation">,</span> <span class="token keyword">int</span> mean<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> m <span class="token operator">=</span> rolls<span class="token punctuation">.</span>length<span class="token punctuation">;</span>        <span class="token keyword">int</span> count <span class="token operator">=</span> n <span class="token operator">+</span> m<span class="token punctuation">;</span>        <span class="token comment">// 所有观测值的和</span>        <span class="token keyword">int</span> sum <span class="token operator">=</span> count <span class="token operator">*</span> mean<span class="token punctuation">;</span>        <span class="token comment">// 缺失的观测记录的和</span>        <span class="token keyword">int</span> missingSum <span class="token operator">=</span> sum<span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> rolls<span class="token punctuation">)</span> <span class="token punctuation">{</span>            missingSum <span class="token operator">-=</span> num<span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token comment">/**            每次观测数据的范围是1~6，如果存在符合要求的答案则一定有n &lt;= missingSum &lt;= 6 * n         */</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>missingSum <span class="token operator">&lt;</span> n <span class="token operator">||</span> missingSum <span class="token operator">&gt;</span> <span class="token number">6</span> <span class="token operator">*</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> missing <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment">/**            quo = missingSum / n            remain = missingSum % n            在缺失的n个观测数据中，有remain个观测数据是quo + 1，其余都是quo         */</span>        <span class="token keyword">int</span> quo <span class="token operator">=</span> missingSum <span class="token operator">/</span> n<span class="token punctuation">;</span>        <span class="token keyword">int</span> remain <span class="token operator">=</span> missingSum <span class="token operator">%</span> n<span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            missing<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> quo <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> remain<span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> missing<span class="token punctuation">;</span>            <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 模拟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>448.找到所有数组中消失的数字</title>
       <link href="/2024/05/26/448-zhao-dao-suo-you-shu-zu-zhong-xiao-shi-de-shu-zi/"/>
       <url>/2024/05/26/448-zhao-dao-suo-you-shu-zu-zhong-xiao-shi-de-shu-zi/</url>
@@ -267,6 +302,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 字符串 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 模拟 </tag>
+            
         </tags>
       
     </entry>
@@ -295,6 +336,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 计数 </tag>
             
         </tags>
       
@@ -325,6 +374,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 排序 </tag>
+            
         </tags>
       
     </entry>
@@ -353,6 +406,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 模拟 </tag>
             
         </tags>
       
@@ -383,6 +442,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数学 </tag>
+            
+            <tag> 位运算 </tag>
+            
         </tags>
       
     </entry>
@@ -411,6 +474,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 树 </tag>
+            
+            <tag> 深度优先搜索 </tag>
+            
+            <tag> 广度优先搜索 </tag>
+            
+            <tag> 二叉树 </tag>
             
         </tags>
       
@@ -441,6 +512,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 位运算 </tag>
+            
+            <tag> 回溯 </tag>
+            
         </tags>
       
     </entry>
@@ -469,6 +544,8 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -499,6 +576,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 动态规划 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 字符串 </tag>
+            
         </tags>
       
     </entry>
@@ -527,6 +610,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 位运算 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -557,6 +648,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 字符串 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 计数 </tag>
+            
         </tags>
       
     </entry>
@@ -585,6 +682,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 二分查找 </tag>
+            
+            <tag> 交互 </tag>
             
         </tags>
       
@@ -615,6 +716,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 模拟 </tag>
+            
         </tags>
       
     </entry>
@@ -643,6 +748,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 二分查找 </tag>
             
         </tags>
       
@@ -710,6 +819,8 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
         </tags>
       
     </entry>
@@ -764,6 +875,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 字符串 </tag>
+            
         </tags>
       
     </entry>
@@ -792,6 +907,16 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 二分查找 </tag>
             
         </tags>
       
@@ -822,6 +947,16 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 二分查找 </tag>
+            
         </tags>
       
     </entry>
@@ -850,6 +985,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 数论 </tag>
             
         </tags>
       
@@ -880,6 +1021,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 字符串 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 贪心 </tag>
+            
         </tags>
       
     </entry>
@@ -908,6 +1055,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 贪心 </tag>
             
         </tags>
       
@@ -1010,6 +1161,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 设计 </tag>
+            
+            <tag> 队列 </tag>
+            
+            <tag> 数据流 </tag>
+            
         </tags>
       
     </entry>
@@ -1074,6 +1231,16 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 二分查找 </tag>
+            
         </tags>
       
     </entry>
@@ -1102,6 +1269,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -1132,6 +1303,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 双指针 </tag>
+            
+            <tag> 字符串 </tag>
+            
         </tags>
       
     </entry>
@@ -1160,6 +1335,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 动态规划 </tag>
+            
+            <tag> 位运算 </tag>
             
         </tags>
       
@@ -1190,6 +1369,12 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数学 </tag>
+            
+            <tag> 位运算 </tag>
+            
+            <tag> 递归 </tag>
+            
         </tags>
       
     </entry>
@@ -1218,6 +1403,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 递归 </tag>
             
         </tags>
       
@@ -1282,6 +1471,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 计数 </tag>
             
         </tags>
       
@@ -1412,6 +1609,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 广度优先搜索 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 矩阵 </tag>
             
         </tags>
       
@@ -1549,9 +1752,9 @@
             
             <tag> 数学 </tag>
             
-            <tag> 数论 </tag>
-            
             <tag> 模拟 </tag>
+            
+            <tag> 数论 </tag>
             
         </tags>
       
@@ -1763,6 +1966,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 动态规划 </tag>
+            
+            <tag> 记忆化搜索 </tag>
+            
         </tags>
       
     </entry>
@@ -1791,6 +1998,22 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 分治 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 计数 </tag>
+            
+            <tag> 快速选择 </tag>
+            
+            <tag> 堆（优先队列） </tag>
+            
+            <tag> 桶排序 </tag>
             
         </tags>
       
@@ -1923,6 +2146,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 前缀和 </tag>
             
         </tags>
       
@@ -2058,6 +2287,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 模拟 </tag>
+            
         </tags>
       
     </entry>
@@ -2187,6 +2420,12 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 模拟 </tag>
             
         </tags>
       
@@ -2513,6 +2752,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 模拟 </tag>
+            
         </tags>
       
     </entry>
@@ -2732,9 +2975,9 @@
             
             <tag> 哈希表 </tag>
             
-            <tag> 计数 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> 计数 </tag>
             
         </tags>
       
@@ -3430,6 +3673,10 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 滑动窗口 </tag>
+            
         </tags>
       
     </entry>
@@ -3627,6 +3874,10 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -3880,6 +4131,14 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 字符串 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 计数 </tag>
+            
+            <tag> 队列 </tag>
+            
         </tags>
       
     </entry>
@@ -3909,6 +4168,16 @@
             
             <tag> 算法题 </tag>
             
+            <tag> 数组 </tag>
+            
+            <tag> 双指针 </tag>
+            
+            <tag> 栈 </tag>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 单调栈 </tag>
+            
         </tags>
       
     </entry>
@@ -3937,6 +4206,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 栈 </tag>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 单调栈 </tag>
             
         </tags>
       
@@ -4082,6 +4359,14 @@
             <tag> LeetCode </tag>
             
             <tag> 算法题 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 栈 </tag>
+            
+            <tag> 贪心 </tag>
+            
+            <tag> 单调栈 </tag>
             
         </tags>
       
@@ -4604,9 +4889,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 矩阵 </tag>
-            
             <tag> 模拟 </tag>
+            
+            <tag> 矩阵 </tag>
             
         </tags>
       
@@ -4639,9 +4924,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 矩阵 </tag>
-            
             <tag> 模拟 </tag>
+            
+            <tag> 矩阵 </tag>
             
         </tags>
       

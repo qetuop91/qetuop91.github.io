@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-26T07:52:16.855Z</updated>
+  <updated>2024-05-27T08:27:12.494Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2028.找出缺失的观测数据</title>
+    <link href="https://qetuop91.github.io/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/"/>
+    <id>https://qetuop91.github.io/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/</id>
+    <published>2024-05-27T08:23:29.000Z</published>
+    <updated>2024-05-27T08:27:12.494Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2028-找出缺失的观测数据&quot;&gt;&lt;a href=&quot;#2028-找出缺失的观测数据&quot; class=&quot;headerlink&quot; title=&quot;2028.找出缺失的观测数据&quot;&gt;&lt;/a&gt;2028.找出缺失的观测数据&lt;/h1&gt;&lt;p&gt;现有一份 &lt;code&gt;n +</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="模拟" scheme="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>448.找到所有数组中消失的数字</title>
@@ -262,7 +297,7 @@
     <link href="https://qetuop91.github.io/2024/05/22/415-zi-fu-chuan-xiang-jia/"/>
     <id>https://qetuop91.github.io/2024/05/22/415-zi-fu-chuan-xiang-jia/</id>
     <published>2024-05-22T04:40:11.000Z</published>
-    <updated>2024-05-22T04:41:25.507Z</updated>
+    <updated>2024-05-27T08:48:16.232Z</updated>
     
     
       
@@ -284,6 +319,12 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="模拟" scheme="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
   </entry>
   
   <entry>
@@ -291,7 +332,7 @@
     <link href="https://qetuop91.github.io/2024/05/22/2225-zhao-chu-shu-diao-ling-chang-huo-yi-chang-bi-sai-de-wan-jia/"/>
     <id>https://qetuop91.github.io/2024/05/22/2225-zhao-chu-shu-diao-ling-chang-huo-yi-chang-bi-sai-de-wan-jia/</id>
     <published>2024-05-22T02:07:17.000Z</published>
-    <updated>2024-05-22T02:10:43.938Z</updated>
+    <updated>2024-05-27T08:54:59.921Z</updated>
     
     
       
@@ -313,6 +354,14 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="排序" scheme="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="计数" scheme="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/"/>
+    
   </entry>
   
   <entry>
@@ -320,7 +369,7 @@
     <link href="https://qetuop91.github.io/2024/05/21/414-di-san-da-de-shu/"/>
     <id>https://qetuop91.github.io/2024/05/21/414-di-san-da-de-shu/</id>
     <published>2024-05-21T09:30:56.000Z</published>
-    <updated>2024-05-21T09:31:47.406Z</updated>
+    <updated>2024-05-27T08:47:57.855Z</updated>
     
     
       
@@ -342,6 +391,10 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="排序" scheme="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
   </entry>
   
   <entry>
@@ -349,7 +402,7 @@
     <link href="https://qetuop91.github.io/2024/05/21/412-fizz-buzz/"/>
     <id>https://qetuop91.github.io/2024/05/21/412-fizz-buzz/</id>
     <published>2024-05-21T09:04:24.000Z</published>
-    <updated>2024-05-21T09:05:16.328Z</updated>
+    <updated>2024-05-27T08:47:42.034Z</updated>
     
     
       
@@ -371,6 +424,12 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="模拟" scheme="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
   </entry>
   
   <entry>
@@ -378,7 +437,7 @@
     <link href="https://qetuop91.github.io/2024/05/21/405-shu-zi-zhuan-huan-wei-shi-liu-jin-zhi-shu/"/>
     <id>https://qetuop91.github.io/2024/05/21/405-shu-zi-zhuan-huan-wei-shi-liu-jin-zhi-shu/</id>
     <published>2024-05-21T08:53:22.000Z</published>
-    <updated>2024-05-21T08:54:18.826Z</updated>
+    <updated>2024-05-27T08:47:07.443Z</updated>
     
     
       
@@ -400,6 +459,10 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
   </entry>
   
   <entry>
@@ -407,7 +470,7 @@
     <link href="https://qetuop91.github.io/2024/05/21/404-zuo-xie-zi-zhi-he/"/>
     <id>https://qetuop91.github.io/2024/05/21/404-zuo-xie-zi-zhi-he/</id>
     <published>2024-05-21T03:50:30.000Z</published>
-    <updated>2024-05-21T03:51:22.806Z</updated>
+    <updated>2024-05-27T08:46:53.454Z</updated>
     
     
       
@@ -429,6 +492,14 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="树" scheme="https://qetuop91.github.io/tags/%E6%A0%91/"/>
+    
+    <category term="深度优先搜索" scheme="https://qetuop91.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="广度优先搜索" scheme="https://qetuop91.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="二叉树" scheme="https://qetuop91.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
   </entry>
   
   <entry>
@@ -436,7 +507,7 @@
     <link href="https://qetuop91.github.io/2024/05/21/401-er-jin-zhi-shou-biao/"/>
     <id>https://qetuop91.github.io/2024/05/21/401-er-jin-zhi-shou-biao/</id>
     <published>2024-05-21T03:37:34.000Z</published>
-    <updated>2024-05-21T03:38:23.540Z</updated>
+    <updated>2024-05-27T08:46:16.007Z</updated>
     
     
       
@@ -458,6 +529,10 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+    <category term="回溯" scheme="https://qetuop91.github.io/tags/%E5%9B%9E%E6%BA%AF/"/>
+    
   </entry>
   
   <entry>
@@ -465,7 +540,7 @@
     <link href="https://qetuop91.github.io/2024/05/21/2769-zhao-chu-zui-da-de-ke-da-cheng-shu-zi/"/>
     <id>https://qetuop91.github.io/2024/05/21/2769-zhao-chu-zui-da-de-ke-da-cheng-shu-zi/</id>
     <published>2024-05-21T01:46:44.000Z</published>
-    <updated>2024-05-21T01:50:35.235Z</updated>
+    <updated>2024-05-27T08:56:25.979Z</updated>
     
     
       
@@ -487,6 +562,8 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
   </entry>
   
   <entry>
@@ -494,7 +571,7 @@
     <link href="https://qetuop91.github.io/2024/05/20/392-pan-duan-zi-xu-lie/"/>
     <id>https://qetuop91.github.io/2024/05/20/392-pan-duan-zi-xu-lie/</id>
     <published>2024-05-20T03:22:55.000Z</published>
-    <updated>2024-05-20T03:26:24.507Z</updated>
+    <updated>2024-05-27T08:45:56.856Z</updated>
     
     
       
@@ -516,6 +593,12 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="动态规划" scheme="https://qetuop91.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="双指针" scheme="https://qetuop91.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
   </entry>
   
   <entry>
@@ -523,7 +606,7 @@
     <link href="https://qetuop91.github.io/2024/05/20/389-zhao-bu-tong/"/>
     <id>https://qetuop91.github.io/2024/05/20/389-zhao-bu-tong/</id>
     <published>2024-05-20T03:06:52.000Z</published>
-    <updated>2024-05-20T03:07:54.247Z</updated>
+    <updated>2024-05-27T08:45:39.766Z</updated>
     
     
       
@@ -545,6 +628,14 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+    <category term="排序" scheme="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
   </entry>
   
   <entry>
@@ -552,7 +643,7 @@
     <link href="https://qetuop91.github.io/2024/05/20/383-shu-jin-xin/"/>
     <id>https://qetuop91.github.io/2024/05/20/383-shu-jin-xin/</id>
     <published>2024-05-20T02:35:08.000Z</published>
-    <updated>2024-05-20T02:40:23.095Z</updated>
+    <updated>2024-05-27T08:45:05.838Z</updated>
     
     
       
@@ -574,6 +665,12 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
+    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="计数" scheme="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/"/>
+    
   </entry>
   
   <entry>
@@ -581,7 +678,7 @@
     <link href="https://qetuop91.github.io/2024/05/20/374-cai-shu-zi-da-xiao/"/>
     <id>https://qetuop91.github.io/2024/05/20/374-cai-shu-zi-da-xiao/</id>
     <published>2024-05-20T02:21:54.000Z</published>
-    <updated>2024-05-20T02:23:14.424Z</updated>
+    <updated>2024-05-27T08:44:26.584Z</updated>
     
     
       
@@ -605,34 +702,9 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
-  </entry>
-  
-  <entry>
-    <title>1535.找出数组游戏的赢家</title>
-    <link href="https://qetuop91.github.io/2024/05/19/1535-zhao-chu-shu-zu-you-xi-de-ying-jia/"/>
-    <id>https://qetuop91.github.io/2024/05/19/1535-zhao-chu-shu-zu-you-xi-de-ying-jia/</id>
-    <published>2024-05-19T02:54:00.000Z</published>
-    <updated>2024-05-19T02:55:39.742Z</updated>
+    <category term="二分查找" scheme="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;1535-找出数组游戏的赢家&quot;&gt;&lt;a href=&quot;#1535-找出数组游戏的赢家&quot; class=&quot;headerlink&quot; title=&quot;1535.找出数组游戏的赢家&quot;&gt;&lt;/a&gt;1535.找出数组游戏的赢家&lt;/h1&gt;&lt;p&gt;给你一个由</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    <category term="交互" scheme="https://qetuop91.github.io/tags/%E4%BA%A4%E4%BA%92/"/>
     
   </entry>
   

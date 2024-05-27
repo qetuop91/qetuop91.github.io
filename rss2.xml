@@ -9,8 +9,45 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Sun, 26 May 2024 07:52:16 GMT</pubDate>
+    <pubDate>Mon, 27 May 2024 08:27:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>2028.找出缺失的观测数据</title>
+      <link>https://qetuop91.github.io/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/</link>
+      <guid>https://qetuop91.github.io/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/</guid>
+      <pubDate>Mon, 27 May 2024 08:23:29 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;2028-找出缺失的观测数据&quot;&gt;&lt;a href=&quot;#2028-找出缺失的观测数据&quot; class=&quot;headerlink&quot; title=&quot;2028.找出缺失的观测数据&quot;&gt;&lt;/a&gt;2028.找出缺失的观测数据&lt;/h1&gt;&lt;p&gt;现有一份 &lt;code&gt;n +</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/">数组</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/">模拟</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/27/2028-zhao-chu-que-shi-de-guan-ce-shu-ju/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>448.找到所有数组中消失的数字</title>
@@ -293,6 +330,12 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/">模拟</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/22/415-zi-fu-chuan-xiang-jia/#disqus_thread</comments>
       
@@ -323,6 +366,14 @@
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/">数组</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/">排序</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/">计数</category>
       
       
       <comments>https://qetuop91.github.io/2024/05/22/2225-zhao-chu-shu-diao-ling-chang-huo-yi-chang-bi-sai-de-wan-jia/#disqus_thread</comments>
@@ -355,6 +406,10 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/">数组</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/">排序</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/21/414-di-san-da-de-shu/#disqus_thread</comments>
       
@@ -385,6 +440,12 @@
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/">模拟</category>
       
       
       <comments>https://qetuop91.github.io/2024/05/21/412-fizz-buzz/#disqus_thread</comments>
@@ -417,6 +478,10 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/21/405-shu-zi-zhuan-huan-wei-shi-liu-jin-zhi-shu/#disqus_thread</comments>
       
@@ -447,6 +512,14 @@
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%A0%91/">树</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</category>
       
       
       <comments>https://qetuop91.github.io/2024/05/21/404-zuo-xie-zi-zhi-he/#disqus_thread</comments>
@@ -479,6 +552,10 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%9B%9E%E6%BA%AF/">回溯</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/21/401-er-jin-zhi-shou-biao/#disqus_thread</comments>
       
@@ -509,6 +586,8 @@
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
       
       
       <comments>https://qetuop91.github.io/2024/05/21/2769-zhao-chu-zui-da-de-ke-da-cheng-shu-zi/#disqus_thread</comments>
@@ -541,6 +620,12 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/20/392-pan-duan-zi-xu-lie/#disqus_thread</comments>
       
@@ -572,6 +657,14 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/">排序</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/20/389-zhao-bu-tong/#disqus_thread</comments>
       
@@ -602,6 +695,12 @@
       <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/">计数</category>
       
       
       <comments>https://qetuop91.github.io/2024/05/20/383-shu-jin-xin/#disqus_thread</comments>
@@ -636,39 +735,12 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
+      <category domain="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%BA%A4%E4%BA%92/">交互</category>
+      
       
       <comments>https://qetuop91.github.io/2024/05/20/374-cai-shu-zi-da-xiao/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>1535.找出数组游戏的赢家</title>
-      <link>https://qetuop91.github.io/2024/05/19/1535-zhao-chu-shu-zu-you-xi-de-ying-jia/</link>
-      <guid>https://qetuop91.github.io/2024/05/19/1535-zhao-chu-shu-zu-you-xi-de-ying-jia/</guid>
-      <pubDate>Sun, 19 May 2024 02:54:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;1535-找出数组游戏的赢家&quot;&gt;&lt;a href=&quot;#1535-找出数组游戏的赢家&quot; class=&quot;headerlink&quot; title=&quot;1535.找出数组游戏的赢家&quot;&gt;&lt;/a&gt;1535.找出数组游戏的赢家&lt;/h1&gt;&lt;p&gt;给你一个由</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/19/1535-zhao-chu-shu-zu-you-xi-de-ying-jia/#disqus_thread</comments>
       
     </item>
     
