@@ -9,8 +9,119 @@
     <atom:link href="https://qetuop91.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>this is my blog</description>
-    <pubDate>Mon, 27 May 2024 08:27:12 GMT</pubDate>
+    <pubDate>Wed, 29 May 2024 06:08:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>2981.找出出现至少三次的最长特殊子字符串 I</title>
+      <link>https://qetuop91.github.io/2024/05/29/2981-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-i/</link>
+      <guid>https://qetuop91.github.io/2024/05/29/2981-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-i/</guid>
+      <pubDate>Wed, 29 May 2024 06:05:26 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;2981-找出出现至少三次的最长特殊子字符串-I&quot;&gt;&lt;a href=&quot;#2981-找出出现至少三次的最长特殊子字符串-I&quot; class=&quot;headerlink&quot; title=&quot;2981.找出出现至少三次的最长特殊子字符串</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">滑动窗口</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/">计数</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/29/2981-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-i/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>459.重复的子字符串</title>
+      <link>https://qetuop91.github.io/2024/05/28/459-chong-fu-de-zi-zi-fu-chuan/</link>
+      <guid>https://qetuop91.github.io/2024/05/28/459-chong-fu-de-zi-zi-fu-chuan/</guid>
+      <pubDate>Tue, 28 May 2024 02:56:52 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;459-重复的子字符串&quot;&gt;&lt;a href=&quot;#459-重复的子字符串&quot; class=&quot;headerlink&quot; title=&quot;459.重复的子字符串&quot;&gt;&lt;/a&gt;459.重复的子字符串&lt;/h1&gt;&lt;p&gt;给定一个非空的字符串 &lt;code&gt;s&lt;/code&gt;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/">字符串匹配</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/28/459-chong-fu-de-zi-zi-fu-chuan/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>2951.找出峰值</title>
+      <link>https://qetuop91.github.io/2024/05/28/2951-zhao-chu-feng-zhi/</link>
+      <guid>https://qetuop91.github.io/2024/05/28/2951-zhao-chu-feng-zhi/</guid>
+      <pubDate>Tue, 28 May 2024 02:02:40 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;2951-找出峰值&quot;&gt;&lt;a href=&quot;#2951-找出峰值&quot; class=&quot;headerlink&quot; title=&quot;2951.找出峰值&quot;&gt;&lt;/a&gt;2951.找出峰值&lt;/h1&gt;&lt;p&gt;给你一个下标从 &lt;strong&gt;0&lt;/strong&gt; 开始的数组</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/">数组</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%9E%9A%E4%B8%BE/">枚举</category>
+      
+      
+      <comments>https://qetuop91.github.io/2024/05/28/2951-zhao-chu-feng-zhi/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>2028.找出缺失的观测数据</title>
@@ -478,9 +589,9 @@
       
       <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
       
-      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
-      
       <category domain="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</category>
+      
+      <category domain="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/">数学</category>
       
       
       <comments>https://qetuop91.github.io/2024/05/21/405-shu-zi-zhuan-huan-wei-shi-liu-jin-zhi-shu/#disqus_thread</comments>
@@ -628,119 +739,6 @@
       
       
       <comments>https://qetuop91.github.io/2024/05/20/392-pan-duan-zi-xu-lie/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>389.找不同</title>
-      <link>https://qetuop91.github.io/2024/05/20/389-zhao-bu-tong/</link>
-      <guid>https://qetuop91.github.io/2024/05/20/389-zhao-bu-tong/</guid>
-      <pubDate>Mon, 20 May 2024 03:06:52 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;389-找不同&quot;&gt;&lt;a href=&quot;#389-找不同&quot; class=&quot;headerlink&quot; title=&quot;389.找不同&quot;&gt;&lt;/a&gt;389.找不同&lt;/h1&gt;&lt;p&gt;给定两个字符串 &lt;code&gt;s&lt;/code&gt; 和 &lt;code&gt;t&lt;/code&gt;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E6%8E%92%E5%BA%8F/">排序</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/20/389-zhao-bu-tong/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>383.赎金信</title>
-      <link>https://qetuop91.github.io/2024/05/20/383-shu-jin-xin/</link>
-      <guid>https://qetuop91.github.io/2024/05/20/383-shu-jin-xin/</guid>
-      <pubDate>Mon, 20 May 2024 02:35:08 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;383-赎金信&quot;&gt;&lt;a href=&quot;#383-赎金信&quot; class=&quot;headerlink&quot; title=&quot;383.赎金信&quot;&gt;&lt;/a&gt;383.赎金信&lt;/h1&gt;&lt;p&gt;给你两个字符串：&lt;code&gt;ransomNote&lt;/code&gt; 和</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/">计数</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/20/383-shu-jin-xin/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>374.猜数字大小</title>
-      <link>https://qetuop91.github.io/2024/05/20/374-cai-shu-zi-da-xiao/</link>
-      <guid>https://qetuop91.github.io/2024/05/20/374-cai-shu-zi-da-xiao/</guid>
-      <pubDate>Mon, 20 May 2024 02:21:54 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;374-猜数字大小&quot;&gt;&lt;a href=&quot;#374-猜数字大小&quot; class=&quot;headerlink&quot; title=&quot;374.猜数字大小&quot;&gt;&lt;/a&gt;374.猜数字大小&lt;/h1&gt;&lt;p&gt;猜数字游戏的规则如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;每轮游戏，我都会从</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
-      
-      
-      <category domain="https://qetuop91.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://qetuop91.github.io/tags/LeetCode/">LeetCode</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</category>
-      
-      <category domain="https://qetuop91.github.io/tags/%E4%BA%A4%E4%BA%92/">交互</category>
-      
-      
-      <comments>https://qetuop91.github.io/2024/05/20/374-cai-shu-zi-da-xiao/#disqus_thread</comments>
       
     </item>
     
