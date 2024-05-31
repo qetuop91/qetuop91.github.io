@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-05-29T06:08:03.347Z</updated>
+  <updated>2024-05-31T00:31:53.382Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2965.找出缺失和重复的数字</title>
+    <link href="https://qetuop91.github.io/2024/05/31/2965-zhao-chu-que-shi-he-chong-fu-de-shu-zi/"/>
+    <id>https://qetuop91.github.io/2024/05/31/2965-zhao-chu-que-shi-he-chong-fu-de-shu-zi/</id>
+    <published>2024-05-31T00:29:31.000Z</published>
+    <updated>2024-05-31T00:31:53.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2965-找出缺失和重复的数字&quot;&gt;&lt;a href=&quot;#2965-找出缺失和重复的数字&quot; class=&quot;headerlink&quot; title=&quot;2965.找出缺失和重复的数字&quot;&gt;&lt;/a&gt;2965.找出缺失和重复的数字&lt;/h1&gt;&lt;p&gt;给你一个下标从</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="矩阵" scheme="https://qetuop91.github.io/tags/%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2982.找出出现至少三次的最长特殊子字符串 II</title>
+    <link href="https://qetuop91.github.io/2024/05/30/2982-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-ii/"/>
+    <id>https://qetuop91.github.io/2024/05/30/2982-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-ii/</id>
+    <published>2024-05-30T00:31:01.000Z</published>
+    <updated>2024-05-30T00:32:25.674Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2982-找出出现至少三次的最长特殊子字符串-II&quot;&gt;&lt;a href=&quot;#2982-找出出现至少三次的最长特殊子字符串-II&quot; class=&quot;headerlink&quot; title=&quot;2982. 找出出现至少三次的最长特殊子字符串 II&quot;&gt;&lt;/a&gt;2982.</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="计数" scheme="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/"/>
+    
+    <category term="滑动窗口" scheme="https://qetuop91.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+    <category term="二分查找" scheme="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>2981.找出出现至少三次的最长特殊子字符串 I</title>
@@ -47,9 +123,9 @@
     
     <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
-    <category term="滑动窗口" scheme="https://qetuop91.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
     <category term="计数" scheme="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/"/>
+    
+    <category term="滑动窗口" scheme="https://qetuop91.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
     <category term="二分查找" scheme="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     
@@ -305,7 +381,7 @@
     <link href="https://qetuop91.github.io/2024/05/24/spring/"/>
     <id>https://qetuop91.github.io/2024/05/24/spring/</id>
     <published>2024-05-24T14:09:38.000Z</published>
-    <updated>2024-05-29T16:07:32.176Z</updated>
+    <updated>2024-05-30T14:44:27.833Z</updated>
     
     
       
@@ -564,9 +640,9 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
-    <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
     <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
@@ -637,72 +713,6 @@
     <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
     <category term="回溯" scheme="https://qetuop91.github.io/tags/%E5%9B%9E%E6%BA%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2769.找出最大的可达成数字</title>
-    <link href="https://qetuop91.github.io/2024/05/21/2769-zhao-chu-zui-da-de-ke-da-cheng-shu-zi/"/>
-    <id>https://qetuop91.github.io/2024/05/21/2769-zhao-chu-zui-da-de-ke-da-cheng-shu-zi/</id>
-    <published>2024-05-21T01:46:44.000Z</published>
-    <updated>2024-05-27T08:56:25.979Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2769-找出最大的可达成数字&quot;&gt;&lt;a href=&quot;#2769-找出最大的可达成数字&quot; class=&quot;headerlink&quot; title=&quot;2769.找出最大的可达成数字&quot;&gt;&lt;/a&gt;2769.找出最大的可达成数字&lt;/h1&gt;&lt;p&gt;给你两个整数</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>392.判断子序列</title>
-    <link href="https://qetuop91.github.io/2024/05/20/392-pan-duan-zi-xu-lie/"/>
-    <id>https://qetuop91.github.io/2024/05/20/392-pan-duan-zi-xu-lie/</id>
-    <published>2024-05-20T03:22:55.000Z</published>
-    <updated>2024-05-27T08:45:56.856Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;392-判断子序列&quot;&gt;&lt;a href=&quot;#392-判断子序列&quot; class=&quot;headerlink&quot; title=&quot;392.判断子序列&quot;&gt;&lt;/a&gt;392.判断子序列&lt;/h1&gt;&lt;p&gt;给定字符串 &lt;strong&gt;s&lt;/strong&gt; 和</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="动态规划" scheme="https://qetuop91.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="双指针" scheme="https://qetuop91.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
