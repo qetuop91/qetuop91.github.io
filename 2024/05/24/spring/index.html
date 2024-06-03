@@ -441,21 +441,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-05-30
+                    2024-05-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11.9k
+                    12.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    58 分
+                    62 分
                 </div>
                 
 
@@ -2630,9 +2630,195 @@
 <p>如上就可以一次性把所有的Person都注入进来，通过控制台输出我们可以发现persons里面有两个对象</p>
 <h3 id="1-5-Resource"><a href="#1-5-Resource" class="headerlink" title="1.5 @Resource"></a>1.5 @Resource</h3><p><code>@Resource</code>也是用来属性注入的注解，它和<code>@Autowired</code>的不同在于：</p>
 <ul>
-<li><code>@Autowired</code>：是按照类型注入</li>
-<li><code>@Resource</code>：是直接按照属性名/Bean的名称注入</li>
+<li><code>@Autowired</code>：按照类型注入</li>
+<li><code>@Resource</code>：直接按照属性名/Bean的名称注入</li>
 </ul>
+<p><code>@Resource</code>相当于同时标注<code>@Autowired</code>和<code>@Qualifier</code></p>
+<p>新建Bird类，在里面使用<code>@Resource</code>注入Person</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>feliks<span class="token punctuation">.</span>spring<span class="token punctuation">.</span>basic_di<span class="token punctuation">.</span>d_complexfield<span class="token punctuation">.</span>bean</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Component</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Resource</span></span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Bird</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Resource</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"master"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Person</span> person<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+<p><strong>注意，如果没有@Resource注解，要检查pom文件内是否添加了javax.annotation.api的依赖</strong></p>
+<pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>javax.annotation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>javax.annotation-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.3.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+<p>启动类</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">ApplicationContext</span> ctx <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AnnotationConfigApplicationContext</span><span class="token punctuation">(</span><span class="token class-name">InjectComplexFieldConfiguration</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Bird</span> bird <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span><span class="token class-name">Bird</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>bird<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p>运行结果</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405311110581.png" alt="image-20240531111008515"> </p>
+<h3 id="1-6-Inject"><a href="#1-6-Inject" class="headerlink" title="1.6 @Inject"></a>1.6 @Inject</h3><p><code>@Inject</code>这个注解跟<code>@Autowired</code>一样的策略，按照类型注入</p>
+<p>pom文件中导入依赖</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>javax.inject<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>javax.inject<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+<p>在Cat类中注入一个名为superMaster的Person</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Inject</span>
+<span class="token annotation punctuation">@Named</span><span class="token punctuation">(</span><span class="token string">"superMaster"</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> <span class="token class-name">Person</span> person<span class="token punctuation">;</span></code></pre>
+
+<p>类似于<code>@Autowired</code>和<code>@Qualifier</code></p>
+<h4 id="1-6-1-Autowired和-Inject的对比"><a href="#1-6-1-Autowired和-Inject的对比" class="headerlink" title="1.6.1 @Autowired和@Inject的对比"></a>1.6.1 @Autowired和@Inject的对比</h4><p><code>@Inject</code>虽然和<code>@Autowired</code>作用一致，但是因为<code>@Inject</code>属于JSR规范，不会因为不使用<code>SpringFramework</code>而失去意义</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Autowired</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>inject<span class="token punctuation">.</span></span><span class="token class-name">Inject</span></span><span class="token punctuation">;</span></code></pre>
+
+
+
+<h3 id="1-7-依赖注入的注入方式"><a href="#1-7-依赖注入的注入方式" class="headerlink" title="1.7 依赖注入的注入方式"></a>1.7 依赖注入的注入方式</h3><table>
+<thead>
+<tr>
+<th>注入方式</th>
+<th>被注入成员是否可变</th>
+<th>是否依赖于IOC框架的API</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>构造器注入</td>
+<td>不可变</td>
+<td>否（xml、编程式注入不依赖）</td>
+<td>不可变的固定注入</td>
+</tr>
+<tr>
+<td>参数注入</td>
+<td>不可变</td>
+<td>否（高版本中注解配置类中的<code>@Bean</code>方法参数注入可以不标注注解）</td>
+<td>注解配置类中<code>@Bean</code>方法注册bean</td>
+</tr>
+<tr>
+<td>属性注入</td>
+<td>不可变</td>
+<td>是（只能通过标注注解来侵入式注入）</td>
+<td>通常用于不可变的固定注入</td>
+</tr>
+<tr>
+<td>setter注入</td>
+<td>可变</td>
+<td>否（xml、编程式注入不依赖）</td>
+<td>可选属性的注入</td>
+</tr>
+</tbody></table>
+<h3 id="1-8-自动注入的注解对比"><a href="#1-8-自动注入的注解对比" class="headerlink" title="1.8 自动注入的注解对比"></a>1.8 自动注入的注解对比</h3><table>
+<thead>
+<tr>
+<th>注解</th>
+<th>注入方式</th>
+<th>是否支持@Primary</th>
+<th>来源</th>
+<th>Bean不存在时的处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@Autowired</td>
+<td>根据类型注入</td>
+<td>是</td>
+<td>SpringFramework原生注解</td>
+<td>可指定required=false来避免注入失败</td>
+</tr>
+<tr>
+<td>@Resource</td>
+<td>根据名称注入</td>
+<td>是</td>
+<td>JSR250规范</td>
+<td>容器中不存在指定Bean会抛出异常</td>
+</tr>
+<tr>
+<td>@Inject</td>
+<td>根据类型注入</td>
+<td>是</td>
+<td>JSR330规范（需要导入jar包）</td>
+<td>容器中不存在指定Bean会抛出异常</td>
+</tr>
+</tbody></table>
+<p><code>@Qualifier</code>：如果被标注的成员/方法在根据类型注入时发现有相同类型的Bean，就会根据该注解声明的name寻找对应的Bean</p>
+<p><code>@Primary</code>：如果有多个相同类型的Bean同时注册到IOC容器中，使用根据类型注入的注解时会注入标注的<code>@Primarty</code>注解的Bean</p>
+<h2 id="2-复杂类型的注入"><a href="#2-复杂类型的注入" class="headerlink" title="2.复杂类型的注入"></a>2.复杂类型的注入</h2><ul>
+<li>数组</li>
+<li>List/Set</li>
+<li>Map</li>
+<li>Properties</li>
+</ul>
+<h3 id="2-1-创建复杂对象"><a href="#2-1-创建复杂对象" class="headerlink" title="2.1 创建复杂对象"></a>2.1 创建复杂对象</h3><p>创建一个Person类，里面定义比较复杂的属性</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405312304214.png" alt="image-20240531230442139"> </p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>feliks<span class="token punctuation">.</span>spring<span class="token punctuation">.</span>basic_di<span class="token punctuation">.</span>g_complexfield<span class="token punctuation">.</span></span><span class="token class-name">Bean</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> names<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> tels<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Cat</span><span class="token punctuation">&gt;</span></span> cats<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> events<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Properties</span> props<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"Person{"</span> <span class="token operator">+</span>
+                <span class="token string">"names="</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span> <span class="token operator">+</span>
+                <span class="token string">", tels="</span> <span class="token operator">+</span> tels <span class="token operator">+</span>
+                <span class="token string">", cats="</span> <span class="token operator">+</span> cats <span class="token operator">+</span>
+                <span class="token string">", events="</span> <span class="token operator">+</span> events <span class="token operator">+</span>
+                <span class="token string">", props="</span> <span class="token operator">+</span> props <span class="token operator">+</span>
+                <span class="token char">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setNames</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>names <span class="token operator">=</span> names<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setTels</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> tels<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>tels <span class="token operator">=</span> tels<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setCats</span><span class="token punctuation">(</span><span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Cat</span><span class="token punctuation">&gt;</span></span> cats<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>cats <span class="token operator">=</span> cats<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setEvents</span><span class="token punctuation">(</span><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> events<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>events <span class="token operator">=</span> events<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setProps</span><span class="token punctuation">(</span><span class="token class-name">Properties</span> props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>props <span class="token operator">=</span> props<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+
+<h3 id="2-2-xml复杂注入"><a href="#2-2-xml复杂注入" class="headerlink" title="2.2 xml复杂注入"></a>2.2 xml复杂注入</h3><p>xml中注册一个Person</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405312304706.png" alt="image-20240531230454665"> </p>
+<pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.feliks.spring.basic_di.g_complexfield.bean.Person<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+
+
+<h4 id="2-2-1-数组注入"><a href="#2-2-1-数组注入" class="headerlink" title="2.2.1 数组注入"></a>2.2.1 数组注入</h4><p><code>&lt;bean&gt;</code>标签中，想要给属性赋值，全部都是用<code>&lt;property&gt;</code>标签，对于简单注入和Bean的注入，可以通过<code>value</code>和<code>ref</code>来完成，但是复杂类型就必须在标签体内写子标签了</p>
+<p>来看看<code>&lt;prperty&gt;</code>标签下的子标签</p>
+<p><img src="https://felikstypora.oss-cn-guangzhou.aliyuncs.com/202405312307507.png" alt="image-20240531230733464"> </p>
 
                 
             </div>
@@ -3393,7 +3579,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">155.2k</span>
+                        class="white-color">157.9k</span>
             
             
             
