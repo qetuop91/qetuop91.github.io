@@ -6,7 +6,7 @@
   <link href="https://qetuop91.github.io/atom.xml" rel="self"/>
   
   <link href="https://qetuop91.github.io/"/>
-  <updated>2024-06-10T05:40:14.625Z</updated>
+  <updated>2024-10-16T13:17:54.301Z</updated>
   <id>https://qetuop91.github.io/</id>
   
   <author>
@@ -15,6 +15,219 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>go语言学习第一章</title>
+    <link href="https://qetuop91.github.io/2024/10/13/go-yu-yan-xue-xi-di-yi-zhang/"/>
+    <id>https://qetuop91.github.io/2024/10/13/go-yu-yan-xue-xi-di-yi-zhang/</id>
+    <published>2024-10-13T13:56:02.000Z</published>
+    <updated>2024-10-16T13:17:54.301Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一个HelloWorld&quot;&gt;&lt;a href=&quot;#第一个HelloWorld&quot; class=&quot;headerlink&quot; title=&quot;第一个HelloWorld&quot;&gt;&lt;/a&gt;第一个HelloWorld&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;  IDE:</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://qetuop91.github.io/categories/Go/"/>
+    
+    
+    <category term="Golang" scheme="https://qetuop91.github.io/tags/Golang/"/>
+    
+    <category term="GoLand" scheme="https://qetuop91.github.io/tags/GoLand/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>老电脑安装Linux发行版（manjaro）</title>
+    <link href="https://qetuop91.github.io/2024/07/22/lao-dian-nao-an-zhuang-linux-fa-xing-ban-manjaro/"/>
+    <id>https://qetuop91.github.io/2024/07/22/lao-dian-nao-an-zhuang-linux-fa-xing-ban-manjaro/</id>
+    <published>2024-07-22T15:57:42.000Z</published>
+    <updated>2024-07-23T02:05:21.812Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近在收拾房间的时候收拾出来了一台好多年前的笔记本（肯定不是清蟑螂的时候清出来的）&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://qetuop91.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://qetuop91.github.io/tags/Linux/"/>
+    
+    <category term="Manjaro" scheme="https://qetuop91.github.io/tags/Manjaro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2786.访问数组中的位置使分数最大数</title>
+    <link href="https://qetuop91.github.io/2024/06/14/2786-fang-wen-shu-zu-zhong-de-wei-zhi-shi-fen-shu-zui-da/"/>
+    <id>https://qetuop91.github.io/2024/06/14/2786-fang-wen-shu-zu-zhong-de-wei-zhi-shi-fen-shu-zui-da/</id>
+    <published>2024-06-14T00:50:48.000Z</published>
+    <updated>2024-06-14T01:02:07.399Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2786-访问数组中的位置使分数最大&quot;&gt;&lt;a href=&quot;#2786-访问数组中的位置使分数最大&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="动态规划" scheme="https://qetuop91.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库-3.SQL语法</title>
+    <link href="https://qetuop91.github.io/2024/06/12/shu-ju-ku-3-sql-yu-fa/"/>
+    <id>https://qetuop91.github.io/2024/06/12/shu-ju-ku-3-sql-yu-fa/</id>
+    <published>2024-06-12T15:33:09.000Z</published>
+    <updated>2024-06-14T01:31:03.798Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SQL语法&quot;&gt;&lt;a href=&quot;#SQL语法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://qetuop91.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="SQL" scheme="https://qetuop91.github.io/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2806.取整购买后的账户余额</title>
+    <link href="https://qetuop91.github.io/2024/06/12/2806-qu-zheng-gou-mai-hou-de-zhang-hu-yu-e/"/>
+    <id>https://qetuop91.github.io/2024/06/12/2806-qu-zheng-gou-mai-hou-de-zhang-hu-yu-e/</id>
+    <published>2024-06-12T02:56:53.000Z</published>
+    <updated>2024-06-12T02:59:43.472Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2806-取整购买后的账户余额&quot;&gt;&lt;a href=&quot;#2806-取整购买后的账户余额&quot; class=&quot;headerlink&quot; title=&quot;2806.取整购买后的账户余额&quot;&gt;&lt;/a&gt;2806.取整购买后的账户余额&lt;/h1&gt;&lt;p&gt;一开始，你的银行账户里有</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>419.甲板上的战舰</title>
+    <link href="https://qetuop91.github.io/2024/06/11/419-jia-ban-shang-de-zhan-jian/"/>
+    <id>https://qetuop91.github.io/2024/06/11/419-jia-ban-shang-de-zhan-jian/</id>
+    <published>2024-06-11T15:33:06.000Z</published>
+    <updated>2024-06-11T15:34:41.384Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;419-甲板上的战舰&quot;&gt;&lt;a href=&quot;#419-甲板上的战舰&quot; class=&quot;headerlink&quot; title=&quot;419.甲板上的战舰&quot;&gt;&lt;/a&gt;419.甲板上的战舰&lt;/h1&gt;&lt;p&gt;给你一个大小为 &lt;code&gt;m x n&lt;/code&gt; 的矩阵</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
+    
+    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
+    
+    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="深度优先搜索" scheme="https://qetuop91.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="矩阵" scheme="https://qetuop91.github.io/tags/%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库-2.NoSQL</title>
+    <link href="https://qetuop91.github.io/2024/06/11/shu-ju-ku-2-nosql/"/>
+    <id>https://qetuop91.github.io/2024/06/11/shu-ju-ku-2-nosql/</id>
+    <published>2024-06-10T17:06:42.000Z</published>
+    <updated>2024-06-10T18:37:17.713Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;NoSQL&quot;&gt;&lt;a href=&quot;#NoSQL&quot; class=&quot;headerlink&quot; title=&quot;NoSQL?&quot;&gt;&lt;/a&gt;NoSQL?&lt;/h1&gt;&lt;p&gt;&lt;code&gt;Not Only</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://qetuop91.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="面试" scheme="https://qetuop91.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="NoSQL" scheme="https://qetuop91.github.io/tags/NoSQL/"/>
+    
+  </entry>
   
   <entry>
     <title>881.救生艇</title>
@@ -206,9 +419,9 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
-    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
     <category term="模拟" scheme="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -274,9 +487,9 @@
     
     <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
     
-    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
     <category term="模拟" scheme="https://qetuop91.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
     <category term="树状数组" scheme="https://qetuop91.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
     
@@ -451,253 +664,6 @@
     <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
     <category term="矩阵" scheme="https://qetuop91.github.io/tags/%E7%9F%A9%E9%98%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>461.汉明距离</title>
-    <link href="https://qetuop91.github.io/2024/06/01/461-han-ming-ju-chi/"/>
-    <id>https://qetuop91.github.io/2024/06/01/461-han-ming-ju-chi/</id>
-    <published>2024-06-01T02:43:34.000Z</published>
-    <updated>2024-06-01T02:45:24.217Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;461-汉明距离&quot;&gt;&lt;a href=&quot;#461-汉明距离&quot; class=&quot;headerlink&quot; title=&quot;461. 汉明距离&quot;&gt;&lt;/a&gt;461. 汉明距离&lt;/h1&gt;&lt;p&gt;两个整数之间的 &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="位运算" scheme="https://qetuop91.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2928.给小朋友们分糖果 I</title>
-    <link href="https://qetuop91.github.io/2024/06/01/2928-gei-xiao-peng-you-men-fen-tang-guo-i/"/>
-    <id>https://qetuop91.github.io/2024/06/01/2928-gei-xiao-peng-you-men-fen-tang-guo-i/</id>
-    <published>2024-06-01T02:16:25.000Z</published>
-    <updated>2024-06-01T02:18:33.712Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2928-给小朋友们分糖果-I&quot;&gt;&lt;a href=&quot;#2928-给小朋友们分糖果-I&quot; class=&quot;headerlink&quot; title=&quot;2928. 给小朋友们分糖果 I&quot;&gt;&lt;/a&gt;2928. 给小朋友们分糖果 I&lt;/h1&gt;&lt;p&gt;给你两个正整数</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="组合数学" scheme="https://qetuop91.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="枚举" scheme="https://qetuop91.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2965.找出缺失和重复的数字</title>
-    <link href="https://qetuop91.github.io/2024/05/31/2965-zhao-chu-que-shi-he-chong-fu-de-shu-zi/"/>
-    <id>https://qetuop91.github.io/2024/05/31/2965-zhao-chu-que-shi-he-chong-fu-de-shu-zi/</id>
-    <published>2024-05-31T00:29:31.000Z</published>
-    <updated>2024-05-31T00:31:53.382Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2965-找出缺失和重复的数字&quot;&gt;&lt;a href=&quot;#2965-找出缺失和重复的数字&quot; class=&quot;headerlink&quot; title=&quot;2965.找出缺失和重复的数字&quot;&gt;&lt;/a&gt;2965.找出缺失和重复的数字&lt;/h1&gt;&lt;p&gt;给你一个下标从</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="数学" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-    <category term="矩阵" scheme="https://qetuop91.github.io/tags/%E7%9F%A9%E9%98%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2982.找出出现至少三次的最长特殊子字符串 II</title>
-    <link href="https://qetuop91.github.io/2024/05/30/2982-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-ii/"/>
-    <id>https://qetuop91.github.io/2024/05/30/2982-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-ii/</id>
-    <published>2024-05-30T00:31:01.000Z</published>
-    <updated>2024-05-30T00:32:25.674Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2982-找出出现至少三次的最长特殊子字符串-II&quot;&gt;&lt;a href=&quot;#2982-找出出现至少三次的最长特殊子字符串-II&quot; class=&quot;headerlink&quot; title=&quot;2982. 找出出现至少三次的最长特殊子字符串 II&quot;&gt;&lt;/a&gt;2982.</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-    <category term="滑动窗口" scheme="https://qetuop91.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
-    <category term="计数" scheme="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/"/>
-    
-    <category term="二分查找" scheme="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2981.找出出现至少三次的最长特殊子字符串 I</title>
-    <link href="https://qetuop91.github.io/2024/05/29/2981-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-i/"/>
-    <id>https://qetuop91.github.io/2024/05/29/2981-zhao-chu-chu-xian-zhi-shao-san-ci-de-zui-chang-te-shu-zi-zi-fu-chuan-i/</id>
-    <published>2024-05-29T06:05:26.000Z</published>
-    <updated>2024-05-29T06:08:03.347Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2981-找出出现至少三次的最长特殊子字符串-I&quot;&gt;&lt;a href=&quot;#2981-找出出现至少三次的最长特殊子字符串-I&quot; class=&quot;headerlink&quot; title=&quot;2981.找出出现至少三次的最长特殊子字符串</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="哈希表" scheme="https://qetuop91.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-    <category term="滑动窗口" scheme="https://qetuop91.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
-    <category term="计数" scheme="https://qetuop91.github.io/tags/%E8%AE%A1%E6%95%B0/"/>
-    
-    <category term="二分查找" scheme="https://qetuop91.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>459.重复的子字符串</title>
-    <link href="https://qetuop91.github.io/2024/05/28/459-chong-fu-de-zi-zi-fu-chuan/"/>
-    <id>https://qetuop91.github.io/2024/05/28/459-chong-fu-de-zi-zi-fu-chuan/</id>
-    <published>2024-05-28T02:56:52.000Z</published>
-    <updated>2024-05-28T02:58:14.201Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;459-重复的子字符串&quot;&gt;&lt;a href=&quot;#459-重复的子字符串&quot; class=&quot;headerlink&quot; title=&quot;459.重复的子字符串&quot;&gt;&lt;/a&gt;459.重复的子字符串&lt;/h1&gt;&lt;p&gt;给定一个非空的字符串 &lt;code&gt;s&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="字符串" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="字符串匹配" scheme="https://qetuop91.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2951.找出峰值</title>
-    <link href="https://qetuop91.github.io/2024/05/28/2951-zhao-chu-feng-zhi/"/>
-    <id>https://qetuop91.github.io/2024/05/28/2951-zhao-chu-feng-zhi/</id>
-    <published>2024-05-28T02:02:40.000Z</published>
-    <updated>2024-05-28T02:04:03.436Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2951-找出峰值&quot;&gt;&lt;a href=&quot;#2951-找出峰值&quot; class=&quot;headerlink&quot; title=&quot;2951.找出峰值&quot;&gt;&lt;/a&gt;2951.找出峰值&lt;/h1&gt;&lt;p&gt;给你一个下标从 &lt;strong&gt;0&lt;/strong&gt; 开始的数组</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://qetuop91.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://qetuop91.github.io/tags/Java/"/>
-    
-    <category term="LeetCode" scheme="https://qetuop91.github.io/tags/LeetCode/"/>
-    
-    <category term="算法题" scheme="https://qetuop91.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
-    
-    <category term="数组" scheme="https://qetuop91.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-    <category term="枚举" scheme="https://qetuop91.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
     
   </entry>
   
