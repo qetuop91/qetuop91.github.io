@@ -241,9 +241,9 @@
             
             <tag> 双指针 </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> 贪心 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -1508,9 +1508,9 @@
             
             <tag> 字符串 </tag>
             
-            <tag> 哈希表 </tag>
-            
             <tag> 位运算 </tag>
+            
+            <tag> 哈希表 </tag>
             
             <tag> 排序 </tag>
             
@@ -1807,9 +1807,9 @@
             
             <tag> 双指针 </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> 贪心 </tag>
+            
+            <tag> 排序 </tag>
             
             <tag> 二分查找 </tag>
             
@@ -2577,9 +2577,9 @@
             
             <tag> 数学 </tag>
             
-            <tag> 哈希表 </tag>
-            
             <tag> 位运算 </tag>
+            
+            <tag> 哈希表 </tag>
             
             <tag> 排序 </tag>
             
@@ -2902,11 +2902,11 @@
             
             <tag> 排序 </tag>
             
-            <tag> 计数 </tag>
-            
             <tag> 快速选择 </tag>
             
             <tag> 堆（优先队列） </tag>
+            
+            <tag> 计数 </tag>
             
             <tag> 桶排序 </tag>
             
